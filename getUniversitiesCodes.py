@@ -1,13 +1,15 @@
 import requests
 from bs4 import BeautifulSoup
 
+from myTypes import UniversitiesCodes, CoursesCodes, Entity
+
 def getUniversitiesCodes ():
   page = requests.get("http://www.dges.gov.pt/guias/indest.asp")
   soup = BeautifulSoup(page.text, "html.parser")
 
-  universities = {}
-  courses = {}
-  currentUniversity = {}
+  universities: UniversitiesCodes = {}
+  courses: CoursesCodes = {}
+  currentUniversity: Entity = {}
   
   elem = soup.find("div", {"class": "box9"})
 
