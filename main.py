@@ -1,10 +1,10 @@
 import json
 
 from getUniversitiesCodes import getUniversitiesCodes
-from getCourseInfo import getCourseInfo
+from getStudentsInfo import getStudentsInfo
 
 universities, courses = getUniversitiesCodes()
-getCourseInfo(universities, courses)
+students = getStudentsInfo(universities)
 
-# print(json.dumps(universities, indent=4, ensure_ascii=False))
-# print(json.dumps(courses, indent=4, ensure_ascii=False))
+with open("students.json", "w") as outfile:
+    outfile.write(json.dumps(students, indent=4, ensure_ascii=False))
