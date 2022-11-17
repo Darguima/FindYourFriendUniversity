@@ -42,12 +42,12 @@ def getStudentsCourseInfo (universityCode: str, universityName: str, courseCode:
     students.append({
       "orderNumber": info[0],
       "civilId": info[1],
-      "Name": info[2],
+      "name": info[2],
       "candidatureGrade": info[3],
       "optionNumber": info[4],
       "examsGrades": info[5],
-      "12grade": info[6],
-      "11grade": info[7],
+      "_12grade": info[6],
+      "_11grade": info[7],
 
       "universityName": universityName,
       "universityCode": universityCode,
