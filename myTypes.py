@@ -19,12 +19,12 @@ CoursesCodes = dict[int, Course]
 class Student (TypedDict):
   orderNumber: str
   civilId: str
-  Name: str
+  name: str
   candidatureGrade: str
   optionNumber: str
   examsGrades: str
-  "12grade": str
-  "11grade": str
+  _12grade: str
+  _11grade: str
   universityName: str
   universityCode: str
   courseName: str
