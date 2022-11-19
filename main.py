@@ -16,5 +16,8 @@ phase = [1, 2, 3]
 applications = getUniversityApplications(universities, years, phase, uniStats["coursesTotal"])
 applyStats = applicationsStats(applications, printOutput=True)
 
-with open("applications.json", "w") as outfile:
+applicationsFile = "applications.json"
+with open(applicationsFile, "w") as outfile:
     outfile.write(json.dumps(applications, indent=4, ensure_ascii=False))
+
+print(f"Students applications stored in '{applicationsFile}' file.\n")

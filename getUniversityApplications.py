@@ -25,7 +25,6 @@ def getStudentsApplicationsInfo (universityCode: str, universityName: str, cours
   tables = soup.find_all("table", {"class": "caixa"})
 
   if (len(tables) <= 0):
-    print(f"\n\nWithout Students: {universityName} - {courseName}\n")
     return []
 
   table: Tag = tables[-1]
@@ -42,7 +41,6 @@ def getStudentsApplicationsInfo (universityCode: str, universityName: str, cours
     )
 
     if len(info) < 8:
-      print(f"\n\nWithout Student Info: {universityName} - {courseName} - {len(info)} items - {info}\n")
       continue
 
     applicationsInfo.append({
