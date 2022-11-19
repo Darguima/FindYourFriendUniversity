@@ -7,6 +7,7 @@ class Entity (TypedDict):
 class University (TypedDict):
   name: str
   courses: list[Entity]
+  isPolytechnic: bool
 
 UniversitiesCodes = dict[int, University]
 
@@ -16,7 +17,7 @@ class Course (TypedDict):
 
 CoursesCodes = dict[int, Course]
 
-class Student (TypedDict):
+class Application (TypedDict):
   orderNumber: str
   civilId: str
   name: str
@@ -25,9 +26,12 @@ class Student (TypedDict):
   examsGrades: str
   _12grade: str
   _11grade: str
+  
   universityName: str
   universityCode: str
   courseName: str
   courseCode: str
 
-StudentsInfo = list[Student]
+  isPolytechnic: bool
+
+Applications = list[Application]
