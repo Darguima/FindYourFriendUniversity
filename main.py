@@ -10,7 +10,10 @@ print("\nHi, welcome to Find Your Friend University!!!\n")
 universities, courses = getUniversitiesCodes()
 uniStats = universitiesStats(universities, printOutput=True)
 
-applications = getUniversityApplications(universities, uniStats["coursesTotal"])
+years = [2018, 2019, 2020, 2021, 2022]
+phase = [1, 2, 3]
+
+applications = getUniversityApplications(universities, years, phase, uniStats["coursesTotal"])
 applyStats = applicationsStats(applications, printOutput=True)
 
 with open("applications.json", "w") as outfile:

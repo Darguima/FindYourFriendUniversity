@@ -52,7 +52,7 @@ def applicationsStats(applications: Applications, printOutput = False):
     if not application["isPolytechnic"]: # university
       count["universitiesApplications"] += 1
     else: # polytechnic
-      count["polytechnicsApplications"] += len(application["courses"])
+      count["polytechnicsApplications"] += 1
 
   if printOutput:
     print(f"Exists {count['applicationsTotal']} applications from {count['studentsTotal']} different students.")
