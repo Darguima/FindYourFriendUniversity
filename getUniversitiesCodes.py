@@ -42,7 +42,8 @@ def scrapSite(url: str, isPolytechnic: bool):
       universities[code] = {
         "name": name,
         "courses": [],
-        "isPolytechnic": isPolytechnic
+        "isPolytechnic": isPolytechnic,
+        "placements": {}
       }
 
     # Course

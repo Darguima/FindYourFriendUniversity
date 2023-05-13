@@ -1,6 +1,7 @@
 import json
 
 from getUniversitiesCodes import getUniversitiesCodes
+from getUniversityPlacements import getUniversityPlacements
 from getUniversityApplications import getUniversityApplications
 
 from utils.statistics import universitiesStats, applicationsStats
@@ -13,10 +14,12 @@ uniStats = universitiesStats(universities, printOutput=True)
 years = [2018, 2019, 2020, 2021, 2022]
 phase = [1, 2, 3]
 
+universities = getUniversityPlacements(universities, years, phase, uniStats["coursesTotal"])
+
 applications = getUniversityApplications(universities, years, phase, uniStats["coursesTotal"])
 applyStats = applicationsStats(applications, printOutput=True)
 
-applicationsFile = "applications.json"
+applicationsFile = "applications_.json"
 with open(applicationsFile, "w") as outfile:
     outfile.write(json.dumps(applications, indent=4, ensure_ascii=False))
 

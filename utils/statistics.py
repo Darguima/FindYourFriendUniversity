@@ -35,9 +35,9 @@ def applicationsStats(applications: Applications, printOutput = False):
 
   for application in applications:
     if not application["isPolytechnic"]: # university
-      universityStudents[application["civilId"] + application["name"]] = None
+      universityStudents[application["studentId"]] = None
     else: # polytechnic
-      polytechnicStudents[application["civilId"] + application["name"]] = None
+      polytechnicStudents[application["studentId"]] = None
     
   count = {
     "applicationsTotal": len(applications),
