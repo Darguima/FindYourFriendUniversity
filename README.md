@@ -16,3 +16,13 @@ Ready to run in production? Please [check our deployment guides](https://hexdocs
   * Docs: https://hexdocs.pm/phoenix
   * Forum: https://elixirforum.com/c/phoenix-forum
   * Source: https://github.com/phoenixframework/phoenix
+
+## Walkthrough
+
+This is my first big Phoenix project, so I decided let here what I did.
+
+### Students:
+
+```bash
+$ mix phx.gen.html Students Student students name:string display_name:string civil_id:string
+```
