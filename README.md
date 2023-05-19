@@ -21,7 +21,17 @@ Ready to run in production? Please [check our deployment guides](https://hexdocs
 
 This is my first big Phoenix project, so I decided let here what I did.
 
-### Students:
+### Access database
+
+```bash
+psql -h localhost -p 5432 -U postgres
+>>> \l
+>>> \c find_your_friend_university_dev
+>>> \dt
+>>> SELECT * FROM <table_name>;
+```
+
+### Contexts
 
 ```bash
 $ mix phx.gen.html Students Student students name:string display_name:string civil_id:string
