@@ -24,7 +24,7 @@ This is my first big Phoenix project, so I decided let here what I did.
 ### Access database
 
 ```bash
-psql -h localhost -p 5432 -U postgres
+$ psql -h localhost -p 5432 -U postgres
 >>> \l
 >>> \c find_your_friend_university_dev
 >>> \dt
@@ -35,4 +35,5 @@ psql -h localhost -p 5432 -U postgres
 
 ```bash
 $ mix phx.gen.html Students Student students name:string display_name:string civil_id:string
+$ mix phx.gen.html Courses Course courses name:string code_id:integer
 ```

@@ -1,0 +1,8 @@
+<.header>
+  New Course
+  <:subtitle>Use this form to manage course records in your database.</:subtitle>
+</.header>
+
+<.course_form changeset={@changeset} action={~p"/courses"} />
+
+<.back navigate={~p"/courses"}>Back to courses</.back>

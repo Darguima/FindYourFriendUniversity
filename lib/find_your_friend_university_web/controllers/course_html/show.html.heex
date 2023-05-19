@@ -1,0 +1,16 @@
+<.header>
+  Course <%= @course.id %>
+  <:subtitle>This is a course record from your database.</:subtitle>
+  <:actions>
+    <.link href={~p"/courses/#{@course}/edit"}>
+      <.button>Edit course</.button>
+    </.link>
+  </:actions>
+</.header>
+
+<.list>
+  <:item title="Name"><%= @course.name %></:item>
+  <:item title="Code"><%= @course.code_id %></:item>
+</.list>
+
+<.back navigate={~p"/courses"}>Back to courses</.back>
