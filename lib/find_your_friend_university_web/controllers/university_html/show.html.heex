@@ -1,0 +1,17 @@
+<.header>
+  University <%= @university.id %>
+  <:subtitle>This is a university record from your database.</:subtitle>
+  <:actions>
+    <.link href={~p"/universities/#{@university}/edit"}>
+      <.button>Edit university</.button>
+    </.link>
+  </:actions>
+</.header>
+
+<.list>
+  <:item title="Name"><%= @university.name %></:item>
+  <:item title="Code"><%= @university.code_id %></:item>
+  <:item title="Is polytechnic"><%= @university.is_polytechnic %></:item>
+</.list>
+
+<.back navigate={~p"/universities"}>Back to universities</.back>

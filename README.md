@@ -36,4 +36,5 @@ $ psql -h localhost -p 5432 -U postgres
 ```bash
 $ mix phx.gen.html Students Student students name:string display_name:string civil_id:string
 $ mix phx.gen.html Courses Course courses name:string code_id:integer
+$ mix phx.gen.html Universities University universities name:string code_id:integer is_polytechnic:boolean
 ```
