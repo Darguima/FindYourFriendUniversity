@@ -16,7 +16,7 @@ defmodule FindYourFriendUniversityWeb.UniversityController do
 
   def create(conn, %{"university" => university_params}) do
     converted_params =
-      Map.update!(university_params, "courses_ids", fn courses_ids ->
+      Map.update(university_params, "courses_ids", [], fn courses_ids ->
         Enum.map(courses_ids, &String.to_integer/1)
       end)
 
