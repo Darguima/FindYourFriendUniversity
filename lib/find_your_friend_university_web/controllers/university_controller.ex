@@ -15,7 +15,12 @@ defmodule FindYourFriendUniversityWeb.UniversityController do
   end
 
   def create(conn, %{"university" => university_params}) do
-    case Universities.create_university(university_params) do
+    converted_params =
+      Map.update!(university_params, "courses_ids", fn courses_ids ->
+        Enum.map(courses_ids, &String.to_integer/1)
+      end)
+
+    case Universities.create_university(converted_params) do
       {:ok, university} ->
         conn
         |> put_flash(:info, "University created successfully.")

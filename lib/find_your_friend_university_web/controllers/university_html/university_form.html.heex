@@ -5,6 +5,17 @@
   <.input field={f[:name]} type="text" label="Name" />
   <.input field={f[:code_id]} type="number" label="Code" />
   <.input field={f[:is_polytechnic]} type="checkbox" label="Is polytechnic" />
+
+  <div class="form-group">
+    <label for="courses">Courses</label>
+    <select multiple name="university[courses_ids][]" id="courses" class="form-control">
+      <%= for course <- FindYourFriendUniversity.Courses.list_courses() do %>
+        <option value={course.id}><%= course.name %> <%= course.code_id %></option>
+      <% end %>
+    </select>
+  </div>
+
+
   <:actions>
     <.button>Save University</.button>
   </:actions>

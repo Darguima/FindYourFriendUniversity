@@ -1,10 +1,12 @@
 defmodule FindYourFriendUniversity.Courses.Course do
   use Ecto.Schema
   import Ecto.Changeset
+  alias FindYourFriendUniversity.Universities.University
 
   schema "courses" do
     field :name, :string
     field :code_id, :integer
+    many_to_many :universities, University, join_through: "university_courses"
 
     timestamps()
   end

@@ -4,6 +4,7 @@ defmodule FindYourFriendUniversity.Universities do
   """
 
   import Ecto.Query, warn: false
+  alias FindYourFriendUniversity.Courses
   alias FindYourFriendUniversity.Repo
 
   alias FindYourFriendUniversity.Universities.University
@@ -37,6 +38,11 @@ defmodule FindYourFriendUniversity.Universities do
   """
   def get_university!(id), do: Repo.get!(University, id)
 
+  defp maybe_put_courses(changeset, attrs) do
+    courses = Courses.get_courses(attrs["courses_ids"])
+    Ecto.Changeset.put_assoc(changeset, :courses, courses)
+  end
+
   @doc """
   Creates a university.
 
@@ -52,6 +58,7 @@ defmodule FindYourFriendUniversity.Universities do
   def create_university(attrs \\ %{}) do
     %University{}
     |> University.changeset(attrs)
+    |> maybe_put_courses(attrs)
     |> Repo.insert()
   end
 

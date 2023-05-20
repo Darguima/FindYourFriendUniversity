@@ -38,6 +38,21 @@ defmodule FindYourFriendUniversity.Courses do
   def get_course!(id), do: Repo.get!(Course, id)
 
   @doc """
+  Gets multiple courses.
+
+  Raises o error if the Courses does not exist.
+
+  ## Examples
+
+      iex> get_courses([1, 2])
+      [%Course{}]
+
+  """
+  def get_courses(nil), do: []
+
+  def get_courses(ids), do: Repo.all(from(a in Course, where: a.id in ^ids))
+
+  @doc """
   Creates a course.
 
   ## Examples
