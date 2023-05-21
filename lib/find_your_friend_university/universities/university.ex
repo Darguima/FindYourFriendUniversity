@@ -7,7 +7,7 @@ defmodule FindYourFriendUniversity.Universities.University do
     field :name, :string
     field :code_id, :integer
     field :is_polytechnic, :boolean, default: false
-    many_to_many :courses, Course, join_through: "university_courses"
+    many_to_many :courses, Course, join_through: "university_courses", on_replace: :delete
 
     timestamps()
   end

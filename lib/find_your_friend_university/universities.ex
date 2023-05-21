@@ -76,7 +76,9 @@ defmodule FindYourFriendUniversity.Universities do
   """
   def update_university(%University{} = university, attrs) do
     university
+    |> Repo.preload(:courses)
     |> University.changeset(attrs)
+    |> maybe_put_courses(attrs)
     |> Repo.update()
   end
 
