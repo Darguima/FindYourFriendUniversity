@@ -22,6 +22,43 @@ defmodule FindYourFriendUniversity.Courses do
   end
 
   @doc """
+  Returns the list of courses, identifying the ones that the given university have.
+
+  ## Examples
+
+      iex> list_courses_and_existence_at_university(nil)
+      [%{:not_exists, %Course{}}, ...]
+
+      iex> list_courses_and_existence_at_university(3)
+      [%{:exists, %Course{}}, ..., %{:not_exists, %Course{}}, ...]
+
+  """
+  def list_courses_and_existence_at_university(nil) do
+    list_courses()
+    |> Enum.map(fn course ->
+      {:not_exists, course}
+    end)
+  end
+
+  def list_courses_and_existence_at_university(university_id) do
+    university_courses_id =
+      from(uni in "university_courses",
+        where: uni.university_id == ^university_id,
+        select: uni.course_id
+      )
+      |> Repo.all()
+
+    list_courses()
+    |> Enum.map(fn course ->
+      if course.id in university_courses_id do
+        {:exists, course}
+      else
+        {:not_exists, course}
+      end
+    end)
+  end
+
+  @doc """
   Gets a single course.
 
   Raises `Ecto.NoResultsError` if the Course does not exist.

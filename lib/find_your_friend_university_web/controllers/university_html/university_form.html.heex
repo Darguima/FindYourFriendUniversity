@@ -9,12 +9,18 @@
   <div class="form-group">
     <label for="courses">Courses</label>
     <select multiple name="university[courses_ids][]" id="courses" class="form-control">
-      <%= for course <- FindYourFriendUniversity.Courses.list_courses() do %>
-        <option value={course.id}><%= course.name %> <%= course.code_id %></option>
+
+      <%= for response <- FindYourFriendUniversity.Courses.list_courses_and_existence_at_university(@changeset.data.id) do %>
+        <%= case response do %>
+          <% {:exists, course} -> %>
+            <option value={course.id} selected><%= course.name %> <%= course.code_id %></option>
+          <% {:not_exists, course} -> %>
+            <option value={course.id}><%= course.name %> <%= course.code_id %></option>
+        <% end %>
       <% end %>
+
     </select>
   </div>
-
 
   <:actions>
     <.button>Save University</.button>
