@@ -22,6 +22,27 @@ defmodule FindYourFriendUniversity.Courses do
   end
 
   @doc """
+  Returns the list of courses from a given university.
+
+  ## Examples
+
+      iex> list_courses_from_university!(3)
+      [%Course{}, ...]
+
+  """
+  def list_courses_from_university!(university_id) do
+    university_courses_id =
+      from(uni in "university_courses",
+        where: uni.university_id == ^university_id,
+        select: uni.course_id
+      )
+      |> Repo.all()
+
+    list_courses()
+    |> Enum.filter(fn course -> course.id in university_courses_id end)
+  end
+
+  @doc """
   Returns the list of courses, identifying the ones that the given university have.
 
   ## Examples
