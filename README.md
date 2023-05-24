@@ -52,13 +52,13 @@ $ mix phx.gen.html Universities University universities name:string code_id:inte
 Added to Universities Schema
 
 ```elixir
-many_to_many :courses, Course, join_through: "university_courses"
+many_to_many :courses, Course, join_through: "universities_courses"
 ```
 
 Created the join table migration and edited them.
 
 ```bash
-$ mix ecto.gen.migration create_university_courses
+$ mix ecto.gen.migration create_universities_courses
 ```
 
 To receive and link the Courses that the Universities have, and store them on the relation table I followed this [post](https://dev.to/ricardoruwer/many-to-many-associations-in-elixir-and-phoenix-21pm).

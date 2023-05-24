@@ -6,7 +6,7 @@ defmodule FindYourFriendUniversity.Courses.Course do
   schema "courses" do
     field :name, :string
     field :code_id, :integer
-    many_to_many :universities, University, join_through: "university_courses", on_replace: :delete
+    many_to_many :universities, University, join_through: "universities_courses", on_replace: :delete
 
     timestamps()
   end

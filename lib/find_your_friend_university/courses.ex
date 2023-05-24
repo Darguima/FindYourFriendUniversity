@@ -33,7 +33,7 @@ defmodule FindYourFriendUniversity.Courses do
   """
   def list_courses_from_university(university_id) do
     university_courses_id =
-      from(rel in "university_courses",
+      from(rel in "universities_courses",
         where: rel.university_id == ^university_id,
         select: rel.course_id
       )
@@ -64,7 +64,7 @@ defmodule FindYourFriendUniversity.Courses do
 
   def list_courses_and_existence_at_university(university_id) do
     university_courses_id =
-      from(rel in "university_courses",
+      from(rel in "universities_courses",
         where: rel.university_id == ^university_id,
         select: rel.course_id
       )
