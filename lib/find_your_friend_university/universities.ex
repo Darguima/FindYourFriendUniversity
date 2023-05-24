@@ -23,6 +23,62 @@ defmodule FindYourFriendUniversity.Universities do
   end
 
   @doc """
+  Returns the list of universities that have the given course.
+
+  ## Examples
+
+      iex> list_universities_from_course(3)
+      [%University{}, ...]
+
+  """
+  def list_universities_from_course(course_id) do
+    course_universities_ids =
+      from(rel in "university_courses",
+        where: rel.course_id == ^course_id,
+        select: rel.university_id
+      )
+      |> Repo.all()
+
+    list_universities()
+    |> Enum.filter(fn university -> university.id in course_universities_ids end)
+  end
+
+  @doc """
+  Returns the list of universities, identifying the ones that the have the given course.
+
+  ## Examples
+
+      iex> list_universities_and_existence_of_course(nil)
+      [%{:not_exists, %University{}}, ...]
+
+      iex> list_universities_and_existence_of_course(3)
+      [%{:exists, %University{}}, ..., %{:not_exists, %University{}}, ...]
+
+  """
+  def list_universities_and_existence_of_course(nil) do
+    list_universities()
+    |> Enum.map(fn uni -> {:not_exists, uni} end)
+  end
+
+  def list_universities_and_existence_of_course(course_id) do
+    course_universities_ids =
+      from(rel in "university_courses",
+        where: rel.course_id == ^course_id,
+        select: rel.university_id
+      )
+      |> Repo.all()
+
+    list_universities()
+    |> Enum.map(fn uni ->
+      if uni.id in course_universities_ids do
+        {:exists, uni}
+      else
+        {:not_exists, uni}
+      end
+    end)
+  end
+
+  @doc """
   Gets a single university.
 
   Raises `Ecto.NoResultsError` if the University does not exist.
@@ -38,7 +94,23 @@ defmodule FindYourFriendUniversity.Universities do
   """
   def get_university!(id), do: Repo.get!(University, id)
 
-  defp maybe_put_courses(changeset, attrs) do
+  @doc """
+  Gets multiple universities.
+
+  ## Examples
+
+      iex> get_universities([1, 2])
+      []
+
+      iex> get_universities([3, 4])
+      [%University{}]
+
+  """
+  def get_universities(nil), do: []
+
+  def get_universities(uni_ids), do: Repo.all(from(uni in University, where: uni.id in ^uni_ids))
+
+  defp put_assoc_courses(changeset, attrs) do
     courses = Courses.get_courses(attrs["courses_ids"])
     Ecto.Changeset.put_assoc(changeset, :courses, courses)
   end
@@ -58,7 +130,7 @@ defmodule FindYourFriendUniversity.Universities do
   def create_university(attrs \\ %{}) do
     %University{}
     |> University.changeset(attrs)
-    |> maybe_put_courses(attrs)
+    |> put_assoc_courses(attrs)
     |> Repo.insert()
   end
 
@@ -78,7 +150,7 @@ defmodule FindYourFriendUniversity.Universities do
     university
     |> Repo.preload(:courses)
     |> University.changeset(attrs)
-    |> maybe_put_courses(attrs)
+    |> put_assoc_courses(attrs)
     |> Repo.update()
   end
 

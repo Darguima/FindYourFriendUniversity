@@ -12,12 +12,13 @@
   <:item title="Name"><%= @university.name %></:item>
   <:item title="Code"><%= @university.code_id %></:item>
   <:item title="Is polytechnic"><%= @university.is_polytechnic %></:item>
+
   <:item title="Courses">
     <select
       multiple
       class="form-control mt-2 block w-full rounded-lg text-zinc-700 focus:ring-0 sm:text-sm sm:leading-6 phx-no-feedback:border-zinc-300 phx-no-feedback:focus:border-zinc-400 border-zinc-700 focus:border-zinc-400 "
     >
-      <%= for course <- FindYourFriendUniversity.Courses.list_courses_from_university!(@university.id) do %>
+      <%= for course <- FindYourFriendUniversity.Courses.list_courses_from_university(@university.id) do %>
             <option value={course.id} class="flex items-center gap-4 text-sm leading-6 text-zinc-700" disabled>
               <%= course.name %> <%= course.code_id %>
             </option>

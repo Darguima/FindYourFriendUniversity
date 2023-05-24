@@ -4,6 +4,7 @@ defmodule FindYourFriendUniversity.Courses do
   """
 
   import Ecto.Query, warn: false
+  alias FindYourFriendUniversity.Universities
   alias FindYourFriendUniversity.Repo
 
   alias FindYourFriendUniversity.Courses.Course
@@ -26,15 +27,15 @@ defmodule FindYourFriendUniversity.Courses do
 
   ## Examples
 
-      iex> list_courses_from_university!(3)
+      iex> list_courses_from_university(3)
       [%Course{}, ...]
 
   """
-  def list_courses_from_university!(university_id) do
+  def list_courses_from_university(university_id) do
     university_courses_id =
-      from(uni in "university_courses",
-        where: uni.university_id == ^university_id,
-        select: uni.course_id
+      from(rel in "university_courses",
+        where: rel.university_id == ^university_id,
+        select: rel.course_id
       )
       |> Repo.all()
 
@@ -63,9 +64,9 @@ defmodule FindYourFriendUniversity.Courses do
 
   def list_courses_and_existence_at_university(university_id) do
     university_courses_id =
-      from(uni in "university_courses",
-        where: uni.university_id == ^university_id,
-        select: uni.course_id
+      from(rel in "university_courses",
+        where: rel.university_id == ^university_id,
+        select: rel.course_id
       )
       |> Repo.all()
 
@@ -98,17 +99,23 @@ defmodule FindYourFriendUniversity.Courses do
   @doc """
   Gets multiple courses.
 
-  Raises o error if the Courses does not exist.
-
   ## Examples
 
       iex> get_courses([1, 2])
+      []
+
+      iex> get_courses([3, 4])
       [%Course{}]
 
   """
   def get_courses(nil), do: []
 
-  def get_courses(ids), do: Repo.all(from(a in Course, where: a.id in ^ids))
+  def get_courses(courses_ids), do: Repo.all(from(course in Course, where: course.id in ^courses_ids))
+
+  defp put_assoc_universities(changeset, attrs) do
+    universities = Universities.get_universities(attrs["universities_ids"])
+    Ecto.Changeset.put_assoc(changeset, :universities, universities)
+  end
 
   @doc """
   Creates a course.
@@ -125,6 +132,7 @@ defmodule FindYourFriendUniversity.Courses do
   def create_course(attrs \\ %{}) do
     %Course{}
     |> Course.changeset(attrs)
+    |> put_assoc_universities(attrs)
     |> Repo.insert()
   end
 
@@ -143,6 +151,7 @@ defmodule FindYourFriendUniversity.Courses do
   def update_course(%Course{} = course, attrs) do
     course
     |> Course.changeset(attrs)
+    |> put_assoc_universities(attrs)
     |> Repo.update()
   end
 

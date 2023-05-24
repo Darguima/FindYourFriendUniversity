@@ -4,6 +4,43 @@
   </.error>
   <.input field={f[:name]} type="text" label="Name" />
   <.input field={f[:code_id]} type="number" label="Code" />
+
+  <div class="form-group">
+    <label class="block text-sm font-semibold leading-6 text-zinc-800" for="course_university_ids">Universities</label>
+
+    <select
+      multiple
+      name="course[universities_ids][]"
+      id="universities"
+      class="form-control mt-2 block w-full rounded-lg text-zinc-900 focus:ring-0 sm:text-sm sm:leading-6 phx-no-feedback:border-zinc-300 phx-no-feedback:focus:border-zinc-400 border-zinc-300 focus:border-zinc-400 "
+    >
+
+      <%= for response <- FindYourFriendUniversity.Universities.list_universities_and_existence_of_course(@changeset.data.id) do %>
+        <%= case response do %>
+
+          <% {:exists, uni} -> %>
+            <option
+              value={uni.id}
+              class="flex items-center gap-4 text-sm leading-6"
+              selected
+            >
+              <%= uni.name %> <%= uni.code_id %>
+            </option>
+
+          <% {:not_exists, uni} -> %>
+            <option
+              value={uni.id}
+              class="flex items-center gap-4 text-sm leading-6"
+            >
+              <%= uni.name %> <%= uni.code_id %>
+            </option>
+
+        <% end %>
+      <% end %>
+
+    </select>
+  </div>
+
   <:actions>
     <.button>Save Course</.button>
   </:actions>
