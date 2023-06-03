@@ -97,6 +97,22 @@ defmodule FindYourFriendUniversity.Courses do
   def get_course!(id), do: Repo.get!(Course, id)
 
   @doc """
+  Gets a single course name.
+
+  Raises `Ecto.NoResultsError` if the Course does not exist.
+
+  ## Examples
+
+      iex> get_course_name!(123)
+      "Engenharia Informática"
+
+      iex> get_course_name!(456)
+      ** (Ecto.NoResultsError)
+
+  """
+  def get_course_name!(id), do: Repo.one!(from(course in Course, where: course.id == ^id, select: course.name))
+
+  @doc """
   Gets multiple courses.
 
   ## Examples

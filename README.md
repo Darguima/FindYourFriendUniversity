@@ -45,6 +45,7 @@ $ psql -h localhost -p 5432 -U postgres
 $ mix phx.gen.html Students Student students name:string display_name:string civil_id:string
 $ mix phx.gen.html Courses Course courses name:string code_id:integer
 $ mix phx.gen.html Universities University universities name:string code_id:integer is_polytechnic:boolean
+$ mix phx.gen.html Applications Application applications course_order_num:integer candidature_grade:integer exams_grades:integer _12grade:integer _11grade:integer student_option_number:integer placed:boolean year:integer phase:integer university:references:universities course:references:courses student:references:students
 ```
 
 ### Many to Many Tables

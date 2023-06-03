@@ -38,6 +38,22 @@ defmodule FindYourFriendUniversity.Students do
   def get_student!(id), do: Repo.get!(Student, id)
 
   @doc """
+  Gets a single student name.
+
+  Raises `Ecto.NoResultsError` if the Student does not exist.
+
+  ## Examples
+
+      iex> get_student_name!(123)
+      "Mike Obama"
+
+      iex> get_student_name!(456)
+      ** (Ecto.NoResultsError)
+
+  """
+  def get_student_name!(id), do: Repo.one!(from(student in Student, where: student.id == ^id, select: student.name))
+
+  @doc """
   Creates a student.
 
   ## Examples

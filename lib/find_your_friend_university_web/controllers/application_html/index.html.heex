@@ -1,0 +1,31 @@
+<.header>
+  Listing Applications
+  <:actions>
+    <.link href={~p"/applications/new"}>
+      <.button>New Application</.button>
+    </.link>
+  </:actions>
+</.header>
+
+<.table id="applications" rows={@applications} row_click={&JS.navigate(~p"/applications/#{&1}")}>
+  <:col :let={application} label="Course order num"><%= application.course_order_num %></:col>
+  <:col :let={application} label="Candidature grade"><%= application.candidature_grade %></:col>
+  <:col :let={application} label="Exams grades"><%= application.exams_grades %></:col>
+  <:col :let={application} label=" 12grade"><%= application._12grade %></:col>
+  <:col :let={application} label=" 11grade"><%= application._11grade %></:col>
+  <:col :let={application} label="Student option number"><%= application.student_option_number %></:col>
+  <:col :let={application} label="Placed"><%= application.placed %></:col>
+  <:col :let={application} label="Year"><%= application.year %></:col>
+  <:col :let={application} label="Phase"><%= application.phase %></:col>
+  <:action :let={application}>
+    <div class="sr-only">
+      <.link navigate={~p"/applications/#{application}"}>Show</.link>
+    </div>
+    <.link navigate={~p"/applications/#{application}/edit"}>Edit</.link>
+  </:action>
+  <:action :let={application}>
+    <.link href={~p"/applications/#{application}"} method="delete" data-confirm="Are you sure?">
+      Delete
+    </.link>
+  </:action>
+</.table>

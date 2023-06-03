@@ -1,0 +1,70 @@
+<.simple_form :let={f} for={@changeset} action={@action}>
+  <.error :if={@changeset.action}>
+    Oops, something went wrong! Please check the errors below.
+  </.error>
+  <.input field={f[:course_order_num]} type="number" label="Course order num" />
+  <.input field={f[:candidature_grade]} type="number" label="Candidature grade" />
+  <.input field={f[:exams_grades]} type="number" label="Exams grades" />
+  <.input field={f[:_12grade]} type="number" label=" 12grade" />
+  <.input field={f[:_11grade]} type="number" label=" 11grade" />
+  <.input field={f[:student_option_number]} type="number" label="Student option number" />
+  <.input field={f[:placed]} type="checkbox" label="Placed" />
+  <.input field={f[:year]} type="number" label="Year" />
+  <.input field={f[:phase]} type="number" label="Phase" />
+
+  <div>
+    <label class="block text-sm font-semibold leading-6 text-zinc-800">
+      University
+    </label>
+
+    <select
+      name="application[university]"
+      class="form-control mt-2 block w-full rounded-lg text-zinc-900 focus:ring-0 sm:text-sm sm:leading-6 phx-no-feedback:border-zinc-300 phx-no-feedback:focus:border-zinc-400 border-zinc-300 focus:border-zinc-400 "
+    >
+      <%= for uni <- FindYourFriendUniversity.Universities.list_universities() do %>
+        <option value={uni.id} class="flex items-center gap-4 text-sm leading-6">
+          <%= uni.name %>
+        </option>
+      <% end %>
+    </select>
+  </div>
+
+  <div>
+    <label class="block text-sm font-semibold leading-6 text-zinc-800">
+      Course
+    </label>
+
+    <select
+      name="application[course]"
+      class="form-control mt-2 block w-full rounded-lg text-zinc-900 focus:ring-0 sm:text-sm sm:leading-6 phx-no-feedback:border-zinc-300 phx-no-feedback:focus:border-zinc-400 border-zinc-300 focus:border-zinc-400 "
+    >
+      <%= for courses <- FindYourFriendUniversity.Courses.list_courses() do %>
+        <option value={courses.id} class="flex items-center gap-4 text-sm leading-6">
+          <%= courses.name %>
+        </option>
+      <% end %>
+    </select>
+  </div>
+
+  <div>
+    <label class="block text-sm font-semibold leading-6 text-zinc-800"for="student_id"
+    >
+      Student
+    </label>
+
+    <select
+      name="application[student]"
+      class="form-control mt-2 block w-full rounded-lg text-zinc-900 focus:ring-0 sm:text-sm sm:leading-6 phx-no-feedback:border-zinc-300 phx-no-feedback:focus:border-zinc-400 border-zinc-300 focus:border-zinc-400 "
+    >
+      <%= for student <- FindYourFriendUniversity.Students.list_students() do %>
+        <option value={student.id} class="flex items-center gap-4 text-sm leading-6" >
+          <%= student.name %>
+        </option>
+      <% end %>
+    </select>
+  </div>
+
+  <:actions>
+    <.button>Save Application</.button>
+  </:actions>
+</.simple_form>

@@ -95,6 +95,22 @@ defmodule FindYourFriendUniversity.Universities do
   def get_university!(id), do: Repo.get!(University, id)
 
   @doc """
+  Gets a single university name.
+
+  Raises `Ecto.NoResultsError` if the University does not exist.
+
+  ## Examples
+
+      iex> get_university_name!(123)
+      "Universidade do Minho"
+
+      iex> get_university_name!(456)
+      ** (Ecto.NoResultsError)
+
+  """
+  def get_university_name!(id), do: Repo.one!(from(uni in University, where: uni.id == ^id, select: uni.name))
+
+  @doc """
   Gets multiple universities.
 
   ## Examples
