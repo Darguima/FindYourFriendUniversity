@@ -111,7 +111,9 @@ defmodule FindYourFriendUniversity.Universities do
   def get_universities(uni_ids), do: Repo.all(from(uni in University, where: uni.id in ^uni_ids))
 
   defp put_assoc_courses(changeset, attrs) do
-    courses = Courses.get_courses(attrs["courses_ids"])
+    courses = Map.get(attrs, "courses_ids", []) ++ Map.get(attrs, :courses_ids, [])
+    |> Courses.get_courses()
+
     Ecto.Changeset.put_assoc(changeset, :courses, courses)
   end
 

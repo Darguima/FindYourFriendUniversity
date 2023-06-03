@@ -113,7 +113,9 @@ defmodule FindYourFriendUniversity.Courses do
   def get_courses(courses_ids), do: Repo.all(from(course in Course, where: course.id in ^courses_ids))
 
   defp put_assoc_universities(changeset, attrs) do
-    universities = Universities.get_universities(attrs["universities_ids"])
+    universities = Map.get(attrs, "universities_ids", []) ++ Map.get(attrs, :universities_ids, [])
+    |> Universities.get_universities()
+
     Ecto.Changeset.put_assoc(changeset, :universities, universities)
   end
 
@@ -150,6 +152,7 @@ defmodule FindYourFriendUniversity.Courses do
   """
   def update_course(%Course{} = course, attrs) do
     course
+    |> Repo.preload(:universities)
     |> Course.changeset(attrs)
     |> put_assoc_universities(attrs)
     |> Repo.update()
