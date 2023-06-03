@@ -5,7 +5,7 @@ defmodule FindYourFriendUniversity.Universities.University do
 
   schema "universities" do
     field :name, :string
-    field :code_id, :integer
+    field :code_id, :string # Just because in courses codes need be string
     field :is_polytechnic, :boolean, default: false
     many_to_many :courses, Course, join_through: "universities_courses", on_replace: :delete
 
@@ -16,6 +16,7 @@ defmodule FindYourFriendUniversity.Universities.University do
   def changeset(university, attrs) do
     university
     |> cast(attrs, [:name, :code_id, :is_polytechnic])
+    |> validate_length(:code_id, is: 4)
     |> validate_required([:name, :code_id, :is_polytechnic])
   end
 end

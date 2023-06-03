@@ -5,7 +5,7 @@ defmodule FindYourFriendUniversity.Courses.Course do
 
   schema "courses" do
     field :name, :string
-    field :code_id, :integer
+    field :code_id, :string # Some codes have the letter L
     many_to_many :universities, University, join_through: "universities_courses", on_replace: :delete
 
     timestamps()
@@ -15,6 +15,7 @@ defmodule FindYourFriendUniversity.Courses.Course do
   def changeset(course, attrs) do
     course
     |> cast(attrs, [:name, :code_id])
+    |> validate_length(:code_id, is: 4)
     |> validate_required([:name, :code_id])
   end
 end
