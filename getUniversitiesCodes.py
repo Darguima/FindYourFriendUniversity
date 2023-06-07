@@ -4,7 +4,23 @@ from bs4 import BeautifulSoup
 from myTypes import UniversitiesCodes, CoursesCodes, Entity
 
 def getUniversitiesCodes ():
-  page = requests.get("http://www.dges.gov.pt/guias/indest.asp")
+  allUniversities: UniversitiesCodes = {}
+  allCourses: CoursesCodes = {}
+
+  # Scraping Universities
+  universities, uniCourses = scrapSite("http://www.dges.gov.pt/guias/indest.asp?reg=11", False)
+  allUniversities.update(universities)
+  allCourses.update(uniCourses)
+
+  # Scraping polytechnics
+  polytechnic, polyCourses = scrapSite("http://www.dges.gov.pt/guias/indest.asp?reg=12", True)
+  allUniversities.update(polytechnic)
+  allCourses.update(polyCourses)
+
+  return allUniversities, allCourses
+
+def scrapSite(url: str, isPolytechnic: bool):
+  page = requests.get(url)
   soup = BeautifulSoup(page.text, "html.parser")
 
   universities: UniversitiesCodes = {}
@@ -25,7 +41,8 @@ def getUniversitiesCodes ():
 
       universities[code] = {
         "name": name,
-        "courses": []
+        "courses": [],
+        "isPolytechnic": isPolytechnic
       }
 
     # Course
