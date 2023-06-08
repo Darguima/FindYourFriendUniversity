@@ -1,6 +1,7 @@
 defmodule FindYourFriendUniversity.Universities.University do
   use Ecto.Schema
   import Ecto.Changeset
+  alias FindYourFriendUniversity.Courses
   alias FindYourFriendUniversity.Courses.Course
 
   schema "universities" do
@@ -12,11 +13,20 @@ defmodule FindYourFriendUniversity.Universities.University do
     timestamps()
   end
 
+  defp put_assoc_courses(changeset, attrs) do
+    courses =
+      (Map.get(attrs, "courses_ids", []) ++ Map.get(attrs, :courses_ids, []))
+      |> Courses.get_courses()
+
+    Ecto.Changeset.put_assoc(changeset, :courses, courses)
+  end
+
   @doc false
   def changeset(university, attrs) do
     university
     |> cast(attrs, [:name, :code_id, :is_polytechnic])
     |> validate_length(:code_id, is: 4)
     |> validate_required([:name, :code_id, :is_polytechnic])
+    |> put_assoc_courses(attrs)
   end
 end

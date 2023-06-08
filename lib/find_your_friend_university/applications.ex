@@ -56,6 +56,19 @@ defmodule FindYourFriendUniversity.Applications do
   end
 
   @doc """
+  Creates multiple applications.
+
+  ## Examples
+
+      iex> create_applications([%{field: value}, %{field: value}, ...])
+      nil
+  """
+  def create_applications(applications \\ []) do
+    applications
+    |> Enum.each(&create_application(&1))
+  end
+
+  @doc """
   Updates a application.
 
   ## Examples

@@ -108,7 +108,8 @@ defmodule FindYourFriendUniversity.Universities do
       ** (Ecto.NoResultsError)
 
   """
-  def get_university_name!(id), do: Repo.one!(from(uni in University, where: uni.id == ^id, select: uni.name))
+  def get_university_name!(id),
+    do: Repo.one!(from(uni in University, where: uni.id == ^id, select: uni.name))
 
   @doc """
   Gets multiple universities.
@@ -126,13 +127,6 @@ defmodule FindYourFriendUniversity.Universities do
 
   def get_universities(uni_ids), do: Repo.all(from(uni in University, where: uni.id in ^uni_ids))
 
-  defp put_assoc_courses(changeset, attrs) do
-    courses = Map.get(attrs, "courses_ids", []) ++ Map.get(attrs, :courses_ids, [])
-    |> Courses.get_courses()
-
-    Ecto.Changeset.put_assoc(changeset, :courses, courses)
-  end
-
   @doc """
   Creates a university.
 
@@ -148,8 +142,20 @@ defmodule FindYourFriendUniversity.Universities do
   def create_university(attrs \\ %{}) do
     %University{}
     |> University.changeset(attrs)
-    |> put_assoc_courses(attrs)
     |> Repo.insert()
+  end
+
+  @doc """
+  Creates multiple universities.
+
+  ## Examples
+
+      iex> create_universities([%{field: value}, %{field: value}, ...])
+      nil
+  """
+  def create_universities(universities \\ []) do
+    universities
+    |> Enum.each(&create_university(&1))
   end
 
   @doc """
@@ -168,7 +174,6 @@ defmodule FindYourFriendUniversity.Universities do
     university
     |> Repo.preload(:courses)
     |> University.changeset(attrs)
-    |> put_assoc_courses(attrs)
     |> Repo.update()
   end
 

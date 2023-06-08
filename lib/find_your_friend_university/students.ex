@@ -51,7 +51,8 @@ defmodule FindYourFriendUniversity.Students do
       ** (Ecto.NoResultsError)
 
   """
-  def get_student_name!(id), do: Repo.one!(from(student in Student, where: student.id == ^id, select: student.name))
+  def get_student_name!(id),
+    do: Repo.one!(from(student in Student, where: student.id == ^id, select: student.name))
 
   @doc """
   Creates a student.
@@ -69,6 +70,19 @@ defmodule FindYourFriendUniversity.Students do
     %Student{}
     |> Student.changeset(attrs)
     |> Repo.insert()
+  end
+
+  @doc """
+  Creates multiple students.
+
+  ## Examples
+
+      iex> create_students([%{field: value}, %{field: value}, ...])
+      nil
+  """
+  def create_students(students \\ []) do
+    students
+    |> Enum.each(&create_student(&1))
   end
 
   @doc """
