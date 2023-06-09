@@ -17,6 +17,15 @@ Ready to run in production? Please [check our deployment guides](https://hexdocs
   * Forum: https://elixirforum.com/c/phoenix-forum
   * Source: https://github.com/phoenixframework/phoenix
 
+## Scraper
+
+To scrape the data from DGES run:
+
+```
+$ iex -S mix
+> clear; recompile; FindYourFriendUniversity.Scraper.run
+```
+
 ## Walkthrough
 
 This is my first big Phoenix project, so I decided let here what I did.
