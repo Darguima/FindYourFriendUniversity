@@ -12,15 +12,15 @@ defmodule FindYourFriendUniversity.Repo.Migrations.CreateApplications do
       add :placed, :boolean, default: false, null: false
       add :year, :integer
       add :phase, :integer
-      add :university, references(:universities, on_delete: :nothing)
-      add :course, references(:courses, on_delete: :nothing)
-      add :student, references(:students, on_delete: :nothing)
+      add :university_id, references(:universities, on_delete: :nothing, type: :string)
+      add :course_id, references(:courses, on_delete: :nothing, type: :string)
+      add :student_id, references(:students, on_delete: :nothing)
 
       timestamps()
     end
 
-    create index(:applications, [:university])
-    create index(:applications, [:course])
-    create index(:applications, [:student])
+    create index(:applications, [:university_id])
+    create index(:applications, [:course_id])
+    create index(:applications, [:student_id])
   end
 end

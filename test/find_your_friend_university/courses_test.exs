@@ -8,7 +8,7 @@ defmodule FindYourFriendUniversity.CoursesTest do
 
     import FindYourFriendUniversity.CoursesFixtures
 
-    @invalid_attrs %{name: nil, code_id: nil}
+    @invalid_attrs %{name: nil, id: nil}
 
     test "list_courses/0 returns all courses" do
       course = course_fixture()
@@ -21,11 +21,11 @@ defmodule FindYourFriendUniversity.CoursesTest do
     end
 
     test "create_course/1 with valid data creates a course" do
-      valid_attrs = %{name: "some name", code_id: 42}
+      valid_attrs = %{name: "some name", id: 42}
 
       assert {:ok, %Course{} = course} = Courses.create_course(valid_attrs)
       assert course.name == "some name"
-      assert course.code_id == 42
+      assert course.id == 42
     end
 
     test "create_course/1 with invalid data returns error changeset" do
@@ -34,11 +34,11 @@ defmodule FindYourFriendUniversity.CoursesTest do
 
     test "update_course/2 with valid data updates the course" do
       course = course_fixture()
-      update_attrs = %{name: "some updated name", code_id: 43}
+      update_attrs = %{name: "some updated name", id: 43}
 
       assert {:ok, %Course{} = course} = Courses.update_course(course, update_attrs)
       assert course.name == "some updated name"
-      assert course.code_id == 43
+      assert course.id == 43
     end
 
     test "update_course/2 with invalid data returns error changeset" do

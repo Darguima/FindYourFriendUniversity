@@ -4,11 +4,12 @@ defmodule FindYourFriendUniversity.Universities.University do
   alias FindYourFriendUniversity.Courses
   alias FindYourFriendUniversity.Courses.Course
 
+  @primary_key {:id, :string, []} # Some codes have the letter L
   schema "universities" do
     field :name, :string
-    field :code_id, :string # Just because in courses codes need be string
     field :is_polytechnic, :boolean, default: false
     many_to_many :courses, Course, join_through: "universities_courses", on_replace: :delete
+    has_many :applications, FindYourFriendUniversity.Applications.Application, on_delete: :delete_all
 
     timestamps()
   end
@@ -24,9 +25,9 @@ defmodule FindYourFriendUniversity.Universities.University do
   @doc false
   def changeset(university, attrs) do
     university
-    |> cast(attrs, [:name, :code_id, :is_polytechnic])
-    |> validate_length(:code_id, is: 4)
-    |> validate_required([:name, :code_id, :is_polytechnic])
+    |> cast(attrs, [:name, :id, :is_polytechnic])
+    |> validate_length(:id, is: 4)
+    |> validate_required([:name, :id, :is_polytechnic])
     |> put_assoc_courses(attrs)
   end
 end

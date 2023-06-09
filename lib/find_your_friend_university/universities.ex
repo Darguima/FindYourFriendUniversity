@@ -4,7 +4,6 @@ defmodule FindYourFriendUniversity.Universities do
   """
 
   import Ecto.Query, warn: false
-  alias FindYourFriendUniversity.Courses
   alias FindYourFriendUniversity.Repo
 
   alias FindYourFriendUniversity.Universities.University

@@ -3,7 +3,7 @@
     Oops, something went wrong! Please check the errors below.
   </.error>
   <.input field={f[:name]} type="text" label="Name" />
-  <.input field={f[:code_id]} type="number" label="Code" />
+  <.input field={f[:id]} type="number" label="Code" />
 
   <div class="form-group">
     <label class="block text-sm font-semibold leading-6 text-zinc-800" for="course_university_ids">Universities</label>
@@ -24,7 +24,7 @@
               class="flex items-center gap-4 text-sm leading-6"
               selected
             >
-              <%= uni.name %> <%= uni.code_id %>
+              <%= uni.name %> <%= uni.id %>
             </option>
 
           <% {:not_exists, uni} -> %>
@@ -32,7 +32,7 @@
               value={uni.id}
               class="flex items-center gap-4 text-sm leading-6"
             >
-              <%= uni.name %> <%= uni.code_id %>
+              <%= uni.name %> <%= uni.id %>
             </option>
 
         <% end %>

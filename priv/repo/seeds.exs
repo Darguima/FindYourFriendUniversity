@@ -16,36 +16,36 @@ alias FindYourFriendUniversity.Students
 alias FindYourFriendUniversity.Applications
 
 Courses.create_courses([
-  %{name: "Engenharia de Polímeros", code_id: "L229"},
-  %{name: "Engenharia Civil", code_id: "9089"},
-  %{name: "Engenharia Informática", code_id: "9119"},
-  %{name: "Engenharia Física", code_id: "9113"},
-  %{name: "Engenharia Têxtil", code_id: "9127"},
-  %{name: "Engenharia Aeronáutica", code_id: "9740"}
+  %{name: "Engenharia de Polímeros", id: "L229"},
+  %{name: "Engenharia Civil", id: "9089"},
+  %{name: "Engenharia Informática", id: "9119"},
+  %{name: "Engenharia Física", id: "9113"},
+  %{name: "Engenharia Têxtil", id: "9127"},
+  %{name: "Engenharia Aeronáutica", id: "9740"}
 ])
 
 Universities.create_universities([
-  %{name: "Universidade do Minho", code_id: "1000", courses_ids: [2, 3]},
-  %{name: "Universidade de Aveiro", code_id: "0300", courses_ids: [2, 3, 4, 5]},
+  %{name: "Universidade do Minho", id: "1000", courses_ids: ["9089", "9119"]},
+  %{name: "Universidade de Aveiro", id: "0300", courses_ids: ["9089", "9119", "9113", "9127"]},
   %{
     name: "Universidade do Porto - Faculdade de Engenharia",
-    code_id: "1105",
-    courses_ids: [2, 4, 5]
+    id: "1105",
+    courses_ids: ["9089", "9113", "9127"]
   },
   %{
     name: "ISCTE - Instituto Universitário de Lisboa",
-    code_id: "6800",
-    courses_ids: [1, 2, 3, 4, 5, 6]
+    id: "6800",
+    courses_ids: ["L229", "9089", "9119", "9113", "9127", "9740"]
   },
   %{
     name: "Instituto Politécnico de Viana do Castelo - Escola Superior de Tecnologia e Gestão",
-    code_id: "3163",
+    id: "3163",
     is_polytechnic: true,
-    courses_ids: [1, 2, 3, 6]
+    courses_ids: ["L229", "9089", "9119", "9740"]
   },
   %{
     name: "Instituto Politécnico de Viseu - Escola Superior de Tecnologia e Gestão de Viseu",
-    code_id: "3182",
+    id: "3182",
     is_polytechnic: true
   }
 ])
@@ -72,8 +72,8 @@ Applications.create_applications([
     placed: true,
     year: 2018,
     phase: 1,
-    university: 1,
-    course: 1,
+    university: "1000",
+    course: "L229",
     student: 1
   },
   %{
@@ -86,8 +86,8 @@ Applications.create_applications([
     placed: false,
     year: 2018,
     phase: 1,
-    university: 5,
-    course: 5,
+    university: "3163",
+    course: "9127",
     student: 1
   },
   %{
@@ -100,8 +100,8 @@ Applications.create_applications([
     placed: true,
     year: 2018,
     phase: 1,
-    university: 2,
-    course: 2,
+    university: "0300",
+    course: "9089",
     student: 1
   },
   %{
@@ -114,8 +114,8 @@ Applications.create_applications([
     placed: false,
     year: 2018,
     phase: 1,
-    university: 6,
-    course: 4,
+    university: "3182",
+    course: "9113",
     student: 2
   },
   %{
@@ -128,8 +128,8 @@ Applications.create_applications([
     placed: true,
     year: 2018,
     phase: 1,
-    university: 2,
-    course: 1,
+    university: "0300",
+    course: "L229",
     student: 2
   },
   %{
@@ -142,8 +142,8 @@ Applications.create_applications([
     placed: false,
     year: 2018,
     phase: 1,
-    university: 1,
-    course: 3,
+    university: "1000",
+    course: "9119",
     student: 3
   },
   %{
@@ -156,8 +156,8 @@ Applications.create_applications([
     placed: true,
     year: 2018,
     phase: 1,
-    university: 5,
-    course: 5,
+    university: "3163",
+    course: "9127",
     student: 5
   }
 ])

@@ -12,7 +12,7 @@ defmodule FindYourFriendUniversity.CoursesFixtures do
       attrs
       |> Enum.into(%{
         name: "some name",
-        code_id: 42
+        id: 42
       })
       |> FindYourFriendUniversity.Courses.create_course()
 

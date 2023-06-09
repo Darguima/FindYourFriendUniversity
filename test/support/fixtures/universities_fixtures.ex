@@ -12,7 +12,7 @@ defmodule FindYourFriendUniversity.UniversitiesFixtures do
       attrs
       |> Enum.into(%{
         name: "some name",
-        code_id: 42,
+        id: 42,
         is_polytechnic: true
       })
       |> FindYourFriendUniversity.Universities.create_university()

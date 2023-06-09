@@ -6,6 +6,7 @@ defmodule FindYourFriendUniversity.Students.Student do
     field :name, :string
     field :display_name, :string
     field :civil_id, :string
+    has_many :applications, FindYourFriendUniversity.Applications.Application, on_delete: :delete_all
 
     timestamps()
   end

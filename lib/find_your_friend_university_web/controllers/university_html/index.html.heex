@@ -9,7 +9,7 @@
 
 <.table id="universities" rows={@universities} row_click={&JS.navigate(~p"/universities/#{&1}")}>
   <:col :let={university} label="Name"><%= university.name %></:col>
-  <:col :let={university} label="Code"><%= university.code_id %></:col>
+  <:col :let={university} label="Code"><%= university.id %></:col>
   <:col :let={university} label="Is polytechnic"><%= university.is_polytechnic %></:col>
   <:action :let={university}>
     <div class="sr-only">

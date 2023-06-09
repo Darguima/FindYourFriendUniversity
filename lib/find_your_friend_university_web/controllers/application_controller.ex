@@ -4,6 +4,7 @@ defmodule FindYourFriendUniversityWeb.ApplicationController do
   alias FindYourFriendUniversity.Universities
   alias FindYourFriendUniversity.Courses
   alias FindYourFriendUniversity.Students
+  alias FindYourFriendUniversity.Repo
 
   alias FindYourFriendUniversity.Applications
   alias FindYourFriendUniversity.Applications.Application
@@ -17,10 +18,15 @@ defmodule FindYourFriendUniversityWeb.ApplicationController do
     changeset = Applications.change_application(%Application{})
 
     universities = Universities.list_universities()
-    courses = Universities.list_universities()
-    students = Universities.list_universities()
+    courses = Courses.list_courses()
+    students = Students.list_students()
 
-    render(conn, :new, changeset: changeset, universities: universities, courses: courses, students: students)
+    render(conn, :new,
+      changeset: changeset,
+      universities: universities,
+      courses: courses,
+      students: students
+    )
   end
 
   def create(conn, %{"application" => application_params}) do
@@ -36,25 +42,33 @@ defmodule FindYourFriendUniversityWeb.ApplicationController do
   end
 
   def show(conn, %{"id" => id}) do
-    application = Applications.get_application!(id)
-
     application =
-      application
-      |> Map.update!(:university, &Universities.get_university_name!(&1))
-      |> Map.update!(:course, &Courses.get_course_name!(&1))
-      |> Map.update!(:student, &Students.get_student_name!(&1))
+      Applications.get_application!(id)
+      |> Repo.preload(:university)
+      |> Repo.preload(:course)
+      |> Repo.preload(:student)
 
     render(conn, :show, application: application)
   end
 
   def edit(conn, %{"id" => id}) do
-    application = Applications.get_application!(id)
+    application =
+      Applications.get_application!(id)
+      |> Repo.preload(:university)
+      |> Repo.preload(:course)
+      |> Repo.preload(:student)
+
     changeset = Applications.change_application(application)
+
     render(conn, :edit, application: application, changeset: changeset)
   end
 
   def update(conn, %{"id" => id, "application" => application_params}) do
-    application = Applications.get_application!(id)
+    application =
+      Applications.get_application!(id)
+      |> Repo.preload(:university)
+      |> Repo.preload(:course)
+      |> Repo.preload(:student)
 
     case Applications.update_application(application, application_params) do
       {:ok, application} ->

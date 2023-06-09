@@ -10,7 +10,7 @@
 
 <.list>
   <:item title="Name"><%= @course.name %></:item>
-  <:item title="Code"><%= @course.code_id %></:item>
+  <:item title="Code"><%= @course.id %></:item>
 
   <:item title="Universities">
     <select
@@ -19,7 +19,7 @@
     >
       <%= for uni <- FindYourFriendUniversity.Universities.list_universities_from_course(@course.id) do %>
             <option value={uni.id} class="flex items-center gap-4 text-sm leading-6 text-zinc-700" disabled>
-              <%= uni.name %> <%= uni.code_id %>
+              <%= uni.name %> <%= uni.id %>
             </option>
       <% end %>
     </select>

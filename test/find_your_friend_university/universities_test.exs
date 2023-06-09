@@ -8,7 +8,7 @@ defmodule FindYourFriendUniversity.UniversitiesTest do
 
     import FindYourFriendUniversity.UniversitiesFixtures
 
-    @invalid_attrs %{name: nil, code_id: nil, is_polytechnic: nil}
+    @invalid_attrs %{name: nil, id: nil, is_polytechnic: nil}
 
     test "list_universities/0 returns all universities" do
       university = university_fixture()
@@ -21,11 +21,11 @@ defmodule FindYourFriendUniversity.UniversitiesTest do
     end
 
     test "create_university/1 with valid data creates a university" do
-      valid_attrs = %{name: "some name", code_id: 42, is_polytechnic: true}
+      valid_attrs = %{name: "some name", id: 42, is_polytechnic: true}
 
       assert {:ok, %University{} = university} = Universities.create_university(valid_attrs)
       assert university.name == "some name"
-      assert university.code_id == 42
+      assert university.id == 42
       assert university.is_polytechnic == true
     end
 
@@ -35,11 +35,11 @@ defmodule FindYourFriendUniversity.UniversitiesTest do
 
     test "update_university/2 with valid data updates the university" do
       university = university_fixture()
-      update_attrs = %{name: "some updated name", code_id: 43, is_polytechnic: false}
+      update_attrs = %{name: "some updated name", id: 43, is_polytechnic: false}
 
       assert {:ok, %University{} = university} = Universities.update_university(university, update_attrs)
       assert university.name == "some updated name"
-      assert university.code_id == 43
+      assert university.id == 43
       assert university.is_polytechnic == false
     end
 

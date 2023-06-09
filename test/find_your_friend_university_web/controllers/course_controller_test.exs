@@ -3,9 +3,9 @@ defmodule FindYourFriendUniversityWeb.CourseControllerTest do
 
   import FindYourFriendUniversity.CoursesFixtures
 
-  @create_attrs %{name: "some name", code_id: 42}
-  @update_attrs %{name: "some updated name", code_id: 43}
-  @invalid_attrs %{name: nil, code_id: nil}
+  @create_attrs %{name: "some name", id: 42}
+  @update_attrs %{name: "some updated name", id: 43}
+  @invalid_attrs %{name: nil, id: nil}
 
   describe "index" do
     test "lists all courses", %{conn: conn} do

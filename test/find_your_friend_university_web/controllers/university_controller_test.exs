@@ -3,9 +3,9 @@ defmodule FindYourFriendUniversityWeb.UniversityControllerTest do
 
   import FindYourFriendUniversity.UniversitiesFixtures
 
-  @create_attrs %{name: "some name", code_id: 42, is_polytechnic: true}
-  @update_attrs %{name: "some updated name", code_id: 43, is_polytechnic: false}
-  @invalid_attrs %{name: nil, code_id: nil, is_polytechnic: nil}
+  @create_attrs %{name: "some name", id: 42, is_polytechnic: true}
+  @update_attrs %{name: "some updated name", id: 43, is_polytechnic: false}
+  @invalid_attrs %{name: nil, id: nil, is_polytechnic: nil}
 
   describe "index" do
     test "lists all universities", %{conn: conn} do

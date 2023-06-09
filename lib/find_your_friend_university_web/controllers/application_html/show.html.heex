@@ -18,9 +18,9 @@
   <:item title="Placed"><%= @application.placed %></:item>
   <:item title="Year"><%= @application.year %></:item>
   <:item title="Phase"><%= @application.phase %></:item>
-  <:item title="University"><%= @application.university %></:item>
-  <:item title="Course"><%= @application.course %></:item>
-  <:item title="Student"><%= @application.student %></:item>
+  <:item title="University"><%= @application.university.name %></:item>
+  <:item title="Course"><%= @application.course.name %></:item>
+  <:item title="Student"><%= @application.student.name %></:item>
 </.list>
 
 <.back navigate={~p"/applications"}>Back to applications</.back>

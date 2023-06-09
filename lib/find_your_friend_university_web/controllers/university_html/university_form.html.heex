@@ -3,7 +3,7 @@
     Oops, something went wrong! Please check the errors below.
   </.error>
   <.input field={f[:name]} type="text" label="Name" />
-  <.input field={f[:code_id]} type="number" label="Code" />
+  <.input field={f[:id]} type="number" label="Code" />
   <.input field={f[:is_polytechnic]} type="checkbox" label="Is polytechnic" />
 
   <div class="form-group">
@@ -29,7 +29,7 @@
               class="flex items-center gap-4 text-sm leading-6"
               selected
             >
-              <%= course.name %> <%= course.code_id %>
+              <%= course.name %> <%= course.id %>
             </option>
 
           <% {:not_exists, course} -> %>
@@ -37,7 +37,7 @@
               value={course.id}
               class="flex items-center gap-4 text-sm leading-6"
             >
-              <%= course.name %> <%= course.code_id %>
+              <%= course.name %> <%= course.id %>
             </option>
 
         <% end %>
