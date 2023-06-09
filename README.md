@@ -22,8 +22,8 @@ Ready to run in production? Please [check our deployment guides](https://hexdocs
 To scrape the data from DGES run:
 
 ```
-$ iex -S mix
-> clear; recompile; FindYourFriendUniversity.Scraper.run
+$ pip install requests beautifulsoup4
+$ python scraper.py
 ```
 
 ## Walkthrough
