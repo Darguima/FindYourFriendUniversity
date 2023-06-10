@@ -15,149 +15,92 @@ alias FindYourFriendUniversity.Universities
 alias FindYourFriendUniversity.Students
 alias FindYourFriendUniversity.Applications
 
-Courses.create_courses([
-  %{name: "Engenharia de Polímeros", id: "L229"},
-  %{name: "Engenharia Civil", id: "9089"},
-  %{name: "Engenharia Informática", id: "9119"},
-  %{name: "Engenharia Física", id: "9113"},
-  %{name: "Engenharia Têxtil", id: "9127"},
-  %{name: "Engenharia Aeronáutica", id: "9740"}
-])
+defmodule Seeds do
+  def load_json_file_until_success([]), do: IO.puts("\nNo more files available to parse seeds.\n")
 
-Universities.create_universities([
-  %{name: "Universidade do Minho", id: "1000", courses_ids: ["9089", "9119"]},
-  %{name: "Universidade de Aveiro", id: "0300", courses_ids: ["9089", "9119", "9113", "9127"]},
-  %{
-    name: "Universidade do Porto - Faculdade de Engenharia",
-    id: "1105",
-    courses_ids: ["9089", "9113", "9127"]
-  },
-  %{
-    name: "ISCTE - Instituto Universitário de Lisboa",
-    id: "6800",
-    courses_ids: ["L229", "9089", "9119", "9113", "9127", "9740"]
-  },
-  %{
-    name: "Instituto Politécnico de Viana do Castelo - Escola Superior de Tecnologia e Gestão",
-    id: "3163",
-    is_polytechnic: true,
-    courses_ids: ["L229", "9089", "9119", "9740"]
-  },
-  %{
-    name: "Instituto Politécnico de Viseu - Escola Superior de Tecnologia e Gestão de Viseu",
-    id: "3182",
-    is_polytechnic: true
-  }
-])
+  def load_json_file_until_success([json_file_path | others_json_file_paths]) do
+    IO.puts("\nTrying parse seeds from '#{json_file_path}'")
 
-Students.create_students([
-  %{name: "Mike Obama", display_name: "dariojosesilvaguimaraes", civil_id: "123xxx45"},
-  %{name: "Maria João Oliveira", display_name: "mariajoaooliveira", civil_id: "567xxx89"},
-  %{name: "João Pedro Santos", display_name: "joaopedrosantos", civil_id: "101xxx11"},
-  %{name: "Ana Luísa Sousa", display_name: "analuisasousa", civil_id: "234xxx56"},
-  %{name: "Pedro Miguel Almeida", display_name: "pedromiguelalmeida", civil_id: "789xxx01"},
-  %{name: "Sofia Isabel Pereira", display_name: "sofiaisabelpereira", civil_id: "345xxx67"},
-  %{name: "Miguel Ângelo Carvalho", display_name: "miguelangelocarvalho", civil_id: "890xxx12"},
-  %{name: "Carolina Maria Silva", display_name: "carolinamariasilva", civil_id: "456xxx78"}
-])
+    case File.read(json_file_path) do
+      {:ok, file_content} ->
+        case Jason.decode(file_content) do
+          {:ok, json_data} ->
+            IO.puts("Success. Seeds parsed.\n")
+            load_json(json_data)
 
-Applications.create_applications([
-  %{
-    course_order_num: 1,
-    candidature_grade: 14,
-    exams_grades: 15,
-    _12grade: 16,
-    _11grade: 14,
-    student_option_number: 1,
-    placed: true,
-    year: 2018,
-    phase: 1,
-    university: "1000",
-    course: "L229",
-    student: 1
-  },
-  %{
-    course_order_num: 2,
-    candidature_grade: 13,
-    exams_grades: 14,
-    _12grade: 15,
-    _11grade: 14,
-    student_option_number: 2,
-    placed: false,
-    year: 2018,
-    phase: 1,
-    university: "3163",
-    course: "9127",
-    student: 1
-  },
-  %{
-    course_order_num: 3,
-    candidature_grade: 15,
-    exams_grades: 14,
-    _12grade: 15,
-    _11grade: 14,
-    student_option_number: 3,
-    placed: true,
-    year: 2018,
-    phase: 1,
-    university: "0300",
-    course: "9089",
-    student: 1
-  },
-  %{
-    course_order_num: 4,
-    candidature_grade: 14,
-    exams_grades: 14,
-    _12grade: 16,
-    _11grade: 13,
-    student_option_number: 1,
-    placed: false,
-    year: 2018,
-    phase: 1,
-    university: "3182",
-    course: "9113",
-    student: 2
-  },
-  %{
-    course_order_num: 5,
-    candidature_grade: 16,
-    exams_grades: 14,
-    _12grade: 15,
-    _11grade: 14,
-    student_option_number: 2,
-    placed: true,
-    year: 2018,
-    phase: 1,
-    university: "0300",
-    course: "L229",
-    student: 2
-  },
-  %{
-    course_order_num: 6,
-    candidature_grade: 14,
-    exams_grades: 15,
-    _12grade: 15,
-    _11grade: 14,
-    student_option_number: 1,
-    placed: false,
-    year: 2018,
-    phase: 1,
-    university: "1000",
-    course: "9119",
-    student: 3
-  },
-  %{
-    course_order_num: 7,
-    candidature_grade: 15,
-    exams_grades: 14,
-    _12grade: 15,
-    _11grade: 14,
-    student_option_number: 1,
-    placed: true,
-    year: 2018,
-    phase: 1,
-    university: "3163",
-    course: "9127",
-    student: 5
-  }
-])
+          {:error, reason} ->
+            IO.puts("Failed to parse JSON: #{reason}.")
+            load_json_file_until_success(others_json_file_paths)
+        end
+
+      {:error, reason} ->
+        IO.puts("Failed to read file: #{reason}.")
+        load_json_file_until_success(others_json_file_paths)
+    end
+  end
+
+  defp load_json(seeds) do
+    courses =
+      seeds
+      |> Enum.reduce([], fn uni, courses_list -> courses_list ++ uni["courses"] end)
+      |> Enum.uniq_by(fn course -> course |> Map.get("id") end)
+
+    Courses.create_courses(courses)
+
+    IO.inspect("Storing #{length(courses)} Courses from seeds")
+
+    universities =
+      seeds
+      |> Enum.map(fn uni ->
+        uni
+        |> Map.put(
+          "courses_ids",
+          uni["courses"] |> Enum.map(fn course -> course |> Map.get("id") end)
+        )
+        |> Map.delete("courses")
+      end)
+
+    Universities.create_universities(universities)
+
+    IO.inspect("Storing #{length(universities)} Universities from seeds")
+
+    students =
+      seeds
+      |> Enum.map(fn uni ->
+        uni["courses"]
+        |> Enum.map(fn course ->
+          course["applications"]
+          |> Map.to_list()
+          |> Enum.map(fn {_, phases} ->
+            phases
+            |> Map.to_list()
+            |> Enum.map(fn {_, applications} -> applications end)
+            |> Enum.concat()
+          end)
+          |> Enum.concat()
+        end)
+        |> Enum.concat()
+      end)
+      |> Enum.concat()
+      |> Enum.map(fn application ->
+        display_name =
+          application
+          |> Map.get("name")
+          |> String.downcase()
+          |> String.replace(~r/\s+/, "")
+          |> String.replace(~r/[^\p{L}]/u, "")
+
+        application
+        |> Map.put_new("display_name", display_name)
+      end)
+      |> Enum.uniq_by(fn student ->
+        Map.get(student, "civil_id") <> Map.get(student, "display_name")
+      end)
+
+    Students.create_students(students)
+
+    IO.inspect("Storing #{length(students)} Students from seeds")
+  end
+end
+
+Seeds.load_json_file_until_success(["./applications.json", "./priv/repo/seeds.json"])

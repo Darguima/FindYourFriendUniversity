@@ -1,0 +1,2099 @@
+[
+    {
+        "name": "ISCTE - Instituto Universitário de Lisboa",
+        "id": "6800",
+        "is_polytechnic": false,
+        "courses": [
+            {
+                "id": "9448",
+                "name": "Antropologia",
+                "applications": {
+                    "2018": {
+                        "1": [
+                            {
+                                "order_number": "",
+                                "civil_id": "123(...)78",
+                                "name": "John Alexander Smith",
+                                "candidature_grade": "16.8",
+                                "option_number": "",
+                                "exams_grades": "15.2",
+                                "_12_grade": "17.1",
+                                "_11_grade": "14.3"
+                            },
+                            {
+                                "order_number": "",
+                                "civil_id": "987(...)02",
+                                "name": "Emma Grace Johnson",
+                                "candidature_grade": "14.7",
+                                "option_number": "",
+                                "exams_grades": "17.9",
+                                "_12_grade": "15.6",
+                                "_11_grade": "13.5"
+                            }
+                        ],
+                        "2": [
+                            {
+                                "order_number": "",
+                                "civil_id": "567(...)94",
+                                "name": "Michael David Rodriguez",
+                                "candidature_grade": "18.2",
+                                "option_number": "",
+                                "exams_grades": "16.3",
+                                "_12_grade": "14.9",
+                                "_11_grade": "17.8"
+                            },
+                            {
+                                "order_number": "",
+                                "civil_id": "432(...)16",
+                                "name": "Emily Rose Anderson",
+                                "candidature_grade": "15.6",
+                                "option_number": "",
+                                "exams_grades": "14.1",
+                                "_12_grade": "13.7",
+                                "_11_grade": "15.9"
+                            }
+                        ],
+                        "3": [
+                            {
+                                "order_number": "",
+                                "civil_id": "789(...)35",
+                                "name": "Daniel Christopher Lee",
+                                "candidature_grade": "17.4",
+                                "option_number": "",
+                                "exams_grades": "18.3",
+                                "_12_grade": "14.8",
+                                "_11_grade": "16.2"
+                            },
+                            {
+                                "order_number": "",
+                                "civil_id": "246(...)70",
+                                "name": "Olivia Sophia Martinez",
+                                "candidature_grade": "16.2",
+                                "option_number": "",
+                                "exams_grades": "15.5",
+                                "_12_grade": "17.9",
+                                "_11_grade": "14.6"
+                            }
+                        ]
+                    },
+                    "2019": {
+                        "1": [
+                            {
+                                "order_number": "",
+                                "civil_id": "123(...)78",
+                                "name": "John Alexander Smith",
+                                "candidature_grade": "16.8",
+                                "option_number": "",
+                                "exams_grades": "15.2",
+                                "_12_grade": "17.1",
+                                "_11_grade": "14.3"
+                            },
+                            {
+                                "order_number": "",
+                                "civil_id": "987(...)02",
+                                "name": "Emma Grace Johnson",
+                                "candidature_grade": "14.7",
+                                "option_number": "",
+                                "exams_grades": "17.9",
+                                "_12_grade": "15.6",
+                                "_11_grade": "13.5"
+                            }
+                        ],
+                        "2": [
+                            {
+                                "order_number": "",
+                                "civil_id": "567(...)94",
+                                "name": "Michael David Rodriguez",
+                                "candidature_grade": "18.2",
+                                "option_number": "",
+                                "exams_grades": "16.3",
+                                "_12_grade": "14.9",
+                                "_11_grade": "17.8"
+                            },
+                            {
+                                "order_number": "",
+                                "civil_id": "432(...)16",
+                                "name": "Emily Rose Anderson",
+                                "candidature_grade": "15.6",
+                                "option_number": "",
+                                "exams_grades": "14.1",
+                                "_12_grade": "13.7",
+                                "_11_grade": "15.9"
+                            }
+                        ],
+                        "3": [
+                            {
+                                "order_number": "",
+                                "civil_id": "789(...)35",
+                                "name": "Daniel Christopher Lee",
+                                "candidature_grade": "17.4",
+                                "option_number": "",
+                                "exams_grades": "18.3",
+                                "_12_grade": "14.8",
+                                "_11_grade": "16.2"
+                            },
+                            {
+                                "order_number": "",
+                                "civil_id": "246(...)70",
+                                "name": "Olivia Sophia Martinez",
+                                "candidature_grade": "16.2",
+                                "option_number": "",
+                                "exams_grades": "15.5",
+                                "_12_grade": "17.9",
+                                "_11_grade": "14.6"
+                            }
+                        ]
+                    },
+                    "2020": {
+                        "1": [
+                            {
+                                "order_number": "",
+                                "civil_id": "123(...)78",
+                                "name": "John Alexander Smith",
+                                "candidature_grade": "16.8",
+                                "option_number": "",
+                                "exams_grades": "15.2",
+                                "_12_grade": "17.1",
+                                "_11_grade": "14.3"
+                            },
+                            {
+                                "order_number": "",
+                                "civil_id": "987(...)02",
+                                "name": "Emma Grace Johnson",
+                                "candidature_grade": "14.7",
+                                "option_number": "",
+                                "exams_grades": "17.9",
+                                "_12_grade": "15.6",
+                                "_11_grade": "13.5"
+                            }
+                        ],
+                        "2": [
+                            {
+                                "order_number": "",
+                                "civil_id": "567(...)94",
+                                "name": "Michael David Rodriguez",
+                                "candidature_grade": "18.2",
+                                "option_number": "",
+                                "exams_grades": "16.3",
+                                "_12_grade": "14.9",
+                                "_11_grade": "17.8"
+                            },
+                            {
+                                "order_number": "",
+                                "civil_id": "432(...)16",
+                                "name": "Emily Rose Anderson",
+                                "candidature_grade": "15.6",
+                                "option_number": "",
+                                "exams_grades": "14.1",
+                                "_12_grade": "13.7",
+                                "_11_grade": "15.9"
+                            }
+                        ],
+                        "3": [
+                            {
+                                "order_number": "",
+                                "civil_id": "789(...)35",
+                                "name": "Daniel Christopher Lee",
+                                "candidature_grade": "17.4",
+                                "option_number": "",
+                                "exams_grades": "18.3",
+                                "_12_grade": "14.8",
+                                "_11_grade": "16.2"
+                            },
+                            {
+                                "order_number": "",
+                                "civil_id": "246(...)70",
+                                "name": "Olivia Sophia Martinez",
+                                "candidature_grade": "16.2",
+                                "option_number": "",
+                                "exams_grades": "15.5",
+                                "_12_grade": "17.9",
+                                "_11_grade": "14.6"
+                            }
+                        ]
+                    },
+                    "2021": {
+                        "1": [
+                            {
+                                "order_number": "",
+                                "civil_id": "123(...)78",
+                                "name": "John Alexander Smith",
+                                "candidature_grade": "16.8",
+                                "option_number": "",
+                                "exams_grades": "15.2",
+                                "_12_grade": "17.1",
+                                "_11_grade": "14.3"
+                            },
+                            {
+                                "order_number": "",
+                                "civil_id": "987(...)02",
+                                "name": "Emma Grace Johnson",
+                                "candidature_grade": "14.7",
+                                "option_number": "",
+                                "exams_grades": "17.9",
+                                "_12_grade": "15.6",
+                                "_11_grade": "13.5"
+                            }
+                        ],
+                        "2": [
+                            {
+                                "order_number": "",
+                                "civil_id": "567(...)94",
+                                "name": "Michael David Rodriguez",
+                                "candidature_grade": "18.2",
+                                "option_number": "",
+                                "exams_grades": "16.3",
+                                "_12_grade": "14.9",
+                                "_11_grade": "17.8"
+                            },
+                            {
+                                "order_number": "",
+                                "civil_id": "432(...)16",
+                                "name": "Emily Rose Anderson",
+                                "candidature_grade": "15.6",
+                                "option_number": "",
+                                "exams_grades": "14.1",
+                                "_12_grade": "13.7",
+                                "_11_grade": "15.9"
+                            }
+                        ],
+                        "3": [
+                            {
+                                "order_number": "",
+                                "civil_id": "789(...)35",
+                                "name": "Daniel Christopher Lee",
+                                "candidature_grade": "17.4",
+                                "option_number": "",
+                                "exams_grades": "18.3",
+                                "_12_grade": "14.8",
+                                "_11_grade": "16.2"
+                            },
+                            {
+                                "order_number": "",
+                                "civil_id": "246(...)70",
+                                "name": "Olivia Sophia Martinez",
+                                "candidature_grade": "16.2",
+                                "option_number": "",
+                                "exams_grades": "15.5",
+                                "_12_grade": "17.9",
+                                "_11_grade": "14.6"
+                            }
+                        ]
+                    },
+                    "2022": {
+                        "1": [
+                            {
+                                "order_number": "",
+                                "civil_id": "123(...)78",
+                                "name": "John Alexander Smith",
+                                "candidature_grade": "16.8",
+                                "option_number": "",
+                                "exams_grades": "15.2",
+                                "_12_grade": "17.1",
+                                "_11_grade": "14.3"
+                            },
+                            {
+                                "order_number": "",
+                                "civil_id": "987(...)02",
+                                "name": "Emma Grace Johnson",
+                                "candidature_grade": "14.7",
+                                "option_number": "",
+                                "exams_grades": "17.9",
+                                "_12_grade": "15.6",
+                                "_11_grade": "13.5"
+                            }
+                        ],
+                        "2": [
+                            {
+                                "order_number": "",
+                                "civil_id": "567(...)94",
+                                "name": "Michael David Rodriguez",
+                                "candidature_grade": "18.2",
+                                "option_number": "",
+                                "exams_grades": "16.3",
+                                "_12_grade": "14.9",
+                                "_11_grade": "17.8"
+                            },
+                            {
+                                "order_number": "",
+                                "civil_id": "432(...)16",
+                                "name": "Emily Rose Anderson",
+                                "candidature_grade": "15.6",
+                                "option_number": "",
+                                "exams_grades": "14.1",
+                                "_12_grade": "13.7",
+                                "_11_grade": "15.9"
+                            }
+                        ],
+                        "3": [
+                            {
+                                "order_number": "",
+                                "civil_id": "789(...)35",
+                                "name": "Daniel Christopher Lee",
+                                "candidature_grade": "17.4",
+                                "option_number": "",
+                                "exams_grades": "18.3",
+                                "_12_grade": "14.8",
+                                "_11_grade": "16.2"
+                            },
+                            {
+                                "order_number": "",
+                                "civil_id": "246(...)70",
+                                "name": "Olivia Sophia Martinez",
+                                "candidature_grade": "16.2",
+                                "option_number": "",
+                                "exams_grades": "15.5",
+                                "_12_grade": "17.9",
+                                "_11_grade": "14.6"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "id": "9257",
+                "name": "Arquitetura",
+                "applications": {
+                    "2018": {
+                        "1": [
+                            {
+                                "order_number": "",
+                                "civil_id": "987(...)02",
+                                "name": "Emma Grace Johnson",
+                                "candidature_grade": "14.7",
+                                "option_number": "",
+                                "exams_grades": "17.9",
+                                "_12_grade": "15.6",
+                                "_11_grade": "13.5"
+                            },
+                            {
+                                "order_number": "",
+                                "civil_id": "567(...)94",
+                                "name": "Michael David Rodriguez",
+                                "candidature_grade": "18.2",
+                                "option_number": "",
+                                "exams_grades": "16.3",
+                                "_12_grade": "14.9",
+                                "_11_grade": "17.8"
+                            }
+                        ],
+                        "2": [
+                            {
+                                "order_number": "",
+                                "civil_id": "432(...)16",
+                                "name": "Emily Rose Anderson",
+                                "candidature_grade": "15.6",
+                                "option_number": "",
+                                "exams_grades": "14.1",
+                                "_12_grade": "13.7",
+                                "_11_grade": "15.9"
+                            },
+                            {
+                                "order_number": "",
+                                "civil_id": "789(...)35",
+                                "name": "Daniel Christopher Lee",
+                                "candidature_grade": "17.4",
+                                "option_number": "",
+                                "exams_grades": "18.3",
+                                "_12_grade": "14.8",
+                                "_11_grade": "16.2"
+                            }
+                        ],
+                        "3": [
+                            {
+                                "order_number": "",
+                                "civil_id": "246(...)70",
+                                "name": "Olivia Sophia Martinez",
+                                "candidature_grade": "16.2",
+                                "option_number": "",
+                                "exams_grades": "15.5",
+                                "_12_grade": "17.9",
+                                "_11_grade": "14.6"
+                            },
+                            {
+                                "order_number": "",
+                                "civil_id": "123(...)78",
+                                "name": "John Alexander Smith",
+                                "candidature_grade": "16.8",
+                                "option_number": "",
+                                "exams_grades": "15.2",
+                                "_12_grade": "17.1",
+                                "_11_grade": "14.3"
+                            }
+                        ]
+                    },
+                    "2019": {
+                        "1": [
+                            {
+                                "order_number": "",
+                                "civil_id": "987(...)02",
+                                "name": "Emma Grace Johnson",
+                                "candidature_grade": "14.7",
+                                "option_number": "",
+                                "exams_grades": "17.9",
+                                "_12_grade": "15.6",
+                                "_11_grade": "13.5"
+                            },
+                            {
+                                "order_number": "",
+                                "civil_id": "567(...)94",
+                                "name": "Michael David Rodriguez",
+                                "candidature_grade": "18.2",
+                                "option_number": "",
+                                "exams_grades": "16.3",
+                                "_12_grade": "14.9",
+                                "_11_grade": "17.8"
+                            }
+                        ],
+                        "2": [
+                            {
+                                "order_number": "",
+                                "civil_id": "432(...)16",
+                                "name": "Emily Rose Anderson",
+                                "candidature_grade": "15.6",
+                                "option_number": "",
+                                "exams_grades": "14.1",
+                                "_12_grade": "13.7",
+                                "_11_grade": "15.9"
+                            },
+                            {
+                                "order_number": "",
+                                "civil_id": "789(...)35",
+                                "name": "Daniel Christopher Lee",
+                                "candidature_grade": "17.4",
+                                "option_number": "",
+                                "exams_grades": "18.3",
+                                "_12_grade": "14.8",
+                                "_11_grade": "16.2"
+                            }
+                        ],
+                        "3": [
+                            {
+                                "order_number": "",
+                                "civil_id": "246(...)70",
+                                "name": "Olivia Sophia Martinez",
+                                "candidature_grade": "16.2",
+                                "option_number": "",
+                                "exams_grades": "15.5",
+                                "_12_grade": "17.9",
+                                "_11_grade": "14.6"
+                            },
+                            {
+                                "order_number": "",
+                                "civil_id": "123(...)78",
+                                "name": "John Alexander Smith",
+                                "candidature_grade": "16.8",
+                                "option_number": "",
+                                "exams_grades": "15.2",
+                                "_12_grade": "17.1",
+                                "_11_grade": "14.3"
+                            }
+                        ]
+                    },
+                    "2020": {
+                        "1": [
+                            {
+                                "order_number": "",
+                                "civil_id": "987(...)02",
+                                "name": "Emma Grace Johnson",
+                                "candidature_grade": "14.7",
+                                "option_number": "",
+                                "exams_grades": "17.9",
+                                "_12_grade": "15.6",
+                                "_11_grade": "13.5"
+                            },
+                            {
+                                "order_number": "",
+                                "civil_id": "567(...)94",
+                                "name": "Michael David Rodriguez",
+                                "candidature_grade": "18.2",
+                                "option_number": "",
+                                "exams_grades": "16.3",
+                                "_12_grade": "14.9",
+                                "_11_grade": "17.8"
+                            }
+                        ],
+                        "2": [
+                            {
+                                "order_number": "",
+                                "civil_id": "432(...)16",
+                                "name": "Emily Rose Anderson",
+                                "candidature_grade": "15.6",
+                                "option_number": "",
+                                "exams_grades": "14.1",
+                                "_12_grade": "13.7",
+                                "_11_grade": "15.9"
+                            },
+                            {
+                                "order_number": "",
+                                "civil_id": "789(...)35",
+                                "name": "Daniel Christopher Lee",
+                                "candidature_grade": "17.4",
+                                "option_number": "",
+                                "exams_grades": "18.3",
+                                "_12_grade": "14.8",
+                                "_11_grade": "16.2"
+                            }
+                        ],
+                        "3": [
+                            {
+                                "order_number": "",
+                                "civil_id": "246(...)70",
+                                "name": "Olivia Sophia Martinez",
+                                "candidature_grade": "16.2",
+                                "option_number": "",
+                                "exams_grades": "15.5",
+                                "_12_grade": "17.9",
+                                "_11_grade": "14.6"
+                            },
+                            {
+                                "order_number": "",
+                                "civil_id": "123(...)78",
+                                "name": "John Alexander Smith",
+                                "candidature_grade": "16.8",
+                                "option_number": "",
+                                "exams_grades": "15.2",
+                                "_12_grade": "17.1",
+                                "_11_grade": "14.3"
+                            }
+                        ]
+                    },
+                    "2021": {
+                        "1": [
+                            {
+                                "order_number": "",
+                                "civil_id": "987(...)02",
+                                "name": "Emma Grace Johnson",
+                                "candidature_grade": "14.7",
+                                "option_number": "",
+                                "exams_grades": "17.9",
+                                "_12_grade": "15.6",
+                                "_11_grade": "13.5"
+                            },
+                            {
+                                "order_number": "",
+                                "civil_id": "567(...)94",
+                                "name": "Michael David Rodriguez",
+                                "candidature_grade": "18.2",
+                                "option_number": "",
+                                "exams_grades": "16.3",
+                                "_12_grade": "14.9",
+                                "_11_grade": "17.8"
+                            }
+                        ],
+                        "2": [
+                            {
+                                "order_number": "",
+                                "civil_id": "432(...)16",
+                                "name": "Emily Rose Anderson",
+                                "candidature_grade": "15.6",
+                                "option_number": "",
+                                "exams_grades": "14.1",
+                                "_12_grade": "13.7",
+                                "_11_grade": "15.9"
+                            },
+                            {
+                                "order_number": "",
+                                "civil_id": "789(...)35",
+                                "name": "Daniel Christopher Lee",
+                                "candidature_grade": "17.4",
+                                "option_number": "",
+                                "exams_grades": "18.3",
+                                "_12_grade": "14.8",
+                                "_11_grade": "16.2"
+                            }
+                        ],
+                        "3": [
+                            {
+                                "order_number": "",
+                                "civil_id": "246(...)70",
+                                "name": "Olivia Sophia Martinez",
+                                "candidature_grade": "16.2",
+                                "option_number": "",
+                                "exams_grades": "15.5",
+                                "_12_grade": "17.9",
+                                "_11_grade": "14.6"
+                            },
+                            {
+                                "order_number": "",
+                                "civil_id": "123(...)78",
+                                "name": "John Alexander Smith",
+                                "candidature_grade": "16.8",
+                                "option_number": "",
+                                "exams_grades": "15.2",
+                                "_12_grade": "17.1",
+                                "_11_grade": "14.3"
+                            }
+                        ]
+                    },
+                    "2022": {
+                        "1": [
+                            {
+                                "order_number": "",
+                                "civil_id": "987(...)02",
+                                "name": "Emma Grace Johnson",
+                                "candidature_grade": "14.7",
+                                "option_number": "",
+                                "exams_grades": "17.9",
+                                "_12_grade": "15.6",
+                                "_11_grade": "13.5"
+                            },
+                            {
+                                "order_number": "",
+                                "civil_id": "567(...)94",
+                                "name": "Michael David Rodriguez",
+                                "candidature_grade": "18.2",
+                                "option_number": "",
+                                "exams_grades": "16.3",
+                                "_12_grade": "14.9",
+                                "_11_grade": "17.8"
+                            }
+                        ],
+                        "2": [
+                            {
+                                "order_number": "",
+                                "civil_id": "432(...)16",
+                                "name": "Emily Rose Anderson",
+                                "candidature_grade": "15.6",
+                                "option_number": "",
+                                "exams_grades": "14.1",
+                                "_12_grade": "13.7",
+                                "_11_grade": "15.9"
+                            },
+                            {
+                                "order_number": "",
+                                "civil_id": "789(...)35",
+                                "name": "Daniel Christopher Lee",
+                                "candidature_grade": "17.4",
+                                "option_number": "",
+                                "exams_grades": "18.3",
+                                "_12_grade": "14.8",
+                                "_11_grade": "16.2"
+                            }
+                        ],
+                        "3": [
+                            {
+                                "order_number": "",
+                                "civil_id": "246(...)70",
+                                "name": "Olivia Sophia Martinez",
+                                "candidature_grade": "16.2",
+                                "option_number": "",
+                                "exams_grades": "15.5",
+                                "_12_grade": "17.9",
+                                "_11_grade": "14.6"
+                            },
+                            {
+                                "order_number": "",
+                                "civil_id": "123(...)78",
+                                "name": "John Alexander Smith",
+                                "candidature_grade": "16.8",
+                                "option_number": "",
+                                "exams_grades": "15.2",
+                                "_12_grade": "17.1",
+                                "_11_grade": "14.3"
+                            }
+                        ]
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "name": "Universidade da Beira Interior",
+        "id": "0400",
+        "is_polytechnic": false,
+        "courses": [
+            {
+                "id": "9257",
+                "name": "Arquitetura",
+                "applications": {
+                    "2018": {
+                        "1": [
+                            {
+                                "order_number": "",
+                                "civil_id": "987(...)02",
+                                "name": "Emma Grace Johnson",
+                                "candidature_grade": "14.7",
+                                "option_number": "",
+                                "exams_grades": "17.9",
+                                "_12_grade": "15.6",
+                                "_11_grade": "13.5"
+                            },
+                            {
+                                "order_number": "",
+                                "civil_id": "567(...)94",
+                                "name": "Michael David Rodriguez",
+                                "candidature_grade": "18.2",
+                                "option_number": "",
+                                "exams_grades": "16.3",
+                                "_12_grade": "14.9",
+                                "_11_grade": "17.8"
+                            }
+                        ],
+                        "2": [
+                            {
+                                "order_number": "",
+                                "civil_id": "432(...)16",
+                                "name": "Emily Rose Anderson",
+                                "candidature_grade": "15.6",
+                                "option_number": "",
+                                "exams_grades": "14.1",
+                                "_12_grade": "13.7",
+                                "_11_grade": "15.9"
+                            },
+                            {
+                                "order_number": "",
+                                "civil_id": "789(...)35",
+                                "name": "Daniel Christopher Lee",
+                                "candidature_grade": "17.4",
+                                "option_number": "",
+                                "exams_grades": "18.3",
+                                "_12_grade": "14.8",
+                                "_11_grade": "16.2"
+                            }
+                        ],
+                        "3": [
+                            {
+                                "order_number": "",
+                                "civil_id": "246(...)70",
+                                "name": "Olivia Sophia Martinez",
+                                "candidature_grade": "16.2",
+                                "option_number": "",
+                                "exams_grades": "15.5",
+                                "_12_grade": "17.9",
+                                "_11_grade": "14.6"
+                            },
+                            {
+                                "order_number": "",
+                                "civil_id": "123(...)78",
+                                "name": "John Alexander Smith",
+                                "candidature_grade": "16.8",
+                                "option_number": "",
+                                "exams_grades": "15.2",
+                                "_12_grade": "17.1",
+                                "_11_grade": "14.3"
+                            }
+                        ]
+                    },
+                    "2019": {
+                        "1": [
+                            {
+                                "order_number": "",
+                                "civil_id": "987(...)02",
+                                "name": "Emma Grace Johnson",
+                                "candidature_grade": "14.7",
+                                "option_number": "",
+                                "exams_grades": "17.9",
+                                "_12_grade": "15.6",
+                                "_11_grade": "13.5"
+                            },
+                            {
+                                "order_number": "",
+                                "civil_id": "567(...)94",
+                                "name": "Michael David Rodriguez",
+                                "candidature_grade": "18.2",
+                                "option_number": "",
+                                "exams_grades": "16.3",
+                                "_12_grade": "14.9",
+                                "_11_grade": "17.8"
+                            }
+                        ],
+                        "2": [
+                            {
+                                "order_number": "",
+                                "civil_id": "432(...)16",
+                                "name": "Emily Rose Anderson",
+                                "candidature_grade": "15.6",
+                                "option_number": "",
+                                "exams_grades": "14.1",
+                                "_12_grade": "13.7",
+                                "_11_grade": "15.9"
+                            },
+                            {
+                                "order_number": "",
+                                "civil_id": "789(...)35",
+                                "name": "Daniel Christopher Lee",
+                                "candidature_grade": "17.4",
+                                "option_number": "",
+                                "exams_grades": "18.3",
+                                "_12_grade": "14.8",
+                                "_11_grade": "16.2"
+                            }
+                        ],
+                        "3": [
+                            {
+                                "order_number": "",
+                                "civil_id": "246(...)70",
+                                "name": "Olivia Sophia Martinez",
+                                "candidature_grade": "16.2",
+                                "option_number": "",
+                                "exams_grades": "15.5",
+                                "_12_grade": "17.9",
+                                "_11_grade": "14.6"
+                            },
+                            {
+                                "order_number": "",
+                                "civil_id": "123(...)78",
+                                "name": "John Alexander Smith",
+                                "candidature_grade": "16.8",
+                                "option_number": "",
+                                "exams_grades": "15.2",
+                                "_12_grade": "17.1",
+                                "_11_grade": "14.3"
+                            }
+                        ]
+                    },
+                    "2020": {
+                        "1": [
+                            {
+                                "order_number": "",
+                                "civil_id": "987(...)02",
+                                "name": "Emma Grace Johnson",
+                                "candidature_grade": "14.7",
+                                "option_number": "",
+                                "exams_grades": "17.9",
+                                "_12_grade": "15.6",
+                                "_11_grade": "13.5"
+                            },
+                            {
+                                "order_number": "",
+                                "civil_id": "567(...)94",
+                                "name": "Michael David Rodriguez",
+                                "candidature_grade": "18.2",
+                                "option_number": "",
+                                "exams_grades": "16.3",
+                                "_12_grade": "14.9",
+                                "_11_grade": "17.8"
+                            }
+                        ],
+                        "2": [
+                            {
+                                "order_number": "",
+                                "civil_id": "432(...)16",
+                                "name": "Emily Rose Anderson",
+                                "candidature_grade": "15.6",
+                                "option_number": "",
+                                "exams_grades": "14.1",
+                                "_12_grade": "13.7",
+                                "_11_grade": "15.9"
+                            },
+                            {
+                                "order_number": "",
+                                "civil_id": "789(...)35",
+                                "name": "Daniel Christopher Lee",
+                                "candidature_grade": "17.4",
+                                "option_number": "",
+                                "exams_grades": "18.3",
+                                "_12_grade": "14.8",
+                                "_11_grade": "16.2"
+                            }
+                        ],
+                        "3": [
+                            {
+                                "order_number": "",
+                                "civil_id": "246(...)70",
+                                "name": "Olivia Sophia Martinez",
+                                "candidature_grade": "16.2",
+                                "option_number": "",
+                                "exams_grades": "15.5",
+                                "_12_grade": "17.9",
+                                "_11_grade": "14.6"
+                            },
+                            {
+                                "order_number": "",
+                                "civil_id": "123(...)78",
+                                "name": "John Alexander Smith",
+                                "candidature_grade": "16.8",
+                                "option_number": "",
+                                "exams_grades": "15.2",
+                                "_12_grade": "17.1",
+                                "_11_grade": "14.3"
+                            }
+                        ]
+                    },
+                    "2021": {
+                        "1": [
+                            {
+                                "order_number": "",
+                                "civil_id": "987(...)02",
+                                "name": "Emma Grace Johnson",
+                                "candidature_grade": "14.7",
+                                "option_number": "",
+                                "exams_grades": "17.9",
+                                "_12_grade": "15.6",
+                                "_11_grade": "13.5"
+                            },
+                            {
+                                "order_number": "",
+                                "civil_id": "567(...)94",
+                                "name": "Michael David Rodriguez",
+                                "candidature_grade": "18.2",
+                                "option_number": "",
+                                "exams_grades": "16.3",
+                                "_12_grade": "14.9",
+                                "_11_grade": "17.8"
+                            }
+                        ],
+                        "2": [
+                            {
+                                "order_number": "",
+                                "civil_id": "432(...)16",
+                                "name": "Emily Rose Anderson",
+                                "candidature_grade": "15.6",
+                                "option_number": "",
+                                "exams_grades": "14.1",
+                                "_12_grade": "13.7",
+                                "_11_grade": "15.9"
+                            },
+                            {
+                                "order_number": "",
+                                "civil_id": "789(...)35",
+                                "name": "Daniel Christopher Lee",
+                                "candidature_grade": "17.4",
+                                "option_number": "",
+                                "exams_grades": "18.3",
+                                "_12_grade": "14.8",
+                                "_11_grade": "16.2"
+                            }
+                        ],
+                        "3": [
+                            {
+                                "order_number": "",
+                                "civil_id": "246(...)70",
+                                "name": "Olivia Sophia Martinez",
+                                "candidature_grade": "16.2",
+                                "option_number": "",
+                                "exams_grades": "15.5",
+                                "_12_grade": "17.9",
+                                "_11_grade": "14.6"
+                            },
+                            {
+                                "order_number": "",
+                                "civil_id": "123(...)78",
+                                "name": "John Alexander Smith",
+                                "candidature_grade": "16.8",
+                                "option_number": "",
+                                "exams_grades": "15.2",
+                                "_12_grade": "17.1",
+                                "_11_grade": "14.3"
+                            }
+                        ]
+                    },
+                    "2022": {
+                        "1": [
+                            {
+                                "order_number": "",
+                                "civil_id": "987(...)02",
+                                "name": "Emma Grace Johnson",
+                                "candidature_grade": "14.7",
+                                "option_number": "",
+                                "exams_grades": "17.9",
+                                "_12_grade": "15.6",
+                                "_11_grade": "13.5"
+                            },
+                            {
+                                "order_number": "",
+                                "civil_id": "567(...)94",
+                                "name": "Michael David Rodriguez",
+                                "candidature_grade": "18.2",
+                                "option_number": "",
+                                "exams_grades": "16.3",
+                                "_12_grade": "14.9",
+                                "_11_grade": "17.8"
+                            }
+                        ],
+                        "2": [
+                            {
+                                "order_number": "",
+                                "civil_id": "432(...)16",
+                                "name": "Emily Rose Anderson",
+                                "candidature_grade": "15.6",
+                                "option_number": "",
+                                "exams_grades": "14.1",
+                                "_12_grade": "13.7",
+                                "_11_grade": "15.9"
+                            },
+                            {
+                                "order_number": "",
+                                "civil_id": "789(...)35",
+                                "name": "Daniel Christopher Lee",
+                                "candidature_grade": "17.4",
+                                "option_number": "",
+                                "exams_grades": "18.3",
+                                "_12_grade": "14.8",
+                                "_11_grade": "16.2"
+                            }
+                        ],
+                        "3": [
+                            {
+                                "order_number": "",
+                                "civil_id": "246(...)70",
+                                "name": "Olivia Sophia Martinez",
+                                "candidature_grade": "16.2",
+                                "option_number": "",
+                                "exams_grades": "15.5",
+                                "_12_grade": "17.9",
+                                "_11_grade": "14.6"
+                            },
+                            {
+                                "order_number": "",
+                                "civil_id": "123(...)78",
+                                "name": "John Alexander Smith",
+                                "candidature_grade": "16.8",
+                                "option_number": "",
+                                "exams_grades": "15.2",
+                                "_12_grade": "17.1",
+                                "_11_grade": "14.3"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "id": "9540",
+                "name": "Bioengenharia",
+                "applications": {
+                    "2018": {
+                        "1": [
+                            {
+                                "order_number": "",
+                                "civil_id": "123(...)78",
+                                "name": "John Alexander Smith",
+                                "candidature_grade": "16.8",
+                                "option_number": "",
+                                "exams_grades": "15.2",
+                                "_12_grade": "17.1",
+                                "_11_grade": "14.3"
+                            },
+                            {
+                                "order_number": "",
+                                "civil_id": "987(...)02",
+                                "name": "Emma Grace Johnson",
+                                "candidature_grade": "14.7",
+                                "option_number": "",
+                                "exams_grades": "17.9",
+                                "_12_grade": "15.6",
+                                "_11_grade": "13.5"
+                            }
+                        ],
+                        "2": [
+                            {
+                                "order_number": "",
+                                "civil_id": "567(...)94",
+                                "name": "Michael David Rodriguez",
+                                "candidature_grade": "18.2",
+                                "option_number": "",
+                                "exams_grades": "16.3",
+                                "_12_grade": "14.9",
+                                "_11_grade": "17.8"
+                            },
+                            {
+                                "order_number": "",
+                                "civil_id": "432(...)16",
+                                "name": "Emily Rose Anderson",
+                                "candidature_grade": "15.6",
+                                "option_number": "",
+                                "exams_grades": "14.1",
+                                "_12_grade": "13.7",
+                                "_11_grade": "15.9"
+                            }
+                        ],
+                        "3": [
+                            {
+                                "order_number": "",
+                                "civil_id": "789(...)35",
+                                "name": "Daniel Christopher Lee",
+                                "candidature_grade": "17.4",
+                                "option_number": "",
+                                "exams_grades": "18.3",
+                                "_12_grade": "14.8",
+                                "_11_grade": "16.2"
+                            },
+                            {
+                                "order_number": "",
+                                "civil_id": "246(...)70",
+                                "name": "Olivia Sophia Martinez",
+                                "candidature_grade": "16.2",
+                                "option_number": "",
+                                "exams_grades": "15.5",
+                                "_12_grade": "17.9",
+                                "_11_grade": "14.6"
+                            }
+                        ]
+                    },
+                    "2019": {
+                        "1": [
+                            {
+                                "order_number": "",
+                                "civil_id": "123(...)78",
+                                "name": "John Alexander Smith",
+                                "candidature_grade": "16.8",
+                                "option_number": "",
+                                "exams_grades": "15.2",
+                                "_12_grade": "17.1",
+                                "_11_grade": "14.3"
+                            },
+                            {
+                                "order_number": "",
+                                "civil_id": "987(...)02",
+                                "name": "Emma Grace Johnson",
+                                "candidature_grade": "14.7",
+                                "option_number": "",
+                                "exams_grades": "17.9",
+                                "_12_grade": "15.6",
+                                "_11_grade": "13.5"
+                            }
+                        ],
+                        "2": [
+                            {
+                                "order_number": "",
+                                "civil_id": "567(...)94",
+                                "name": "Michael David Rodriguez",
+                                "candidature_grade": "18.2",
+                                "option_number": "",
+                                "exams_grades": "16.3",
+                                "_12_grade": "14.9",
+                                "_11_grade": "17.8"
+                            },
+                            {
+                                "order_number": "",
+                                "civil_id": "432(...)16",
+                                "name": "Emily Rose Anderson",
+                                "candidature_grade": "15.6",
+                                "option_number": "",
+                                "exams_grades": "14.1",
+                                "_12_grade": "13.7",
+                                "_11_grade": "15.9"
+                            }
+                        ],
+                        "3": [
+                            {
+                                "order_number": "",
+                                "civil_id": "789(...)35",
+                                "name": "Daniel Christopher Lee",
+                                "candidature_grade": "17.4",
+                                "option_number": "",
+                                "exams_grades": "18.3",
+                                "_12_grade": "14.8",
+                                "_11_grade": "16.2"
+                            },
+                            {
+                                "order_number": "",
+                                "civil_id": "246(...)70",
+                                "name": "Olivia Sophia Martinez",
+                                "candidature_grade": "16.2",
+                                "option_number": "",
+                                "exams_grades": "15.5",
+                                "_12_grade": "17.9",
+                                "_11_grade": "14.6"
+                            }
+                        ]
+                    },
+                    "2020": {
+                        "1": [
+                            {
+                                "order_number": "",
+                                "civil_id": "123(...)78",
+                                "name": "John Alexander Smith",
+                                "candidature_grade": "16.8",
+                                "option_number": "",
+                                "exams_grades": "15.2",
+                                "_12_grade": "17.1",
+                                "_11_grade": "14.3"
+                            },
+                            {
+                                "order_number": "",
+                                "civil_id": "987(...)02",
+                                "name": "Emma Grace Johnson",
+                                "candidature_grade": "14.7",
+                                "option_number": "",
+                                "exams_grades": "17.9",
+                                "_12_grade": "15.6",
+                                "_11_grade": "13.5"
+                            }
+                        ],
+                        "2": [
+                            {
+                                "order_number": "",
+                                "civil_id": "567(...)94",
+                                "name": "Michael David Rodriguez",
+                                "candidature_grade": "18.2",
+                                "option_number": "",
+                                "exams_grades": "16.3",
+                                "_12_grade": "14.9",
+                                "_11_grade": "17.8"
+                            },
+                            {
+                                "order_number": "",
+                                "civil_id": "432(...)16",
+                                "name": "Emily Rose Anderson",
+                                "candidature_grade": "15.6",
+                                "option_number": "",
+                                "exams_grades": "14.1",
+                                "_12_grade": "13.7",
+                                "_11_grade": "15.9"
+                            }
+                        ],
+                        "3": [
+                            {
+                                "order_number": "",
+                                "civil_id": "789(...)35",
+                                "name": "Daniel Christopher Lee",
+                                "candidature_grade": "17.4",
+                                "option_number": "",
+                                "exams_grades": "18.3",
+                                "_12_grade": "14.8",
+                                "_11_grade": "16.2"
+                            },
+                            {
+                                "order_number": "",
+                                "civil_id": "246(...)70",
+                                "name": "Olivia Sophia Martinez",
+                                "candidature_grade": "16.2",
+                                "option_number": "",
+                                "exams_grades": "15.5",
+                                "_12_grade": "17.9",
+                                "_11_grade": "14.6"
+                            }
+                        ]
+                    },
+                    "2021": {
+                        "1": [
+                            {
+                                "order_number": "",
+                                "civil_id": "123(...)78",
+                                "name": "John Alexander Smith",
+                                "candidature_grade": "16.8",
+                                "option_number": "",
+                                "exams_grades": "15.2",
+                                "_12_grade": "17.1",
+                                "_11_grade": "14.3"
+                            },
+                            {
+                                "order_number": "",
+                                "civil_id": "987(...)02",
+                                "name": "Emma Grace Johnson",
+                                "candidature_grade": "14.7",
+                                "option_number": "",
+                                "exams_grades": "17.9",
+                                "_12_grade": "15.6",
+                                "_11_grade": "13.5"
+                            }
+                        ],
+                        "2": [
+                            {
+                                "order_number": "",
+                                "civil_id": "567(...)94",
+                                "name": "Michael David Rodriguez",
+                                "candidature_grade": "18.2",
+                                "option_number": "",
+                                "exams_grades": "16.3",
+                                "_12_grade": "14.9",
+                                "_11_grade": "17.8"
+                            },
+                            {
+                                "order_number": "",
+                                "civil_id": "432(...)16",
+                                "name": "Emily Rose Anderson",
+                                "candidature_grade": "15.6",
+                                "option_number": "",
+                                "exams_grades": "14.1",
+                                "_12_grade": "13.7",
+                                "_11_grade": "15.9"
+                            }
+                        ],
+                        "3": [
+                            {
+                                "order_number": "",
+                                "civil_id": "789(...)35",
+                                "name": "Daniel Christopher Lee",
+                                "candidature_grade": "17.4",
+                                "option_number": "",
+                                "exams_grades": "18.3",
+                                "_12_grade": "14.8",
+                                "_11_grade": "16.2"
+                            },
+                            {
+                                "order_number": "",
+                                "civil_id": "246(...)70",
+                                "name": "Olivia Sophia Martinez",
+                                "candidature_grade": "16.2",
+                                "option_number": "",
+                                "exams_grades": "15.5",
+                                "_12_grade": "17.9",
+                                "_11_grade": "14.6"
+                            }
+                        ]
+                    },
+                    "2022": {
+                        "1": [
+                            {
+                                "order_number": "",
+                                "civil_id": "123(...)78",
+                                "name": "John Alexander Smith",
+                                "candidature_grade": "16.8",
+                                "option_number": "",
+                                "exams_grades": "15.2",
+                                "_12_grade": "17.1",
+                                "_11_grade": "14.3"
+                            },
+                            {
+                                "order_number": "",
+                                "civil_id": "987(...)02",
+                                "name": "Emma Grace Johnson",
+                                "candidature_grade": "14.7",
+                                "option_number": "",
+                                "exams_grades": "17.9",
+                                "_12_grade": "15.6",
+                                "_11_grade": "13.5"
+                            }
+                        ],
+                        "2": [
+                            {
+                                "order_number": "",
+                                "civil_id": "567(...)94",
+                                "name": "Michael David Rodriguez",
+                                "candidature_grade": "18.2",
+                                "option_number": "",
+                                "exams_grades": "16.3",
+                                "_12_grade": "14.9",
+                                "_11_grade": "17.8"
+                            },
+                            {
+                                "order_number": "",
+                                "civil_id": "432(...)16",
+                                "name": "Emily Rose Anderson",
+                                "candidature_grade": "15.6",
+                                "option_number": "",
+                                "exams_grades": "14.1",
+                                "_12_grade": "13.7",
+                                "_11_grade": "15.9"
+                            }
+                        ],
+                        "3": [
+                            {
+                                "order_number": "",
+                                "civil_id": "789(...)35",
+                                "name": "Daniel Christopher Lee",
+                                "candidature_grade": "17.4",
+                                "option_number": "",
+                                "exams_grades": "18.3",
+                                "_12_grade": "14.8",
+                                "_11_grade": "16.2"
+                            },
+                            {
+                                "order_number": "",
+                                "civil_id": "246(...)70",
+                                "name": "Olivia Sophia Martinez",
+                                "candidature_grade": "16.2",
+                                "option_number": "",
+                                "exams_grades": "15.5",
+                                "_12_grade": "17.9",
+                                "_11_grade": "14.6"
+                            }
+                        ]
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "name": "Instituto Politécnico de Coimbra - Instituto Superior de Engenharia de Coimbra",
+        "id": "3064",
+        "is_polytechnic": true,
+        "courses": [
+            {
+                "id": "9540",
+                "name": "Bioengenharia",
+                "applications": {
+                    "2018": {
+                        "1": [
+                            {
+                                "order_number": "",
+                                "civil_id": "123(...)78",
+                                "name": "John Alexander Smith",
+                                "candidature_grade": "16.8",
+                                "option_number": "",
+                                "exams_grades": "15.2",
+                                "_12_grade": "17.1",
+                                "_11_grade": "14.3"
+                            },
+                            {
+                                "order_number": "",
+                                "civil_id": "987(...)02",
+                                "name": "Emma Grace Johnson",
+                                "candidature_grade": "14.7",
+                                "option_number": "",
+                                "exams_grades": "17.9",
+                                "_12_grade": "15.6",
+                                "_11_grade": "13.5"
+                            }
+                        ],
+                        "2": [
+                            {
+                                "order_number": "",
+                                "civil_id": "567(...)94",
+                                "name": "Michael David Rodriguez",
+                                "candidature_grade": "18.2",
+                                "option_number": "",
+                                "exams_grades": "16.3",
+                                "_12_grade": "14.9",
+                                "_11_grade": "17.8"
+                            },
+                            {
+                                "order_number": "",
+                                "civil_id": "432(...)16",
+                                "name": "Emily Rose Anderson",
+                                "candidature_grade": "15.6",
+                                "option_number": "",
+                                "exams_grades": "14.1",
+                                "_12_grade": "13.7",
+                                "_11_grade": "15.9"
+                            }
+                        ],
+                        "3": [
+                            {
+                                "order_number": "",
+                                "civil_id": "789(...)35",
+                                "name": "Daniel Christopher Lee",
+                                "candidature_grade": "17.4",
+                                "option_number": "",
+                                "exams_grades": "18.3",
+                                "_12_grade": "14.8",
+                                "_11_grade": "16.2"
+                            },
+                            {
+                                "order_number": "",
+                                "civil_id": "246(...)70",
+                                "name": "Olivia Sophia Martinez",
+                                "candidature_grade": "16.2",
+                                "option_number": "",
+                                "exams_grades": "15.5",
+                                "_12_grade": "17.9",
+                                "_11_grade": "14.6"
+                            }
+                        ]
+                    },
+                    "2019": {
+                        "1": [
+                            {
+                                "order_number": "",
+                                "civil_id": "123(...)78",
+                                "name": "John Alexander Smith",
+                                "candidature_grade": "16.8",
+                                "option_number": "",
+                                "exams_grades": "15.2",
+                                "_12_grade": "17.1",
+                                "_11_grade": "14.3"
+                            },
+                            {
+                                "order_number": "",
+                                "civil_id": "987(...)02",
+                                "name": "Emma Grace Johnson",
+                                "candidature_grade": "14.7",
+                                "option_number": "",
+                                "exams_grades": "17.9",
+                                "_12_grade": "15.6",
+                                "_11_grade": "13.5"
+                            }
+                        ],
+                        "2": [
+                            {
+                                "order_number": "",
+                                "civil_id": "567(...)94",
+                                "name": "Michael David Rodriguez",
+                                "candidature_grade": "18.2",
+                                "option_number": "",
+                                "exams_grades": "16.3",
+                                "_12_grade": "14.9",
+                                "_11_grade": "17.8"
+                            },
+                            {
+                                "order_number": "",
+                                "civil_id": "432(...)16",
+                                "name": "Emily Rose Anderson",
+                                "candidature_grade": "15.6",
+                                "option_number": "",
+                                "exams_grades": "14.1",
+                                "_12_grade": "13.7",
+                                "_11_grade": "15.9"
+                            }
+                        ],
+                        "3": [
+                            {
+                                "order_number": "",
+                                "civil_id": "789(...)35",
+                                "name": "Daniel Christopher Lee",
+                                "candidature_grade": "17.4",
+                                "option_number": "",
+                                "exams_grades": "18.3",
+                                "_12_grade": "14.8",
+                                "_11_grade": "16.2"
+                            },
+                            {
+                                "order_number": "",
+                                "civil_id": "246(...)70",
+                                "name": "Olivia Sophia Martinez",
+                                "candidature_grade": "16.2",
+                                "option_number": "",
+                                "exams_grades": "15.5",
+                                "_12_grade": "17.9",
+                                "_11_grade": "14.6"
+                            }
+                        ]
+                    },
+                    "2020": {
+                        "1": [
+                            {
+                                "order_number": "",
+                                "civil_id": "123(...)78",
+                                "name": "John Alexander Smith",
+                                "candidature_grade": "16.8",
+                                "option_number": "",
+                                "exams_grades": "15.2",
+                                "_12_grade": "17.1",
+                                "_11_grade": "14.3"
+                            },
+                            {
+                                "order_number": "",
+                                "civil_id": "987(...)02",
+                                "name": "Emma Grace Johnson",
+                                "candidature_grade": "14.7",
+                                "option_number": "",
+                                "exams_grades": "17.9",
+                                "_12_grade": "15.6",
+                                "_11_grade": "13.5"
+                            }
+                        ],
+                        "2": [
+                            {
+                                "order_number": "",
+                                "civil_id": "567(...)94",
+                                "name": "Michael David Rodriguez",
+                                "candidature_grade": "18.2",
+                                "option_number": "",
+                                "exams_grades": "16.3",
+                                "_12_grade": "14.9",
+                                "_11_grade": "17.8"
+                            },
+                            {
+                                "order_number": "",
+                                "civil_id": "432(...)16",
+                                "name": "Emily Rose Anderson",
+                                "candidature_grade": "15.6",
+                                "option_number": "",
+                                "exams_grades": "14.1",
+                                "_12_grade": "13.7",
+                                "_11_grade": "15.9"
+                            }
+                        ],
+                        "3": [
+                            {
+                                "order_number": "",
+                                "civil_id": "789(...)35",
+                                "name": "Daniel Christopher Lee",
+                                "candidature_grade": "17.4",
+                                "option_number": "",
+                                "exams_grades": "18.3",
+                                "_12_grade": "14.8",
+                                "_11_grade": "16.2"
+                            },
+                            {
+                                "order_number": "",
+                                "civil_id": "246(...)70",
+                                "name": "Olivia Sophia Martinez",
+                                "candidature_grade": "16.2",
+                                "option_number": "",
+                                "exams_grades": "15.5",
+                                "_12_grade": "17.9",
+                                "_11_grade": "14.6"
+                            }
+                        ]
+                    },
+                    "2021": {
+                        "1": [
+                            {
+                                "order_number": "",
+                                "civil_id": "123(...)78",
+                                "name": "John Alexander Smith",
+                                "candidature_grade": "16.8",
+                                "option_number": "",
+                                "exams_grades": "15.2",
+                                "_12_grade": "17.1",
+                                "_11_grade": "14.3"
+                            },
+                            {
+                                "order_number": "",
+                                "civil_id": "987(...)02",
+                                "name": "Emma Grace Johnson",
+                                "candidature_grade": "14.7",
+                                "option_number": "",
+                                "exams_grades": "17.9",
+                                "_12_grade": "15.6",
+                                "_11_grade": "13.5"
+                            }
+                        ],
+                        "2": [
+                            {
+                                "order_number": "",
+                                "civil_id": "567(...)94",
+                                "name": "Michael David Rodriguez",
+                                "candidature_grade": "18.2",
+                                "option_number": "",
+                                "exams_grades": "16.3",
+                                "_12_grade": "14.9",
+                                "_11_grade": "17.8"
+                            },
+                            {
+                                "order_number": "",
+                                "civil_id": "432(...)16",
+                                "name": "Emily Rose Anderson",
+                                "candidature_grade": "15.6",
+                                "option_number": "",
+                                "exams_grades": "14.1",
+                                "_12_grade": "13.7",
+                                "_11_grade": "15.9"
+                            }
+                        ],
+                        "3": [
+                            {
+                                "order_number": "",
+                                "civil_id": "789(...)35",
+                                "name": "Daniel Christopher Lee",
+                                "candidature_grade": "17.4",
+                                "option_number": "",
+                                "exams_grades": "18.3",
+                                "_12_grade": "14.8",
+                                "_11_grade": "16.2"
+                            },
+                            {
+                                "order_number": "",
+                                "civil_id": "246(...)70",
+                                "name": "Olivia Sophia Martinez",
+                                "candidature_grade": "16.2",
+                                "option_number": "",
+                                "exams_grades": "15.5",
+                                "_12_grade": "17.9",
+                                "_11_grade": "14.6"
+                            }
+                        ]
+                    },
+                    "2022": {
+                        "1": [
+                            {
+                                "order_number": "",
+                                "civil_id": "123(...)78",
+                                "name": "John Alexander Smith",
+                                "candidature_grade": "16.8",
+                                "option_number": "",
+                                "exams_grades": "15.2",
+                                "_12_grade": "17.1",
+                                "_11_grade": "14.3"
+                            },
+                            {
+                                "order_number": "",
+                                "civil_id": "987(...)02",
+                                "name": "Emma Grace Johnson",
+                                "candidature_grade": "14.7",
+                                "option_number": "",
+                                "exams_grades": "17.9",
+                                "_12_grade": "15.6",
+                                "_11_grade": "13.5"
+                            }
+                        ],
+                        "2": [
+                            {
+                                "order_number": "",
+                                "civil_id": "567(...)94",
+                                "name": "Michael David Rodriguez",
+                                "candidature_grade": "18.2",
+                                "option_number": "",
+                                "exams_grades": "16.3",
+                                "_12_grade": "14.9",
+                                "_11_grade": "17.8"
+                            },
+                            {
+                                "order_number": "",
+                                "civil_id": "432(...)16",
+                                "name": "Emily Rose Anderson",
+                                "candidature_grade": "15.6",
+                                "option_number": "",
+                                "exams_grades": "14.1",
+                                "_12_grade": "13.7",
+                                "_11_grade": "15.9"
+                            }
+                        ],
+                        "3": [
+                            {
+                                "order_number": "",
+                                "civil_id": "789(...)35",
+                                "name": "Daniel Christopher Lee",
+                                "candidature_grade": "17.4",
+                                "option_number": "",
+                                "exams_grades": "18.3",
+                                "_12_grade": "14.8",
+                                "_11_grade": "16.2"
+                            },
+                            {
+                                "order_number": "",
+                                "civil_id": "246(...)70",
+                                "name": "Olivia Sophia Martinez",
+                                "candidature_grade": "16.2",
+                                "option_number": "",
+                                "exams_grades": "15.5",
+                                "_12_grade": "17.9",
+                                "_11_grade": "14.6"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "id": "9089",
+                "name": "Engenharia Civil",
+                "applications": {
+                    "2018": {
+                        "1": [
+                            {
+                                "order_number": "",
+                                "civil_id": "987(...)02",
+                                "name": "Emma Grace Johnson",
+                                "candidature_grade": "14.7",
+                                "option_number": "",
+                                "exams_grades": "17.9",
+                                "_12_grade": "15.6",
+                                "_11_grade": "13.5"
+                            },
+                            {
+                                "order_number": "",
+                                "civil_id": "567(...)94",
+                                "name": "Michael David Rodriguez",
+                                "candidature_grade": "18.2",
+                                "option_number": "",
+                                "exams_grades": "16.3",
+                                "_12_grade": "14.9",
+                                "_11_grade": "17.8"
+                            }
+                        ],
+                        "2": [
+                            {
+                                "order_number": "",
+                                "civil_id": "432(...)16",
+                                "name": "Emily Rose Anderson",
+                                "candidature_grade": "15.6",
+                                "option_number": "",
+                                "exams_grades": "14.1",
+                                "_12_grade": "13.7",
+                                "_11_grade": "15.9"
+                            },
+                            {
+                                "order_number": "",
+                                "civil_id": "789(...)35",
+                                "name": "Daniel Christopher Lee",
+                                "candidature_grade": "17.4",
+                                "option_number": "",
+                                "exams_grades": "18.3",
+                                "_12_grade": "14.8",
+                                "_11_grade": "16.2"
+                            }
+                        ],
+                        "3": [
+                            {
+                                "order_number": "",
+                                "civil_id": "246(...)70",
+                                "name": "Olivia Sophia Martinez",
+                                "candidature_grade": "16.2",
+                                "option_number": "",
+                                "exams_grades": "15.5",
+                                "_12_grade": "17.9",
+                                "_11_grade": "14.6"
+                            },
+                            {
+                                "order_number": "",
+                                "civil_id": "123(...)78",
+                                "name": "John Alexander Smith",
+                                "candidature_grade": "16.8",
+                                "option_number": "",
+                                "exams_grades": "15.2",
+                                "_12_grade": "17.1",
+                                "_11_grade": "14.3"
+                            }
+                        ]
+                    },
+                    "2019": {
+                        "1": [
+                            {
+                                "order_number": "",
+                                "civil_id": "987(...)02",
+                                "name": "Emma Grace Johnson",
+                                "candidature_grade": "14.7",
+                                "option_number": "",
+                                "exams_grades": "17.9",
+                                "_12_grade": "15.6",
+                                "_11_grade": "13.5"
+                            },
+                            {
+                                "order_number": "",
+                                "civil_id": "567(...)94",
+                                "name": "Michael David Rodriguez",
+                                "candidature_grade": "18.2",
+                                "option_number": "",
+                                "exams_grades": "16.3",
+                                "_12_grade": "14.9",
+                                "_11_grade": "17.8"
+                            }
+                        ],
+                        "2": [
+                            {
+                                "order_number": "",
+                                "civil_id": "432(...)16",
+                                "name": "Emily Rose Anderson",
+                                "candidature_grade": "15.6",
+                                "option_number": "",
+                                "exams_grades": "14.1",
+                                "_12_grade": "13.7",
+                                "_11_grade": "15.9"
+                            },
+                            {
+                                "order_number": "",
+                                "civil_id": "789(...)35",
+                                "name": "Daniel Christopher Lee",
+                                "candidature_grade": "17.4",
+                                "option_number": "",
+                                "exams_grades": "18.3",
+                                "_12_grade": "14.8",
+                                "_11_grade": "16.2"
+                            }
+                        ],
+                        "3": [
+                            {
+                                "order_number": "",
+                                "civil_id": "246(...)70",
+                                "name": "Olivia Sophia Martinez",
+                                "candidature_grade": "16.2",
+                                "option_number": "",
+                                "exams_grades": "15.5",
+                                "_12_grade": "17.9",
+                                "_11_grade": "14.6"
+                            },
+                            {
+                                "order_number": "",
+                                "civil_id": "123(...)78",
+                                "name": "John Alexander Smith",
+                                "candidature_grade": "16.8",
+                                "option_number": "",
+                                "exams_grades": "15.2",
+                                "_12_grade": "17.1",
+                                "_11_grade": "14.3"
+                            }
+                        ]
+                    },
+                    "2020": {
+                        "1": [
+                            {
+                                "order_number": "",
+                                "civil_id": "987(...)02",
+                                "name": "Emma Grace Johnson",
+                                "candidature_grade": "14.7",
+                                "option_number": "",
+                                "exams_grades": "17.9",
+                                "_12_grade": "15.6",
+                                "_11_grade": "13.5"
+                            },
+                            {
+                                "order_number": "",
+                                "civil_id": "567(...)94",
+                                "name": "Michael David Rodriguez",
+                                "candidature_grade": "18.2",
+                                "option_number": "",
+                                "exams_grades": "16.3",
+                                "_12_grade": "14.9",
+                                "_11_grade": "17.8"
+                            }
+                        ],
+                        "2": [
+                            {
+                                "order_number": "",
+                                "civil_id": "432(...)16",
+                                "name": "Emily Rose Anderson",
+                                "candidature_grade": "15.6",
+                                "option_number": "",
+                                "exams_grades": "14.1",
+                                "_12_grade": "13.7",
+                                "_11_grade": "15.9"
+                            },
+                            {
+                                "order_number": "",
+                                "civil_id": "789(...)35",
+                                "name": "Daniel Christopher Lee",
+                                "candidature_grade": "17.4",
+                                "option_number": "",
+                                "exams_grades": "18.3",
+                                "_12_grade": "14.8",
+                                "_11_grade": "16.2"
+                            }
+                        ],
+                        "3": [
+                            {
+                                "order_number": "",
+                                "civil_id": "246(...)70",
+                                "name": "Olivia Sophia Martinez",
+                                "candidature_grade": "16.2",
+                                "option_number": "",
+                                "exams_grades": "15.5",
+                                "_12_grade": "17.9",
+                                "_11_grade": "14.6"
+                            },
+                            {
+                                "order_number": "",
+                                "civil_id": "123(...)78",
+                                "name": "John Alexander Smith",
+                                "candidature_grade": "16.8",
+                                "option_number": "",
+                                "exams_grades": "15.2",
+                                "_12_grade": "17.1",
+                                "_11_grade": "14.3"
+                            }
+                        ]
+                    },
+                    "2021": {
+                        "1": [
+                            {
+                                "order_number": "",
+                                "civil_id": "987(...)02",
+                                "name": "Emma Grace Johnson",
+                                "candidature_grade": "14.7",
+                                "option_number": "",
+                                "exams_grades": "17.9",
+                                "_12_grade": "15.6",
+                                "_11_grade": "13.5"
+                            },
+                            {
+                                "order_number": "",
+                                "civil_id": "567(...)94",
+                                "name": "Michael David Rodriguez",
+                                "candidature_grade": "18.2",
+                                "option_number": "",
+                                "exams_grades": "16.3",
+                                "_12_grade": "14.9",
+                                "_11_grade": "17.8"
+                            }
+                        ],
+                        "2": [
+                            {
+                                "order_number": "",
+                                "civil_id": "432(...)16",
+                                "name": "Emily Rose Anderson",
+                                "candidature_grade": "15.6",
+                                "option_number": "",
+                                "exams_grades": "14.1",
+                                "_12_grade": "13.7",
+                                "_11_grade": "15.9"
+                            },
+                            {
+                                "order_number": "",
+                                "civil_id": "789(...)35",
+                                "name": "Daniel Christopher Lee",
+                                "candidature_grade": "17.4",
+                                "option_number": "",
+                                "exams_grades": "18.3",
+                                "_12_grade": "14.8",
+                                "_11_grade": "16.2"
+                            }
+                        ],
+                        "3": [
+                            {
+                                "order_number": "",
+                                "civil_id": "246(...)70",
+                                "name": "Olivia Sophia Martinez",
+                                "candidature_grade": "16.2",
+                                "option_number": "",
+                                "exams_grades": "15.5",
+                                "_12_grade": "17.9",
+                                "_11_grade": "14.6"
+                            },
+                            {
+                                "order_number": "",
+                                "civil_id": "123(...)78",
+                                "name": "John Alexander Smith",
+                                "candidature_grade": "16.8",
+                                "option_number": "",
+                                "exams_grades": "15.2",
+                                "_12_grade": "17.1",
+                                "_11_grade": "14.3"
+                            }
+                        ]
+                    },
+                    "2022": {
+                        "1": [
+                            {
+                                "order_number": "",
+                                "civil_id": "987(...)02",
+                                "name": "Emma Grace Johnson",
+                                "candidature_grade": "14.7",
+                                "option_number": "",
+                                "exams_grades": "17.9",
+                                "_12_grade": "15.6",
+                                "_11_grade": "13.5"
+                            },
+                            {
+                                "order_number": "",
+                                "civil_id": "567(...)94",
+                                "name": "Michael David Rodriguez",
+                                "candidature_grade": "18.2",
+                                "option_number": "",
+                                "exams_grades": "16.3",
+                                "_12_grade": "14.9",
+                                "_11_grade": "17.8"
+                            }
+                        ],
+                        "2": [
+                            {
+                                "order_number": "",
+                                "civil_id": "432(...)16",
+                                "name": "Emily Rose Anderson",
+                                "candidature_grade": "15.6",
+                                "option_number": "",
+                                "exams_grades": "14.1",
+                                "_12_grade": "13.7",
+                                "_11_grade": "15.9"
+                            },
+                            {
+                                "order_number": "",
+                                "civil_id": "789(...)35",
+                                "name": "Daniel Christopher Lee",
+                                "candidature_grade": "17.4",
+                                "option_number": "",
+                                "exams_grades": "18.3",
+                                "_12_grade": "14.8",
+                                "_11_grade": "16.2"
+                            }
+                        ],
+                        "3": [
+                            {
+                                "order_number": "",
+                                "civil_id": "246(...)70",
+                                "name": "Olivia Sophia Martinez",
+                                "candidature_grade": "16.2",
+                                "option_number": "",
+                                "exams_grades": "15.5",
+                                "_12_grade": "17.9",
+                                "_11_grade": "14.6"
+                            },
+                            {
+                                "order_number": "",
+                                "civil_id": "123(...)78",
+                                "name": "John Alexander Smith",
+                                "candidature_grade": "16.8",
+                                "option_number": "",
+                                "exams_grades": "15.2",
+                                "_12_grade": "17.1",
+                                "_11_grade": "14.3"
+                            }
+                        ]
+                    }
+                }
+            }
+        ]
+    }
+]

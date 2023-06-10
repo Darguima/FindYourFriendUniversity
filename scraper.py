@@ -50,10 +50,11 @@ def scrape_applications_for_courses(courses_by_university, years, phases):
     for uni_i, uni in enumerate(courses_by_university):
         for course in uni["courses"]:
             courses_counter += 1
+            course["applications"] = {}
             for year in years:
-                course[year] = {}
+                course["applications"][year] = {}
                 for phase in phases:
-                    course[year][phase] = getStudentsCourseInfo(
+                    course["applications"][year][phase] = getStudentsCourseInfo(
                         uni["id"],
                         course["id"],
                         year,
@@ -94,14 +95,14 @@ def getStudentsCourseInfo(university_id, course_id, year, phase, first_student=1
             continue
 
         applications.append({
-            "orderNumber": application[0],
-            "civilId": application[1],
+            "order_number": application[0],
+            "civil_id": application[1],
             "name": application[2],
-            "candidatureGrade": application[3],
-            "optionNumber": application[4],
-            "examsGrades": application[5],
-            "_12grade": application[6],
-            "_11grade": application[7],
+            "candidature_grade": application[3],
+            "option_number": application[4],
+            "exams_grades": application[5],
+            "_12_grade": application[6],
+            "_11_grade": application[7],
         })
 
     return applications
