@@ -95,14 +95,14 @@ def getStudentsCourseInfo(university_id, course_id, year, phase, first_student=1
             continue
 
         applications.append({
-            "order_number": application[0],
+            "course_order_num": application[0],
             "civil_id": application[1],
             "name": application[2],
             "candidature_grade": application[3],
-            "option_number": application[4],
+            "student_option_number": application[4],
             "exams_grades": application[5],
-            "_12_grade": application[6],
-            "_11_grade": application[7],
+            "_12grade": application[6],
+            "_11grade": application[7],
         })
 
     return applications

@@ -11,340 +11,340 @@
                     "2018": {
                         "1": [
                             {
-                                "order_number": "",
+                                "course_order_num": "1",
                                 "civil_id": "123(...)78",
-                                "name": "John Alexander Smith",
-                                "candidature_grade": "16.8",
-                                "option_number": "",
-                                "exams_grades": "15.2",
-                                "_12_grade": "17.1",
-                                "_11_grade": "14.3"
+                                "name": "João d'Antônia Góis",
+                                "candidature_grade": "168,6",
+                                "student_option_number": "1",
+                                "exams_grades": "152,0",
+                                "_12grade": "171",
+                                "_11grade": "143"
                             },
                             {
-                                "order_number": "",
+                                "course_order_num": "2",
                                 "civil_id": "987(...)02",
                                 "name": "Emma Grace Johnson",
-                                "candidature_grade": "14.7",
-                                "option_number": "",
-                                "exams_grades": "17.9",
-                                "_12_grade": "15.6",
-                                "_11_grade": "13.5"
+                                "candidature_grade": "147,6",
+                                "student_option_number": "1",
+                                "exams_grades": "179,0",
+                                "_12grade": "156",
+                                "_11grade": "135"
                             }
                         ],
                         "2": [
                             {
-                                "order_number": "",
+                                "course_order_num": "1",
                                 "civil_id": "567(...)94",
                                 "name": "Michael David Rodriguez",
-                                "candidature_grade": "18.2",
-                                "option_number": "",
-                                "exams_grades": "16.3",
-                                "_12_grade": "14.9",
-                                "_11_grade": "17.8"
+                                "candidature_grade": "182,6",
+                                "student_option_number": "1",
+                                "exams_grades": "163,0",
+                                "_12grade": "149",
+                                "_11grade": "178"
                             },
                             {
-                                "order_number": "",
+                                "course_order_num": "2",
                                 "civil_id": "432(...)16",
                                 "name": "Emily Rose Anderson",
-                                "candidature_grade": "15.6",
-                                "option_number": "",
-                                "exams_grades": "14.1",
-                                "_12_grade": "13.7",
-                                "_11_grade": "15.9"
+                                "candidature_grade": "156,4",
+                                "student_option_number": "1",
+                                "exams_grades": "141,0",
+                                "_12grade": "137",
+                                "_11grade": "159"
                             }
                         ],
                         "3": [
                             {
-                                "order_number": "",
+                                "course_order_num": "1",
                                 "civil_id": "789(...)35",
                                 "name": "Daniel Christopher Lee",
-                                "candidature_grade": "17.4",
-                                "option_number": "",
-                                "exams_grades": "18.3",
-                                "_12_grade": "14.8",
-                                "_11_grade": "16.2"
+                                "candidature_grade": "174,3",
+                                "student_option_number": "1",
+                                "exams_grades": "183,0",
+                                "_12grade": "148",
+                                "_11grade": "162"
                             },
                             {
-                                "order_number": "",
+                                "course_order_num": "2",
                                 "civil_id": "246(...)70",
                                 "name": "Olivia Sophia Martinez",
-                                "candidature_grade": "16.2",
-                                "option_number": "",
-                                "exams_grades": "15.5",
-                                "_12_grade": "17.9",
-                                "_11_grade": "14.6"
+                                "candidature_grade": "162,2",
+                                "student_option_number": "1",
+                                "exams_grades": "155,0",
+                                "_12grade": "179",
+                                "_11grade": "146"
                             }
                         ]
                     },
                     "2019": {
                         "1": [
                             {
-                                "order_number": "",
+                                "course_order_num": "1",
                                 "civil_id": "123(...)78",
-                                "name": "John Alexander Smith",
-                                "candidature_grade": "16.8",
-                                "option_number": "",
-                                "exams_grades": "15.2",
-                                "_12_grade": "17.1",
-                                "_11_grade": "14.3"
+                                "name": "João d'Antônia Góis",
+                                "candidature_grade": "168,6",
+                                "student_option_number": "1",
+                                "exams_grades": "152,0",
+                                "_12grade": "171",
+                                "_11grade": "143"
                             },
                             {
-                                "order_number": "",
+                                "course_order_num": "2",
                                 "civil_id": "987(...)02",
                                 "name": "Emma Grace Johnson",
-                                "candidature_grade": "14.7",
-                                "option_number": "",
-                                "exams_grades": "17.9",
-                                "_12_grade": "15.6",
-                                "_11_grade": "13.5"
+                                "candidature_grade": "147,6",
+                                "student_option_number": "1",
+                                "exams_grades": "179,0",
+                                "_12grade": "156",
+                                "_11grade": "135"
                             }
                         ],
                         "2": [
                             {
-                                "order_number": "",
+                                "course_order_num": "1",
                                 "civil_id": "567(...)94",
                                 "name": "Michael David Rodriguez",
-                                "candidature_grade": "18.2",
-                                "option_number": "",
-                                "exams_grades": "16.3",
-                                "_12_grade": "14.9",
-                                "_11_grade": "17.8"
+                                "candidature_grade": "182,8",
+                                "student_option_number": "1",
+                                "exams_grades": "163,0",
+                                "_12grade": "149",
+                                "_11grade": "178"
                             },
                             {
-                                "order_number": "",
+                                "course_order_num": "2",
                                 "civil_id": "432(...)16",
                                 "name": "Emily Rose Anderson",
-                                "candidature_grade": "15.6",
-                                "option_number": "",
-                                "exams_grades": "14.1",
-                                "_12_grade": "13.7",
-                                "_11_grade": "15.9"
+                                "candidature_grade": "156,6",
+                                "student_option_number": "1",
+                                "exams_grades": "141,0",
+                                "_12grade": "137",
+                                "_11grade": "159"
                             }
                         ],
                         "3": [
                             {
-                                "order_number": "",
+                                "course_order_num": "1",
                                 "civil_id": "789(...)35",
                                 "name": "Daniel Christopher Lee",
-                                "candidature_grade": "17.4",
-                                "option_number": "",
-                                "exams_grades": "18.3",
-                                "_12_grade": "14.8",
-                                "_11_grade": "16.2"
+                                "candidature_grade": "174,0",
+                                "student_option_number": "1",
+                                "exams_grades": "183,0",
+                                "_12grade": "148",
+                                "_11grade": "162"
                             },
                             {
-                                "order_number": "",
+                                "course_order_num": "2",
                                 "civil_id": "246(...)70",
                                 "name": "Olivia Sophia Martinez",
-                                "candidature_grade": "16.2",
-                                "option_number": "",
-                                "exams_grades": "15.5",
-                                "_12_grade": "17.9",
-                                "_11_grade": "14.6"
+                                "candidature_grade": "162,6",
+                                "student_option_number": "1",
+                                "exams_grades": "155,0",
+                                "_12grade": "179",
+                                "_11grade": "146"
                             }
                         ]
                     },
                     "2020": {
                         "1": [
                             {
-                                "order_number": "",
+                                "course_order_num": "1",
                                 "civil_id": "123(...)78",
-                                "name": "John Alexander Smith",
-                                "candidature_grade": "16.8",
-                                "option_number": "",
-                                "exams_grades": "15.2",
-                                "_12_grade": "17.1",
-                                "_11_grade": "14.3"
+                                "name": "João d'Antônia Góis",
+                                "candidature_grade": "168,6",
+                                "student_option_number": "1",
+                                "exams_grades": "152,0",
+                                "_12grade": "171",
+                                "_11grade": "143"
                             },
                             {
-                                "order_number": "",
+                                "course_order_num": "2",
                                 "civil_id": "987(...)02",
                                 "name": "Emma Grace Johnson",
-                                "candidature_grade": "14.7",
-                                "option_number": "",
-                                "exams_grades": "17.9",
-                                "_12_grade": "15.6",
-                                "_11_grade": "13.5"
+                                "candidature_grade": "147,6",
+                                "student_option_number": "1",
+                                "exams_grades": "179,0",
+                                "_12grade": "156",
+                                "_11grade": "135"
                             }
                         ],
                         "2": [
                             {
-                                "order_number": "",
+                                "course_order_num": "1",
                                 "civil_id": "567(...)94",
                                 "name": "Michael David Rodriguez",
-                                "candidature_grade": "18.2",
-                                "option_number": "",
-                                "exams_grades": "16.3",
-                                "_12_grade": "14.9",
-                                "_11_grade": "17.8"
+                                "candidature_grade": "182,5",
+                                "student_option_number": "1",
+                                "exams_grades": "163,0",
+                                "_12grade": "149",
+                                "_11grade": "178"
                             },
                             {
-                                "order_number": "",
+                                "course_order_num": "2",
                                 "civil_id": "432(...)16",
                                 "name": "Emily Rose Anderson",
-                                "candidature_grade": "15.6",
-                                "option_number": "",
-                                "exams_grades": "14.1",
-                                "_12_grade": "13.7",
-                                "_11_grade": "15.9"
+                                "candidature_grade": "156,6",
+                                "student_option_number": "1",
+                                "exams_grades": "141,0",
+                                "_12grade": "137",
+                                "_11grade": "159"
                             }
                         ],
                         "3": [
                             {
-                                "order_number": "",
+                                "course_order_num": "1",
                                 "civil_id": "789(...)35",
                                 "name": "Daniel Christopher Lee",
-                                "candidature_grade": "17.4",
-                                "option_number": "",
-                                "exams_grades": "18.3",
-                                "_12_grade": "14.8",
-                                "_11_grade": "16.2"
+                                "candidature_grade": "174,6",
+                                "student_option_number": "1",
+                                "exams_grades": "183,0",
+                                "_12grade": "148",
+                                "_11grade": "162"
                             },
                             {
-                                "order_number": "",
+                                "course_order_num": "2",
                                 "civil_id": "246(...)70",
                                 "name": "Olivia Sophia Martinez",
-                                "candidature_grade": "16.2",
-                                "option_number": "",
-                                "exams_grades": "15.5",
-                                "_12_grade": "17.9",
-                                "_11_grade": "14.6"
+                                "candidature_grade": "162,3",
+                                "student_option_number": "1",
+                                "exams_grades": "155,0",
+                                "_12grade": "179",
+                                "_11grade": "146"
                             }
                         ]
                     },
                     "2021": {
                         "1": [
                             {
-                                "order_number": "",
+                                "course_order_num": "1",
                                 "civil_id": "123(...)78",
-                                "name": "John Alexander Smith",
-                                "candidature_grade": "16.8",
-                                "option_number": "",
-                                "exams_grades": "15.2",
-                                "_12_grade": "17.1",
-                                "_11_grade": "14.3"
+                                "name": "João d'Antônia Góis",
+                                "candidature_grade": "168,6",
+                                "student_option_number": "1",
+                                "exams_grades": "152,0",
+                                "_12grade": "171",
+                                "_11grade": "143"
                             },
                             {
-                                "order_number": "",
+                                "course_order_num": "2",
                                 "civil_id": "987(...)02",
                                 "name": "Emma Grace Johnson",
-                                "candidature_grade": "14.7",
-                                "option_number": "",
-                                "exams_grades": "17.9",
-                                "_12_grade": "15.6",
-                                "_11_grade": "13.5"
+                                "candidature_grade": "147,1",
+                                "student_option_number": "1",
+                                "exams_grades": "179,0",
+                                "_12grade": "156",
+                                "_11grade": "135"
                             }
                         ],
                         "2": [
                             {
-                                "order_number": "",
+                                "course_order_num": "1",
                                 "civil_id": "567(...)94",
                                 "name": "Michael David Rodriguez",
-                                "candidature_grade": "18.2",
-                                "option_number": "",
-                                "exams_grades": "16.3",
-                                "_12_grade": "14.9",
-                                "_11_grade": "17.8"
+                                "candidature_grade": "182,6",
+                                "student_option_number": "1",
+                                "exams_grades": "163,0",
+                                "_12grade": "149",
+                                "_11grade": "178"
                             },
                             {
-                                "order_number": "",
+                                "course_order_num": "2",
                                 "civil_id": "432(...)16",
                                 "name": "Emily Rose Anderson",
-                                "candidature_grade": "15.6",
-                                "option_number": "",
-                                "exams_grades": "14.1",
-                                "_12_grade": "13.7",
-                                "_11_grade": "15.9"
+                                "candidature_grade": "156,4",
+                                "student_option_number": "1",
+                                "exams_grades": "141,0",
+                                "_12grade": "137",
+                                "_11grade": "159"
                             }
                         ],
                         "3": [
                             {
-                                "order_number": "",
+                                "course_order_num": "1",
                                 "civil_id": "789(...)35",
                                 "name": "Daniel Christopher Lee",
-                                "candidature_grade": "17.4",
-                                "option_number": "",
-                                "exams_grades": "18.3",
-                                "_12_grade": "14.8",
-                                "_11_grade": "16.2"
+                                "candidature_grade": "174,6",
+                                "student_option_number": "1",
+                                "exams_grades": "183,0",
+                                "_12grade": "148",
+                                "_11grade": "162"
                             },
                             {
-                                "order_number": "",
+                                "course_order_num": "2",
                                 "civil_id": "246(...)70",
                                 "name": "Olivia Sophia Martinez",
-                                "candidature_grade": "16.2",
-                                "option_number": "",
-                                "exams_grades": "15.5",
-                                "_12_grade": "17.9",
-                                "_11_grade": "14.6"
+                                "candidature_grade": "162,5",
+                                "student_option_number": "1",
+                                "exams_grades": "155,0",
+                                "_12grade": "179",
+                                "_11grade": "146"
                             }
                         ]
                     },
                     "2022": {
                         "1": [
                             {
-                                "order_number": "",
+                                "course_order_num": "1",
                                 "civil_id": "123(...)78",
-                                "name": "John Alexander Smith",
-                                "candidature_grade": "16.8",
-                                "option_number": "",
-                                "exams_grades": "15.2",
-                                "_12_grade": "17.1",
-                                "_11_grade": "14.3"
+                                "name": "João d'Antônia Góis",
+                                "candidature_grade": "168,6",
+                                "student_option_number": "1",
+                                "exams_grades": "152,0",
+                                "_12grade": "171",
+                                "_11grade": "143"
                             },
                             {
-                                "order_number": "",
+                                "course_order_num": "2",
                                 "civil_id": "987(...)02",
                                 "name": "Emma Grace Johnson",
-                                "candidature_grade": "14.7",
-                                "option_number": "",
-                                "exams_grades": "17.9",
-                                "_12_grade": "15.6",
-                                "_11_grade": "13.5"
+                                "candidature_grade": "147,6",
+                                "student_option_number": "1",
+                                "exams_grades": "179,0",
+                                "_12grade": "156",
+                                "_11grade": "135"
                             }
                         ],
                         "2": [
                             {
-                                "order_number": "",
+                                "course_order_num": "1",
                                 "civil_id": "567(...)94",
                                 "name": "Michael David Rodriguez",
-                                "candidature_grade": "18.2",
-                                "option_number": "",
-                                "exams_grades": "16.3",
-                                "_12_grade": "14.9",
-                                "_11_grade": "17.8"
+                                "candidature_grade": "182,4",
+                                "student_option_number": "1",
+                                "exams_grades": "163,0",
+                                "_12grade": "149",
+                                "_11grade": "178"
                             },
                             {
-                                "order_number": "",
+                                "course_order_num": "2",
                                 "civil_id": "432(...)16",
                                 "name": "Emily Rose Anderson",
-                                "candidature_grade": "15.6",
-                                "option_number": "",
-                                "exams_grades": "14.1",
-                                "_12_grade": "13.7",
-                                "_11_grade": "15.9"
+                                "candidature_grade": "156,6",
+                                "student_option_number": "1",
+                                "exams_grades": "141,0",
+                                "_12grade": "137",
+                                "_11grade": "159"
                             }
                         ],
                         "3": [
                             {
-                                "order_number": "",
+                                "course_order_num": "1",
                                 "civil_id": "789(...)35",
                                 "name": "Daniel Christopher Lee",
-                                "candidature_grade": "17.4",
-                                "option_number": "",
-                                "exams_grades": "18.3",
-                                "_12_grade": "14.8",
-                                "_11_grade": "16.2"
+                                "candidature_grade": "174,6",
+                                "student_option_number": "1",
+                                "exams_grades": "183,0",
+                                "_12grade": "148",
+                                "_11grade": "162"
                             },
                             {
-                                "order_number": "",
+                                "course_order_num": "2",
                                 "civil_id": "246(...)70",
                                 "name": "Olivia Sophia Martinez",
-                                "candidature_grade": "16.2",
-                                "option_number": "",
-                                "exams_grades": "15.5",
-                                "_12_grade": "17.9",
-                                "_11_grade": "14.6"
+                                "candidature_grade": "162,2",
+                                "student_option_number": "1",
+                                "exams_grades": "155,0",
+                                "_12grade": "179",
+                                "_11grade": "146"
                             }
                         ]
                     }
@@ -357,340 +357,340 @@
                     "2018": {
                         "1": [
                             {
-                                "order_number": "",
+                                "course_order_num": "1",
                                 "civil_id": "987(...)02",
                                 "name": "Emma Grace Johnson",
-                                "candidature_grade": "14.7",
-                                "option_number": "",
-                                "exams_grades": "17.9",
-                                "_12_grade": "15.6",
-                                "_11_grade": "13.5"
+                                "candidature_grade": "147,6",
+                                "student_option_number": "1",
+                                "exams_grades": "179,0",
+                                "_12grade": "156",
+                                "_11grade": "135"
                             },
                             {
-                                "order_number": "",
+                                "course_order_num": "2",
                                 "civil_id": "567(...)94",
                                 "name": "Michael David Rodriguez",
-                                "candidature_grade": "18.2",
-                                "option_number": "",
-                                "exams_grades": "16.3",
-                                "_12_grade": "14.9",
-                                "_11_grade": "17.8"
+                                "candidature_grade": "182,1",
+                                "student_option_number": "1",
+                                "exams_grades": "163,0",
+                                "_12grade": "149",
+                                "_11grade": "178"
                             }
                         ],
                         "2": [
                             {
-                                "order_number": "",
+                                "course_order_num": "1",
                                 "civil_id": "432(...)16",
                                 "name": "Emily Rose Anderson",
-                                "candidature_grade": "15.6",
-                                "option_number": "",
-                                "exams_grades": "14.1",
-                                "_12_grade": "13.7",
-                                "_11_grade": "15.9"
+                                "candidature_grade": "156,6",
+                                "student_option_number": "1",
+                                "exams_grades": "141,0",
+                                "_12grade": "137",
+                                "_11grade": "159"
                             },
                             {
-                                "order_number": "",
+                                "course_order_num": "2",
                                 "civil_id": "789(...)35",
                                 "name": "Daniel Christopher Lee",
-                                "candidature_grade": "17.4",
-                                "option_number": "",
-                                "exams_grades": "18.3",
-                                "_12_grade": "14.8",
-                                "_11_grade": "16.2"
+                                "candidature_grade": "174,5",
+                                "student_option_number": "1",
+                                "exams_grades": "183,0",
+                                "_12grade": "148",
+                                "_11grade": "162"
                             }
                         ],
                         "3": [
                             {
-                                "order_number": "",
+                                "course_order_num": "1",
                                 "civil_id": "246(...)70",
                                 "name": "Olivia Sophia Martinez",
-                                "candidature_grade": "16.2",
-                                "option_number": "",
-                                "exams_grades": "15.5",
-                                "_12_grade": "17.9",
-                                "_11_grade": "14.6"
+                                "candidature_grade": "162,6",
+                                "student_option_number": "1",
+                                "exams_grades": "155,0",
+                                "_12grade": "179",
+                                "_11grade": "146"
                             },
                             {
-                                "order_number": "",
+                                "course_order_num": "2",
                                 "civil_id": "123(...)78",
-                                "name": "John Alexander Smith",
-                                "candidature_grade": "16.8",
-                                "option_number": "",
-                                "exams_grades": "15.2",
-                                "_12_grade": "17.1",
-                                "_11_grade": "14.3"
+                                "name": "João d'Antônia Góis",
+                                "candidature_grade": "168,6",
+                                "student_option_number": "1",
+                                "exams_grades": "152,0",
+                                "_12grade": "171",
+                                "_11grade": "143"
                             }
                         ]
                     },
                     "2019": {
                         "1": [
                             {
-                                "order_number": "",
+                                "course_order_num": "1",
                                 "civil_id": "987(...)02",
                                 "name": "Emma Grace Johnson",
-                                "candidature_grade": "14.7",
-                                "option_number": "",
-                                "exams_grades": "17.9",
-                                "_12_grade": "15.6",
-                                "_11_grade": "13.5"
+                                "candidature_grade": "147,8",
+                                "student_option_number": "1",
+                                "exams_grades": "179,0",
+                                "_12grade": "156",
+                                "_11grade": "135"
                             },
                             {
-                                "order_number": "",
+                                "course_order_num": "2",
                                 "civil_id": "567(...)94",
                                 "name": "Michael David Rodriguez",
-                                "candidature_grade": "18.2",
-                                "option_number": "",
-                                "exams_grades": "16.3",
-                                "_12_grade": "14.9",
-                                "_11_grade": "17.8"
+                                "candidature_grade": "182,6",
+                                "student_option_number": "1",
+                                "exams_grades": "163,0",
+                                "_12grade": "149",
+                                "_11grade": "178"
                             }
                         ],
                         "2": [
                             {
-                                "order_number": "",
+                                "course_order_num": "1",
                                 "civil_id": "432(...)16",
                                 "name": "Emily Rose Anderson",
-                                "candidature_grade": "15.6",
-                                "option_number": "",
-                                "exams_grades": "14.1",
-                                "_12_grade": "13.7",
-                                "_11_grade": "15.9"
+                                "candidature_grade": "156,4",
+                                "student_option_number": "1",
+                                "exams_grades": "141,0",
+                                "_12grade": "137",
+                                "_11grade": "159"
                             },
                             {
-                                "order_number": "",
+                                "course_order_num": "2",
                                 "civil_id": "789(...)35",
                                 "name": "Daniel Christopher Lee",
-                                "candidature_grade": "17.4",
-                                "option_number": "",
-                                "exams_grades": "18.3",
-                                "_12_grade": "14.8",
-                                "_11_grade": "16.2"
+                                "candidature_grade": "174,6",
+                                "student_option_number": "1",
+                                "exams_grades": "183,0",
+                                "_12grade": "148",
+                                "_11grade": "162"
                             }
                         ],
                         "3": [
                             {
-                                "order_number": "",
+                                "course_order_num": "1",
                                 "civil_id": "246(...)70",
                                 "name": "Olivia Sophia Martinez",
-                                "candidature_grade": "16.2",
-                                "option_number": "",
-                                "exams_grades": "15.5",
-                                "_12_grade": "17.9",
-                                "_11_grade": "14.6"
+                                "candidature_grade": "162,6",
+                                "student_option_number": "1",
+                                "exams_grades": "155,0",
+                                "_12grade": "179",
+                                "_11grade": "146"
                             },
                             {
-                                "order_number": "",
+                                "course_order_num": "2",
                                 "civil_id": "123(...)78",
-                                "name": "John Alexander Smith",
-                                "candidature_grade": "16.8",
-                                "option_number": "",
-                                "exams_grades": "15.2",
-                                "_12_grade": "17.1",
-                                "_11_grade": "14.3"
+                                "name": "João d'Antônia Góis",
+                                "candidature_grade": "168,3",
+                                "student_option_number": "1",
+                                "exams_grades": "152,0",
+                                "_12grade": "171",
+                                "_11grade": "143"
                             }
                         ]
                     },
                     "2020": {
                         "1": [
                             {
-                                "order_number": "",
+                                "course_order_num": "1",
                                 "civil_id": "987(...)02",
                                 "name": "Emma Grace Johnson",
-                                "candidature_grade": "14.7",
-                                "option_number": "",
-                                "exams_grades": "17.9",
-                                "_12_grade": "15.6",
-                                "_11_grade": "13.5"
+                                "candidature_grade": "147,6",
+                                "student_option_number": "1",
+                                "exams_grades": "179,0",
+                                "_12grade": "156",
+                                "_11grade": "135"
                             },
                             {
-                                "order_number": "",
+                                "course_order_num": "2",
                                 "civil_id": "567(...)94",
                                 "name": "Michael David Rodriguez",
-                                "candidature_grade": "18.2",
-                                "option_number": "",
-                                "exams_grades": "16.3",
-                                "_12_grade": "14.9",
-                                "_11_grade": "17.8"
+                                "candidature_grade": "182,6",
+                                "student_option_number": "1",
+                                "exams_grades": "163,0",
+                                "_12grade": "149",
+                                "_11grade": "178"
                             }
                         ],
                         "2": [
                             {
-                                "order_number": "",
+                                "course_order_num": "1",
                                 "civil_id": "432(...)16",
                                 "name": "Emily Rose Anderson",
-                                "candidature_grade": "15.6",
-                                "option_number": "",
-                                "exams_grades": "14.1",
-                                "_12_grade": "13.7",
-                                "_11_grade": "15.9"
+                                "candidature_grade": "156,6",
+                                "student_option_number": "1",
+                                "exams_grades": "141,0",
+                                "_12grade": "137",
+                                "_11grade": "159"
                             },
                             {
-                                "order_number": "",
+                                "course_order_num": "2",
                                 "civil_id": "789(...)35",
                                 "name": "Daniel Christopher Lee",
-                                "candidature_grade": "17.4",
-                                "option_number": "",
-                                "exams_grades": "18.3",
-                                "_12_grade": "14.8",
-                                "_11_grade": "16.2"
+                                "candidature_grade": "174,6",
+                                "student_option_number": "1",
+                                "exams_grades": "183,0",
+                                "_12grade": "148",
+                                "_11grade": "162"
                             }
                         ],
                         "3": [
                             {
-                                "order_number": "",
+                                "course_order_num": "1",
                                 "civil_id": "246(...)70",
                                 "name": "Olivia Sophia Martinez",
-                                "candidature_grade": "16.2",
-                                "option_number": "",
-                                "exams_grades": "15.5",
-                                "_12_grade": "17.9",
-                                "_11_grade": "14.6"
+                                "candidature_grade": "162,6",
+                                "student_option_number": "1",
+                                "exams_grades": "155,0",
+                                "_12grade": "179",
+                                "_11grade": "146"
                             },
                             {
-                                "order_number": "",
+                                "course_order_num": "2",
                                 "civil_id": "123(...)78",
-                                "name": "John Alexander Smith",
-                                "candidature_grade": "16.8",
-                                "option_number": "",
-                                "exams_grades": "15.2",
-                                "_12_grade": "17.1",
-                                "_11_grade": "14.3"
+                                "name": "João d'Antônia Góis",
+                                "candidature_grade": "168,6",
+                                "student_option_number": "1",
+                                "exams_grades": "152,0",
+                                "_12grade": "171",
+                                "_11grade": "143"
                             }
                         ]
                     },
                     "2021": {
                         "1": [
                             {
-                                "order_number": "",
+                                "course_order_num": "1",
                                 "civil_id": "987(...)02",
                                 "name": "Emma Grace Johnson",
-                                "candidature_grade": "14.7",
-                                "option_number": "",
-                                "exams_grades": "17.9",
-                                "_12_grade": "15.6",
-                                "_11_grade": "13.5"
+                                "candidature_grade": "147,6",
+                                "student_option_number": "1",
+                                "exams_grades": "179,0",
+                                "_12grade": "156",
+                                "_11grade": "135"
                             },
                             {
-                                "order_number": "",
+                                "course_order_num": "2",
                                 "civil_id": "567(...)94",
                                 "name": "Michael David Rodriguez",
-                                "candidature_grade": "18.2",
-                                "option_number": "",
-                                "exams_grades": "16.3",
-                                "_12_grade": "14.9",
-                                "_11_grade": "17.8"
+                                "candidature_grade": "182,6",
+                                "student_option_number": "1",
+                                "exams_grades": "163,0",
+                                "_12grade": "149",
+                                "_11grade": "178"
                             }
                         ],
                         "2": [
                             {
-                                "order_number": "",
+                                "course_order_num": "1",
                                 "civil_id": "432(...)16",
                                 "name": "Emily Rose Anderson",
-                                "candidature_grade": "15.6",
-                                "option_number": "",
-                                "exams_grades": "14.1",
-                                "_12_grade": "13.7",
-                                "_11_grade": "15.9"
+                                "candidature_grade": "156,6",
+                                "student_option_number": "1",
+                                "exams_grades": "141,0",
+                                "_12grade": "137",
+                                "_11grade": "159"
                             },
                             {
-                                "order_number": "",
+                                "course_order_num": "2",
                                 "civil_id": "789(...)35",
                                 "name": "Daniel Christopher Lee",
-                                "candidature_grade": "17.4",
-                                "option_number": "",
-                                "exams_grades": "18.3",
-                                "_12_grade": "14.8",
-                                "_11_grade": "16.2"
+                                "candidature_grade": "174,6",
+                                "student_option_number": "1",
+                                "exams_grades": "183,0",
+                                "_12grade": "148",
+                                "_11grade": "162"
                             }
                         ],
                         "3": [
                             {
-                                "order_number": "",
+                                "course_order_num": "1",
                                 "civil_id": "246(...)70",
                                 "name": "Olivia Sophia Martinez",
-                                "candidature_grade": "16.2",
-                                "option_number": "",
-                                "exams_grades": "15.5",
-                                "_12_grade": "17.9",
-                                "_11_grade": "14.6"
+                                "candidature_grade": "162,6",
+                                "student_option_number": "1",
+                                "exams_grades": "155,0",
+                                "_12grade": "179",
+                                "_11grade": "146"
                             },
                             {
-                                "order_number": "",
+                                "course_order_num": "2",
                                 "civil_id": "123(...)78",
-                                "name": "John Alexander Smith",
-                                "candidature_grade": "16.8",
-                                "option_number": "",
-                                "exams_grades": "15.2",
-                                "_12_grade": "17.1",
-                                "_11_grade": "14.3"
+                                "name": "João d'Antônia Góis",
+                                "candidature_grade": "168,6",
+                                "student_option_number": "1",
+                                "exams_grades": "152,0",
+                                "_12grade": "171",
+                                "_11grade": "143"
                             }
                         ]
                     },
                     "2022": {
                         "1": [
                             {
-                                "order_number": "",
+                                "course_order_num": "1",
                                 "civil_id": "987(...)02",
                                 "name": "Emma Grace Johnson",
-                                "candidature_grade": "14.7",
-                                "option_number": "",
-                                "exams_grades": "17.9",
-                                "_12_grade": "15.6",
-                                "_11_grade": "13.5"
+                                "candidature_grade": "147,6",
+                                "student_option_number": "1",
+                                "exams_grades": "179,0",
+                                "_12grade": "156",
+                                "_11grade": "135"
                             },
                             {
-                                "order_number": "",
+                                "course_order_num": "2",
                                 "civil_id": "567(...)94",
                                 "name": "Michael David Rodriguez",
-                                "candidature_grade": "18.2",
-                                "option_number": "",
-                                "exams_grades": "16.3",
-                                "_12_grade": "14.9",
-                                "_11_grade": "17.8"
+                                "candidature_grade": "182,6",
+                                "student_option_number": "1",
+                                "exams_grades": "163,0",
+                                "_12grade": "149",
+                                "_11grade": "178"
                             }
                         ],
                         "2": [
                             {
-                                "order_number": "",
+                                "course_order_num": "1",
                                 "civil_id": "432(...)16",
                                 "name": "Emily Rose Anderson",
-                                "candidature_grade": "15.6",
-                                "option_number": "",
-                                "exams_grades": "14.1",
-                                "_12_grade": "13.7",
-                                "_11_grade": "15.9"
+                                "candidature_grade": "156,6",
+                                "student_option_number": "1",
+                                "exams_grades": "141,0",
+                                "_12grade": "137",
+                                "_11grade": "159"
                             },
                             {
-                                "order_number": "",
+                                "course_order_num": "2",
                                 "civil_id": "789(...)35",
                                 "name": "Daniel Christopher Lee",
-                                "candidature_grade": "17.4",
-                                "option_number": "",
-                                "exams_grades": "18.3",
-                                "_12_grade": "14.8",
-                                "_11_grade": "16.2"
+                                "candidature_grade": "174,6",
+                                "student_option_number": "1",
+                                "exams_grades": "183,0",
+                                "_12grade": "148",
+                                "_11grade": "162"
                             }
                         ],
                         "3": [
                             {
-                                "order_number": "",
+                                "course_order_num": "1",
                                 "civil_id": "246(...)70",
                                 "name": "Olivia Sophia Martinez",
-                                "candidature_grade": "16.2",
-                                "option_number": "",
-                                "exams_grades": "15.5",
-                                "_12_grade": "17.9",
-                                "_11_grade": "14.6"
+                                "candidature_grade": "162,6",
+                                "student_option_number": "1",
+                                "exams_grades": "155,0",
+                                "_12grade": "179",
+                                "_11grade": "146"
                             },
                             {
-                                "order_number": "",
+                                "course_order_num": "2",
                                 "civil_id": "123(...)78",
-                                "name": "John Alexander Smith",
-                                "candidature_grade": "16.8",
-                                "option_number": "",
-                                "exams_grades": "15.2",
-                                "_12_grade": "17.1",
-                                "_11_grade": "14.3"
+                                "name": "João d'Antônia Góis",
+                                "candidature_grade": "168,6",
+                                "student_option_number": "1",
+                                "exams_grades": "152,0",
+                                "_12grade": "171",
+                                "_11grade": "143"
                             }
                         ]
                     }
@@ -710,340 +710,340 @@
                     "2018": {
                         "1": [
                             {
-                                "order_number": "",
+                                "course_order_num": "1",
                                 "civil_id": "987(...)02",
                                 "name": "Emma Grace Johnson",
-                                "candidature_grade": "14.7",
-                                "option_number": "",
-                                "exams_grades": "17.9",
-                                "_12_grade": "15.6",
-                                "_11_grade": "13.5"
+                                "candidature_grade": "147,2",
+                                "student_option_number": "1",
+                                "exams_grades": "179,0",
+                                "_12grade": "156",
+                                "_11grade": "135"
                             },
                             {
-                                "order_number": "",
+                                "course_order_num": "2",
                                 "civil_id": "567(...)94",
                                 "name": "Michael David Rodriguez",
-                                "candidature_grade": "18.2",
-                                "option_number": "",
-                                "exams_grades": "16.3",
-                                "_12_grade": "14.9",
-                                "_11_grade": "17.8"
+                                "candidature_grade": "182,6",
+                                "student_option_number": "1",
+                                "exams_grades": "163,0",
+                                "_12grade": "149",
+                                "_11grade": "178"
                             }
                         ],
                         "2": [
                             {
-                                "order_number": "",
+                                "course_order_num": "1",
                                 "civil_id": "432(...)16",
                                 "name": "Emily Rose Anderson",
-                                "candidature_grade": "15.6",
-                                "option_number": "",
-                                "exams_grades": "14.1",
-                                "_12_grade": "13.7",
-                                "_11_grade": "15.9"
+                                "candidature_grade": "156,6",
+                                "student_option_number": "1",
+                                "exams_grades": "141,0",
+                                "_12grade": "137",
+                                "_11grade": "159"
                             },
                             {
-                                "order_number": "",
+                                "course_order_num": "2",
                                 "civil_id": "789(...)35",
                                 "name": "Daniel Christopher Lee",
-                                "candidature_grade": "17.4",
-                                "option_number": "",
-                                "exams_grades": "18.3",
-                                "_12_grade": "14.8",
-                                "_11_grade": "16.2"
+                                "candidature_grade": "174,6",
+                                "student_option_number": "1",
+                                "exams_grades": "183,0",
+                                "_12grade": "148",
+                                "_11grade": "162"
                             }
                         ],
                         "3": [
                             {
-                                "order_number": "",
+                                "course_order_num": "1",
                                 "civil_id": "246(...)70",
                                 "name": "Olivia Sophia Martinez",
-                                "candidature_grade": "16.2",
-                                "option_number": "",
-                                "exams_grades": "15.5",
-                                "_12_grade": "17.9",
-                                "_11_grade": "14.6"
+                                "candidature_grade": "162,5",
+                                "student_option_number": "1",
+                                "exams_grades": "155,0",
+                                "_12grade": "179",
+                                "_11grade": "146"
                             },
                             {
-                                "order_number": "",
+                                "course_order_num": "2",
                                 "civil_id": "123(...)78",
-                                "name": "John Alexander Smith",
-                                "candidature_grade": "16.8",
-                                "option_number": "",
-                                "exams_grades": "15.2",
-                                "_12_grade": "17.1",
-                                "_11_grade": "14.3"
+                                "name": "João d'Antônia Góis",
+                                "candidature_grade": "168,6",
+                                "student_option_number": "1",
+                                "exams_grades": "152,0",
+                                "_12grade": "171",
+                                "_11grade": "143"
                             }
                         ]
                     },
                     "2019": {
                         "1": [
                             {
-                                "order_number": "",
+                                "course_order_num": "1",
                                 "civil_id": "987(...)02",
                                 "name": "Emma Grace Johnson",
-                                "candidature_grade": "14.7",
-                                "option_number": "",
-                                "exams_grades": "17.9",
-                                "_12_grade": "15.6",
-                                "_11_grade": "13.5"
+                                "candidature_grade": "147,6",
+                                "student_option_number": "1",
+                                "exams_grades": "179,0",
+                                "_12grade": "156",
+                                "_11grade": "135"
                             },
                             {
-                                "order_number": "",
+                                "course_order_num": "2",
                                 "civil_id": "567(...)94",
                                 "name": "Michael David Rodriguez",
-                                "candidature_grade": "18.2",
-                                "option_number": "",
-                                "exams_grades": "16.3",
-                                "_12_grade": "14.9",
-                                "_11_grade": "17.8"
+                                "candidature_grade": "182,6",
+                                "student_option_number": "1",
+                                "exams_grades": "163,0",
+                                "_12grade": "149",
+                                "_11grade": "178"
                             }
                         ],
                         "2": [
                             {
-                                "order_number": "",
+                                "course_order_num": "1",
                                 "civil_id": "432(...)16",
                                 "name": "Emily Rose Anderson",
-                                "candidature_grade": "15.6",
-                                "option_number": "",
-                                "exams_grades": "14.1",
-                                "_12_grade": "13.7",
-                                "_11_grade": "15.9"
+                                "candidature_grade": "156,4",
+                                "student_option_number": "1",
+                                "exams_grades": "141,0",
+                                "_12grade": "137",
+                                "_11grade": "159"
                             },
                             {
-                                "order_number": "",
+                                "course_order_num": "2",
                                 "civil_id": "789(...)35",
                                 "name": "Daniel Christopher Lee",
-                                "candidature_grade": "17.4",
-                                "option_number": "",
-                                "exams_grades": "18.3",
-                                "_12_grade": "14.8",
-                                "_11_grade": "16.2"
+                                "candidature_grade": "174,6",
+                                "student_option_number": "1",
+                                "exams_grades": "183,0",
+                                "_12grade": "148",
+                                "_11grade": "162"
                             }
                         ],
                         "3": [
                             {
-                                "order_number": "",
+                                "course_order_num": "1",
                                 "civil_id": "246(...)70",
                                 "name": "Olivia Sophia Martinez",
-                                "candidature_grade": "16.2",
-                                "option_number": "",
-                                "exams_grades": "15.5",
-                                "_12_grade": "17.9",
-                                "_11_grade": "14.6"
+                                "candidature_grade": "162,6",
+                                "student_option_number": "1",
+                                "exams_grades": "155,0",
+                                "_12grade": "179",
+                                "_11grade": "146"
                             },
                             {
-                                "order_number": "",
+                                "course_order_num": "2",
                                 "civil_id": "123(...)78",
-                                "name": "John Alexander Smith",
-                                "candidature_grade": "16.8",
-                                "option_number": "",
-                                "exams_grades": "15.2",
-                                "_12_grade": "17.1",
-                                "_11_grade": "14.3"
+                                "name": "João d'Antônia Góis",
+                                "candidature_grade": "168,6",
+                                "student_option_number": "1",
+                                "exams_grades": "152,0",
+                                "_12grade": "171",
+                                "_11grade": "143"
                             }
                         ]
                     },
                     "2020": {
                         "1": [
                             {
-                                "order_number": "",
+                                "course_order_num": "1",
                                 "civil_id": "987(...)02",
                                 "name": "Emma Grace Johnson",
-                                "candidature_grade": "14.7",
-                                "option_number": "",
-                                "exams_grades": "17.9",
-                                "_12_grade": "15.6",
-                                "_11_grade": "13.5"
+                                "candidature_grade": "147,6",
+                                "student_option_number": "1",
+                                "exams_grades": "179,0",
+                                "_12grade": "156",
+                                "_11grade": "135"
                             },
                             {
-                                "order_number": "",
+                                "course_order_num": "2",
                                 "civil_id": "567(...)94",
                                 "name": "Michael David Rodriguez",
-                                "candidature_grade": "18.2",
-                                "option_number": "",
-                                "exams_grades": "16.3",
-                                "_12_grade": "14.9",
-                                "_11_grade": "17.8"
+                                "candidature_grade": "182,6",
+                                "student_option_number": "1",
+                                "exams_grades": "163,0",
+                                "_12grade": "149",
+                                "_11grade": "178"
                             }
                         ],
                         "2": [
                             {
-                                "order_number": "",
+                                "course_order_num": "1",
                                 "civil_id": "432(...)16",
                                 "name": "Emily Rose Anderson",
-                                "candidature_grade": "15.6",
-                                "option_number": "",
-                                "exams_grades": "14.1",
-                                "_12_grade": "13.7",
-                                "_11_grade": "15.9"
+                                "candidature_grade": "156,6",
+                                "student_option_number": "1",
+                                "exams_grades": "141,0",
+                                "_12grade": "137",
+                                "_11grade": "159"
                             },
                             {
-                                "order_number": "",
+                                "course_order_num": "2",
                                 "civil_id": "789(...)35",
                                 "name": "Daniel Christopher Lee",
-                                "candidature_grade": "17.4",
-                                "option_number": "",
-                                "exams_grades": "18.3",
-                                "_12_grade": "14.8",
-                                "_11_grade": "16.2"
+                                "candidature_grade": "174,6",
+                                "student_option_number": "1",
+                                "exams_grades": "183,0",
+                                "_12grade": "148",
+                                "_11grade": "162"
                             }
                         ],
                         "3": [
                             {
-                                "order_number": "",
+                                "course_order_num": "1",
                                 "civil_id": "246(...)70",
                                 "name": "Olivia Sophia Martinez",
-                                "candidature_grade": "16.2",
-                                "option_number": "",
-                                "exams_grades": "15.5",
-                                "_12_grade": "17.9",
-                                "_11_grade": "14.6"
+                                "candidature_grade": "162,6",
+                                "student_option_number": "1",
+                                "exams_grades": "155,0",
+                                "_12grade": "179",
+                                "_11grade": "146"
                             },
                             {
-                                "order_number": "",
+                                "course_order_num": "2",
                                 "civil_id": "123(...)78",
-                                "name": "John Alexander Smith",
-                                "candidature_grade": "16.8",
-                                "option_number": "",
-                                "exams_grades": "15.2",
-                                "_12_grade": "17.1",
-                                "_11_grade": "14.3"
+                                "name": "João d'Antônia Góis",
+                                "candidature_grade": "168,6",
+                                "student_option_number": "1",
+                                "exams_grades": "152,0",
+                                "_12grade": "171",
+                                "_11grade": "143"
                             }
                         ]
                     },
                     "2021": {
                         "1": [
                             {
-                                "order_number": "",
+                                "course_order_num": "1",
                                 "civil_id": "987(...)02",
                                 "name": "Emma Grace Johnson",
-                                "candidature_grade": "14.7",
-                                "option_number": "",
-                                "exams_grades": "17.9",
-                                "_12_grade": "15.6",
-                                "_11_grade": "13.5"
+                                "candidature_grade": "147,6",
+                                "student_option_number": "1",
+                                "exams_grades": "179,0",
+                                "_12grade": "156",
+                                "_11grade": "135"
                             },
                             {
-                                "order_number": "",
+                                "course_order_num": "2",
                                 "civil_id": "567(...)94",
                                 "name": "Michael David Rodriguez",
-                                "candidature_grade": "18.2",
-                                "option_number": "",
-                                "exams_grades": "16.3",
-                                "_12_grade": "14.9",
-                                "_11_grade": "17.8"
+                                "candidature_grade": "182,6",
+                                "student_option_number": "1",
+                                "exams_grades": "163,0",
+                                "_12grade": "149",
+                                "_11grade": "178"
                             }
                         ],
                         "2": [
                             {
-                                "order_number": "",
+                                "course_order_num": "1",
                                 "civil_id": "432(...)16",
                                 "name": "Emily Rose Anderson",
-                                "candidature_grade": "15.6",
-                                "option_number": "",
-                                "exams_grades": "14.1",
-                                "_12_grade": "13.7",
-                                "_11_grade": "15.9"
+                                "candidature_grade": "156,6",
+                                "student_option_number": "1",
+                                "exams_grades": "141,0",
+                                "_12grade": "137",
+                                "_11grade": "159"
                             },
                             {
-                                "order_number": "",
+                                "course_order_num": "2",
                                 "civil_id": "789(...)35",
                                 "name": "Daniel Christopher Lee",
-                                "candidature_grade": "17.4",
-                                "option_number": "",
-                                "exams_grades": "18.3",
-                                "_12_grade": "14.8",
-                                "_11_grade": "16.2"
+                                "candidature_grade": "174,6",
+                                "student_option_number": "1",
+                                "exams_grades": "183,0",
+                                "_12grade": "148",
+                                "_11grade": "162"
                             }
                         ],
                         "3": [
                             {
-                                "order_number": "",
+                                "course_order_num": "1",
                                 "civil_id": "246(...)70",
                                 "name": "Olivia Sophia Martinez",
-                                "candidature_grade": "16.2",
-                                "option_number": "",
-                                "exams_grades": "15.5",
-                                "_12_grade": "17.9",
-                                "_11_grade": "14.6"
+                                "candidature_grade": "162,6",
+                                "student_option_number": "1",
+                                "exams_grades": "155,0",
+                                "_12grade": "179",
+                                "_11grade": "146"
                             },
                             {
-                                "order_number": "",
+                                "course_order_num": "2",
                                 "civil_id": "123(...)78",
-                                "name": "John Alexander Smith",
-                                "candidature_grade": "16.8",
-                                "option_number": "",
-                                "exams_grades": "15.2",
-                                "_12_grade": "17.1",
-                                "_11_grade": "14.3"
+                                "name": "João d'Antônia Góis",
+                                "candidature_grade": "168,6",
+                                "student_option_number": "1",
+                                "exams_grades": "152,0",
+                                "_12grade": "171",
+                                "_11grade": "143"
                             }
                         ]
                     },
                     "2022": {
                         "1": [
                             {
-                                "order_number": "",
+                                "course_order_num": "1",
                                 "civil_id": "987(...)02",
                                 "name": "Emma Grace Johnson",
-                                "candidature_grade": "14.7",
-                                "option_number": "",
-                                "exams_grades": "17.9",
-                                "_12_grade": "15.6",
-                                "_11_grade": "13.5"
+                                "candidature_grade": "147,6",
+                                "student_option_number": "1",
+                                "exams_grades": "179,0",
+                                "_12grade": "156",
+                                "_11grade": "135"
                             },
                             {
-                                "order_number": "",
+                                "course_order_num": "2",
                                 "civil_id": "567(...)94",
                                 "name": "Michael David Rodriguez",
-                                "candidature_grade": "18.2",
-                                "option_number": "",
-                                "exams_grades": "16.3",
-                                "_12_grade": "14.9",
-                                "_11_grade": "17.8"
+                                "candidature_grade": "182,6",
+                                "student_option_number": "1",
+                                "exams_grades": "163,0",
+                                "_12grade": "149",
+                                "_11grade": "178"
                             }
                         ],
                         "2": [
                             {
-                                "order_number": "",
+                                "course_order_num": "1",
                                 "civil_id": "432(...)16",
                                 "name": "Emily Rose Anderson",
-                                "candidature_grade": "15.6",
-                                "option_number": "",
-                                "exams_grades": "14.1",
-                                "_12_grade": "13.7",
-                                "_11_grade": "15.9"
+                                "candidature_grade": "156,6",
+                                "student_option_number": "1",
+                                "exams_grades": "141,0",
+                                "_12grade": "137",
+                                "_11grade": "159"
                             },
                             {
-                                "order_number": "",
+                                "course_order_num": "2",
                                 "civil_id": "789(...)35",
                                 "name": "Daniel Christopher Lee",
-                                "candidature_grade": "17.4",
-                                "option_number": "",
-                                "exams_grades": "18.3",
-                                "_12_grade": "14.8",
-                                "_11_grade": "16.2"
+                                "candidature_grade": "174,3",
+                                "student_option_number": "1",
+                                "exams_grades": "183,0",
+                                "_12grade": "148",
+                                "_11grade": "162"
                             }
                         ],
                         "3": [
                             {
-                                "order_number": "",
+                                "course_order_num": "1",
                                 "civil_id": "246(...)70",
                                 "name": "Olivia Sophia Martinez",
-                                "candidature_grade": "16.2",
-                                "option_number": "",
-                                "exams_grades": "15.5",
-                                "_12_grade": "17.9",
-                                "_11_grade": "14.6"
+                                "candidature_grade": "162,6",
+                                "student_option_number": "1",
+                                "exams_grades": "155,0",
+                                "_12grade": "179",
+                                "_11grade": "146"
                             },
                             {
-                                "order_number": "",
+                                "course_order_num": "2",
                                 "civil_id": "123(...)78",
-                                "name": "John Alexander Smith",
-                                "candidature_grade": "16.8",
-                                "option_number": "",
-                                "exams_grades": "15.2",
-                                "_12_grade": "17.1",
-                                "_11_grade": "14.3"
+                                "name": "João d'Antônia Góis",
+                                "candidature_grade": "168,6",
+                                "student_option_number": "1",
+                                "exams_grades": "152,0",
+                                "_12grade": "171",
+                                "_11grade": "143"
                             }
                         ]
                     }
@@ -1056,340 +1056,340 @@
                     "2018": {
                         "1": [
                             {
-                                "order_number": "",
+                                "course_order_num": "1",
                                 "civil_id": "123(...)78",
-                                "name": "John Alexander Smith",
-                                "candidature_grade": "16.8",
-                                "option_number": "",
-                                "exams_grades": "15.2",
-                                "_12_grade": "17.1",
-                                "_11_grade": "14.3"
+                                "name": "João d'Antônia Góis",
+                                "candidature_grade": "168,6",
+                                "student_option_number": "1",
+                                "exams_grades": "152,0",
+                                "_12grade": "171",
+                                "_11grade": "143"
                             },
                             {
-                                "order_number": "",
+                                "course_order_num": "2",
                                 "civil_id": "987(...)02",
                                 "name": "Emma Grace Johnson",
-                                "candidature_grade": "14.7",
-                                "option_number": "",
-                                "exams_grades": "17.9",
-                                "_12_grade": "15.6",
-                                "_11_grade": "13.5"
+                                "candidature_grade": "147,6",
+                                "student_option_number": "1",
+                                "exams_grades": "179,0",
+                                "_12grade": "156",
+                                "_11grade": "135"
                             }
                         ],
                         "2": [
                             {
-                                "order_number": "",
+                                "course_order_num": "1",
                                 "civil_id": "567(...)94",
                                 "name": "Michael David Rodriguez",
-                                "candidature_grade": "18.2",
-                                "option_number": "",
-                                "exams_grades": "16.3",
-                                "_12_grade": "14.9",
-                                "_11_grade": "17.8"
+                                "candidature_grade": "182,6",
+                                "student_option_number": "1",
+                                "exams_grades": "163,0",
+                                "_12grade": "149",
+                                "_11grade": "178"
                             },
                             {
-                                "order_number": "",
+                                "course_order_num": "2",
                                 "civil_id": "432(...)16",
                                 "name": "Emily Rose Anderson",
-                                "candidature_grade": "15.6",
-                                "option_number": "",
-                                "exams_grades": "14.1",
-                                "_12_grade": "13.7",
-                                "_11_grade": "15.9"
+                                "candidature_grade": "156,6",
+                                "student_option_number": "1",
+                                "exams_grades": "141,0",
+                                "_12grade": "137",
+                                "_11grade": "159"
                             }
                         ],
                         "3": [
                             {
-                                "order_number": "",
+                                "course_order_num": "1",
                                 "civil_id": "789(...)35",
                                 "name": "Daniel Christopher Lee",
-                                "candidature_grade": "17.4",
-                                "option_number": "",
-                                "exams_grades": "18.3",
-                                "_12_grade": "14.8",
-                                "_11_grade": "16.2"
+                                "candidature_grade": "174,6",
+                                "student_option_number": "1",
+                                "exams_grades": "183,0",
+                                "_12grade": "148",
+                                "_11grade": "162"
                             },
                             {
-                                "order_number": "",
+                                "course_order_num": "2",
                                 "civil_id": "246(...)70",
                                 "name": "Olivia Sophia Martinez",
-                                "candidature_grade": "16.2",
-                                "option_number": "",
-                                "exams_grades": "15.5",
-                                "_12_grade": "17.9",
-                                "_11_grade": "14.6"
+                                "candidature_grade": "162,6",
+                                "student_option_number": "1",
+                                "exams_grades": "155,0",
+                                "_12grade": "179",
+                                "_11grade": "146"
                             }
                         ]
                     },
                     "2019": {
                         "1": [
                             {
-                                "order_number": "",
+                                "course_order_num": "1",
                                 "civil_id": "123(...)78",
-                                "name": "John Alexander Smith",
-                                "candidature_grade": "16.8",
-                                "option_number": "",
-                                "exams_grades": "15.2",
-                                "_12_grade": "17.1",
-                                "_11_grade": "14.3"
+                                "name": "João d'Antônia Góis",
+                                "candidature_grade": "168,6",
+                                "student_option_number": "1",
+                                "exams_grades": "152,0",
+                                "_12grade": "171",
+                                "_11grade": "143"
                             },
                             {
-                                "order_number": "",
+                                "course_order_num": "2",
                                 "civil_id": "987(...)02",
                                 "name": "Emma Grace Johnson",
-                                "candidature_grade": "14.7",
-                                "option_number": "",
-                                "exams_grades": "17.9",
-                                "_12_grade": "15.6",
-                                "_11_grade": "13.5"
+                                "candidature_grade": "147,2",
+                                "student_option_number": "1",
+                                "exams_grades": "179,0",
+                                "_12grade": "156",
+                                "_11grade": "135"
                             }
                         ],
                         "2": [
                             {
-                                "order_number": "",
+                                "course_order_num": "1",
                                 "civil_id": "567(...)94",
                                 "name": "Michael David Rodriguez",
-                                "candidature_grade": "18.2",
-                                "option_number": "",
-                                "exams_grades": "16.3",
-                                "_12_grade": "14.9",
-                                "_11_grade": "17.8"
+                                "candidature_grade": "182,6",
+                                "student_option_number": "1",
+                                "exams_grades": "163,0",
+                                "_12grade": "149",
+                                "_11grade": "178"
                             },
                             {
-                                "order_number": "",
+                                "course_order_num": "2",
                                 "civil_id": "432(...)16",
                                 "name": "Emily Rose Anderson",
-                                "candidature_grade": "15.6",
-                                "option_number": "",
-                                "exams_grades": "14.1",
-                                "_12_grade": "13.7",
-                                "_11_grade": "15.9"
+                                "candidature_grade": "156,6",
+                                "student_option_number": "1",
+                                "exams_grades": "141,0",
+                                "_12grade": "137",
+                                "_11grade": "159"
                             }
                         ],
                         "3": [
                             {
-                                "order_number": "",
+                                "course_order_num": "1",
                                 "civil_id": "789(...)35",
                                 "name": "Daniel Christopher Lee",
-                                "candidature_grade": "17.4",
-                                "option_number": "",
-                                "exams_grades": "18.3",
-                                "_12_grade": "14.8",
-                                "_11_grade": "16.2"
+                                "candidature_grade": "174,6",
+                                "student_option_number": "1",
+                                "exams_grades": "183,0",
+                                "_12grade": "148",
+                                "_11grade": "162"
                             },
                             {
-                                "order_number": "",
+                                "course_order_num": "2",
                                 "civil_id": "246(...)70",
                                 "name": "Olivia Sophia Martinez",
-                                "candidature_grade": "16.2",
-                                "option_number": "",
-                                "exams_grades": "15.5",
-                                "_12_grade": "17.9",
-                                "_11_grade": "14.6"
+                                "candidature_grade": "162,6",
+                                "student_option_number": "1",
+                                "exams_grades": "155,0",
+                                "_12grade": "179",
+                                "_11grade": "146"
                             }
                         ]
                     },
                     "2020": {
                         "1": [
                             {
-                                "order_number": "",
+                                "course_order_num": "1",
                                 "civil_id": "123(...)78",
-                                "name": "John Alexander Smith",
-                                "candidature_grade": "16.8",
-                                "option_number": "",
-                                "exams_grades": "15.2",
-                                "_12_grade": "17.1",
-                                "_11_grade": "14.3"
+                                "name": "João d'Antônia Góis",
+                                "candidature_grade": "168,6",
+                                "student_option_number": "1",
+                                "exams_grades": "152,0",
+                                "_12grade": "171",
+                                "_11grade": "143"
                             },
                             {
-                                "order_number": "",
+                                "course_order_num": "2",
                                 "civil_id": "987(...)02",
                                 "name": "Emma Grace Johnson",
-                                "candidature_grade": "14.7",
-                                "option_number": "",
-                                "exams_grades": "17.9",
-                                "_12_grade": "15.6",
-                                "_11_grade": "13.5"
+                                "candidature_grade": "147,6",
+                                "student_option_number": "1",
+                                "exams_grades": "179,0",
+                                "_12grade": "156",
+                                "_11grade": "135"
                             }
                         ],
                         "2": [
                             {
-                                "order_number": "",
+                                "course_order_num": "1",
                                 "civil_id": "567(...)94",
                                 "name": "Michael David Rodriguez",
-                                "candidature_grade": "18.2",
-                                "option_number": "",
-                                "exams_grades": "16.3",
-                                "_12_grade": "14.9",
-                                "_11_grade": "17.8"
+                                "candidature_grade": "182,6",
+                                "student_option_number": "1",
+                                "exams_grades": "163,0",
+                                "_12grade": "149",
+                                "_11grade": "178"
                             },
                             {
-                                "order_number": "",
+                                "course_order_num": "2",
                                 "civil_id": "432(...)16",
                                 "name": "Emily Rose Anderson",
-                                "candidature_grade": "15.6",
-                                "option_number": "",
-                                "exams_grades": "14.1",
-                                "_12_grade": "13.7",
-                                "_11_grade": "15.9"
+                                "candidature_grade": "156,6",
+                                "student_option_number": "1",
+                                "exams_grades": "141,0",
+                                "_12grade": "137",
+                                "_11grade": "159"
                             }
                         ],
                         "3": [
                             {
-                                "order_number": "",
+                                "course_order_num": "1",
                                 "civil_id": "789(...)35",
                                 "name": "Daniel Christopher Lee",
-                                "candidature_grade": "17.4",
-                                "option_number": "",
-                                "exams_grades": "18.3",
-                                "_12_grade": "14.8",
-                                "_11_grade": "16.2"
+                                "candidature_grade": "174,6",
+                                "student_option_number": "1",
+                                "exams_grades": "183,0",
+                                "_12grade": "148",
+                                "_11grade": "162"
                             },
                             {
-                                "order_number": "",
+                                "course_order_num": "2",
                                 "civil_id": "246(...)70",
                                 "name": "Olivia Sophia Martinez",
-                                "candidature_grade": "16.2",
-                                "option_number": "",
-                                "exams_grades": "15.5",
-                                "_12_grade": "17.9",
-                                "_11_grade": "14.6"
+                                "candidature_grade": "162,6",
+                                "student_option_number": "1",
+                                "exams_grades": "155,0",
+                                "_12grade": "179",
+                                "_11grade": "146"
                             }
                         ]
                     },
                     "2021": {
                         "1": [
                             {
-                                "order_number": "",
+                                "course_order_num": "1",
                                 "civil_id": "123(...)78",
-                                "name": "John Alexander Smith",
-                                "candidature_grade": "16.8",
-                                "option_number": "",
-                                "exams_grades": "15.2",
-                                "_12_grade": "17.1",
-                                "_11_grade": "14.3"
+                                "name": "João d'Antônia Góis",
+                                "candidature_grade": "168,3",
+                                "student_option_number": "1",
+                                "exams_grades": "152,0",
+                                "_12grade": "171",
+                                "_11grade": "143"
                             },
                             {
-                                "order_number": "",
+                                "course_order_num": "2",
                                 "civil_id": "987(...)02",
                                 "name": "Emma Grace Johnson",
-                                "candidature_grade": "14.7",
-                                "option_number": "",
-                                "exams_grades": "17.9",
-                                "_12_grade": "15.6",
-                                "_11_grade": "13.5"
+                                "candidature_grade": "147,6",
+                                "student_option_number": "1",
+                                "exams_grades": "179,0",
+                                "_12grade": "156",
+                                "_11grade": "135"
                             }
                         ],
                         "2": [
                             {
-                                "order_number": "",
+                                "course_order_num": "1",
                                 "civil_id": "567(...)94",
                                 "name": "Michael David Rodriguez",
-                                "candidature_grade": "18.2",
-                                "option_number": "",
-                                "exams_grades": "16.3",
-                                "_12_grade": "14.9",
-                                "_11_grade": "17.8"
+                                "candidature_grade": "182,6",
+                                "student_option_number": "1",
+                                "exams_grades": "163,0",
+                                "_12grade": "149",
+                                "_11grade": "178"
                             },
                             {
-                                "order_number": "",
+                                "course_order_num": "2",
                                 "civil_id": "432(...)16",
                                 "name": "Emily Rose Anderson",
-                                "candidature_grade": "15.6",
-                                "option_number": "",
-                                "exams_grades": "14.1",
-                                "_12_grade": "13.7",
-                                "_11_grade": "15.9"
+                                "candidature_grade": "156,6",
+                                "student_option_number": "1",
+                                "exams_grades": "141,0",
+                                "_12grade": "137",
+                                "_11grade": "159"
                             }
                         ],
                         "3": [
                             {
-                                "order_number": "",
+                                "course_order_num": "1",
                                 "civil_id": "789(...)35",
                                 "name": "Daniel Christopher Lee",
-                                "candidature_grade": "17.4",
-                                "option_number": "",
-                                "exams_grades": "18.3",
-                                "_12_grade": "14.8",
-                                "_11_grade": "16.2"
+                                "candidature_grade": "174,6",
+                                "student_option_number": "1",
+                                "exams_grades": "183,0",
+                                "_12grade": "148",
+                                "_11grade": "162"
                             },
                             {
-                                "order_number": "",
+                                "course_order_num": "2",
                                 "civil_id": "246(...)70",
                                 "name": "Olivia Sophia Martinez",
-                                "candidature_grade": "16.2",
-                                "option_number": "",
-                                "exams_grades": "15.5",
-                                "_12_grade": "17.9",
-                                "_11_grade": "14.6"
+                                "candidature_grade": "162,6",
+                                "student_option_number": "1",
+                                "exams_grades": "155,0",
+                                "_12grade": "179",
+                                "_11grade": "146"
                             }
                         ]
                     },
                     "2022": {
                         "1": [
                             {
-                                "order_number": "",
+                                "course_order_num": "1",
                                 "civil_id": "123(...)78",
-                                "name": "John Alexander Smith",
-                                "candidature_grade": "16.8",
-                                "option_number": "",
-                                "exams_grades": "15.2",
-                                "_12_grade": "17.1",
-                                "_11_grade": "14.3"
+                                "name": "João d'Antônia Góis",
+                                "candidature_grade": "168,6",
+                                "student_option_number": "1",
+                                "exams_grades": "152,0",
+                                "_12grade": "171",
+                                "_11grade": "143"
                             },
                             {
-                                "order_number": "",
+                                "course_order_num": "2",
                                 "civil_id": "987(...)02",
                                 "name": "Emma Grace Johnson",
-                                "candidature_grade": "14.7",
-                                "option_number": "",
-                                "exams_grades": "17.9",
-                                "_12_grade": "15.6",
-                                "_11_grade": "13.5"
+                                "candidature_grade": "147,6",
+                                "student_option_number": "1",
+                                "exams_grades": "179,0",
+                                "_12grade": "156",
+                                "_11grade": "135"
                             }
                         ],
                         "2": [
                             {
-                                "order_number": "",
+                                "course_order_num": "1",
                                 "civil_id": "567(...)94",
                                 "name": "Michael David Rodriguez",
-                                "candidature_grade": "18.2",
-                                "option_number": "",
-                                "exams_grades": "16.3",
-                                "_12_grade": "14.9",
-                                "_11_grade": "17.8"
+                                "candidature_grade": "182,6",
+                                "student_option_number": "1",
+                                "exams_grades": "163,0",
+                                "_12grade": "149",
+                                "_11grade": "178"
                             },
                             {
-                                "order_number": "",
+                                "course_order_num": "2",
                                 "civil_id": "432(...)16",
                                 "name": "Emily Rose Anderson",
-                                "candidature_grade": "15.6",
-                                "option_number": "",
-                                "exams_grades": "14.1",
-                                "_12_grade": "13.7",
-                                "_11_grade": "15.9"
+                                "candidature_grade": "156,6",
+                                "student_option_number": "1",
+                                "exams_grades": "141,0",
+                                "_12grade": "137",
+                                "_11grade": "159"
                             }
                         ],
                         "3": [
                             {
-                                "order_number": "",
+                                "course_order_num": "1",
                                 "civil_id": "789(...)35",
                                 "name": "Daniel Christopher Lee",
-                                "candidature_grade": "17.4",
-                                "option_number": "",
-                                "exams_grades": "18.3",
-                                "_12_grade": "14.8",
-                                "_11_grade": "16.2"
+                                "candidature_grade": "174,5",
+                                "student_option_number": "1",
+                                "exams_grades": "183,0",
+                                "_12grade": "148",
+                                "_11grade": "162"
                             },
                             {
-                                "order_number": "",
+                                "course_order_num": "2",
                                 "civil_id": "246(...)70",
                                 "name": "Olivia Sophia Martinez",
-                                "candidature_grade": "16.2",
-                                "option_number": "",
-                                "exams_grades": "15.5",
-                                "_12_grade": "17.9",
-                                "_11_grade": "14.6"
+                                "candidature_grade": "162,6",
+                                "student_option_number": "1",
+                                "exams_grades": "155,0",
+                                "_12grade": "179",
+                                "_11grade": "146"
                             }
                         ]
                     }
@@ -1409,340 +1409,340 @@
                     "2018": {
                         "1": [
                             {
-                                "order_number": "",
+                                "course_order_num": "1",
                                 "civil_id": "123(...)78",
-                                "name": "John Alexander Smith",
-                                "candidature_grade": "16.8",
-                                "option_number": "",
-                                "exams_grades": "15.2",
-                                "_12_grade": "17.1",
-                                "_11_grade": "14.3"
+                                "name": "João d'Antônia Góis",
+                                "candidature_grade": "168,6",
+                                "student_option_number": "1",
+                                "exams_grades": "152,0",
+                                "_12grade": "171",
+                                "_11grade": "143"
                             },
                             {
-                                "order_number": "",
+                                "course_order_num": "2",
                                 "civil_id": "987(...)02",
                                 "name": "Emma Grace Johnson",
-                                "candidature_grade": "14.7",
-                                "option_number": "",
-                                "exams_grades": "17.9",
-                                "_12_grade": "15.6",
-                                "_11_grade": "13.5"
+                                "candidature_grade": "147,6",
+                                "student_option_number": "1",
+                                "exams_grades": "179,0",
+                                "_12grade": "156",
+                                "_11grade": "135"
                             }
                         ],
                         "2": [
                             {
-                                "order_number": "",
+                                "course_order_num": "1",
                                 "civil_id": "567(...)94",
                                 "name": "Michael David Rodriguez",
-                                "candidature_grade": "18.2",
-                                "option_number": "",
-                                "exams_grades": "16.3",
-                                "_12_grade": "14.9",
-                                "_11_grade": "17.8"
+                                "candidature_grade": "182,6",
+                                "student_option_number": "1",
+                                "exams_grades": "163,0",
+                                "_12grade": "149",
+                                "_11grade": "178"
                             },
                             {
-                                "order_number": "",
+                                "course_order_num": "2",
                                 "civil_id": "432(...)16",
                                 "name": "Emily Rose Anderson",
-                                "candidature_grade": "15.6",
-                                "option_number": "",
-                                "exams_grades": "14.1",
-                                "_12_grade": "13.7",
-                                "_11_grade": "15.9"
+                                "candidature_grade": "156,6",
+                                "student_option_number": "1",
+                                "exams_grades": "141,0",
+                                "_12grade": "137",
+                                "_11grade": "159"
                             }
                         ],
                         "3": [
                             {
-                                "order_number": "",
+                                "course_order_num": "1",
                                 "civil_id": "789(...)35",
                                 "name": "Daniel Christopher Lee",
-                                "candidature_grade": "17.4",
-                                "option_number": "",
-                                "exams_grades": "18.3",
-                                "_12_grade": "14.8",
-                                "_11_grade": "16.2"
+                                "candidature_grade": "174,6",
+                                "student_option_number": "1",
+                                "exams_grades": "183,0",
+                                "_12grade": "148",
+                                "_11grade": "162"
                             },
                             {
-                                "order_number": "",
+                                "course_order_num": "2",
                                 "civil_id": "246(...)70",
                                 "name": "Olivia Sophia Martinez",
-                                "candidature_grade": "16.2",
-                                "option_number": "",
-                                "exams_grades": "15.5",
-                                "_12_grade": "17.9",
-                                "_11_grade": "14.6"
+                                "candidature_grade": "162,6",
+                                "student_option_number": "1",
+                                "exams_grades": "155,0",
+                                "_12grade": "179",
+                                "_11grade": "146"
                             }
                         ]
                     },
                     "2019": {
                         "1": [
                             {
-                                "order_number": "",
+                                "course_order_num": "1",
                                 "civil_id": "123(...)78",
-                                "name": "John Alexander Smith",
-                                "candidature_grade": "16.8",
-                                "option_number": "",
-                                "exams_grades": "15.2",
-                                "_12_grade": "17.1",
-                                "_11_grade": "14.3"
+                                "name": "João d'Antônia Góis",
+                                "candidature_grade": "168,6",
+                                "student_option_number": "1",
+                                "exams_grades": "152,0",
+                                "_12grade": "171",
+                                "_11grade": "143"
                             },
                             {
-                                "order_number": "",
+                                "course_order_num": "2",
                                 "civil_id": "987(...)02",
                                 "name": "Emma Grace Johnson",
-                                "candidature_grade": "14.7",
-                                "option_number": "",
-                                "exams_grades": "17.9",
-                                "_12_grade": "15.6",
-                                "_11_grade": "13.5"
+                                "candidature_grade": "147,6",
+                                "student_option_number": "1",
+                                "exams_grades": "179,0",
+                                "_12grade": "156",
+                                "_11grade": "135"
                             }
                         ],
                         "2": [
                             {
-                                "order_number": "",
+                                "course_order_num": "1",
                                 "civil_id": "567(...)94",
                                 "name": "Michael David Rodriguez",
-                                "candidature_grade": "18.2",
-                                "option_number": "",
-                                "exams_grades": "16.3",
-                                "_12_grade": "14.9",
-                                "_11_grade": "17.8"
+                                "candidature_grade": "182,6",
+                                "student_option_number": "1",
+                                "exams_grades": "163,0",
+                                "_12grade": "149",
+                                "_11grade": "178"
                             },
                             {
-                                "order_number": "",
+                                "course_order_num": "2",
                                 "civil_id": "432(...)16",
                                 "name": "Emily Rose Anderson",
-                                "candidature_grade": "15.6",
-                                "option_number": "",
-                                "exams_grades": "14.1",
-                                "_12_grade": "13.7",
-                                "_11_grade": "15.9"
+                                "candidature_grade": "156,6",
+                                "student_option_number": "1",
+                                "exams_grades": "141,0",
+                                "_12grade": "137",
+                                "_11grade": "159"
                             }
                         ],
                         "3": [
                             {
-                                "order_number": "",
+                                "course_order_num": "1",
                                 "civil_id": "789(...)35",
                                 "name": "Daniel Christopher Lee",
-                                "candidature_grade": "17.4",
-                                "option_number": "",
-                                "exams_grades": "18.3",
-                                "_12_grade": "14.8",
-                                "_11_grade": "16.2"
+                                "candidature_grade": "174,6",
+                                "student_option_number": "1",
+                                "exams_grades": "183,0",
+                                "_12grade": "148",
+                                "_11grade": "162"
                             },
                             {
-                                "order_number": "",
+                                "course_order_num": "2",
                                 "civil_id": "246(...)70",
                                 "name": "Olivia Sophia Martinez",
-                                "candidature_grade": "16.2",
-                                "option_number": "",
-                                "exams_grades": "15.5",
-                                "_12_grade": "17.9",
-                                "_11_grade": "14.6"
+                                "candidature_grade": "162,6",
+                                "student_option_number": "1",
+                                "exams_grades": "155,0",
+                                "_12grade": "179",
+                                "_11grade": "146"
                             }
                         ]
                     },
                     "2020": {
                         "1": [
                             {
-                                "order_number": "",
+                                "course_order_num": "1",
                                 "civil_id": "123(...)78",
-                                "name": "John Alexander Smith",
-                                "candidature_grade": "16.8",
-                                "option_number": "",
-                                "exams_grades": "15.2",
-                                "_12_grade": "17.1",
-                                "_11_grade": "14.3"
+                                "name": "João d'Antônia Góis",
+                                "candidature_grade": "168,6",
+                                "student_option_number": "1",
+                                "exams_grades": "152,0",
+                                "_12grade": "171",
+                                "_11grade": "143"
                             },
                             {
-                                "order_number": "",
+                                "course_order_num": "2",
                                 "civil_id": "987(...)02",
                                 "name": "Emma Grace Johnson",
-                                "candidature_grade": "14.7",
-                                "option_number": "",
-                                "exams_grades": "17.9",
-                                "_12_grade": "15.6",
-                                "_11_grade": "13.5"
+                                "candidature_grade": "147,5",
+                                "student_option_number": "1",
+                                "exams_grades": "179,0",
+                                "_12grade": "156",
+                                "_11grade": "135"
                             }
                         ],
                         "2": [
                             {
-                                "order_number": "",
+                                "course_order_num": "1",
                                 "civil_id": "567(...)94",
                                 "name": "Michael David Rodriguez",
-                                "candidature_grade": "18.2",
-                                "option_number": "",
-                                "exams_grades": "16.3",
-                                "_12_grade": "14.9",
-                                "_11_grade": "17.8"
+                                "candidature_grade": "182,6",
+                                "student_option_number": "1",
+                                "exams_grades": "163,0",
+                                "_12grade": "149",
+                                "_11grade": "178"
                             },
                             {
-                                "order_number": "",
+                                "course_order_num": "2",
                                 "civil_id": "432(...)16",
                                 "name": "Emily Rose Anderson",
-                                "candidature_grade": "15.6",
-                                "option_number": "",
-                                "exams_grades": "14.1",
-                                "_12_grade": "13.7",
-                                "_11_grade": "15.9"
+                                "candidature_grade": "156,6",
+                                "student_option_number": "1",
+                                "exams_grades": "141,0",
+                                "_12grade": "137",
+                                "_11grade": "159"
                             }
                         ],
                         "3": [
                             {
-                                "order_number": "",
+                                "course_order_num": "1",
                                 "civil_id": "789(...)35",
                                 "name": "Daniel Christopher Lee",
-                                "candidature_grade": "17.4",
-                                "option_number": "",
-                                "exams_grades": "18.3",
-                                "_12_grade": "14.8",
-                                "_11_grade": "16.2"
+                                "candidature_grade": "174,6",
+                                "student_option_number": "1",
+                                "exams_grades": "183,0",
+                                "_12grade": "148",
+                                "_11grade": "162"
                             },
                             {
-                                "order_number": "",
+                                "course_order_num": "2",
                                 "civil_id": "246(...)70",
                                 "name": "Olivia Sophia Martinez",
-                                "candidature_grade": "16.2",
-                                "option_number": "",
-                                "exams_grades": "15.5",
-                                "_12_grade": "17.9",
-                                "_11_grade": "14.6"
+                                "candidature_grade": "162,6",
+                                "student_option_number": "1",
+                                "exams_grades": "155,0",
+                                "_12grade": "179",
+                                "_11grade": "146"
                             }
                         ]
                     },
                     "2021": {
                         "1": [
                             {
-                                "order_number": "",
+                                "course_order_num": "1",
                                 "civil_id": "123(...)78",
-                                "name": "John Alexander Smith",
-                                "candidature_grade": "16.8",
-                                "option_number": "",
-                                "exams_grades": "15.2",
-                                "_12_grade": "17.1",
-                                "_11_grade": "14.3"
+                                "name": "João d'Antônia Góis",
+                                "candidature_grade": "168,6",
+                                "student_option_number": "1",
+                                "exams_grades": "152,0",
+                                "_12grade": "171",
+                                "_11grade": "143"
                             },
                             {
-                                "order_number": "",
+                                "course_order_num": "2",
                                 "civil_id": "987(...)02",
                                 "name": "Emma Grace Johnson",
-                                "candidature_grade": "14.7",
-                                "option_number": "",
-                                "exams_grades": "17.9",
-                                "_12_grade": "15.6",
-                                "_11_grade": "13.5"
+                                "candidature_grade": "147,6",
+                                "student_option_number": "1",
+                                "exams_grades": "179,0",
+                                "_12grade": "156",
+                                "_11grade": "135"
                             }
                         ],
                         "2": [
                             {
-                                "order_number": "",
+                                "course_order_num": "1",
                                 "civil_id": "567(...)94",
                                 "name": "Michael David Rodriguez",
-                                "candidature_grade": "18.2",
-                                "option_number": "",
-                                "exams_grades": "16.3",
-                                "_12_grade": "14.9",
-                                "_11_grade": "17.8"
+                                "candidature_grade": "182,8",
+                                "student_option_number": "1",
+                                "exams_grades": "163,0",
+                                "_12grade": "149",
+                                "_11grade": "178"
                             },
                             {
-                                "order_number": "",
+                                "course_order_num": "2",
                                 "civil_id": "432(...)16",
                                 "name": "Emily Rose Anderson",
-                                "candidature_grade": "15.6",
-                                "option_number": "",
-                                "exams_grades": "14.1",
-                                "_12_grade": "13.7",
-                                "_11_grade": "15.9"
+                                "candidature_grade": "156,6",
+                                "student_option_number": "1",
+                                "exams_grades": "141,0",
+                                "_12grade": "137",
+                                "_11grade": "159"
                             }
                         ],
                         "3": [
                             {
-                                "order_number": "",
+                                "course_order_num": "1",
                                 "civil_id": "789(...)35",
                                 "name": "Daniel Christopher Lee",
-                                "candidature_grade": "17.4",
-                                "option_number": "",
-                                "exams_grades": "18.3",
-                                "_12_grade": "14.8",
-                                "_11_grade": "16.2"
+                                "candidature_grade": "174,6",
+                                "student_option_number": "1",
+                                "exams_grades": "183,0",
+                                "_12grade": "148",
+                                "_11grade": "162"
                             },
                             {
-                                "order_number": "",
+                                "course_order_num": "2",
                                 "civil_id": "246(...)70",
                                 "name": "Olivia Sophia Martinez",
-                                "candidature_grade": "16.2",
-                                "option_number": "",
-                                "exams_grades": "15.5",
-                                "_12_grade": "17.9",
-                                "_11_grade": "14.6"
+                                "candidature_grade": "162,6",
+                                "student_option_number": "1",
+                                "exams_grades": "155,0",
+                                "_12grade": "179",
+                                "_11grade": "146"
                             }
                         ]
                     },
                     "2022": {
                         "1": [
                             {
-                                "order_number": "",
+                                "course_order_num": "1",
                                 "civil_id": "123(...)78",
-                                "name": "John Alexander Smith",
-                                "candidature_grade": "16.8",
-                                "option_number": "",
-                                "exams_grades": "15.2",
-                                "_12_grade": "17.1",
-                                "_11_grade": "14.3"
+                                "name": "João d'Antônia Góis",
+                                "candidature_grade": "168,6",
+                                "student_option_number": "1",
+                                "exams_grades": "152,0",
+                                "_12grade": "171",
+                                "_11grade": "143"
                             },
                             {
-                                "order_number": "",
+                                "course_order_num": "2",
                                 "civil_id": "987(...)02",
                                 "name": "Emma Grace Johnson",
-                                "candidature_grade": "14.7",
-                                "option_number": "",
-                                "exams_grades": "17.9",
-                                "_12_grade": "15.6",
-                                "_11_grade": "13.5"
+                                "candidature_grade": "147,6",
+                                "student_option_number": "1",
+                                "exams_grades": "179,0",
+                                "_12grade": "156",
+                                "_11grade": "135"
                             }
                         ],
                         "2": [
                             {
-                                "order_number": "",
+                                "course_order_num": "1",
                                 "civil_id": "567(...)94",
                                 "name": "Michael David Rodriguez",
-                                "candidature_grade": "18.2",
-                                "option_number": "",
-                                "exams_grades": "16.3",
-                                "_12_grade": "14.9",
-                                "_11_grade": "17.8"
+                                "candidature_grade": "182,6",
+                                "student_option_number": "1",
+                                "exams_grades": "163,0",
+                                "_12grade": "149",
+                                "_11grade": "178"
                             },
                             {
-                                "order_number": "",
+                                "course_order_num": "2",
                                 "civil_id": "432(...)16",
                                 "name": "Emily Rose Anderson",
-                                "candidature_grade": "15.6",
-                                "option_number": "",
-                                "exams_grades": "14.1",
-                                "_12_grade": "13.7",
-                                "_11_grade": "15.9"
+                                "candidature_grade": "156,9",
+                                "student_option_number": "1",
+                                "exams_grades": "141,0",
+                                "_12grade": "137",
+                                "_11grade": "159"
                             }
                         ],
                         "3": [
                             {
-                                "order_number": "",
+                                "course_order_num": "1",
                                 "civil_id": "789(...)35",
                                 "name": "Daniel Christopher Lee",
-                                "candidature_grade": "17.4",
-                                "option_number": "",
-                                "exams_grades": "18.3",
-                                "_12_grade": "14.8",
-                                "_11_grade": "16.2"
+                                "candidature_grade": "174,6",
+                                "student_option_number": "1",
+                                "exams_grades": "183,0",
+                                "_12grade": "148",
+                                "_11grade": "162"
                             },
                             {
-                                "order_number": "",
+                                "course_order_num": "2",
                                 "civil_id": "246(...)70",
                                 "name": "Olivia Sophia Martinez",
-                                "candidature_grade": "16.2",
-                                "option_number": "",
-                                "exams_grades": "15.5",
-                                "_12_grade": "17.9",
-                                "_11_grade": "14.6"
+                                "candidature_grade": "162,6",
+                                "student_option_number": "1",
+                                "exams_grades": "155,0",
+                                "_12grade": "179",
+                                "_11grade": "146"
                             }
                         ]
                     }
@@ -1755,340 +1755,340 @@
                     "2018": {
                         "1": [
                             {
-                                "order_number": "",
+                                "course_order_num": "1",
                                 "civil_id": "987(...)02",
                                 "name": "Emma Grace Johnson",
-                                "candidature_grade": "14.7",
-                                "option_number": "",
-                                "exams_grades": "17.9",
-                                "_12_grade": "15.6",
-                                "_11_grade": "13.5"
+                                "candidature_grade": "147,6",
+                                "student_option_number": "1",
+                                "exams_grades": "179,0",
+                                "_12grade": "156",
+                                "_11grade": "135"
                             },
                             {
-                                "order_number": "",
+                                "course_order_num": "2",
                                 "civil_id": "567(...)94",
                                 "name": "Michael David Rodriguez",
-                                "candidature_grade": "18.2",
-                                "option_number": "",
-                                "exams_grades": "16.3",
-                                "_12_grade": "14.9",
-                                "_11_grade": "17.8"
+                                "candidature_grade": "182,6",
+                                "student_option_number": "1",
+                                "exams_grades": "163,0",
+                                "_12grade": "149",
+                                "_11grade": "178"
                             }
                         ],
                         "2": [
                             {
-                                "order_number": "",
+                                "course_order_num": "1",
                                 "civil_id": "432(...)16",
                                 "name": "Emily Rose Anderson",
-                                "candidature_grade": "15.6",
-                                "option_number": "",
-                                "exams_grades": "14.1",
-                                "_12_grade": "13.7",
-                                "_11_grade": "15.9"
+                                "candidature_grade": "156,6",
+                                "student_option_number": "1",
+                                "exams_grades": "141,0",
+                                "_12grade": "137",
+                                "_11grade": "159"
                             },
                             {
-                                "order_number": "",
+                                "course_order_num": "2",
                                 "civil_id": "789(...)35",
                                 "name": "Daniel Christopher Lee",
-                                "candidature_grade": "17.4",
-                                "option_number": "",
-                                "exams_grades": "18.3",
-                                "_12_grade": "14.8",
-                                "_11_grade": "16.2"
+                                "candidature_grade": "174,6",
+                                "student_option_number": "1",
+                                "exams_grades": "183,0",
+                                "_12grade": "148",
+                                "_11grade": "162"
                             }
                         ],
                         "3": [
                             {
-                                "order_number": "",
+                                "course_order_num": "1",
                                 "civil_id": "246(...)70",
                                 "name": "Olivia Sophia Martinez",
-                                "candidature_grade": "16.2",
-                                "option_number": "",
-                                "exams_grades": "15.5",
-                                "_12_grade": "17.9",
-                                "_11_grade": "14.6"
+                                "candidature_grade": "162,6",
+                                "student_option_number": "1",
+                                "exams_grades": "155,0",
+                                "_12grade": "179",
+                                "_11grade": "146"
                             },
                             {
-                                "order_number": "",
+                                "course_order_num": "2",
                                 "civil_id": "123(...)78",
-                                "name": "John Alexander Smith",
-                                "candidature_grade": "16.8",
-                                "option_number": "",
-                                "exams_grades": "15.2",
-                                "_12_grade": "17.1",
-                                "_11_grade": "14.3"
+                                "name": "João d'Antônia Góis",
+                                "candidature_grade": "168,9",
+                                "student_option_number": "1",
+                                "exams_grades": "152,0",
+                                "_12grade": "171",
+                                "_11grade": "143"
                             }
                         ]
                     },
                     "2019": {
                         "1": [
                             {
-                                "order_number": "",
+                                "course_order_num": "1",
                                 "civil_id": "987(...)02",
                                 "name": "Emma Grace Johnson",
-                                "candidature_grade": "14.7",
-                                "option_number": "",
-                                "exams_grades": "17.9",
-                                "_12_grade": "15.6",
-                                "_11_grade": "13.5"
+                                "candidature_grade": "147,6",
+                                "student_option_number": "1",
+                                "exams_grades": "179,0",
+                                "_12grade": "156",
+                                "_11grade": "135"
                             },
                             {
-                                "order_number": "",
+                                "course_order_num": "2",
                                 "civil_id": "567(...)94",
                                 "name": "Michael David Rodriguez",
-                                "candidature_grade": "18.2",
-                                "option_number": "",
-                                "exams_grades": "16.3",
-                                "_12_grade": "14.9",
-                                "_11_grade": "17.8"
+                                "candidature_grade": "182,6",
+                                "student_option_number": "1",
+                                "exams_grades": "163,0",
+                                "_12grade": "149",
+                                "_11grade": "178"
                             }
                         ],
                         "2": [
                             {
-                                "order_number": "",
+                                "course_order_num": "1",
                                 "civil_id": "432(...)16",
                                 "name": "Emily Rose Anderson",
-                                "candidature_grade": "15.6",
-                                "option_number": "",
-                                "exams_grades": "14.1",
-                                "_12_grade": "13.7",
-                                "_11_grade": "15.9"
+                                "candidature_grade": "156,6",
+                                "student_option_number": "1",
+                                "exams_grades": "141,0",
+                                "_12grade": "137",
+                                "_11grade": "159"
                             },
                             {
-                                "order_number": "",
+                                "course_order_num": "2",
                                 "civil_id": "789(...)35",
                                 "name": "Daniel Christopher Lee",
-                                "candidature_grade": "17.4",
-                                "option_number": "",
-                                "exams_grades": "18.3",
-                                "_12_grade": "14.8",
-                                "_11_grade": "16.2"
+                                "candidature_grade": "174,6",
+                                "student_option_number": "1",
+                                "exams_grades": "183,0",
+                                "_12grade": "148",
+                                "_11grade": "162"
                             }
                         ],
                         "3": [
                             {
-                                "order_number": "",
+                                "course_order_num": "1",
                                 "civil_id": "246(...)70",
                                 "name": "Olivia Sophia Martinez",
-                                "candidature_grade": "16.2",
-                                "option_number": "",
-                                "exams_grades": "15.5",
-                                "_12_grade": "17.9",
-                                "_11_grade": "14.6"
+                                "candidature_grade": "162,6",
+                                "student_option_number": "1",
+                                "exams_grades": "155,0",
+                                "_12grade": "179",
+                                "_11grade": "146"
                             },
                             {
-                                "order_number": "",
+                                "course_order_num": "2",
                                 "civil_id": "123(...)78",
-                                "name": "John Alexander Smith",
-                                "candidature_grade": "16.8",
-                                "option_number": "",
-                                "exams_grades": "15.2",
-                                "_12_grade": "17.1",
-                                "_11_grade": "14.3"
+                                "name": "João d'Antônia Góis",
+                                "candidature_grade": "168,6",
+                                "student_option_number": "1",
+                                "exams_grades": "152,0",
+                                "_12grade": "171",
+                                "_11grade": "143"
                             }
                         ]
                     },
                     "2020": {
                         "1": [
                             {
-                                "order_number": "",
+                                "course_order_num": "1",
                                 "civil_id": "987(...)02",
                                 "name": "Emma Grace Johnson",
-                                "candidature_grade": "14.7",
-                                "option_number": "",
-                                "exams_grades": "17.9",
-                                "_12_grade": "15.6",
-                                "_11_grade": "13.5"
+                                "candidature_grade": "147,1",
+                                "student_option_number": "1",
+                                "exams_grades": "179,0",
+                                "_12grade": "156",
+                                "_11grade": "135"
                             },
                             {
-                                "order_number": "",
+                                "course_order_num": "2",
                                 "civil_id": "567(...)94",
                                 "name": "Michael David Rodriguez",
-                                "candidature_grade": "18.2",
-                                "option_number": "",
-                                "exams_grades": "16.3",
-                                "_12_grade": "14.9",
-                                "_11_grade": "17.8"
+                                "candidature_grade": "182,6",
+                                "student_option_number": "1",
+                                "exams_grades": "163,0",
+                                "_12grade": "149",
+                                "_11grade": "178"
                             }
                         ],
                         "2": [
                             {
-                                "order_number": "",
+                                "course_order_num": "1",
                                 "civil_id": "432(...)16",
                                 "name": "Emily Rose Anderson",
-                                "candidature_grade": "15.6",
-                                "option_number": "",
-                                "exams_grades": "14.1",
-                                "_12_grade": "13.7",
-                                "_11_grade": "15.9"
+                                "candidature_grade": "156,6",
+                                "student_option_number": "1",
+                                "exams_grades": "141,0",
+                                "_12grade": "137",
+                                "_11grade": "159"
                             },
                             {
-                                "order_number": "",
+                                "course_order_num": "2",
                                 "civil_id": "789(...)35",
                                 "name": "Daniel Christopher Lee",
-                                "candidature_grade": "17.4",
-                                "option_number": "",
-                                "exams_grades": "18.3",
-                                "_12_grade": "14.8",
-                                "_11_grade": "16.2"
+                                "candidature_grade": "174,6",
+                                "student_option_number": "1",
+                                "exams_grades": "183,0",
+                                "_12grade": "148",
+                                "_11grade": "162"
                             }
                         ],
                         "3": [
                             {
-                                "order_number": "",
+                                "course_order_num": "1",
                                 "civil_id": "246(...)70",
                                 "name": "Olivia Sophia Martinez",
-                                "candidature_grade": "16.2",
-                                "option_number": "",
-                                "exams_grades": "15.5",
-                                "_12_grade": "17.9",
-                                "_11_grade": "14.6"
+                                "candidature_grade": "162,6",
+                                "student_option_number": "1",
+                                "exams_grades": "155,0",
+                                "_12grade": "179",
+                                "_11grade": "146"
                             },
                             {
-                                "order_number": "",
+                                "course_order_num": "2",
                                 "civil_id": "123(...)78",
-                                "name": "John Alexander Smith",
-                                "candidature_grade": "16.8",
-                                "option_number": "",
-                                "exams_grades": "15.2",
-                                "_12_grade": "17.1",
-                                "_11_grade": "14.3"
+                                "name": "João d'Antônia Góis",
+                                "candidature_grade": "168,6",
+                                "student_option_number": "1",
+                                "exams_grades": "152,0",
+                                "_12grade": "171",
+                                "_11grade": "143"
                             }
                         ]
                     },
                     "2021": {
                         "1": [
                             {
-                                "order_number": "",
+                                "course_order_num": "1",
                                 "civil_id": "987(...)02",
                                 "name": "Emma Grace Johnson",
-                                "candidature_grade": "14.7",
-                                "option_number": "",
-                                "exams_grades": "17.9",
-                                "_12_grade": "15.6",
-                                "_11_grade": "13.5"
+                                "candidature_grade": "147,6",
+                                "student_option_number": "1",
+                                "exams_grades": "179,0",
+                                "_12grade": "156",
+                                "_11grade": "135"
                             },
                             {
-                                "order_number": "",
+                                "course_order_num": "2",
                                 "civil_id": "567(...)94",
                                 "name": "Michael David Rodriguez",
-                                "candidature_grade": "18.2",
-                                "option_number": "",
-                                "exams_grades": "16.3",
-                                "_12_grade": "14.9",
-                                "_11_grade": "17.8"
+                                "candidature_grade": "182,6",
+                                "student_option_number": "1",
+                                "exams_grades": "163,0",
+                                "_12grade": "149",
+                                "_11grade": "178"
                             }
                         ],
                         "2": [
                             {
-                                "order_number": "",
+                                "course_order_num": "1",
                                 "civil_id": "432(...)16",
                                 "name": "Emily Rose Anderson",
-                                "candidature_grade": "15.6",
-                                "option_number": "",
-                                "exams_grades": "14.1",
-                                "_12_grade": "13.7",
-                                "_11_grade": "15.9"
+                                "candidature_grade": "156,6",
+                                "student_option_number": "1",
+                                "exams_grades": "141,0",
+                                "_12grade": "137",
+                                "_11grade": "159"
                             },
                             {
-                                "order_number": "",
+                                "course_order_num": "2",
                                 "civil_id": "789(...)35",
                                 "name": "Daniel Christopher Lee",
-                                "candidature_grade": "17.4",
-                                "option_number": "",
-                                "exams_grades": "18.3",
-                                "_12_grade": "14.8",
-                                "_11_grade": "16.2"
+                                "candidature_grade": "174,6",
+                                "student_option_number": "1",
+                                "exams_grades": "183,0",
+                                "_12grade": "148",
+                                "_11grade": "162"
                             }
                         ],
                         "3": [
                             {
-                                "order_number": "",
+                                "course_order_num": "1",
                                 "civil_id": "246(...)70",
                                 "name": "Olivia Sophia Martinez",
-                                "candidature_grade": "16.2",
-                                "option_number": "",
-                                "exams_grades": "15.5",
-                                "_12_grade": "17.9",
-                                "_11_grade": "14.6"
+                                "candidature_grade": "162,6",
+                                "student_option_number": "1",
+                                "exams_grades": "155,0",
+                                "_12grade": "179",
+                                "_11grade": "146"
                             },
                             {
-                                "order_number": "",
+                                "course_order_num": "2",
                                 "civil_id": "123(...)78",
-                                "name": "John Alexander Smith",
-                                "candidature_grade": "16.8",
-                                "option_number": "",
-                                "exams_grades": "15.2",
-                                "_12_grade": "17.1",
-                                "_11_grade": "14.3"
+                                "name": "João d'Antônia Góis",
+                                "candidature_grade": "168,6",
+                                "student_option_number": "1",
+                                "exams_grades": "152,0",
+                                "_12grade": "171",
+                                "_11grade": "143"
                             }
                         ]
                     },
                     "2022": {
                         "1": [
                             {
-                                "order_number": "",
+                                "course_order_num": "1",
                                 "civil_id": "987(...)02",
                                 "name": "Emma Grace Johnson",
-                                "candidature_grade": "14.7",
-                                "option_number": "",
-                                "exams_grades": "17.9",
-                                "_12_grade": "15.6",
-                                "_11_grade": "13.5"
+                                "candidature_grade": "147,6",
+                                "student_option_number": "1",
+                                "exams_grades": "179,0",
+                                "_12grade": "156",
+                                "_11grade": "135"
                             },
                             {
-                                "order_number": "",
+                                "course_order_num": "2",
                                 "civil_id": "567(...)94",
                                 "name": "Michael David Rodriguez",
-                                "candidature_grade": "18.2",
-                                "option_number": "",
-                                "exams_grades": "16.3",
-                                "_12_grade": "14.9",
-                                "_11_grade": "17.8"
+                                "candidature_grade": "182,6",
+                                "student_option_number": "1",
+                                "exams_grades": "163,0",
+                                "_12grade": "149",
+                                "_11grade": "178"
                             }
                         ],
                         "2": [
                             {
-                                "order_number": "",
+                                "course_order_num": "1",
                                 "civil_id": "432(...)16",
                                 "name": "Emily Rose Anderson",
-                                "candidature_grade": "15.6",
-                                "option_number": "",
-                                "exams_grades": "14.1",
-                                "_12_grade": "13.7",
-                                "_11_grade": "15.9"
+                                "candidature_grade": "156,6",
+                                "student_option_number": "1",
+                                "exams_grades": "141,0",
+                                "_12grade": "137",
+                                "_11grade": "159"
                             },
                             {
-                                "order_number": "",
+                                "course_order_num": "2",
                                 "civil_id": "789(...)35",
                                 "name": "Daniel Christopher Lee",
-                                "candidature_grade": "17.4",
-                                "option_number": "",
-                                "exams_grades": "18.3",
-                                "_12_grade": "14.8",
-                                "_11_grade": "16.2"
+                                "candidature_grade": "174,6",
+                                "student_option_number": "1",
+                                "exams_grades": "183,0",
+                                "_12grade": "148",
+                                "_11grade": "162"
                             }
                         ],
                         "3": [
                             {
-                                "order_number": "",
+                                "course_order_num": "1",
                                 "civil_id": "246(...)70",
                                 "name": "Olivia Sophia Martinez",
-                                "candidature_grade": "16.2",
-                                "option_number": "",
-                                "exams_grades": "15.5",
-                                "_12_grade": "17.9",
-                                "_11_grade": "14.6"
+                                "candidature_grade": "162,6",
+                                "student_option_number": "1",
+                                "exams_grades": "155,0",
+                                "_12grade": "179",
+                                "_11grade": "146"
                             },
                             {
-                                "order_number": "",
+                                "course_order_num": "2",
                                 "civil_id": "123(...)78",
-                                "name": "John Alexander Smith",
-                                "candidature_grade": "16.8",
-                                "option_number": "",
-                                "exams_grades": "15.2",
-                                "_12_grade": "17.1",
-                                "_11_grade": "14.3"
+                                "name": "João d'Antônia Góis",
+                                "candidature_grade": "168,6",
+                                "student_option_number": "1",
+                                "exams_grades": "152,0",
+                                "_12grade": "171",
+                                "_11grade": "143"
                             }
                         ]
                     }

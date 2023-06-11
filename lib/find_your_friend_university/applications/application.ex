@@ -18,7 +18,7 @@ defmodule FindYourFriendUniversity.Applications.Application do
 
     belongs_to :university, FindYourFriendUniversity.Universities.University, on_replace: :nilify, type: :string
     belongs_to :course, FindYourFriendUniversity.Courses.Course, on_replace: :nilify, type: :string
-    belongs_to :student, FindYourFriendUniversity.Students.Student, on_replace: :nilify
+    belongs_to :student, FindYourFriendUniversity.Students.Student, on_replace: :nilify, type: :string
 
     timestamps()
   end

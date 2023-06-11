@@ -47,7 +47,7 @@ defmodule Seeds do
 
     Courses.create_courses(courses)
 
-    IO.inspect("Storing #{length(courses)} Courses from seeds")
+    IO.puts("Storing #{length(courses)} Courses from seeds")
 
     universities =
       seeds
@@ -62,19 +62,28 @@ defmodule Seeds do
 
     Universities.create_universities(universities)
 
-    IO.inspect("Storing #{length(universities)} Universities from seeds")
+    IO.puts("Storing #{length(universities)} Universities from seeds")
 
-    students =
+    applications =
       seeds
       |> Enum.map(fn uni ->
         uni["courses"]
         |> Enum.map(fn course ->
           course["applications"]
           |> Map.to_list()
-          |> Enum.map(fn {_, phases} ->
+          |> Enum.map(fn {year, phases} ->
             phases
             |> Map.to_list()
-            |> Enum.map(fn {_, applications} -> applications end)
+            |> Enum.map(fn {phase, applications} ->
+              applications
+              |> Enum.map(fn application ->
+                application
+                |> Map.put("university", uni["id"])
+                |> Map.put("course", course["id"])
+                |> Map.put("year", year)
+                |> Map.put("phase", phase)
+              end)
+            end)
             |> Enum.concat()
           end)
           |> Enum.concat()
@@ -87,19 +96,48 @@ defmodule Seeds do
           application
           |> Map.get("name")
           |> String.downcase()
-          |> String.replace(~r/\s+/, "")
-          |> String.replace(~r/[^\p{L}]/u, "")
+          |> String.normalize(:nfd)
+          |> String.to_charlist()
+          |> Enum.filter(fn char -> 97 <= char && char <= 122 end)
+          |> List.to_string()
+
+        civil_id =
+          application
+          |> Map.get("civil_id")
+          |> String.replace("(...)", "xxx")
 
         application
         |> Map.put_new("display_name", display_name)
+        |> Map.update!("civil_id", fn _ -> civil_id end)
+        |> Map.update!("candidature_grade", &parse_grades/1)
+        |> Map.update!("exams_grades", &parse_grades/1)
+        |> Map.update!("_12grade", &parse_grades/1)
+        |> Map.update!("_11grade", &parse_grades/1)
+        |> Map.put_new("student", civil_id <> display_name)
+        |> Map.put_new("id", civil_id <> display_name)
       end)
-      |> Enum.uniq_by(fn student ->
-        Map.get(student, "civil_id") <> Map.get(student, "display_name")
-      end)
+
+    students =
+      applications
+      |> Enum.uniq_by(fn student -> student |> Map.get("id") end)
 
     Students.create_students(students)
 
-    IO.inspect("Storing #{length(students)} Students from seeds")
+    IO.puts("Storing #{length(students)} Students from seeds")
+
+    Applications.create_applications(applications)
+
+    IO.puts("Storing #{length(applications)} Applications from seeds")
+  end
+
+  defp parse_grades(grade) do
+    {grade, _} =
+      grade
+      |> String.replace(",", ".")
+      |> Float.parse()
+
+    if(grade < 1000, do: grade * 10, else: grade)
+      |> trunc()
   end
 end
 

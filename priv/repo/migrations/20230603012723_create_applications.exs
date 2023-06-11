@@ -14,7 +14,7 @@ defmodule FindYourFriendUniversity.Repo.Migrations.CreateApplications do
       add :phase, :integer
       add :university_id, references(:universities, on_delete: :nothing, type: :string)
       add :course_id, references(:courses, on_delete: :nothing, type: :string)
-      add :student_id, references(:students, on_delete: :nothing)
+      add :student_id, references(:students, on_delete: :nothing, type: :string)
 
       timestamps()
     end
