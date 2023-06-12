@@ -3,8 +3,8 @@ defmodule FindYourFriendUniversityWeb.StudentControllerTest do
 
   import FindYourFriendUniversity.StudentsFixtures
 
-  @create_attrs %{civil_id: "some civil_id", display_name: "some display_name", id: "some id", name: "some name"}
-  @update_attrs %{civil_id: "some updated civil_id", display_name: "some updated display_name", id: "some updated id", name: "some updated name"}
+  @create_attrs %{civil_id: "some civil_id", display_name: "some display_name", id: "some_id", name: "some name"}
+  @update_attrs %{civil_id: "some updated civil_id", display_name: "some updated display_name", name: "some updated name"}
   @invalid_attrs %{civil_id: nil, display_name: nil, id: nil, name: nil}
 
   describe "index" do

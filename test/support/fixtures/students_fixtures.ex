@@ -13,7 +13,7 @@ defmodule FindYourFriendUniversity.StudentsFixtures do
       |> Enum.into(%{
         civil_id: "some civil_id",
         display_name: "some display_name",
-        id: "some id",
+        id: "some_id",
         name: "some name"
       })
       |> FindYourFriendUniversity.Students.create_student()
