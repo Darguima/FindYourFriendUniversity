@@ -23,6 +23,7 @@ defmodule FindYourFriendUniversityWeb.Router do
 
     resources "/courses", CourseController
     resources "/universities", UniversityController
+    resources "/applications", ApplicationController
   end
 
   # Other scopes may use custom stacks.

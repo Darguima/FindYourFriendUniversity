@@ -21,6 +21,8 @@ Ready to run in production? Please [check our deployment guides](https://hexdocs
 
 1. Configure Postgres to be secure - I'm using default password
 2. Exclude unnecessary controllers
+3. Configure changesets to validate all fields
+4. Configure insert_all to run changeset first
 
 ## Walkthrough
 
@@ -62,4 +64,6 @@ I generated my migrations, schemas and all the HTML files with this commands. Th
 $ mix phx.gen.html Students Student students id:string name:string display_name:string civil_id:string
 $ mix phx.gen.html Courses Course courses id:string name:string
 $ mix phx.gen.html Universities University universities id:string name:string is_polytechnic:boolean
+$ mix phx.gen.html Applications Application applications course_order_num:integer candidature_grade:integer exams_grades:integer _12grade:integer _11grade:integer student_option_number:integer placed:boolean year:integer phase:integer university_id:references:universities course_id:references:courses student_id:references:students
 ```
+ 

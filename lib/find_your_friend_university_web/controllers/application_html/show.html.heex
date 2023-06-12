@@ -1,0 +1,26 @@
+<.header>
+  Application <%= @application.id %>
+  <:subtitle>This is a application record from your database.</:subtitle>
+  <:actions>
+    <.link href={~p"/applications/#{@application}/edit"}>
+      <.button>Edit application</.button>
+    </.link>
+  </:actions>
+</.header>
+
+<.list>
+  <:item title="Course order num"><%= @application.course_order_num %></:item>
+  <:item title="Candidature grade"><%= @application.candidature_grade %></:item>
+  <:item title="Exams grades"><%= @application.exams_grades %></:item>
+  <:item title=" 12grade"><%= @application._12grade %></:item>
+  <:item title=" 11grade"><%= @application._11grade %></:item>
+  <:item title="Student option number"><%= @application.student_option_number %></:item>
+  <:item title="Placed"><%= @application.placed %></:item>
+  <:item title="Year"><%= @application.year %></:item>
+  <:item title="Phase"><%= @application.phase %></:item>
+  <:item title="University ID"><%= @application.university_id %></:item>
+  <:item title="Course ID"><%= @application.course_id %></:item>
+  <:item title="Student ID"><%= @application.student_id %></:item>
+</.list>
+
+<.back navigate={~p"/applications"}>Back to applications</.back>
