@@ -20,6 +20,7 @@ Ready to run in production? Please [check our deployment guides](https://hexdocs
 ## To Do
 
 1. Configure Postgres to be secure - I'm using default password
+2. Exclude unnecessary controllers
 
 ## Walkthrough
 
@@ -59,4 +60,6 @@ I generated my migrations, schemas and all the HTML files with this commands. Th
 
 ```bash
 $ mix phx.gen.html Students Student students id:string name:string display_name:string civil_id:string
+$ mix phx.gen.html Courses Course courses id:string name:string
+$ mix phx.gen.html Universities University universities id:string name:string is_polytechnic:boolean
 ```

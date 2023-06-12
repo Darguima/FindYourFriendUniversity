@@ -1,0 +1,25 @@
+<.header>
+  Listing Universities
+  <:actions>
+    <.link href={~p"/universities/new"}>
+      <.button>New University</.button>
+    </.link>
+  </:actions>
+</.header>
+
+<.table id="universities" rows={@universities} row_click={&JS.navigate(~p"/universities/#{&1}")}>
+  <:col :let={university} label="Id"><%= university.id %></:col>
+  <:col :let={university} label="Name"><%= university.name %></:col>
+  <:col :let={university} label="Is polytechnic"><%= university.is_polytechnic %></:col>
+  <:action :let={university}>
+    <div class="sr-only">
+      <.link navigate={~p"/universities/#{university}"}>Show</.link>
+    </div>
+    <.link navigate={~p"/universities/#{university}/edit"}>Edit</.link>
+  </:action>
+  <:action :let={university}>
+    <.link href={~p"/universities/#{university}"} method="delete" data-confirm="Are you sure?">
+      Delete
+    </.link>
+  </:action>
+</.table>

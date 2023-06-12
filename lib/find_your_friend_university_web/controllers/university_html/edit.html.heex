@@ -1,0 +1,8 @@
+<.header>
+  Edit University <%= @university.id %>
+  <:subtitle>Use this form to manage university records in your database.</:subtitle>
+</.header>
+
+<.university_form changeset={@changeset} action={~p"/universities/#{@university}"} />
+
+<.back navigate={~p"/universities"}>Back to universities</.back>
