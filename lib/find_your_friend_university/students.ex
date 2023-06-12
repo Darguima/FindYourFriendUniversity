@@ -81,8 +81,24 @@ defmodule FindYourFriendUniversity.Students do
       nil
   """
   def create_students(students \\ []) do
+    timestamp =
+      NaiveDateTime.utc_now()
+      |> NaiveDateTime.truncate(:second)
+
     students
-    |> Enum.each(&create_student(&1))
+    |> Enum.map(fn student ->
+      %{
+        id: student["id"],
+        name: student["name"],
+        display_name: student["display_name"],
+        civil_id: student["civil_id"],
+        inserted_at: timestamp,
+        updated_at: timestamp
+      }
+    end)
+    # 65535 is the maximum of parameters per query; 6 the number of params per row
+    |> Enum.chunk_every(trunc(65535 / 6))
+    |> Enum.each(fn students -> Repo.insert_all(Student, students) end)
   end
 
   @doc """

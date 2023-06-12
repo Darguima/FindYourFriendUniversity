@@ -125,6 +125,7 @@ defmodule FindYourFriendUniversity.Courses do
 
   """
   def get_courses(nil), do: []
+  def get_courses([]), do: []
 
   def get_courses(courses_ids),
     do: Repo.all(from(course in Course, where: course.id in ^courses_ids))
@@ -156,8 +157,34 @@ defmodule FindYourFriendUniversity.Courses do
       nil
   """
   def create_courses(courses \\ []) do
+    timestamp =
+      NaiveDateTime.utc_now()
+      |> NaiveDateTime.truncate(:second)
+
     courses
-    |> Enum.each(&create_course(&1))
+    |> Enum.map(fn course ->
+      %{
+        id: course["id"],
+        name: course["name"],
+        inserted_at: timestamp,
+        updated_at: timestamp
+      }
+    end)
+
+    # 65535 is the maximum of parameters per query; 4 the number of params per row
+    |> Enum.chunk_every(trunc(65535 / 4))
+    |> Enum.each(fn course -> Repo.insert_all(Course, course) end)
+
+    courses
+    |> Enum.map(fn course ->
+      (Map.get(course, "universities_ids", []) ++ Map.get(course, :universities_ids, []))
+      |> Enum.map(fn uni_id -> %{university_id: uni_id, course_id: course["id"]} end)
+    end)
+    |> Enum.concat()
+    # 65535 is the maximum of parameters per query; 2 the number of params per row
+    |> Enum.chunk_every(trunc(65535 / 2))
+    |> Enum.each(fn assoc -> Repo.insert_all("universities_courses", assoc)
+    end)
   end
 
   @doc """

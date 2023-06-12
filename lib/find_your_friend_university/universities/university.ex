@@ -15,11 +15,11 @@ defmodule FindYourFriendUniversity.Universities.University do
   end
 
   defp put_assoc_courses(changeset, attrs) do
-    courses =
+    courses_ids =
       (Map.get(attrs, "courses_ids", []) ++ Map.get(attrs, :courses_ids, []))
       |> Courses.get_courses()
 
-    Ecto.Changeset.put_assoc(changeset, :courses, courses)
+    Ecto.Changeset.put_assoc(changeset, :courses, courses_ids)
   end
 
   @doc false

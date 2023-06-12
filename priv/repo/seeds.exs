@@ -47,7 +47,7 @@ defmodule Seeds do
 
     Courses.create_courses(courses)
 
-    IO.puts("Storing #{length(courses)} Courses from seeds")
+    IO.puts("Storing #{length(courses)} Courses from seeds ond DB.")
 
     universities =
       seeds
@@ -57,12 +57,13 @@ defmodule Seeds do
           "courses_ids",
           uni["courses"] |> Enum.map(fn course -> course |> Map.get("id") end)
         )
-        |> Map.delete("courses")
       end)
 
     Universities.create_universities(universities)
 
-    IO.puts("Storing #{length(universities)} Universities from seeds")
+    IO.puts("Storing #{length(universities)} Universities from seeds ond DB.")
+
+    IO.puts("\nPreparing Students and Applications creation. Can take some time!")
 
     applications =
       seeds
@@ -70,52 +71,56 @@ defmodule Seeds do
         uni["courses"]
         |> Enum.map(fn course ->
           course["applications"]
-          |> Map.to_list()
           |> Enum.map(fn {year, phases} ->
             phases
-            |> Map.to_list()
             |> Enum.map(fn {phase, applications} ->
               applications
               |> Enum.map(fn application ->
+                display_name =
+                  application
+                  |> Map.get("name")
+                  |> String.downcase()
+                  |> String.normalize(:nfd)
+                  |> String.to_charlist()
+                  |> Enum.filter(fn char -> 97 <= char && char <= 122 end)
+                  |> List.to_string()
+
+                civil_id =
+                  application
+                  |> Map.get("civil_id")
+                  |> String.replace("(...)", "xxx")
+
+                student_id = civil_id <> display_name
+
                 application
+                # Application parents info
                 |> Map.put("university", uni["id"])
                 |> Map.put("course", course["id"])
                 |> Map.put("year", year)
                 |> Map.put("phase", phase)
+                # Application Grades
+                |> Map.update!("candidature_grade", &parse_grades/1)
+                |> Map.update!("exams_grades", &parse_grades/1)
+                |> Map.update!("_12grade", &parse_grades/1)
+                |> Map.update!("_11grade", &parse_grades/1)
+                # Student Info
+                |> Map.put_new("display_name", display_name)
+                |> Map.update!("civil_id", fn _ -> civil_id end)
+                |> Map.put("placed", false)
+                |> Map.update!("student_option_number", &parse_integer/1)
+                |> Map.update!("course_order_num", &parse_integer/1)
+                |> Map.update!("phase", &parse_integer/1)
+                |> Map.update!("year", &parse_integer/1)
+                # To create student on DB
+                |> Map.put_new("id", student_id)
+                # To create application (association with student)
+                |> Map.put_new("student", student_id)
               end)
             end)
-            |> Enum.concat()
           end)
-          |> Enum.concat()
         end)
-        |> Enum.concat()
       end)
-      |> Enum.concat()
-      |> Enum.map(fn application ->
-        display_name =
-          application
-          |> Map.get("name")
-          |> String.downcase()
-          |> String.normalize(:nfd)
-          |> String.to_charlist()
-          |> Enum.filter(fn char -> 97 <= char && char <= 122 end)
-          |> List.to_string()
-
-        civil_id =
-          application
-          |> Map.get("civil_id")
-          |> String.replace("(...)", "xxx")
-
-        application
-        |> Map.put_new("display_name", display_name)
-        |> Map.update!("civil_id", fn _ -> civil_id end)
-        |> Map.update!("candidature_grade", &parse_grades/1)
-        |> Map.update!("exams_grades", &parse_grades/1)
-        |> Map.update!("_12grade", &parse_grades/1)
-        |> Map.update!("_11grade", &parse_grades/1)
-        |> Map.put_new("student", civil_id <> display_name)
-        |> Map.put_new("id", civil_id <> display_name)
-      end)
+      |> List.flatten()
 
     students =
       applications
@@ -123,11 +128,11 @@ defmodule Seeds do
 
     Students.create_students(students)
 
-    IO.puts("Storing #{length(students)} Students from seeds")
+    IO.puts("Storing #{length(students)} Students from seeds ond DB.")
 
     Applications.create_applications(applications)
 
-    IO.puts("Storing #{length(applications)} Applications from seeds")
+    IO.puts("Storing #{length(applications)} Applications from seeds ond DB.")
   end
 
   defp parse_grades(grade) do
@@ -136,9 +141,17 @@ defmodule Seeds do
       |> String.replace(",", ".")
       |> Float.parse()
 
+    # all grades are represented with 4 digits -> 13.56 <=> 1356
     if(grade < 1000, do: grade * 10, else: grade)
-      |> trunc()
+    |> trunc()
+  end
+
+  defp parse_integer(string) do
+    string
+    |> Integer.parse()
+    |> elem(0)
   end
 end
 
 Seeds.load_json_file_until_success(["./applications.json", "./priv/repo/seeds.json"])
+# Seeds.load_json_file_until_success(["./priv/repo/seeds.json"])

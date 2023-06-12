@@ -64,8 +64,36 @@ defmodule FindYourFriendUniversity.Applications do
       nil
   """
   def create_applications(applications \\ []) do
+    timestamp =
+      NaiveDateTime.utc_now()
+      |> NaiveDateTime.truncate(:second)
+
     applications
-    |> Enum.each(&create_application(&1))
+    |> Enum.map(fn application ->
+      %{
+        _11grade: application["_11grade"],
+        _12grade: application["_12grade"],
+        candidature_grade: application["candidature_grade"],
+        exams_grades: application["exams_grades"],
+
+        course_order_num: application["course_order_num"],
+        student_option_number: application["student_option_number"],
+        placed: application["placed"],
+
+        year: application["year"],
+        phase: application["phase"],
+
+        university_id: application["university"],
+        course_id: application["course"],
+        student_id: application["student"],
+
+        inserted_at: timestamp,
+        updated_at: timestamp
+      }
+    end)
+    # 65535 is the maximum of parameters per query; 14 the number of params per row
+    |> Enum.chunk_every(trunc(65535 / 14))
+    |> Enum.each(fn applications -> Repo.insert_all(Application, applications) end)
   end
 
   @doc """
