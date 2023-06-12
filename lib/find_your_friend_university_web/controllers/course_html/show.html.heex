@@ -1,0 +1,30 @@
+<.header>
+  Course <%= @course.id %>
+  <:subtitle>This is a course record from your database.</:subtitle>
+  <:actions>
+    <.link href={~p"/courses/#{@course}/edit"}>
+      <.button>Edit course</.button>
+    </.link>
+  </:actions>
+</.header>
+
+<.list>
+  <:item title="Name"><%= @course.name %></:item>
+  <:item title="Code"><%= @course.id %></:item>
+
+  <:item title="Universities">
+    <select
+      multiple
+      class="form-control mt-2 block w-full rounded-lg text-zinc-700 focus:ring-0 sm:text-sm sm:leading-6 phx-no-feedback:border-zinc-300 phx-no-feedback:focus:border-zinc-400 border-zinc-700 focus:border-zinc-400 "
+    >
+      <%= for uni <- FindYourFriendUniversity.Universities.list_universities_from_course(@course.id) do %>
+            <option value={uni.id} class="flex items-center gap-4 text-sm leading-6 text-zinc-700" disabled>
+              <%= uni.name %> <%= uni.id %>
+            </option>
+      <% end %>
+    </select>
+  </:item>
+
+</.list>
+
+<.back navigate={~p"/courses"}>Back to courses</.back>
