@@ -22,6 +22,40 @@ defmodule FindYourFriendUniversity.Students do
   end
 
   @doc """
+  Don't have yet a good doc. I need write it.
+  """
+  def search_students(filters) do
+    ilike_query =
+      filters
+      |> Map.get(:name, "")
+      |> String.downcase()
+      |> String.normalize(:nfd)
+      |> String.to_charlist()
+      |> Enum.filter(fn char -> (97 <= char && char <= 122) || char == 32 end)
+      |> List.to_string()
+      |> String.replace(" ", "%")
+
+    page_size =
+      filters
+      |> Map.get(:page_size, 100)
+
+    page_number =
+      filters
+      |> Map.get(:page_number, 1)
+
+    query =
+      from(s in Student,
+        where: ilike(s.display_name, ^"%#{ilike_query}%"),
+        select: s,
+        order_by: s.name,
+        limit: ^page_size,
+        offset: (^page_number - 1) * ^page_size
+      )
+
+    Repo.all(query)
+  end
+
+  @doc """
   Gets a single student.
 
   Raises `Ecto.NoResultsError` if the Student does not exist.

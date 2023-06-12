@@ -1,12 +1,45 @@
 defmodule FindYourFriendUniversityWeb.StudentController do
   use FindYourFriendUniversityWeb, :controller
 
+  import Ecto.Query
+  alias FindYourFriendUniversity.Repo
   alias FindYourFriendUniversity.Students
   alias FindYourFriendUniversity.Students.Student
+  alias FindYourFriendUniversity.Applications.Application
 
-  def index(conn, _params) do
-    students = Students.list_students()
-    render(conn, :index, students: students)
+  def index(conn, params) do
+    # https://stackoverflow.com/questions/52460139/how-do-you-do-search-sorting-pagination-in-phoenix-framework
+    # https://github.blog/2015-11-03-like-injection/
+    # https://medium.com/@aditya7iyengar/searching-sorting-and-pagination-in-elixir-phoenix-with-rummage-part-3-7cf5023bc226
+    # students = Students.list_students()
+
+    search_name =
+      params
+      |> Map.get("search_name", "")
+
+    page_number =
+      params
+      |> Map.get("page_number", "1")
+      |> Integer.parse()
+      |> elem(0)
+      |> (fn pn -> if pn <= 1, do: 1, else: pn end).()
+
+    page_size =
+      params
+      |> Map.get("page_size", "100")
+      |> Integer.parse()
+      |> elem(0)
+      |> (fn ps -> if ps <= 1, do: 1, else: ps end).()
+
+    filters = %{
+      name: search_name,
+      page_number: page_number,
+      page_size: page_size
+    }
+
+    students = Students.search_students(filters)
+
+    render(conn, :index, students: students, filters: filters)
   end
 
   def new(conn, _params) do
@@ -27,7 +60,26 @@ defmodule FindYourFriendUniversityWeb.StudentController do
   end
 
   def show(conn, %{"id" => id}) do
-    student = Students.get_student!(id)
+    student =
+      Students.get_student!(id)
+      |> Repo.preload(
+        applications:
+          from(a in Application,
+            order_by: [desc: a.year, asc: a.phase, asc: a.student_option_number]
+          )
+      )
+      |> Map.update!(:applications, fn applications ->
+        applications
+        |> Repo.preload([:course, :university])
+        |> Enum.map(fn application ->
+          application
+          |> Map.update!(:_11grade, fn grade -> grade / 100 end)
+          |> Map.update!(:_12grade, fn grade -> grade / 100 end)
+          |> Map.update!(:exams_grades, fn grade -> grade / 100 end)
+          |> Map.update!(:candidature_grade, fn grade -> grade / 100 end)
+        end)
+      end)
+
     render(conn, :show, student: student)
   end
 

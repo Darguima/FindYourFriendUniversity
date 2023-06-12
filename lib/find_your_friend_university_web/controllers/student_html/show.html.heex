@@ -1,5 +1,5 @@
 <.header>
-  Student <%= @student.id %>
+  <%= @student.name %>
   <:subtitle>This is a student record from your database.</:subtitle>
   <:actions>
     <.link href={~p"/students/#{@student}/edit"}>
@@ -13,5 +13,34 @@
   <:item title="Display name"><%= @student.display_name %></:item>
   <:item title="Civil"><%= @student.civil_id %></:item>
 </.list>
+
+<div>
+  <h3 class="mt-16 text-m font-bold">Applications</h3>
+
+  <.table
+    id="applications"
+    rows={@student.applications}
+    row_click={&JS.navigate(~p"/applications/#{&1}")}
+  >
+    <:col :let={application} label="Course"><%= application.course.name %></:col>
+    <:col :let={application} label="University"><%= application.university.name %></:col>
+
+    <:col :let={application} label="Year"><%= application.year %></:col>
+    <:col :let={application} label="Phase"><%= application.phase %></:col>
+    <:col :let={application} label="Student Option Number">
+      <%= application.student_option_number %>
+    </:col>
+    <:col :let={application} label="Placed"><%= application.placed %></:col>
+
+    <:col :let={application} label="11º grades"><%= application._11grade %></:col>
+    <:col :let={application} label="12º grades"><%= application._12grade %></:col>
+    <:col :let={application} label="Exams Grades"><%= application.exams_grades %></:col>
+    <:col :let={application} label="Candidature grade"><%= application.candidature_grade %></:col>
+
+    <:col :let={application} label="Candidature position">
+      <%= application.course_order_num %>
+    </:col>
+  </.table>
+</div>
 
 <.back navigate={~p"/students"}>Back to students</.back>
