@@ -6,6 +6,8 @@ defmodule FindYourFriendUniversity.Courses.Course do
   schema "courses" do
     field :name, :string
 
+    has_many :applications, FindYourFriendUniversity.Applications.Application
+
     timestamps()
   end
 

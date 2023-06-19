@@ -1,9 +1,11 @@
 defmodule FindYourFriendUniversity.ApplicationsTest do
   use FindYourFriendUniversity.DataCase
 
-  alias FindYourFriendUniversity.Applications
-
   describe "applications" do
+    alias FindYourFriendUniversity.Universities
+    alias FindYourFriendUniversity.Courses
+    alias FindYourFriendUniversity.Students
+    alias FindYourFriendUniversity.Applications
     alias FindYourFriendUniversity.Applications.Application
 
     import FindYourFriendUniversity.UniversitiesFixtures
@@ -88,6 +90,54 @@ defmodule FindYourFriendUniversity.ApplicationsTest do
       assert application.student == student
     end
 
+    test "create_application/1 with valid data but non existing associations ids returns error changeset" do
+      valid_attrs_with_non_existing_associations =
+        Map.merge(@valid_attrs, %{
+          university_id: "2",
+          course_id: "3",
+          student_id: "4"
+        })
+
+      assert {:error, %Ecto.Changeset{} = changeset} =
+               Applications.create_application(valid_attrs_with_non_existing_associations)
+
+      assert changeset.errors == [
+               university_id:
+                 {"does not exist",
+                  [{:constraint, :foreign}, {:constraint_name, "applications_university_id_fkey"}]}
+             ]
+
+      university_id = university_fixture() |> Map.get(:id)
+
+      valid_attrs_with_non_existing_associations =
+        valid_attrs_with_non_existing_associations
+        |> Map.update!(:university_id, fn _ -> university_id end)
+
+      assert {:error, %Ecto.Changeset{} = changeset} =
+               Applications.create_application(valid_attrs_with_non_existing_associations)
+
+      assert changeset.errors == [
+               course_id:
+                 {"does not exist",
+                  [{:constraint, :foreign}, {:constraint_name, "applications_course_id_fkey"}]}
+             ]
+
+      course_id = course_fixture() |> Map.get(:id)
+
+      valid_attrs_with_non_existing_associations =
+        valid_attrs_with_non_existing_associations
+        |> Map.update!(:course_id, fn _ -> course_id end)
+
+      assert {:error, %Ecto.Changeset{} = changeset} =
+               Applications.create_application(valid_attrs_with_non_existing_associations)
+
+      assert changeset.errors == [
+               student_id:
+                 {"does not exist",
+                  [{:constraint, :foreign}, {:constraint_name, "applications_student_id_fkey"}]}
+             ]
+    end
+
     test "create_application/1 with valid data but wrong associations ids returns error changeset" do
       valid_attrs_with_wrong_associations =
         Map.merge(@valid_attrs, %{
@@ -144,6 +194,65 @@ defmodule FindYourFriendUniversity.ApplicationsTest do
       assert application.year == 43
     end
 
+    test "update_application/1 with valid data but non existing associations ids returns error changeset" do
+      application = application_fixture()
+
+      valid_attrs_with_non_existing_associations =
+        Map.merge(@valid_attrs, %{
+          university_id: "2",
+          course_id: "3",
+          student_id: "4"
+        })
+
+      assert {:error, %Ecto.Changeset{} = changeset} =
+               Applications.update_application(
+                 application,
+                 valid_attrs_with_non_existing_associations
+               )
+
+      assert changeset.errors == [
+               university_id:
+                 {"does not exist",
+                  [{:constraint, :foreign}, {:constraint_name, "applications_university_id_fkey"}]}
+             ]
+
+      university_id = university_fixture() |> Map.get(:id)
+
+      valid_attrs_with_non_existing_associations =
+        valid_attrs_with_non_existing_associations
+        |> Map.update!(:university_id, fn _ -> university_id end)
+
+      assert {:error, %Ecto.Changeset{} = changeset} =
+               Applications.update_application(
+                 application,
+                 valid_attrs_with_non_existing_associations
+               )
+
+      assert changeset.errors == [
+               course_id:
+                 {"does not exist",
+                  [{:constraint, :foreign}, {:constraint_name, "applications_course_id_fkey"}]}
+             ]
+
+      course_id = course_fixture() |> Map.get(:id)
+
+      valid_attrs_with_non_existing_associations =
+        valid_attrs_with_non_existing_associations
+        |> Map.update!(:course_id, fn _ -> course_id end)
+
+      assert {:error, %Ecto.Changeset{} = changeset} =
+               Applications.update_application(
+                 application,
+                 valid_attrs_with_non_existing_associations
+               )
+
+      assert changeset.errors == [
+               student_id:
+                 {"does not exist",
+                  [{:constraint, :foreign}, {:constraint_name, "applications_student_id_fkey"}]}
+             ]
+    end
+
     test "update_application/1 with valid data but wrong associations ids returns error changeset" do
       application = application_fixture()
 
@@ -189,6 +298,48 @@ defmodule FindYourFriendUniversity.ApplicationsTest do
     test "change_application/1 returns a application changeset" do
       application = application_fixture()
       assert %Ecto.Changeset{} = Applications.change_application(application)
+    end
+
+    test "associations updated when university/course/student is updated" do
+      application =
+        application_fixture()
+        |> Repo.preload([:university, :course, :student])
+
+      Universities.update_university(application.university, %{id: "new_university_id"})
+      Courses.update_course(application.course, %{id: "new_course_id"})
+      Students.update_student(application.student, %{id: "new_student_id"})
+
+      application = Applications.get_application!(application.id)
+
+      assert application.university_id == "new_university_id"
+      assert application.course_id == "new_course_id"
+      assert application.student_id == "new_student_id"
+    end
+
+    test "deleted when university, course or student is deleted" do
+      application =
+        application_fixture()
+        |> Repo.preload(:university)
+
+      Universities.delete_university(application.university)
+
+      assert_raise Ecto.NoResultsError, fn -> Applications.get_application!(application.id) end
+
+      application =
+        application_fixture()
+        |> Repo.preload(:course)
+
+      Courses.delete_course(application.course)
+
+      assert_raise Ecto.NoResultsError, fn -> Applications.get_application!(application.id) end
+
+      application =
+        application_fixture()
+        |> Repo.preload(:student)
+
+      Students.delete_student(application.student)
+
+      assert_raise Ecto.NoResultsError, fn -> Applications.get_application!(application.id) end
     end
   end
 end

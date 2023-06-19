@@ -25,5 +25,8 @@ defmodule FindYourFriendUniversity.Applications.Application do
     application
     |> cast(attrs, [:course_order_num, :candidature_grade, :exams_grades, :_12grade, :_11grade, :student_option_number, :placed, :year, :phase, :university_id, :course_id, :student_id])
     |> validate_required([:course_order_num, :candidature_grade, :exams_grades, :_12grade, :_11grade, :student_option_number, :placed, :year, :phase, :university_id, :course_id, :student_id])
+    |> foreign_key_constraint(:university_id)
+    |> foreign_key_constraint(:course_id)
+    |> foreign_key_constraint(:student_id)
   end
 end

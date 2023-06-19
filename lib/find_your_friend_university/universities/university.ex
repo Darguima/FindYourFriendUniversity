@@ -7,6 +7,8 @@ defmodule FindYourFriendUniversity.Universities.University do
     field(:is_polytechnic, :boolean, default: false)
     field(:name, :string)
 
+    has_many :applications, FindYourFriendUniversity.Applications.Application
+
     timestamps()
   end
 

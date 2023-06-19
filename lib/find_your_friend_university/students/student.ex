@@ -9,6 +9,8 @@ defmodule FindYourFriendUniversity.Students.Student do
     field(:display_name, :string)
     field(:name, :string)
 
+    has_many :applications, FindYourFriendUniversity.Applications.Application
+
     timestamps()
   end
 
