@@ -4,10 +4,18 @@ defmodule FindYourFriendUniversity.ApplicationsFixtures do
   entities via the `FindYourFriendUniversity.Applications` context.
   """
 
+  import FindYourFriendUniversity.UniversitiesFixtures
+  import FindYourFriendUniversity.CoursesFixtures
+  import FindYourFriendUniversity.StudentsFixtures
+
   @doc """
   Generate a application.
   """
   def application_fixture(attrs \\ %{}) do
+    university = university_fixture()
+    course = course_fixture()
+    student = student_fixture()
+
     {:ok, application} =
       attrs
       |> Enum.into(%{
@@ -19,7 +27,10 @@ defmodule FindYourFriendUniversity.ApplicationsFixtures do
         phase: 42,
         placed: true,
         student_option_number: 42,
-        year: 42
+        year: 42,
+        university_id: university.id,
+        course_id: course.id,
+        student_id: student.id
       })
       |> FindYourFriendUniversity.Applications.create_application()
 

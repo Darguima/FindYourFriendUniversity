@@ -55,7 +55,8 @@ defmodule FindYourFriendUniversityWeb.UniversityControllerTest do
       assert redirected_to(conn) == ~p"/universities/#{university}"
 
       conn = get(conn, ~p"/universities/#{university}")
-      assert html_response(conn, 200) =~ "some_id"
+      assert html_response(conn, 200) =~ university.id
+      assert html_response(conn, 200) =~ "some updated name"
     end
 
     test "renders errors when data is invalid", %{conn: conn, university: university} do

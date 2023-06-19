@@ -11,7 +11,7 @@ defmodule FindYourFriendUniversity.UniversitiesFixtures do
     {:ok, university} =
       attrs
       |> Enum.into(%{
-        id: "some_id",
+        id: Ecto.UUID.generate,
         is_polytechnic: true,
         name: "some name"
       })

@@ -36,9 +36,9 @@ defmodule FindYourFriendUniversity.CoursesTest do
       course = course_fixture()
       update_attrs = %{name: "some updated name"}
 
-      assert {:ok, %Course{} = course} = Courses.update_course(course, update_attrs)
-      assert course.id == "some_id"
-      assert course.name == "some updated name"
+      assert {:ok, %Course{} = course_updated} = Courses.update_course(course, update_attrs)
+      assert course_updated.id == course.id
+      assert course_updated.name == "some updated name"
     end
 
     test "update_course/2 with invalid data returns error changeset" do

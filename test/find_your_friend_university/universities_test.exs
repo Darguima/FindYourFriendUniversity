@@ -37,10 +37,10 @@ defmodule FindYourFriendUniversity.UniversitiesTest do
       university = university_fixture()
       update_attrs = %{is_polytechnic: false, name: "some updated name"}
 
-      assert {:ok, %University{} = university} = Universities.update_university(university, update_attrs)
-      assert university.id == "some_id"
-      assert university.is_polytechnic == false
-      assert university.name == "some updated name"
+      assert {:ok, %University{} = university_updated} = Universities.update_university(university, update_attrs)
+      assert university_updated.id == university.id
+      assert university_updated.is_polytechnic == false
+      assert university_updated.name == "some updated name"
     end
 
     test "update_university/2 with invalid data returns error changeset" do

@@ -38,11 +38,11 @@ defmodule FindYourFriendUniversity.StudentsTest do
       student = student_fixture()
       update_attrs = %{civil_id: "some updated civil_id", display_name: "some updated display_name", name: "some updated name"}
 
-      assert {:ok, %Student{} = student} = Students.update_student(student, update_attrs)
-      assert student.civil_id == "some updated civil_id"
-      assert student.display_name == "some updated display_name"
-      assert student.id == "some_id"
-      assert student.name == "some updated name"
+      assert {:ok, %Student{} = student_updated} = Students.update_student(student, update_attrs)
+      assert student_updated.id == student.id
+      assert student_updated.civil_id == "some updated civil_id"
+      assert student_updated.display_name == "some updated display_name"
+      assert student_updated.name == "some updated name"
     end
 
     test "update_student/2 with invalid data returns error changeset" do
