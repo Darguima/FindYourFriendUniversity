@@ -1,8 +1,11 @@
 defmodule FindYourFriendUniversityWeb.StudentController do
   use FindYourFriendUniversityWeb, :controller
 
+  import Ecto.Query
+  alias FindYourFriendUniversity.Repo
   alias FindYourFriendUniversity.Students
   alias FindYourFriendUniversity.Students.Student
+  alias FindYourFriendUniversity.Applications.Application
 
   def index(conn, _params) do
     students = Students.list_students()
@@ -28,7 +31,26 @@ defmodule FindYourFriendUniversityWeb.StudentController do
 
   def show(conn, %{"id" => id}) do
     student = Students.get_student!(id)
-    render(conn, :show, student: student)
+
+    applications =
+      student
+      |> Repo.preload(
+        applications:
+          from(a in Application,
+            order_by: [desc: a.year, asc: a.phase, asc: a.student_option_number]
+          )
+      )
+      |> Map.get(:applications)
+      |> Enum.map(fn application ->
+        application
+        |> Repo.preload([:course, :university])
+        |> Map.update!(:_11grade, fn grade -> grade / 100 end)
+        |> Map.update!(:_12grade, fn grade -> grade / 100 end)
+        |> Map.update!(:exams_grades, fn grade -> grade / 100 end)
+        |> Map.update!(:candidature_grade, fn grade -> grade / 100 end)
+      end)
+
+    render(conn, :show, student: student, applications: applications)
   end
 
   def edit(conn, %{"id" => id}) do

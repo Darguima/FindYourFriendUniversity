@@ -15,4 +15,22 @@
   <:item title="Civil"><%= @student.civil_id %></:item>
 </.list>
 
+<%= if length(@applications) > 0 do %>
+  <h4 class="my-16">Applications:</h4>
+
+  <.table id="applications" rows={@applications} row_click={&JS.navigate(~p"/applications/#{&1}")}>
+    <:col :let={application} label="course"><%= application.course.name %></:col>
+    <:col :let={application} label="university"><%= application.university.name %></:col>
+    <:col :let={application} label="year"><%= application.year %></:col>
+    <:col :let={application} label="phase"><%= application.phase %></:col>
+    <:col :let={application} label="student option number"><%= application.student_option_number %></:col>
+    <:col :let={application} label="candidature grade"><%= application.candidature_grade %></:col>
+    <:col :let={application} label="exams grades"><%= application.exams_grades %></:col>
+    <:col :let={application} label="12 grade"><%= application._12grade %></:col>
+    <:col :let={application} label="11 grade"><%= application._11grade %></:col>
+    <:col :let={application} label="placed"><%= application.placed %></:col>
+    <:col :let={application} label="course order num"><%= application.course_order_num %></:col>
+  </.table>
+<% end %>
+
 <.back navigate={~p"/students"}>Back to students</.back>
