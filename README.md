@@ -66,4 +66,34 @@ $ mix phx.gen.html Courses Course courses id:string name:string
 $ mix phx.gen.html Universities University universities id:string name:string is_polytechnic:boolean
 $ mix phx.gen.html Applications Application applications course_order_num:integer candidature_grade:integer exams_grades:integer _12grade:integer _11grade:integer student_option_number:integer placed:boolean year:integer phase:integer university_id:references:universities course_id:references:courses student_id:references:students
 ```
+
+### Many to Many Tables
+
+I created a table for the many to many association between Courses and Universities:
+
+```bash
+$ mix ecto.gen.migration create_universities_courses
+```
+
+And wrote this function on the migrations:
+
+```elixir
+  def change do
+    create table(:universities_courses) do
+      add :university_id, references(:universities, on_delete: :delete_all, on_update: :update_all, type: :string)
+      add :course_id, references(:courses, on_delete: :delete_all, on_update: :update_all, type: :string)
+    end
+
+    create unique_index(:universities_courses, [:university_id, :course_id])
+  end
+```
+
+And then added to Universities and Courses Schema
+
+```elixir
+many_to_many :courses, Course, join_through: "universities_courses" # universities.ex
+many_to_many :universities, University, join_through: "universities_courses" # courses.ex
+```
+
+To put the associations on the table while running the changeset, I followed this [post](https://dev.to/ricardoruwer/many-to-many-associations-in-elixir-and-phoenix-21pm).
  

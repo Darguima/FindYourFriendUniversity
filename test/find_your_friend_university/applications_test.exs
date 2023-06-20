@@ -300,7 +300,7 @@ defmodule FindYourFriendUniversity.ApplicationsTest do
       assert %Ecto.Changeset{} = Applications.change_application(application)
     end
 
-    test "associations updated when university/course/student is updated" do
+    test "associations update when university/course/student is updated" do
       application =
         application_fixture()
         |> Repo.preload([:university, :course, :student])

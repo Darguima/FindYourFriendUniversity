@@ -1,6 +1,7 @@
 defmodule FindYourFriendUniversityWeb.CourseController do
   use FindYourFriendUniversityWeb, :controller
 
+  alias FindYourFriendUniversity.Repo
   alias FindYourFriendUniversity.Courses
   alias FindYourFriendUniversity.Courses.Course
 
@@ -28,7 +29,13 @@ defmodule FindYourFriendUniversityWeb.CourseController do
 
   def show(conn, %{"id" => id}) do
     course = Courses.get_course!(id)
-    render(conn, :show, course: course)
+
+    universities =
+      course
+      |> Repo.preload(:universities)
+      |> Map.get(:universities)
+
+    render(conn, :show, course: course, universities: universities)
   end
 
   def edit(conn, %{"id" => id}) do

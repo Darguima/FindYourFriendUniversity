@@ -14,4 +14,13 @@
   <:item title="Is polytechnic"><%= @university.is_polytechnic %></:item>
 </.list>
 
+<%= if length(@courses) > 0 do %>
+  <h4 class="my-16">Courses:</h4>
+
+  <.table id="courses" rows={@courses} row_click={&JS.navigate(~p"/courses/#{&1}")}>
+    <:col :let={course} label="Id"><%= course.id %></:col>
+    <:col :let={course} label="Name"><%= course.name %></:col>
+  </.table>
+<% end %>
+
 <.back navigate={~p"/universities"}>Back to universities</.back>
