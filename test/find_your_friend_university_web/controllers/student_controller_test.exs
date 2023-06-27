@@ -3,8 +3,8 @@ defmodule FindYourFriendUniversityWeb.StudentControllerTest do
 
   import FindYourFriendUniversity.StudentsFixtures
 
-  @create_attrs %{civil_id: "some civil_id", display_name: "some display_name", id: "some_id", name: "some name"}
-  @update_attrs %{civil_id: "some updated civil_id", display_name: "some updated display_name", name: "some updated name"}
+  @create_attrs %{civil_id: "civil_id", display_name: "some display_name", id: "_id_", name: "some name"}
+  @update_attrs %{civil_id: "civil_id", display_name: "some updated display_name", name: "some updated name"}
   @invalid_attrs %{civil_id: nil, display_name: nil, id: nil, name: nil}
 
   describe "index" do
@@ -56,7 +56,7 @@ defmodule FindYourFriendUniversityWeb.StudentControllerTest do
 
       conn = get(conn, ~p"/students/#{student}")
       assert html_response(conn, 200) =~ student.id
-      assert html_response(conn, 200) =~ "some updated civil_id"
+      assert html_response(conn, 200) =~ "civil_id"
       assert html_response(conn, 200) =~ "some updated display_name"
       assert html_response(conn, 200) =~ "some updated name"
     end

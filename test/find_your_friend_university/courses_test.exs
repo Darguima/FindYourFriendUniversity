@@ -21,10 +21,10 @@ defmodule FindYourFriendUniversity.CoursesTest do
     end
 
     test "create_course/1 with valid data creates a course" do
-      valid_attrs = %{id: "some_id", name: "some name"}
+      valid_attrs = %{id: "_id_", name: "some name"}
 
       assert {:ok, %Course{} = course} = Courses.create_course(valid_attrs)
-      assert course.id == "some_id"
+      assert course.id == "_id_"
       assert course.name == "some name"
     end
 

@@ -21,10 +21,10 @@ defmodule FindYourFriendUniversity.UniversitiesTest do
     end
 
     test "create_university/1 with valid data creates a university" do
-      valid_attrs = %{id: "some_id", is_polytechnic: true, name: "some name"}
+      valid_attrs = %{id: "_id_", is_polytechnic: true, name: "some name"}
 
       assert {:ok, %University{} = university} = Universities.create_university(valid_attrs)
-      assert university.id == "some_id"
+      assert university.id == "_id_"
       assert university.is_polytechnic == true
       assert university.name == "some name"
     end

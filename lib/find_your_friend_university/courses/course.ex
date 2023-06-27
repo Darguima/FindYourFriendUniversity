@@ -23,12 +23,17 @@ defmodule FindYourFriendUniversity.Courses.Course do
 
   @doc false
   def changeset(course, attrs) do
-    universities = attrs
-    |> Map.get(:universities, [])
+    universities =
+      attrs
+      |> Map.get(:universities, [])
 
     course
     |> cast(attrs, [:id, :name])
     |> validate_required([:id, :name])
+    |> validate_length(:id, is: 4)
+
+    |> unique_constraint(:id, name: :courses_pkey)
+
     |> put_assoc_universities(universities)
   end
 end

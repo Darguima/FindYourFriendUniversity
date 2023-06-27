@@ -9,7 +9,7 @@ defmodule FindYourFriendUniversity.Students.Student do
     field(:display_name, :string)
     field(:name, :string)
 
-    has_many :applications, FindYourFriendUniversity.Applications.Application
+    has_many(:applications, FindYourFriendUniversity.Applications.Application)
 
     timestamps()
   end
@@ -19,5 +19,7 @@ defmodule FindYourFriendUniversity.Students.Student do
     student
     |> cast(attrs, [:id, :name, :display_name, :civil_id])
     |> validate_required([:id, :name, :display_name, :civil_id])
+    |> validate_length(:civil_id, is: 8)
+    |> unique_constraint(:id, name: :students_pkey)
   end
 end

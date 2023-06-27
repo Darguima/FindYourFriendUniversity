@@ -3,7 +3,7 @@ defmodule FindYourFriendUniversityWeb.UniversityControllerTest do
 
   import FindYourFriendUniversity.UniversitiesFixtures
 
-  @create_attrs %{id: "some_id", is_polytechnic: true, name: "some name"}
+  @create_attrs %{id: "_id_", is_polytechnic: true, name: "some name"}
   @update_attrs %{is_polytechnic: false, name: "some updated name"}
   @invalid_attrs %{id: nil, is_polytechnic: nil, name: nil}
 

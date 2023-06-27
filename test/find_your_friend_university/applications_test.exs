@@ -14,15 +14,15 @@ defmodule FindYourFriendUniversity.ApplicationsTest do
     import FindYourFriendUniversity.ApplicationsFixtures
 
     @valid_attrs %{
-      _11grade: 42,
-      _12grade: 42,
-      candidature_grade: 42,
-      course_order_num: 42,
-      exams_grades: 42,
-      phase: 42,
+      _11grade: 18,
+      _12grade: 13,
+      candidature_grade: 16,
+      course_order_num: 98,
+      exams_grades: 15,
+      phase: 2,
       placed: true,
-      student_option_number: 42,
-      year: 42
+      student_option_number: 2,
+      year: 2019
     }
     @invalid_attrs %{
       _11grade: nil,
@@ -36,15 +36,15 @@ defmodule FindYourFriendUniversity.ApplicationsTest do
       year: nil
     }
     @update_attrs %{
-      _11grade: 43,
-      _12grade: 43,
-      candidature_grade: 43,
-      course_order_num: 43,
-      exams_grades: 43,
-      phase: 43,
-      placed: false,
-      student_option_number: 43,
-      year: 43
+      _11grade: 15,
+      _12grade: 13,
+      candidature_grade: 17,
+      course_order_num: 13,
+      exams_grades: 16,
+      phase: 3,
+      placed: true,
+      student_option_number: 6,
+      year: 2019
     }
 
     test "list_applications/0 returns all applications" do
@@ -75,15 +75,15 @@ defmodule FindYourFriendUniversity.ApplicationsTest do
         application
         |> Repo.preload([:university, :course, :student])
 
-      assert application._11grade == 42
-      assert application._12grade == 42
-      assert application.candidature_grade == 42
-      assert application.course_order_num == 42
-      assert application.exams_grades == 42
-      assert application.phase == 42
-      assert application.placed == true
-      assert application.student_option_number == 42
-      assert application.year == 42
+      assert application._11grade == valid_attrs._11grade
+      assert application._12grade == valid_attrs._12grade
+      assert application.candidature_grade == valid_attrs.candidature_grade
+      assert application.course_order_num == valid_attrs.course_order_num
+      assert application.exams_grades == valid_attrs.exams_grades
+      assert application.phase == valid_attrs.phase
+      assert application.placed == valid_attrs.placed
+      assert application.student_option_number == valid_attrs.student_option_number
+      assert application.year == valid_attrs.year
 
       assert application.university == university
       assert application.course == course
@@ -183,15 +183,15 @@ defmodule FindYourFriendUniversity.ApplicationsTest do
       assert {:ok, %Application{} = application} =
                Applications.update_application(application, update_attrs)
 
-      assert application._11grade == 43
-      assert application._12grade == 43
-      assert application.candidature_grade == 43
-      assert application.course_order_num == 43
-      assert application.exams_grades == 43
-      assert application.phase == 43
-      assert application.placed == false
-      assert application.student_option_number == 43
-      assert application.year == 43
+      assert application._11grade == update_attrs._11grade
+      assert application._12grade == update_attrs._12grade
+      assert application.candidature_grade == update_attrs.candidature_grade
+      assert application.course_order_num == update_attrs.course_order_num
+      assert application.exams_grades == update_attrs.exams_grades
+      assert application.phase == update_attrs.phase
+      assert application.placed == update_attrs.placed
+      assert application.student_option_number == update_attrs.student_option_number
+      assert application.year == update_attrs.year
     end
 
     test "update_application/1 with valid data but non existing associations ids returns error changeset" do
@@ -305,15 +305,17 @@ defmodule FindYourFriendUniversity.ApplicationsTest do
         application_fixture()
         |> Repo.preload([:university, :course, :student])
 
-      Universities.update_university(application.university, %{id: "new_university_id"})
-      Courses.update_course(application.course, %{id: "new_course_id"})
-      Students.update_student(application.student, %{id: "new_student_id"})
+      Universities.update_university(application.university, %{name: "new_university_name"})
+      Courses.update_course(application.course, %{name: "new_course_name"})
+      Students.update_student(application.student, %{name: "new_student_name"})
 
-      application = Applications.get_application!(application.id)
+      application =
+        Applications.get_application!(application.id)
+        |> Repo.preload([:university, :course, :student])
 
-      assert application.university_id == "new_university_id"
-      assert application.course_id == "new_course_id"
-      assert application.student_id == "new_student_id"
+      assert application.university.name == "new_university_name"
+      assert application.course.name == "new_course_name"
+      assert application.student.name == "new_student_name"
     end
 
     test "deleted when university, course or student is deleted" do

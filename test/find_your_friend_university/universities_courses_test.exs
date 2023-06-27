@@ -10,8 +10,8 @@ defmodule FindYourFriendUniversity.UniversitiesCoursesTest do
     import FindYourFriendUniversity.UniversitiesFixtures
     import FindYourFriendUniversity.CoursesFixtures
 
-    @valid_uni_attrs %{id: "some_id", is_polytechnic: true, name: "some name"}
-    @valid_course_attrs %{id: "some_id", name: "some name"}
+    @valid_uni_attrs %{id: "_id_", is_polytechnic: true, name: "some name"}
+    @valid_course_attrs %{id: "_id_", name: "some name"}
 
     test "create_university/1 with valid data and course association creates a university" do
       course = course_fixture()
@@ -23,7 +23,7 @@ defmodule FindYourFriendUniversity.UniversitiesCoursesTest do
 
       assert {:ok, %University{} = university} = Universities.create_university(valid_uni_attrs)
 
-      assert university.id == "some_id"
+      assert university.id == "_id_"
       assert university.is_polytechnic == true
       assert university.name == "some name"
       assert university.courses == [course]
@@ -39,7 +39,7 @@ defmodule FindYourFriendUniversity.UniversitiesCoursesTest do
 
       assert {:ok, %Course{} = course} = Courses.create_course(valid_course_attrs)
 
-      assert course.id == "some_id"
+      assert course.id == "_id_"
       assert course.name == "some name"
       assert course.universities == [university]
     end

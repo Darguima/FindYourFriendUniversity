@@ -31,6 +31,8 @@ defmodule FindYourFriendUniversity.Universities.University do
     university
     |> cast(attrs, [:id, :name, :is_polytechnic])
     |> validate_required([:id, :name, :is_polytechnic])
+    |> validate_length(:id, is: 4)
+    |> unique_constraint(:id, name: :universities_pkey)
     |> put_assoc_courses(courses)
   end
 end

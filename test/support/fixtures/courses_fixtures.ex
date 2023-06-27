@@ -11,7 +11,7 @@ defmodule FindYourFriendUniversity.CoursesFixtures do
     {:ok, course} =
       attrs
       |> Enum.into(%{
-        id: Ecto.UUID.generate,
+        id: Ecto.UUID.generate() |> String.slice(0..3),
         name: "some name"
       })
       |> FindYourFriendUniversity.Courses.create_course()

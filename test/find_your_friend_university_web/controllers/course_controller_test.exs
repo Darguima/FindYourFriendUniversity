@@ -3,7 +3,7 @@ defmodule FindYourFriendUniversityWeb.CourseControllerTest do
 
   import FindYourFriendUniversity.CoursesFixtures
 
-  @create_attrs %{id: "some_id", name: "some name"}
+  @create_attrs %{id: "_id_", name: "some name"}
   @update_attrs %{name: "some updated name"}
   @invalid_attrs %{id: nil, name: nil}
 

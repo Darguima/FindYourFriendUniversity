@@ -12,7 +12,7 @@ defmodule FindYourFriendUniversity.StudentsFixtures do
       attrs
       |> Enum.into(%{
         id: Ecto.UUID.generate,
-        civil_id: "some civil_id",
+        civil_id: "civil_id",
         display_name: "some display_name",
         name: "some name"
       })

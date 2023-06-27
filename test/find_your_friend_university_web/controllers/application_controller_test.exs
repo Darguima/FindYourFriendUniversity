@@ -7,26 +7,15 @@ defmodule FindYourFriendUniversityWeb.ApplicationControllerTest do
   import FindYourFriendUniversity.ApplicationsFixtures
 
   @create_attrs %{
-    _11grade: 42,
-    _12grade: 42,
-    candidature_grade: 42,
-    course_order_num: 42,
-    exams_grades: 42,
-    phase: 42,
+    _11grade: 18,
+    _12grade: 13,
+    candidature_grade: 16,
+    course_order_num: 98,
+    exams_grades: 15,
+    phase: 2,
     placed: true,
-    student_option_number: 42,
-    year: 42
-  }
-  @update_attrs %{
-    _11grade: 43,
-    _12grade: 43,
-    candidature_grade: 43,
-    course_order_num: 43,
-    exams_grades: 43,
-    phase: 43,
-    placed: false,
-    student_option_number: 43,
-    year: 43
+    student_option_number: 2,
+    year: 2019
   }
   @invalid_attrs %{
     _11grade: nil,
@@ -38,6 +27,17 @@ defmodule FindYourFriendUniversityWeb.ApplicationControllerTest do
     placed: nil,
     student_option_number: nil,
     year: nil
+  }
+  @update_attrs %{
+    _11grade: 15,
+    _12grade: 13,
+    candidature_grade: 17,
+    course_order_num: 13,
+    exams_grades: 16,
+    phase: 3,
+    placed: true,
+    student_option_number: 6,
+    year: 2019
   }
 
   describe "index" do

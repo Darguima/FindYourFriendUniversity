@@ -3,15 +3,15 @@ defmodule FindYourFriendUniversity.Repo.Migrations.CreateApplications do
 
   def change do
     create table(:applications) do
-      add :course_order_num, :integer
-      add :candidature_grade, :integer
-      add :exams_grades, :integer
-      add :_12grade, :integer
-      add :_11grade, :integer
-      add :student_option_number, :integer
+      add :course_order_num, :integer, null: false
+      add :candidature_grade, :integer, null: false
+      add :exams_grades, :integer, null: false
+      add :_12grade, :integer, null: false
+      add :_11grade, :integer, null: false
+      add :student_option_number, :integer, null: false
       add :placed, :boolean, default: false, null: false
-      add :year, :integer
-      add :phase, :integer
+      add :year, :integer, null: false
+      add :phase, :integer, null: false
 
       add :university_id, references(:universities, on_delete: :delete_all, on_update: :update_all, type: :string)
       add :course_id, references(:courses, on_delete: :delete_all, on_update: :update_all, type: :string)
@@ -23,5 +23,7 @@ defmodule FindYourFriendUniversity.Repo.Migrations.CreateApplications do
     create index(:applications, [:university_id])
     create index(:applications, [:course_id])
     create index(:applications, [:student_id])
+
+    create unique_index(:applications, [:student_option_number, :year, :phase, :student_id])
   end
 end
