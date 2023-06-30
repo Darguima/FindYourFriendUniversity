@@ -21,7 +21,12 @@ defmodule FindYourFriendUniversity.StudentsTest do
     end
 
     test "create_student/1 with valid data creates a student" do
-      valid_attrs = %{civil_id: "civil_id", display_name: "some display_name", id: "_id_", name: "some name"}
+      valid_attrs = %{
+        civil_id: "civil_id",
+        display_name: "some display_name",
+        id: "_id_",
+        name: "some name"
+      }
 
       assert {:ok, %Student{} = student} = Students.create_student(valid_attrs)
       assert student.civil_id == "civil_id"
@@ -34,9 +39,45 @@ defmodule FindYourFriendUniversity.StudentsTest do
       assert {:error, %Ecto.Changeset{}} = Students.create_student(@invalid_attrs)
     end
 
+    test "create_multiple_students/1 with valid data that creates all students" do
+      students =
+        List.duplicate(%{}, 5)
+        |> Enum.map(fn student ->
+          student
+          |> Map.put(:id, Ecto.UUID.generate())
+          |> Map.put(:name, Ecto.UUID.generate())
+          |> Map.put(:display_name, Ecto.UUID.generate())
+          |> Map.put(:civil_id, Ecto.UUID.generate() |> String.slice(0..7))
+        end)
+
+      {:ok, {students_inserted_qnt, _}} = Students.create_multiple_students(students)
+
+      assert students_inserted_qnt == length(students)
+      assert length(Students.list_students()) == length(students)
+    end
+
+    test "create_multiple_students/1 with invalid data returns error" do
+      invalid_courses =
+        List.duplicate(%{}, 5)
+        |> Enum.map(fn course ->
+          course
+          |> Map.put(:id, nil)
+          |> Map.put(:name, nil)
+          |> Map.put(:display_name, nil)
+          |> Map.put(:civil_id, nil)
+        end)
+
+      assert {:error, _} = Students.create_multiple_students(invalid_courses)
+    end
+
     test "update_student/2 with valid data updates the student" do
       student = student_fixture()
-      update_attrs = %{civil_id: "civil_id", display_name: "some updated display_name", name: "some updated name"}
+
+      update_attrs = %{
+        civil_id: "civil_id",
+        display_name: "some updated display_name",
+        name: "some updated name"
+      }
 
       assert {:ok, %Student{} = student_updated} = Students.update_student(student, update_attrs)
       assert student_updated.id == student.id

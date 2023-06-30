@@ -4,6 +4,8 @@ defmodule FindYourFriendUniversity.Courses do
   """
 
   import Ecto.Query, warn: false
+  import FindYourFriendUniversity.Helpers
+
   alias FindYourFriendUniversity.Repo
 
   alias FindYourFriendUniversity.Courses.Course
@@ -53,6 +55,98 @@ defmodule FindYourFriendUniversity.Courses do
     %Course{}
     |> Course.changeset(attrs)
     |> Repo.insert()
+  end
+
+  @doc """
+  Creates multiple courses.
+
+  If everything is ok, it returns two tuples, both containing the number of entries stored and any returned result as second element, from the courses and all associations inserted, respectively.
+
+  If the changeset detect some errors at some of the courses it will return a list of courses and its respective errors.
+
+  NOTE: changeset will not detect errors at associations.
+
+  In some cases, like if one of the given university id don't exists it will raise an Postgres error
+
+  ## Examples
+
+      iex> create_multiple_courses(
+              [
+                %{
+                  id: "1234",
+                  name: "Course Name",
+                  universities_ids: ["1234", "1111"], # Optional
+                },
+                ...
+              ]
+            )
+      {:ok, {courses_inserted_quantity, [...]}, {associations_inserted_quantity, [...]}}
+
+      iex> create_multiple_courses([%{field: value}, %{field: value}, ...])
+      {:error, [ %{course: %Course{}, errors: [ %Ecto.Changeset{} ]} ]}
+
+      # If, for example, one university id doesn't exists:
+      iex> create_multiple_courses([%{field: value}, %{field: value}, ...])
+      ** (Postgrex.Error) ERROR 23503 (foreign_key_violation)
+  """
+  def create_multiple_courses(courses) do
+    timestamp =
+      NaiveDateTime.utc_now()
+      |> NaiveDateTime.truncate(:second)
+
+    courses =
+      courses
+      |> Enum.map(fn course ->
+        %{
+          id: course |> Map.get(:id),
+          name: course |> Map.get(:name),
+          universities_ids: course |> Map.get(:universities_ids, []),
+          inserted_at: timestamp,
+          updated_at: timestamp
+        }
+      end)
+
+    errors =
+      courses
+      |> Enum.map(fn course ->
+        errors =
+          Course.changeset(%Course{}, course)
+          |> Map.get(:errors)
+
+        %{course: course, errors: errors}
+      end)
+      |> Enum.filter(fn course -> course.errors != [] end)
+
+    if errors != [] do
+      {:error, errors}
+    else
+      courses_inserted =
+        courses
+        |> Enum.map(fn course ->
+          course
+          |> Map.delete(:universities_ids)
+        end)
+        # 65535 is the maximum of parameters per query; 4 the number of params per row
+        |> Enum.chunk_every(trunc(65535 / 4))
+        |> Enum.map(fn course -> Repo.insert_all(Course, course) end)
+        |> reduce_multiple_insert_all()
+
+      # Many to many association with universities:
+      associations_inserted =
+        courses
+        |> Enum.map(fn course ->
+          course
+          |> Map.get(:universities_ids)
+          |> Enum.map(fn uni_id -> %{university_id: uni_id, course_id: course.id} end)
+        end)
+        |> Enum.concat()
+        # 65535 is the maximum of parameters per query; 2 the number of params per row
+        |> Enum.chunk_every(trunc(65535 / 2))
+        |> Enum.map(fn assoc -> Repo.insert_all("universities_courses", assoc) end)
+        |> reduce_multiple_insert_all()
+
+      {:ok, courses_inserted, associations_inserted}
+    end
   end
 
   @doc """

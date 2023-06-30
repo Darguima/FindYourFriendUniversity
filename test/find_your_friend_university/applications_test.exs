@@ -167,6 +167,69 @@ defmodule FindYourFriendUniversity.ApplicationsTest do
       assert {:error, %Ecto.Changeset{}} = Applications.create_application(invalid_attrs)
     end
 
+    test "create_multiple_applications/1 with valid data and with valid associations creates all applications" do
+      university = university_fixture()
+      course = course_fixture()
+      student = student_fixture()
+
+      applications =
+        @valid_attrs
+        |> List.duplicate(5)
+        |> Enum.with_index(fn element, index -> {2018 + index, element} end)
+        |> Enum.map(fn {year, application} ->
+          application
+          |> Map.replace(:year, year)
+          |> Map.put(:university_id, university.id)
+          |> Map.put(:course_id, course.id)
+          |> Map.put(:student_id, student.id)
+        end)
+
+      {:ok, {applications_inserted_qnt, _}} =
+        Applications.create_multiple_applications(applications)
+
+      assert applications_inserted_qnt == length(applications)
+
+      assert length(Applications.list_applications()) == length(applications)
+    end
+
+    test "create_multiple_applications/1 with valid data and no associations returns error" do
+      applications = @valid_attrs |> List.duplicate(5)
+
+      assert {:error, _} = Applications.create_multiple_applications(applications)
+    end
+
+    test "create_multiple_applications/1 with valid data and with invalid associations raises Postgres error" do
+      invalid_applications =
+        @valid_attrs
+        |> List.duplicate(5)
+        |> Enum.with_index(fn element, index -> {2018 + index, element} end)
+        |> Enum.map(fn {year, application} ->
+          application
+          |> Map.replace(:year, year)
+          |> Map.put(:university_id, "1234")
+          |> Map.put(:course_id, "1234")
+          |> Map.put(:student_id, "1234")
+        end)
+
+      assert_raise Postgrex.Error, fn ->
+        Applications.create_multiple_applications(invalid_applications)
+      end
+    end
+
+    test "create_multiple_applications/1 with invalid data returns error" do
+      invalid_applications =
+        @invalid_attrs
+        |> List.duplicate(5)
+        |> Enum.map(fn application ->
+          application
+          |> Map.put(:university_id, nil)
+          |> Map.put(:course_id, nil)
+          |> Map.put(:student_id, nil)
+        end)
+
+      assert {:error, _} = Applications.create_multiple_applications(invalid_applications)
+    end
+
     test "update_application/2 with valid data updates the application" do
       university = university_fixture()
       course = course_fixture()
