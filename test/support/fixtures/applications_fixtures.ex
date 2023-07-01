@@ -19,11 +19,11 @@ defmodule FindYourFriendUniversity.ApplicationsFixtures do
     {:ok, application} =
       attrs
       |> Enum.into(%{
-        _11grade: 18,
-        _12grade: 13,
-        candidature_grade: 16,
+        _11grade: 1850,
+        _12grade: 1347,
+        candidature_grade: 1668,
         course_order_num: 98,
-        exams_grades: 15,
+        exams_grades: 1549,
         phase: 2,
         placed: true,
         student_option_number: 2,

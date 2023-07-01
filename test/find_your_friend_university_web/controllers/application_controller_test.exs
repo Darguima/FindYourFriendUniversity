@@ -7,11 +7,11 @@ defmodule FindYourFriendUniversityWeb.ApplicationControllerTest do
   import FindYourFriendUniversity.ApplicationsFixtures
 
   @create_attrs %{
-    _11grade: 18,
-    _12grade: 13,
-    candidature_grade: 16,
+    _11grade: 1850,
+    _12grade: 1347,
+    candidature_grade: 1668,
     course_order_num: 98,
-    exams_grades: 15,
+    exams_grades: 1549,
     phase: 2,
     placed: true,
     student_option_number: 2,
@@ -29,11 +29,11 @@ defmodule FindYourFriendUniversityWeb.ApplicationControllerTest do
     year: nil
   }
   @update_attrs %{
-    _11grade: 15,
-    _12grade: 13,
-    candidature_grade: 17,
+    _11grade: 1540,
+    _12grade: 1347,
+    candidature_grade: 1728,
     course_order_num: 13,
-    exams_grades: 16,
+    exams_grades: 1639,
     phase: 3,
     placed: true,
     student_option_number: 6,

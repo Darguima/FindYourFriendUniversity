@@ -42,6 +42,10 @@ defmodule FindYourFriendUniversity.Applications do
   @doc """
   Creates a application.
 
+  Note: grades are represented as 2000 scale.
+
+  16,39 -> 1639
+
   ## Examples
 
       iex> create_application(%{field: value})
@@ -73,10 +77,10 @@ defmodule FindYourFriendUniversity.Applications do
       iex> create_multiple_applications(
               [
                 %{
-                  _11grade: 18,
-                  _12grade: 13,
-                  candidature_grade: 16,
-                  exams_grades: 15,
+                  _11grade: 1850,
+                  _12grade: 1347,
+                  candidature_grade: 1668,
+                  exams_grades: 1549,
 
                   student_option_number: 2,
                   placed: true,
