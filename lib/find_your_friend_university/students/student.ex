@@ -19,7 +19,7 @@ defmodule FindYourFriendUniversity.Students.Student do
     student
     |> cast(attrs, [:id, :name, :display_name, :civil_id])
     |> validate_required([:id, :name, :display_name, :civil_id])
-    |> validate_length(:civil_id, is: 8)
+    |> validate_length(:civil_id, greater_than_or_equal_to: 7, less_than_or_equal_to: 8)
     |> unique_constraint(:id, name: :students_pkey)
   end
 end

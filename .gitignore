@@ -35,4 +35,5 @@ find_your_friend_university-*.tar
 npm-debug.log
 /assets/node_modules/
 
+seeds.json
 applications.json
