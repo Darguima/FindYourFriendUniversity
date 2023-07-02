@@ -2,14 +2,68 @@ defmodule FindYourFriendUniversityWeb.StudentController do
   use FindYourFriendUniversityWeb, :controller
 
   import Ecto.Query
+  alias FindYourFriendUniversity.Universities
+  alias FindYourFriendUniversity.Courses
   alias FindYourFriendUniversity.Repo
   alias FindYourFriendUniversity.Students
   alias FindYourFriendUniversity.Students.Student
   alias FindYourFriendUniversity.Applications.Application
+  import FindYourFriendUniversity.Helpers
 
-  def index(conn, _params) do
-    students = Students.list_students()
-    render(conn, :index, students: students)
+  def index(conn, params) do
+    universities_available = Universities.list_universities()
+    courses_available = Courses.list_courses()
+
+    filters =
+      params
+      |> Map.put_new("name", "")
+      |> Map.put_new("civil_id", "")
+      |> Map.put_new(
+        "universities_applications",
+        universities_available |> Enum.map(fn uni -> uni.id end)
+      )
+      |> Map.put_new(
+        "courses_applications",
+        courses_available |> Enum.map(fn course -> course.id end)
+      )
+      |> Map.put_new(
+        "years_applications",
+        2018..2023 |> Enum.map(&Integer.to_string(&1))
+      )
+      |> Map.put_new(
+        "phases_applications",
+        1..3 |> Enum.map(&Integer.to_string(&1))
+      )
+      |> Map.update("page_number", 1, fn string ->
+        string
+        |> Integer.parse()
+        |> elem(0)
+      end)
+      |> Map.update("page_size", 100, fn string ->
+        string
+        |> Integer.parse()
+        |> elem(0)
+      end)
+      |> Map.take([
+        "name",
+        "civil_id",
+        "universities_applications",
+        "courses_applications",
+        "years_applications",
+        "phases_applications",
+        "page_number",
+        "page_size"
+      ])
+      |> map_keys_to_atoms()
+
+    students = Students.search_students(filters)
+
+    render(conn, :index,
+      students: students,
+      filters: filters,
+      universities: universities_available,
+      courses: courses_available
+    )
   end
 
   def new(conn, _params) do

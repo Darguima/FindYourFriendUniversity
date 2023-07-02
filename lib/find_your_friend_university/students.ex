@@ -8,6 +8,7 @@ defmodule FindYourFriendUniversity.Students do
 
   alias FindYourFriendUniversity.Repo
 
+  alias FindYourFriendUniversity.Applications.Application
   alias FindYourFriendUniversity.Students.Student
 
   @doc """
@@ -21,6 +22,75 @@ defmodule FindYourFriendUniversity.Students do
   """
   def list_students do
     Repo.all(Student)
+  end
+
+  @doc """
+  Returns the list of students that match the filters.
+
+  ## Filters
+
+  ```elixir
+  students_filters = {
+    :name, # The name to search. It need be in the correct order
+    :civil_id, # The civil id to search. Can be used 'x' to match any number
+
+    :universities_applications, # An array with universities ids. The returned students will have applications to this university
+    :courses_applications, # An array with courses ids. The returned students will have applications to this course
+
+    :years_applications, # An array with years. The returned students will have applications during on this year
+    :phases_applications, # An array with phases. The returned students will have applications on this phase
+
+    :page_size, # How much students are presented inside a page
+    :page_number # The page number,
+  }
+  ```
+
+  ## Examples
+
+      iex> Students.search_students(%{
+        name: "Some name to search",
+
+        universities_applications: ["1234", "5678"],
+
+        page_number: 4,
+        page_size: 50
+      })
+      [%Student{}, ...]
+  """
+  def search_students(filters) do
+    filters =
+      filters
+      |> Map.update!(:name, fn name ->
+        name
+        |> normalize_string([32])
+        |> String.replace(" ", "%")
+      end)
+      |> Map.update!(:civil_id, fn civil_id ->
+        civil_id
+        |> normalize_string(48..57)
+        |> IO.inspect()
+        |> String.replace("x", "%")
+      end)
+
+    query =
+      from(student in Student,
+        order_by: student.name,
+        join: application in Application,
+        on: application.student_id == student.id,
+        where:
+          ilike(student.display_name, ^"%#{filters.name}%") and
+            ilike(student.civil_id, ^"%#{filters.civil_id}%") and
+            application.university_id in ^filters.universities_applications and
+            application.course_id in ^filters.courses_applications and
+            application.year in ^filters.years_applications and
+            application.phase in ^filters.phases_applications,
+        limit: ^filters.page_size,
+        offset: (^filters.page_number - 1) * ^filters.page_size,
+        select: student,
+        distinct: student
+      )
+
+    Repo.all(query)
   end
 
   @doc """

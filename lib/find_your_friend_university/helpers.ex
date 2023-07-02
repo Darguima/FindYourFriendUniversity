@@ -22,17 +22,23 @@ defmodule FindYourFriendUniversity.Helpers do
   @doc """
   Convert an unicode UTF-8 string name to a normalized downcase ASCII string.
 
+  By default just downcase letters will be on the final string. If you want add some other chars, let its ASCII codes at `others_allowed_chars`.
+
   ## Examples
 
-      iex> name_to_display_name( "Luís André Côrreia Rocha" )
+      iex> normalize_string( "Luís André Côrreia Rocha" )
       luisandrecorreiarocha
+
+      # Space ASCII code is 32
+      iex> normalize_string( "Luís André Côrreia Rocha", [32] )
+      luis andre correia rocha
   """
-  def name_to_display_name(name) do
+  def normalize_string(name, others_allowed_chars \\ []) do
     name
     |> String.downcase()
     |> String.normalize(:nfd)
     |> String.to_charlist()
-    |> Enum.filter(fn char -> 97 <= char && char <= 122 end)
+    |> Enum.filter(fn char -> (97 <= char && char <= 122) || (char in others_allowed_chars) end)
     |> List.to_string()
   end
 
@@ -55,7 +61,7 @@ defmodule FindYourFriendUniversity.Helpers do
 
   ## Examples
 
-      iex> name_to_display_name( {"a": 1, "b": 2} )
+      iex> map_keys_to_atoms( {"a": 1, "b": 2} )
       {a: 1, b: 2}
   """
   def map_keys_to_atoms(string_key_map) do

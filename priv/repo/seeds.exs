@@ -94,7 +94,7 @@ defmodule Seeds do
                 display_name =
                   application
                   |> Map.get("name")
-                  |> name_to_display_name()
+                  |> normalize_string()
 
                 civil_id =
                   application

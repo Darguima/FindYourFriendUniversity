@@ -7,6 +7,119 @@
   </:actions>
 </.header>
 
+<form
+  phx-submit="submit"
+  class="w-full my-2 bg-slate-200 flex justify-evenly items-center flex-col"
+>
+  <div class="w-full h-12 flex justify-between items-center">
+    <label>Search by name:</label>
+
+    <input
+      type="text"
+      name="name"
+      placeholder="Search a name"
+      class="h-2/4"
+      value={@filters[:name]}
+      autofocus
+    />
+  </div>
+
+  <div class="w-full h-12 flex justify-between items-center">
+    <label>Search by civil id:</label>
+
+    <input
+      type="text"
+      name="civil_id"
+      placeholder="Search a civil id"
+      class="h-2/4"
+      value={@filters[:civil_id]}
+      autofocus
+    />
+  </div>
+
+  <div class="w-full flex justify-between items-center">
+    <label>Has applications to University</label>
+
+    <select name="universities_applications[]" multiple size="5">
+      <%= for university <- @universities do %>
+        <%= if university.id not in @filters.universities_applications do %>
+          <option value={university.id}><%= university.name %></option>
+        <% else %>
+          <option selected value={university.id}><%= university.name %></option>
+        <% end %>
+      <% end %>
+    </select>
+  </div>
+
+  <div class="w-full flex justify-between items-center">
+    <label>Has applications to Course</label>
+
+    <select name="courses_applications[]" multiple size="5">
+      <%= for course <- @courses do %>
+        <%= if course.id not in @filters.courses_applications do %>
+          <option value={course.id}><%= course.name %></option>
+        <% else %>
+          <option selected value={course.id}><%= course.name %></option>
+        <% end %>
+      <% end %>
+    </select>
+  </div>
+
+  <div class="w-full flex justify-between items-center">
+    <label>Has applications on this year:</label>
+
+    <select name="years_applications[]" multiple size="5">
+      <%= for year <- 2018..2023 do %>
+        <%= if Integer.to_string(year) not in @filters.years_applications do %>
+          <option value={year}><%= year %></option>
+        <% else %>
+          <option selected value={year}><%= year %></option>
+        <% end %>
+      <% end %>
+    </select>
+  </div>
+
+  <div class="w-full flex justify-between items-center">
+    <label>Has applications on this phase:</label>
+
+    <select name="phases_applications[]" multiple size="3">
+      <%= for phase <- 1..3 do %>
+        <%= if Integer.to_string(phase) not in @filters.phases_applications do %>
+          <option value={phase}><%= phase %></option>
+        <% else %>
+          <option selected value={phase}><%= phase %></option>
+        <% end %>
+      <% end %>
+    </select>
+  </div>
+
+  <div class="w-full h-12 flex justify-between items-center">
+    <label>Page:</label>
+
+    <input
+      type="number"
+      name="page_number"
+      placeholder="Page Number"
+      class="h-2/4"
+      value={@filters[:page_number]}
+    />
+  </div>
+
+  <div class="w-full h-12 flex justify-between items-center">
+    <label>Page Size:</label>
+
+    <input
+      type="number"
+      name="page_size"
+      placeholder="Page Size"
+      class="h-2/4"
+      value={@filters[:page_size]}
+    />
+  </div>
+
+  <.button type="submit">Search</.button>
+</form>
+
 <.table id="students" rows={@students} row_click={&JS.navigate(~p"/students/#{&1}")}>
   <:col :let={student} label="Id"><%= student.id %></:col>
   <:col :let={student} label="Name"><%= student.name %></:col>
