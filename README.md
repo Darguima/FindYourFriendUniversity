@@ -22,8 +22,6 @@ Ready to run in production? Please [check our deployment guides](https://hexdocs
 
 1. Configure Postgres to be secure - I'm using default password
 2. Exclude unnecessary controllers
-3. Configure changesets to validate all fields
-4. Configure insert_all to run changeset first
 
 ## Walkthrough
 
