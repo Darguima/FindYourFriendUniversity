@@ -68,7 +68,6 @@ defmodule FindYourFriendUniversity.Students do
       |> Map.update!(:civil_id, fn civil_id ->
         civil_id
         |> normalize_string(48..57)
-        |> IO.inspect()
         |> String.replace("x", "%")
       end)
 

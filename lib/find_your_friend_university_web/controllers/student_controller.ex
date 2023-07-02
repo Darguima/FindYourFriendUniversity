@@ -9,6 +9,7 @@ defmodule FindYourFriendUniversityWeb.StudentController do
   alias FindYourFriendUniversity.Students.Student
   alias FindYourFriendUniversity.Applications.Application
   import FindYourFriendUniversity.Helpers
+  alias FindYourFriendUniversity.SearchHistory
 
   def index(conn, params) do
     universities_available = Universities.list_universities()
@@ -57,6 +58,10 @@ defmodule FindYourFriendUniversityWeb.StudentController do
       |> map_keys_to_atoms()
 
     students = Students.search_students(filters)
+
+    if params != %{} do
+      SearchHistory.create_search_history(filters)
+    end
 
     render(conn, :index,
       students: students,
