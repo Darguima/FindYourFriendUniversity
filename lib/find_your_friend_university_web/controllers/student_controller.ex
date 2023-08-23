@@ -19,21 +19,27 @@ defmodule FindYourFriendUniversityWeb.StudentController do
       params
       |> Map.put_new("name", "")
       |> Map.put_new("civil_id", "")
-      |> Map.put_new(
+      |> Map.update(
         "universities_applications",
-        universities_available |> Enum.map(fn uni -> uni.id end)
+        universities_available |> Enum.map(fn uni -> uni.id end),
+        fn array -> Enum.filter(array, fn elem -> elem != "" end) end
       )
-      |> Map.put_new(
+
+      |> Map.update(
         "courses_applications",
-        courses_available |> Enum.map(fn course -> course.id end)
+        courses_available |> Enum.map(fn course -> course.id end),
+        fn array -> Enum.filter(array, fn elem -> elem != "" end) end
       )
-      |> Map.put_new(
+      |> Map.update(
         "years_applications",
-        2018..2023 |> Enum.map(&Integer.to_string(&1))
+        2018..2023 |> Enum.map(&Integer.to_string(&1)),
+        fn array -> Enum.filter(array, fn elem -> elem != "" end) end
+
       )
-      |> Map.put_new(
+      |> Map.update(
         "phases_applications",
-        1..3 |> Enum.map(&Integer.to_string(&1))
+        1..3 |> Enum.map(&Integer.to_string(&1)),
+        fn array -> Enum.filter(array, fn elem -> elem != "" end) end
       )
       |> Map.update("page_number", 1, fn string ->
         string
@@ -64,7 +70,7 @@ defmodule FindYourFriendUniversityWeb.StudentController do
     end
 
     render(conn, :index,
-      students: students,
+      students: (if params != %{}, do: students, else: []),
       filters: filters,
       universities: universities_available,
       courses: courses_available

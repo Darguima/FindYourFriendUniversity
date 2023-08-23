@@ -1,139 +1,147 @@
-<.header>
-  Listing Students
-  <:actions>
-    <.link href={~p"/students/new"}>
-      <.button>New Student</.button>
-    </.link>
-  </:actions>
-</.header>
+<script>
+  function onInpputsChange(e) {
+    const submitButton = document.querySelector(".students-form-submit-button")
+    console.log(submitButton.click())
+  }
+</script>
 
 <form
   phx-submit="submit"
-  class="w-full my-2 bg-slate-200 flex justify-evenly items-center flex-col"
+  class="px-8 max-w-[100vw]"
 >
-  <div class="w-full h-12 flex justify-between items-center">
-    <label>Search by name:</label>
+  <div class={"flex flex-col justify-center items-center #{if length(@students) == 0 do 'h-screen' end}"}>
+    <h1 class="my-8 text-center text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl">
+      Encontra os teus amigos
+    </h1>
 
-    <input
-      type="text"
-      name="name"
-      placeholder="Search a name"
-      class="h-2/4"
-      value={@filters[:name]}
-      autofocus
-    />
-  </div>
+    <%= if length(@students) == 0 do %>
+      <span
+        class="my-8 text-center text-lg font-normal text-gray-700 lg:text-xl sm:px-16 xl:px-48">
+        Insere o máximo de dados que conheceres dos teus amigos e Descobre Já onde é que eles foram colocados!!
+      </span>
+    <% end %>
 
-  <div class="w-full h-12 flex justify-between items-center">
-    <label>Search by civil id:</label>
 
-    <input
-      type="text"
-      name="civil_id"
-      placeholder="Search a civil id"
-      class="h-2/4"
-      value={@filters[:civil_id]}
-      autofocus
-    />
-  </div>
+    <div
+      class="flex flex-col justify-center w-full my-8 gap-y-4">
 
-  <div class="w-full flex justify-between items-center">
-    <label>Has applications to University</label>
-
-    <select name="universities_applications[]" multiple size="5">
-      <%= for university <- @universities do %>
-        <%= if university.id not in @filters.universities_applications do %>
-          <option value={university.id}><%= university.name %></option>
-        <% else %>
-          <option selected value={university.id}><%= university.name %></option>
+      <input name="name" value={@filters[:name]} type="text" placeholder="Nome" class="h-10 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-indigo-500 focus:border-indigo-500 p-2" />
+      <input name="civil_id" value={@filters[:civil_id]} type="number" placeholder="Nº Cartão Cidadão" class="h-10 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-indigo-500 focus:border-indigo-500 p-2" />
+      
+      <select multiple name="universities_applications[]" type="text" class="h-10 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-indigo-500 focus:border-indigo-500 p-2">
+        <%= for university <- @universities do %>
+          <%= if university.id not in @filters.universities_applications do %>
+            <option value={university.id}><%= university.name %></option>
+          <% else %>
+            <option selected value={university.id}><%= university.name %></option>
+          <% end %>
         <% end %>
-      <% end %>
-    </select>
-  </div>
+      </select>
 
-  <div class="w-full flex justify-between items-center">
-    <label>Has applications to Course</label>
-
-    <select name="courses_applications[]" multiple size="5">
-      <%= for course <- @courses do %>
-        <%= if course.id not in @filters.courses_applications do %>
-          <option value={course.id}><%= course.name %></option>
-        <% else %>
-          <option selected value={course.id}><%= course.name %></option>
+      <select multiple name="courses_applications[]" type="text" class="h-10 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-indigo-500 focus:border-indigo-500 p-2">
+        <%= for course <- @courses do %>
+          <%= if course.id not in @filters.courses_applications do %>
+            <option value={course.id}><%= course.name %></option>
+          <% else %>
+            <option selected value={course.id}><%= course.name %></option>
+          <% end %>
         <% end %>
-      <% end %>
-    </select>
-  </div>
-
-  <div class="w-full flex justify-between items-center">
-    <label>Has applications on this year:</label>
-
-    <select name="years_applications[]" multiple size="5">
-      <%= for year <- 2018..2023 do %>
-        <%= if Integer.to_string(year) not in @filters.years_applications do %>
-          <option value={year}><%= year %></option>
-        <% else %>
-          <option selected value={year}><%= year %></option>
+      </select>
+      
+      <select multiple name="years_applications[]" type="number" placeholder="Ano" class="h-10 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-indigo-500 focus:border-indigo-500 p-2">
+        <%= for year <- 2018..2023 do %>
+          <%= if year not in @filters.years_applications do %>
+            <option value={year}><%= year %></option>
+          <% else %>
+            <option selected value={year}><%= year %></option>
+          <% end %>
         <% end %>
-      <% end %>
-    </select>
-  </div>
+      </select>
 
-  <div class="w-full flex justify-between items-center">
-    <label>Has applications on this phase:</label>
-
-    <select name="phases_applications[]" multiple size="3">
-      <%= for phase <- 1..3 do %>
-        <%= if Integer.to_string(phase) not in @filters.phases_applications do %>
-          <option value={phase}><%= phase %></option>
-        <% else %>
-          <option selected value={phase}><%= phase %></option>
+      <select multiple name="phases_applications[]" type="number" placeholder="Fase" class="h-10 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-indigo-500 focus:border-indigo-500 p-2">
+        <%= for phase <- 1..3 do %>
+          <%= if phase not in @filters.phases_applications do %>
+            <option value={phase}><%= phase %></option>
+          <% else %>
+            <option selected value={phase}><%= phase %></option>
+          <% end %>
         <% end %>
-      <% end %>
-    </select>
-  </div>
+      </select>
 
-  <div class="w-full h-12 flex justify-between items-center">
-    <label>Page:</label>
-
-    <input
-      type="number"
-      name="page_number"
-      placeholder="Page Number"
-      class="h-2/4"
-      value={@filters[:page_number]}
-    />
-  </div>
-
-  <div class="w-full h-12 flex justify-between items-center">
-    <label>Page Size:</label>
-
-    <input
-      type="number"
-      name="page_size"
-      placeholder="Page Size"
-      class="h-2/4"
-      value={@filters[:page_size]}
-    />
-  </div>
-
-  <.button type="submit">Search</.button>
-</form>
-
-<.table id="students" rows={@students} row_click={&JS.navigate(~p"/students/#{&1}")}>
-  <:col :let={student} label="Id"><%= student.id %></:col>
-  <:col :let={student} label="Name"><%= student.name %></:col>
-  <:col :let={student} label="Display name"><%= student.display_name %></:col>
-  <:col :let={student} label="Civil"><%= student.civil_id %></:col>
-  <:action :let={student}>
-    <div class="sr-only">
-      <.link navigate={~p"/students/#{student}"}>Show</.link>
+      <button type="submit" class="students-form-submit-button h-10 text-white bg-indigo-700 hover:bg-indigo-800 focus:ring-4 focus:outline-none focus:ring-indigo-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center">
+        Encontrar
+      </button>
     </div>
-    <.link navigate={~p"/students/#{student}/edit"}>Edit</.link>
-  </:action>
-  <:action :let={student}>
-    <.link href={~p"/students/#{student}"} method="delete" data-confirm="Are you sure?">
-      Delete
-    </.link>
-  </:action>
-</.table>
+  </div>
+
+  <%= if length(@students) > 0 do %>
+    <div class="py-8 border-b-solid border-t-2 border-gray-300">
+      <div class="shadow-md sm:rounded-lg">
+        <table class="block overflow-x-auto w-full text-sm text-left text-gray-500">
+
+            <thead class="text-xs text-gray-700 uppercase bg-gray-100">
+                <tr>
+                    <th scope="col" class="px-6 py-3">
+                        Nome
+                    </th>
+                    <th scope="col" class="px-6 py-3">
+                        Nº CC
+                    </th>
+                </tr>
+            </thead>
+
+            <tbody>
+              <%= if length(@students) > 0 do %>
+                <%= for student <- @students do %>
+  
+                  <tr class="bg-white border-b">
+                    <td class="px-6 py-4">
+                      <a href={"/students/#{student.id}"} class="font-medium text-indigo-600 hover:underline">
+                        <%= student.name %> 
+                      </a>
+                    </td>
+                    <td class="px-6 py-4">
+                      <%= student.civil_id %> 
+                    </td>
+                  </tr>
+
+                <% end %>
+              <% end %>
+            </tbody>
+        </table>
+
+        <div>
+          <div class="relative bg-gray-100 rounded-b-lg shadow-md">
+            <nav
+              class="flex flex-col items-start justify-between p-4 space-y-3 md:flex-row md:items-center md:space-y-0"
+              aria-label="Table navigation"
+            >
+              <span class="text-sm font-normal text-gray-500 ">
+                Page Size - <input
+                  onchange="onInpputsChange()"
+                  name="page_size"
+                  value={@filters.page_size}
+                  min="1"
+                  type="number"
+                  class="w-32 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-indigo-500 focus:border-indigo-500 p-2"
+                />
+              </span>
+              <span class="text-sm font-normal text-gray-500 ">
+                Current Page - <input
+                  onchange="onInpputsChange()"
+                  name="page_number"
+                  value={@filters.page_number}
+                  min="1"
+                  type="number"
+                  class="w-32 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-indigo-500 focus:border-indigo-500 p-2"
+                />
+              </span> 
+            </nav>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  <% end %>
+
+</form>
