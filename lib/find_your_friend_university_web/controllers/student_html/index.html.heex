@@ -77,38 +77,40 @@
   <%= if length(@students) > 0 do %>
     <div class="py-8 border-b-solid border-t-2 border-gray-300">
       <div class="shadow-md sm:rounded-lg">
-        <table class="block overflow-x-auto w-full text-sm text-left text-gray-500">
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm text-left text-gray-500">
 
-            <thead class="text-xs text-gray-700 uppercase bg-gray-100">
-                <tr>
-                    <th scope="col" class="px-6 py-3">
-                        Nome
-                    </th>
-                    <th scope="col" class="px-6 py-3">
-                        Nº CC
-                    </th>
-                </tr>
-            </thead>
-
-            <tbody>
-              <%= if length(@students) > 0 do %>
-                <%= for student <- @students do %>
-  
-                  <tr class="bg-white border-b">
-                    <td class="px-6 py-4">
-                      <a href={"/students/#{student.id}"} class="font-medium text-indigo-600 hover:underline">
-                        <%= student.name %> 
-                      </a>
-                    </td>
-                    <td class="px-6 py-4">
-                      <%= student.civil_id %> 
-                    </td>
+              <thead class="text-xs text-gray-700 uppercase bg-gray-100">
+                  <tr>
+                      <th scope="col" class="px-6 py-3">
+                          Nome
+                      </th>
+                      <th scope="col" class="px-6 py-3">
+                          Nº CC
+                      </th>
                   </tr>
+              </thead>
 
+              <tbody>
+                <%= if length(@students) > 0 do %>
+                  <%= for student <- @students do %>
+    
+                    <tr class="bg-white border-b">
+                      <td class="px-6 py-4">
+                        <a href={"/students/#{student.id}"} class="font-medium text-indigo-600 hover:underline">
+                          <%= student.name %> 
+                        </a>
+                      </td>
+                      <td class="px-6 py-4">
+                        <%= student.civil_id %> 
+                      </td>
+                    </tr>
+
+                  <% end %>
                 <% end %>
-              <% end %>
-            </tbody>
-        </table>
+              </tbody>
+          </table>
+        </div>
 
         <div>
           <div class="relative bg-gray-100 rounded-b-lg shadow-md">
