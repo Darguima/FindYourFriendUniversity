@@ -142,7 +142,7 @@ for university in seeds:
 
       course["applications"] = {}
 
-      for year in (2018, 2019, 2020, 2021, 2022):
+      for year in (2018, 2019, 2020, 2021, 2022, 2023):
         course["applications"][year] = {}
         for phase in (1, 2, 3):
           course["applications"][year][phase] = []

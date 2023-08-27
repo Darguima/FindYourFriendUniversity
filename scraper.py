@@ -130,7 +130,7 @@ print(f"""
 """)
 
 applications = scrape_applications_for_courses(
-    courses_by_university, [2018, 2019, 2020, 2021, 2022], [1, 2, 3])
+    courses_by_university, [2018, 2019, 2020, 2021, 2022, 2023], [1, 2, 3])
 
 print(f"\n\nDone!!! Applications stored at `\033[1mapplications.json\033[0m`.")
 
