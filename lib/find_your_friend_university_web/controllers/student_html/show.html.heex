@@ -1,36 +1,92 @@
-<.header>
-  Student <%= @student.id %>
-  <:subtitle>This is a student record from your database.</:subtitle>
-  <:actions>
-    <.link href={~p"/students/#{@student}/edit"}>
-      <.button>Edit student</.button>
-    </.link>
-  </:actions>
-</.header>
+<%!-- <.back navigate={~p"/students"}>Back to students</.back> --%>
 
-<.list>
-  <:item title="Id"><%= @student.id %></:item>
-  <:item title="Name"><%= @student.name %></:item>
-  <:item title="Display name"><%= @student.display_name %></:item>
-  <:item title="Civil"><%= @student.civil_id %></:item>
-</.list>
+<div class="px-8">
+  <h1 class="my-8 text-center text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl">
+    <%= @student.name %>
+  </h1>
 
-<%= if length(@applications) > 0 do %>
-  <h4 class="my-16">Applications:</h4>
+  Numero CC: <%= @student.civil_id %>
+</div>
 
-  <.table id="applications" rows={@applications} row_click={&JS.navigate(~p"/applications/#{&1}")}>
-    <:col :let={application} label="course"><%= application.course.name %></:col>
-    <:col :let={application} label="university"><%= application.university.name %></:col>
-    <:col :let={application} label="year"><%= application.year %></:col>
-    <:col :let={application} label="phase"><%= application.phase %></:col>
-    <:col :let={application} label="student option number"><%= application.student_option_number %></:col>
-    <:col :let={application} label="candidature grade"><%= application.candidature_grade %></:col>
-    <:col :let={application} label="exams grades"><%= application.exams_grades %></:col>
-    <:col :let={application} label="12 grade"><%= application._12grade %></:col>
-    <:col :let={application} label="11 grade"><%= application._11grade %></:col>
-    <:col :let={application} label="placed"><%= application.placed %></:col>
-    <:col :let={application} label="course order num"><%= application.course_order_num %></:col>
-  </.table>
-<% end %>
+<div class="m-8 overflow-x-auto shadow-md sm:rounded-lg">
+  <table class="text-sm text-left text-gray-500">
+    <thead class="text-xs text-gray-700 uppercase bg-gray-100">
+      <tr>
+        <th scope="col" class="px-6 py-3">
+            Curso
+        </th>
+        <th scope="col" class="px-6 py-3">
+            Universidade
+        </th>
+        <th scope="col" class="px-6 py-3">
+            Ano
+        </th>
+        <th scope="col" class="px-6 py-3">
+            Fase
+        </th>
+        <th scope="col" class="px-6 py-3">
+            Opção
+        </th>
+        <th scope="col" class="px-6 py-3">
+            Nota da candidatura
+        </th>
+        <th scope="col" class="px-6 py-3">
+            Nota Exames
+        </th>
+        <th scope="col" class="px-6 py-3">
+            Nota 12º
+        </th>
+        <th scope="col" class="px-6 py-3">
+            Nota 11º
+        </th>
+        <th scope="col" class="px-6 py-3">
+            Colocado?
+        </th>
+        <th scope="col" class="px-6 py-3">
+            Posição na colocação
+        </th>
+      </tr>
+    </thead>
 
-<.back navigate={~p"/students"}>Back to students</.back>
+    <tbody>
+      <%= for application <- @applications do %>
+        <tr class="bg-white border-b">
+
+          <td class="px-6 py-4">
+            <%= application.course.name %>
+          </td>
+          <td class="px-6 py-4">
+            <%= application.university.name %>
+          </td>
+          <td class="px-6 py-4">
+            <%= application.year %>
+          </td>
+          <td class="px-6 py-4">
+            <%= application.phase %>
+          </td>
+          <td class="px-6 py-4">
+            <%= application.student_option_number %>
+          </td>
+          <td class="px-6 py-4">
+            <%= application.candidature_grade %>
+          </td>
+          <td class="px-6 py-4">
+            <%= application.exams_grades %>
+          </td>
+          <td class="px-6 py-4">
+            <%= application._12grade %>
+          </td>
+          <td class="px-6 py-4">
+            <%= application._11grade %>
+          </td>
+          <td class="px-6 py-4">
+            <%= application.placed %>
+          </td>
+          <td class="px-6 py-4">
+            <%= application.course_order_num %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
