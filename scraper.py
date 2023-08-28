@@ -62,9 +62,12 @@ def scrape_applications_for_courses(courses_by_university, years, phases):
                     )
                     print(f"Progress {round((100 * (courses_counter - 1)) / courses_qnt)}% \t\t \033[1m{uni_i + 1} / {institutes_qnt}\033[0m Universities ({uni['id']}) \t\t \033[1m{courses_counter} / {courses_qnt}\033[0m\033[0m Courses ({course['id']}) \t\t {year} phase {phase}", end="\r")
 
-                # Just first year and phase
-                #     break
-                # break
+        #         # Just first year and phase
+        #             break
+        #         break
+        # # Just first course and university
+        #     break
+        # break
 
     return courses_by_university
 
@@ -107,6 +110,56 @@ def getStudentsCourseInfo(university_id, course_id, year, phase, first_student=1
 
     return applications
 
+def scrape_placements_for_applications(applications):
+    for uni in applications:
+        type_code = 11 if not uni["is_polytechnic"] else 12
+        for course in uni["courses"]:
+            if "applications" not in course:
+                continue
+
+            for year in course["applications"]:
+                for phase in course["applications"][year]:
+                    page = requests.get(f"http://dges.gov.pt/coloc/{year}/col{phase}listacol.asp",
+                        data = {
+                        "CodEstab": uni['id'],
+                        "CodCurso": course['id'],
+                        "CodR": type_code,
+                        "search": "Continuar"
+                        }
+                    )
+                    soup = BeautifulSoup(page.text, "html.parser")
+
+                    tables = soup.find_all("table", {"class": "caixa"})
+
+                    if (len(tables) == 0):
+                        continue
+
+                    table: Tag = tables[-1]
+
+                    placements = []
+
+                    for placement in table.find_all("tr"):
+                        placement = placement \
+                            .getText() \
+                            .replace("\t", "") \
+                            .replace("\r", "") \
+                            .split("\n")
+
+                        placement = list(filter(lambda s: s != '', placement))
+
+                        if (len(placement) != 2):
+                            continue
+                        
+                        civil_id = placement[0].strip()
+                        name = placement[1].strip().replace(" ", "").lower()
+
+                        placements.append(civil_id + name)
+                    
+                    for student_i, student in enumerate(course["applications"][year][phase]):
+                        id = student["civil_id"].strip() + student["name"].strip().replace(" ", "").lower()
+                        course["applications"][year][phase][student_i]["placed"] = id in placements
+
+    return applications
 
 print("Welcome to FindYourFriendUniversity Scraper!")
 print("\nScraping Universities and Courses ...")
@@ -132,10 +185,12 @@ print(f"""
 applications = scrape_applications_for_courses(
     courses_by_university, [2018, 2019, 2020, 2021, 2022, 2023], [1, 2, 3])
 
+applications_with_placements = scrape_placements_for_applications(applications)
+
 print(f"\n\nDone!!! Applications stored at `\033[1mapplications.json\033[0m`.")
 
 with open("applications.json", "w") as file:
-    json.dump(applications, file, indent=4, ensure_ascii=False)
+    json.dump(applications_with_placements, file, indent=4, ensure_ascii=False)
 
 # print("Applications:\n" +
 #       json.dumps(applications, indent=4, ensure_ascii=False))
