@@ -117,7 +117,7 @@ defmodule Seeds do
                 # Student Info
                 |> Map.put_new("display_name", display_name)
                 |> Map.update!("civil_id", fn _ -> civil_id end)
-                |> Map.put("placed", false)
+                |> Map.put_new("placed", false)
                 |> Map.update!("student_option_number", &str_to_int/1)
                 |> Map.update!("course_order_num", &str_to_int/1)
                 |> Map.update!("phase", &str_to_int/1)
