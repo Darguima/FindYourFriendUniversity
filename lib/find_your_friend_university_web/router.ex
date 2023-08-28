@@ -20,10 +20,6 @@ defmodule FindYourFriendUniversityWeb.Router do
     get "/", PageController, :home
 
     resources "/students", StudentController
-
-    resources "/courses", CourseController
-    resources "/universities", UniversityController
-    resources "/applications", ApplicationController
   end
 
   # Other scopes may use custom stacks.

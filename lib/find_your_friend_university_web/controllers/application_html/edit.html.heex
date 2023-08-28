@@ -1,8 +1,0 @@
-<.header>
-  Edit Application <%= @application.id %>
-  <:subtitle>Use this form to manage application records in your database.</:subtitle>
-</.header>
-
-<.application_form changeset={@changeset} action={~p"/applications/#{@application}"} />
-
-<.back navigate={~p"/applications"}>Back to applications</.back>
