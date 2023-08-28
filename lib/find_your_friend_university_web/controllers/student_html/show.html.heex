@@ -1,92 +1,95 @@
 <%!-- <.back navigate={~p"/students"}>Back to students</.back> --%>
 
-<div class="px-8">
-  <h1 class="my-8 text-center text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl">
-    <%= @student.name %>
-  </h1>
+<div class="max-w-screen-2xl w-screen">
+  <div class="px-8">
+    <h1 class="my-8 text-center text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl">
+      <%= @student.name %>
+    </h1>
 
-  Numero CC: <%= @student.civil_id %>
-</div>
+    Numero CC: <%= @student.civil_id %>
+  </div>
 
-<div class="m-8 overflow-x-auto shadow-md sm:rounded-lg">
-  <table class="text-sm text-left text-gray-500">
-    <thead class="text-xs text-gray-700 uppercase bg-gray-100">
-      <tr>
-        <th scope="col" class="px-6 py-3">
-            Curso
-        </th>
-        <th scope="col" class="px-6 py-3">
-            Universidade
-        </th>
-        <th scope="col" class="px-6 py-3">
-            Ano
-        </th>
-        <th scope="col" class="px-6 py-3">
-            Fase
-        </th>
-        <th scope="col" class="px-6 py-3">
-            Opção
-        </th>
-        <th scope="col" class="px-6 py-3">
-            Nota da candidatura
-        </th>
-        <th scope="col" class="px-6 py-3">
-            Nota Exames
-        </th>
-        <th scope="col" class="px-6 py-3">
-            Nota 12º
-        </th>
-        <th scope="col" class="px-6 py-3">
-            Nota 11º
-        </th>
-        <th scope="col" class="px-6 py-3">
-            Colocado?
-        </th>
-        <th scope="col" class="px-6 py-3">
-            Posição na colocação
-        </th>
-      </tr>
-    </thead>
-
-    <tbody>
-      <%= for application <- @applications do %>
-        <tr class="bg-white border-b">
-
-          <td class="px-6 py-4">
-            <%= application.course.name %>
-          </td>
-          <td class="px-6 py-4">
-            <%= application.university.name %>
-          </td>
-          <td class="px-6 py-4">
-            <%= application.year %>
-          </td>
-          <td class="px-6 py-4">
-            <%= application.phase %>
-          </td>
-          <td class="px-6 py-4">
-            <%= application.student_option_number %>
-          </td>
-          <td class="px-6 py-4">
-            <%= application.candidature_grade %>
-          </td>
-          <td class="px-6 py-4">
-            <%= application.exams_grades %>
-          </td>
-          <td class="px-6 py-4">
-            <%= application._12grade %>
-          </td>
-          <td class="px-6 py-4">
-            <%= application._11grade %>
-          </td>
-          <td class="px-6 py-4">
-            <%= application.placed %>
-          </td>
-          <td class="px-6 py-4">
-            <%= application.course_order_num %>
-          </td>
+  <div class="m-8 overflow-x-auto shadow-md sm:rounded-lg">
+    <table class="text-sm text-left text-gray-500">
+      <thead class="text-xs text-gray-700 uppercase bg-gray-100">
+        <tr>
+          <th scope="col" class="px-6 py-3">
+              Curso
+          </th>
+          <th scope="col" class="px-6 py-3">
+              Universidade
+          </th>
+          <th scope="col" class="px-6 py-3">
+              Ano
+          </th>
+          <th scope="col" class="px-6 py-3">
+              Fase
+          </th>
+          <th scope="col" class="px-6 py-3">
+              Opção
+          </th>
+          <th scope="col" class="px-6 py-3">
+              Nota da candidatura
+          </th>
+          <th scope="col" class="px-6 py-3">
+              Nota Exames
+          </th>
+          <th scope="col" class="px-6 py-3">
+              Nota 12º
+          </th>
+          <th scope="col" class="px-6 py-3">
+              Nota 11º
+          </th>
+          <th scope="col" class="px-6 py-3">
+              Colocado?
+          </th>
+          <th scope="col" class="px-6 py-3">
+              Posição na colocação
+          </th>
         </tr>
-      <% end %>
-    </tbody>
-  </table>
+      </thead>
+
+      <tbody>
+        <%= for application <- @applications do %>
+          <tr class="bg-white border-b">
+
+            <td class="px-6 py-4">
+              <%= application.course.name %>
+            </td>
+            <td class="px-6 py-4">
+              <%= application.university.name %>
+            </td>
+            <td class="px-6 py-4">
+              <%= application.year %>
+            </td>
+            <td class="px-6 py-4">
+              <%= application.phase %>
+            </td>
+            <td class="px-6 py-4">
+              <%= application.student_option_number %>
+            </td>
+            <td class="px-6 py-4">
+              <%= application.candidature_grade %>
+            </td>
+            <td class="px-6 py-4">
+              <%= application.exams_grades %>
+            </td>
+            <td class="px-6 py-4">
+              <%= application._12grade %>
+            </td>
+            <td class="px-6 py-4">
+              <%= application._11grade %>
+            </td>
+            <td class="px-6 py-4">
+              <%= application.placed %>
+            </td>
+            <td class="px-6 py-4">
+              <%= application.course_order_num %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+
 </div>
