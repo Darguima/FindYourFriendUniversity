@@ -17,7 +17,7 @@ defmodule FindYourFriendUniversityWeb.Router do
   scope "/", FindYourFriendUniversityWeb do
     pipe_through :browser
 
-    get "/", PageController, :home
+    get "/", StudentController, :index
 
     resources "/students", StudentController
   end
