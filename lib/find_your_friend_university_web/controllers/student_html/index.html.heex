@@ -28,9 +28,23 @@
     })
   })
 
-  function onInpputsChange(e) {
+  function onInputsChange(e) {
     const submitButton = document.querySelector(".students-form-submit-button")
     console.log(submitButton.click())
+  }
+
+  function onSelectChanged(spanTextClass, selectableName, male){
+    const span = document.querySelector(`div .${spanTextClass} button span`)
+
+    if (!span) return false
+
+    if (span.innerText === "All selected") {
+      span.innerText = (male ? "Todos os " : "Todas as ") + selectableName + (male ? " selecionados" : " selecionadas")
+    } else if (span.innerText.includes("of") && span.innerText.includes("selected")) {
+      span.innerText = span.innerText.replace("of", "de").replace("selected", selectableName + (male ? " selecionados" : " selecionadas"))
+    }
+    
+    return true
   }
 </script>
 
@@ -60,7 +74,13 @@
         <input name="name" value={@filters[:name]} type="text" placeholder="Nome" class="h-10 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-indigo-500 focus:border-indigo-500 p-2" />
         <input name="civil_id" value={@filters[:civil_id]} type="number" placeholder="Nº Cartão Cidadão" class="h-10 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-indigo-500 focus:border-indigo-500 p-2" />
         
-        <select multiple name="universities_applications[]" placeholder="Filtrar por Universidade"  class="multiple-select  h-10 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg hover:ring-indigo-500 hover:border-indigo-500 p-2">
+        <select
+          multiple
+          name="universities_applications[]"
+          placeholder="Filtrar por Universidade"
+          onchange="onSelectChanged('select-universities', 'universidades', false)"
+          class="multiple-select select-universities  h-10 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg hover:ring-indigo-500 hover:border-indigo-500 p-2"
+        >
           <%= for university <- @universities do %>
             <%= if university.id not in @filters.universities_applications do %>
               <option value={university.id}><%= university.name %></option>
@@ -70,7 +90,13 @@
           <% end %>
         </select>
 
-        <select multiple name="courses_applications[]" placeholder="Filtrar por Cursos" class="multiple-select h-10 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg hover:ring-indigo-500 hover:border-indigo-500  p-2">
+        <select
+          multiple
+          name="courses_applications[]"
+          placeholder="Filtrar por Cursos"
+          onchange="onSelectChanged('select-courses', 'cursos', true)"
+          class="multiple-select select-courses h-10 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg hover:ring-indigo-500 hover:border-indigo-500  p-2"
+        >
           <%= for course <- @courses do %>
             <%= if course.id not in @filters.courses_applications do %>
               <option value={course.id}><%= course.name %></option>
@@ -80,17 +106,29 @@
           <% end %>
         </select>
 
-          <select multiple name="years_applications[]" placeholder="Filtrar por Anos" class="multiple-select h-10 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg hover:ring-indigo-500 hover:border-indigo-500  p-2">
-            <%= for year <- 2018..2023 |> Enum.map(&Integer.to_string(&1)) do %>
-              <%= if year not in @filters.years_applications do %>
-                <option value={year}><%= year %></option>
-              <% else %>
-                <option selected value={year}><%= year %></option>
-              <% end %>
+        <select
+          multiple
+          name="years_applications[]"
+          placeholder="Filtrar por Anos"
+          onchange="onSelectChanged('select-years', 'anos', true)"
+          class="multiple-select select-years h-10 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg hover:ring-indigo-500 hover:border-indigo-500  p-2"
+        >
+          <%= for year <- 2018..2023 |> Enum.map(&Integer.to_string(&1)) do %>
+            <%= if year not in @filters.years_applications do %>
+              <option value={year}><%= year %></option>
+            <% else %>
+              <option selected value={year}><%= year %></option>
             <% end %>
-          </select>
+          <% end %>
+        </select>
 
-        <select multiple name="phases_applications[]" placeholder="Filtrar por Fases" class="multiple-select h-10 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg hover:ring-indigo-500 hover:border-indigo-500  p-2">
+        <select
+          multiple
+          name="phases_applications[]"
+          placeholder="Filtrar por Fases"
+          onchange="onSelectChanged('select-phase', 'fases', false)"
+          class="multiple-select select-phase h-10 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg hover:ring-indigo-500 hover:border-indigo-500  p-2"
+        >
           <%= for phase <- 1..3 |> Enum.map(&Integer.to_string(&1)) do %>
             <%= if phase not in @filters.phases_applications do %>
               <option value={phase}><%= phase %></option>
@@ -152,7 +190,7 @@
               >
                 <span class="text-sm font-normal text-gray-500 ">
                   Page Size - <input
-                    onchange="onInpputsChange()"
+                    onchange="onInputsChange()"
                     name="page_size"
                     value={@filters.page_size}
                     min="1"
@@ -162,7 +200,7 @@
                 </span>
                 <span class="text-sm font-normal text-gray-500 ">
                   Current Page - <input
-                    onchange="onInpputsChange()"
+                    onchange="onInputsChange()"
                     name="page_number"
                     value={@filters.page_number}
                     min="1"
@@ -180,3 +218,16 @@
 
   </form>
 </div>
+
+<script>
+  const cancelIntervalID = setInterval(() => {
+    const action_1 = onSelectChanged('select-universities', 'universidades', false)
+    const action_2 = onSelectChanged('select-courses', 'cursos', true)
+    const action_3 = onSelectChanged('select-years', 'anos', true)
+    const action_4 = onSelectChanged('select-phase', 'fases', false)
+
+    if (action_1 && action_2 && action_3 && action_4) {
+      clearInterval(cancelIntervalID)
+    }
+  }, 4)
+</script>
