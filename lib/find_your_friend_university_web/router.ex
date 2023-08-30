@@ -19,7 +19,9 @@ defmodule FindYourFriendUniversityWeb.Router do
 
     get "/", StudentController, :index
 
-    resources "/students", StudentController, only: [:index, :show]
+    get "/students", StudentController, :index
+    post "/students", StudentController, :index
+    get "/students/:id", StudentController, :show
   end
 
   # Other scopes may use custom stacks.

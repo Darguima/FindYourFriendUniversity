@@ -62,14 +62,14 @@ defmodule FindYourFriendUniversityWeb.StudentController do
       ])
       |> map_keys_to_atoms()
 
-    students = Students.search_students(filters)
+    students = if params == %{}, do: [], else: Students.search_students(filters)
 
     if params != %{} do
       SearchHistory.create_search_history(filters)
     end
 
     render(conn, :index,
-      students: (if params != %{}, do: students, else: []),
+      students: students,
       filters: filters,
       universities: universities_available,
       courses: courses_available
