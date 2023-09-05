@@ -3,12 +3,18 @@
 </h2>
 
 <p align="center">
-FindYourFriendUniversity is an Elixir Phoenix App, that alongside a Python script, indexes all the candidatures, collocations, and, in the future, address of all the students that were already candidates to Portuguese Public Universities.
+FindYourFriendUniversity is an Elixir Phoenix App, that alongside a Python script, indexes all the candidatures and collocations of all the students that were already candidates to Portuguese Public Universities.
 </p>
 
 <h4 align="center">
 ⭐ Don't forget to Starring ⭐
 </h4>
+
+#### Disclaimer
+
+Although you could scrape real data from DGES website, seeing that this is personal information you can't use it, and this can be taken as illegal.
+
+When I started this project I started it just as a POC, and after I wanted to learn Elixir and I decided take this project to other level, but publish it as a website on Internet is a crime in Portugal due GDPR. The next demos that you will see are with fake data.
 
 ## Contribute
 
@@ -33,9 +39,7 @@ Ready to run in production? Please [Phoenix deployment guides](https://hexdocs.p
 ### To Do
 
 1. Configure Postgres to be secure - I'm using default password
-2. Exclude unnecessary controllers
-3. Add Footer
-4. Add Disclaimer
+2. Add Footer
 
 ### Walkthrough
 
