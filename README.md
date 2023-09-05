@@ -10,11 +10,19 @@ FindYourFriendUniversity is an Elixir Phoenix App, that alongside a Python scrip
 ⭐ Don't forget to Starring ⭐
 </h4>
 
-#### Disclaimer
+#### ⚠️ Disclaimer - GDPR 🔒🧍
 
-Although you could scrape real data from DGES website, seeing that this is personal information you can't use it, and this can be taken as illegal.
+With this Python script you will be able to scrape real personal data from DGES website. Although this is illegal due GDPR in Europe. Be careful when dealing with others personal information online
 
-When I started this project I started it just as a POC, and after I wanted to learn Elixir and I decided take this project to other level, but publish it as a website on Internet is a crime in Portugal due GDPR. The next demos that you will see are with fake data.
+When I started this project, I started it just as a POC, and after I wanted to learn Elixir and I decided take this project to other level. I would never publish others personal information online without their consent.
+
+## Demo 📹
+
+Here you can see a demo with all the real data from DGES (only showing me), and then the complete Website Frontend with fake data.
+
+If it fails click [here](./readme/real-data-demo.mp4) and [here]().
+
+https://github.com/Darguima/FindYourFriendUniversity/assets/49988070/7acd0292-87f1-4775-b623-c10eacf33e62
 
 ## Contribute
 
@@ -28,7 +36,7 @@ Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 
 Ready to run in production? Please [Phoenix deployment guides](https://hexdocs.pm/phoenix/deployment.html).
 
-### Learn more about Elixir / Phoenix
+### Learn more about Elixir / Phoenix 📚
 
   * Official website: https://www.phoenixframework.org/
   * Guides: https://hexdocs.pm/phoenix/overview.html
@@ -36,12 +44,12 @@ Ready to run in production? Please [Phoenix deployment guides](https://hexdocs.p
   * Forum: https://elixirforum.com/c/phoenix-forum
   * Source: https://github.com/phoenixframework/phoenix
 
-### To Do
+### To Do 🗹
 
 1. Configure Postgres to be secure - I'm using default password
 2. Add Footer
 
-### Walkthrough
+### Walkthrough 🗺️
 
 This is my first "big" Phoenix project, so I decided let here what I did.
 
