@@ -20,9 +20,11 @@ When I started this project, I started it just as a POC, and after I wanted to l
 
 Here you can see a demo with all the real data from DGES (only showing me), and then the complete Website Frontend with fake data.
 
-If it fails click [here](./readme/real-data-demo.mp4) and [here]().
+###### If the player fails click [here for real data demo](./readme/real-data-demo.mp4) and [here for fake data](./readme/fake-data-demo.mp4).
 
 https://github.com/Darguima/FindYourFriendUniversity/assets/49988070/7acd0292-87f1-4775-b623-c10eacf33e62
+
+https://github.com/Darguima/FindYourFriendUniversity/assets/49988070/9cd12753-a2c2-430b-88f4-2698b1e4e698
 
 ## Contribute
 
