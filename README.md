@@ -62,8 +62,8 @@ This is my first "big" Phoenix project, so I decided let here what I did.
 I already had this folder created, so I ran:
 
 ```bash
-$ mix local.hex\n
-$ mix archive.install hex phx_new\n
+$ mix local.hex
+$ mix archive.install hex phx_new
 $ mix phx.new . --app find_your_friend_university --module FindYourFriendUniversity
 ```
 

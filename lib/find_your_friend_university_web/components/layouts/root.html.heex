@@ -11,7 +11,13 @@
     <script defer phx-track-static type="text/javascript" src={~p"/assets/app.js"}>
     </script>
   </head>
-  <body class="flex justify-center bg-background antialiased ">
+  
+  <body class="flex flex-col items-center h-screen bg-background antialiased">
     <%= @inner_content %>
+
+    <footer class="w-full p-2">
+      Developed with 💙 by <a class="text-primary" href="https://github.com/Darguima">Darguima</a> 
+    </footer>
   </body>
+
 </html>
