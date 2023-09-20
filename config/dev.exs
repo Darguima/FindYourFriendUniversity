@@ -2,8 +2,8 @@ import Config
 
 # Configure your database
 config :find_your_friend_university, FindYourFriendUniversity.Repo,
-  username: "postgres",
-  password: "postgres",
+  username: System.get_env("DB_USER") || "postgres",
+  password: System.get_env("DB_PASS") || "postgres",
   hostname: "localhost",
   database: "find_your_friend_university_dev",
   stacktrace: true,
