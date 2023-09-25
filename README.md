@@ -75,8 +75,6 @@ To create the database:
 $ docker run --name postgres -e POSTGRES_PASSWORD=postgres -p 5432:5432 -d postgres
 ```
 
-###### If you don't use the default `postgres` for authentication you can use env variables `DB_USER` and `DB_PASS` for access dev database
-
 To access database
 
 ```bash
@@ -85,6 +83,16 @@ $ psql -h localhost -p 5432 -U postgres
 >>> \c find_your_friend_university_dev
 >>> \dt
 >>> SELECT * FROM <table_name>;
+```
+
+##### Working with env variables to store credentials
+
+If you want, you can store the credentials inside `DB_USER` and `DB_PASS` env variables and then pass them to Phoenix:
+
+```bash
+$ read USER
+$ read -s PASS
+$ DB_PASS=$PASS DB_USER=$USER mix phx.server
 ```
 
 #### Migrations and Schemas
