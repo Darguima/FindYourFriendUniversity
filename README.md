@@ -73,6 +73,9 @@ To create the database:
 
 ```bash
 $ docker run --name postgres -e POSTGRES_PASSWORD=postgres -p 5432:5432 -d postgres
+
+# Start the container at computer startup
+$ docker run --restart=always --name postgres -e POSTGRES_PASSWORD=postgres -p 5432:5432 -d postgres
 ```
 
 To access database
@@ -135,4 +138,17 @@ many_to_many :universities, University, join_through: "universities_courses" # c
 ```
 
 To put the associations on the table while running the changeset, I followed this [post](https://dev.to/ricardoruwer/many-to-many-associations-in-elixir-and-phoenix-21pm).
+
+#### Deploy 🚀
+
+And at the final I wanted to learn how to deploy on my home server this app [remember that do this is illegal, this was just a test]. After research and tries, I ended writing a script to automatize this task (can be used in any Phoenix Project without major changes).
+
+Run it and fill the firsts questions. After some seconds you will have a deployed Web Server running at `http://127.0.0.1:4000/`. Now use some tool like NGinx to expose it to the Internet.
+
+###### You shouldn't directly expose port 80/443 with web servers, because this are high privileges ports.
+
+```bash
+$ ./deploy.sh
+```
+
  
