@@ -111,9 +111,11 @@ def getStudentsCourseInfo(university_id, course_id, year, phase, first_student=1
     return applications
 
 def scrape_placements_for_applications(applications):
-    for uni in applications:
+    courses_counter = 0
+    for uni_i, uni in enumerate(applications):
         type_code = 11 if not uni["is_polytechnic"] else 12
         for course in uni["courses"]:
+            courses_counter += 1
             if "applications" not in course:
                 continue
 
@@ -158,6 +160,9 @@ def scrape_placements_for_applications(applications):
                     for student_i, student in enumerate(course["applications"][year][phase]):
                         id = student["civil_id"].strip() + student["name"].strip().replace(" ", "").lower()
                         course["applications"][year][phase][student_i]["placed"] = id in placements
+                    
+                    print(f"Progress {round((100 * (courses_counter - 1)) / courses_qnt)}% \t\t \033[1m{uni_i + 1} / {institutes_qnt}\033[0m Universities ({uni['id']}) \t\t \033[1m{courses_counter} / {courses_qnt}\033[0m\033[0m Courses ({course['id']}) \t\t {year} phase {phase}", end="\r")
+
 
     return applications
 
@@ -184,6 +189,8 @@ print(f"""
 
 applications = scrape_applications_for_courses(
     courses_by_university, [2018, 2019, 2020, 2021, 2022, 2023], [1, 2, 3])
+
+print(f"\n\nScraped Applications. Starting scrape placements.\n\n")
 
 applications_with_placements = scrape_placements_for_applications(applications)
 
