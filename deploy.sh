@@ -16,7 +16,7 @@ export SECRET_KEY_BASE=$(mix phx.gen.secret)
 export DATABASE_URL=ecto://$DB_USER:$DB_PASS@localhost/find_your_friend_university
 
 echo ">>> Installing dependencies"
-mix deps.get --only prod
+mix deps.get
 
 echo ">>> Compiling project"
 MIX_ENV=prod mix compile
