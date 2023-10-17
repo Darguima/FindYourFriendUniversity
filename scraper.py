@@ -190,7 +190,7 @@ print(f"""
 applications = scrape_applications_for_courses(
     courses_by_university, [2018, 2019, 2020, 2021, 2022, 2023], [1, 2, 3])
 
-print(f"\n\nScraped Applications. Starting scrape placements.\n\n")
+print(f"\n\nScraped Applications. Starting scrape placements:\n")
 
 applications_with_placements = scrape_placements_for_applications(applications)
 
