@@ -32,7 +32,7 @@ https://github.com/Darguima/FindYourFriendUniversity/assets/49988070/9cd12753-a2
 
 To start your Phoenix server:
 
-  * Create fake seeds with `python faker_seeds.py` or scrape the official data from DGES `python scraper.py` (after `pip install beautifulsoup4`)
+  * Create fake seeds with `python faker_seeds.py` or scrape the official data from DGES `python applications_scraper.py` (after `pip install beautifulsoup4`)
   * Run `mix setup` to install and setup dependencies
   * Start Phoenix endpoint with `mix phx.server` or inside IEx with `iex -S mix phx.server`
 
