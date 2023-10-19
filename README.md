@@ -151,4 +151,9 @@ Run it and fill the firsts questions. After some seconds you will have a deploye
 $ ./deploy.sh
 ```
 
+If for some reason you want pass some Phoenix Env Variables you can pass it to the script and them will be passed to Phoenix. For example, if you want the app running under the path `example.com/fyfu`, you can run:
+
+```bash
+$ PHX_PATH='/fyfu' ./deploy.sh
+```
  
