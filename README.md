@@ -20,10 +20,6 @@ When I started this project, I started it just as a POC, and after I wanted to l
 
 Here you can see a demo with all the real data from DGES (only showing me), and then the complete Website Frontend with fake data. You can also see a screenshot of the website responsiveness on mobile phones.
 
-###### If the player fails click [here for real data demo](./readme/real-data-demo.mp4) and [here for fake data](./readme/fake-data-demo.mp4).
-
-https://github.com/Darguima/FindYourFriendUniversity/assets/49988070/03fc6889-c0b9-4a65-8158-29cb449a25fe
-
 https://github.com/Darguima/FindYourFriendUniversity/assets/49988070/96e2d543-7a87-420c-812d-2a01a697c27f
 
 ![](./readme/mobile-phone-demo.png)
