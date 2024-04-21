@@ -147,6 +147,16 @@ Run it and fill the firsts questions. After some seconds you will have a deploye
 $ ./deploy.sh
 ```
 
+##### Env vars
+
+Are available 3 environment variables to skip the questions:
+
+```bash
+DB_USER="db_username" DB_PASS="db_password" RUN_SEEDS="n" ./deploy.sh
+```
+
+###### Elixir Env vars
+
 If for some reason you want pass some Phoenix Env Variables you can pass it to the script and them will be passed to Phoenix. For example, if you want the app running under the path `example.com/fyfu`, you can run:
 
 ```bash
