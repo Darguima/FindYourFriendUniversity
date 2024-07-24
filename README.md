@@ -24,11 +24,13 @@ https://github.com/Darguima/FindYourFriendUniversity/assets/49988070/96e2d543-7a
 
 ![](./readme/mobile-phone-demo.png)
 
-## Contribute
+## Getting Started
 
 To start your Phoenix server:
 
+  * Install Elixir and Erlang with `asdf install` (require [asdf](https://asdf-vm.com/guide/getting-started.html))
   * Create fake seeds with `python faker_seeds.py` or scrape the official data from DGES `python applications_scraper.py` (after `pip install beautifulsoup4`)
+  * Create the database (for example on [docker](#create-and-access-database))
   * Run `mix setup` to install and setup dependencies
   * Start Phoenix endpoint with `mix phx.server` or inside IEx with `iex -S mix phx.server`
 
