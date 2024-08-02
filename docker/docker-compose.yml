@@ -1,0 +1,38 @@
+services:
+  fyfu_db:
+    image: postgres:16.3
+    container_name: fyfu_db
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASS}
+      POSTGRES_DB: find_your_friend_university
+    volumes:
+      - fyfu_db:/var/lib/postgresql
+    networks:
+      - fyfu_network
+
+  fyfu_app:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    image: fyfu_app
+    container_name: fyfu_app
+    restart: unless-stopped
+    environment:
+      MIX_ENV: prod
+      SECRET_KEY_BASE: ${SECRET_KEY_BASE}
+      DATABASE_URL: ecto://${DB_USER}:${DB_PASS}@fyfu_db/find_your_friend_university
+      PHX_PATH: ${PHX_PATH}
+    depends_on:
+      - fyfu_db
+    networks:
+      - fyfu_network
+    ports:
+      - "${EXPOSED_PORT}:4000"
+
+volumes:
+  fyfu_db:
+
+networks:
+  fyfu_network:
