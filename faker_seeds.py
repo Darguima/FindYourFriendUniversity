@@ -171,8 +171,8 @@ for university in seeds:
 # print(json.dumps(seeds, ensure_ascii=False, indent=2))
 json.dumps(seeds, ensure_ascii=False, indent=2)
 
-print(f"\nDone!!! Seeds stored at `priv/repo/\033[1mseeds.json\033[0m`.")
+print(f"\nDone!!! Seeds stored at `seeds/\033[1mapplications_faked.json\033[0m`.")
 
-with open("priv/repo/seeds.json", "w") as file:
+with open("seeds/applications_faked.json", "w") as file:
     json.dump(seeds, file, indent=4, ensure_ascii=False)
 

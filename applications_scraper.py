@@ -1,4 +1,5 @@
 import requests
+from time import time
 from bs4 import BeautifulSoup, Tag
 import json
 
@@ -167,6 +168,10 @@ def scrape_placements_for_applications(applications):
     return applications
 
 print("Welcome to FindYourFriendUniversity Scraper!")
+
+start_year = int(input("\nEnter the first year that you want to scrape (yyyy): "))
+end_year = int(input("Enter the last year that you want to scrape (yyyy): "))
+
 print("\nScraping Universities and Courses ...")
 
 (courses_by_university, universities_qnt, courses_uni_qnt) \
@@ -188,15 +193,17 @@ print(f"""
 """)
 
 applications = scrape_applications_for_courses(
-    courses_by_university, [2018, 2019, 2020, 2021, 2022, 2023], [1, 2, 3])
+    courses_by_university, range(start_year, end_year + 1), [1, 2, 3])
 
 print(f"\n\nScraped Applications. Starting scrape placements:\n")
 
 applications_with_placements = scrape_placements_for_applications(applications)
 
-print(f"\n\nDone!!! Applications stored at `\033[1mapplications.json\033[0m`.")
+current_time = int(time())
 
-with open("applications.json", "w") as file:
+print(f"\n\nDone!!! Applications stored at `seeds/\033[1mapplications_dges_{current_time}.json\033[0m`.")
+
+with open(f"seeds/applications_dges_{current_time}.json", "w") as file:
     json.dump(applications_with_placements, file, indent=4, ensure_ascii=False)
 
 # print("Applications:\n" +

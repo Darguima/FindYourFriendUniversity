@@ -131,7 +131,7 @@ defmodule FindYourFriendUniversity.Universities do
         end)
         # 65535 is the maximum of parameters per query; 4 the number of params per row
         |> Enum.chunk_every(trunc(65535 / 5))
-        |> Enum.map(fn uni -> Repo.insert_all(University, uni) end)
+        |> Enum.map(fn uni -> Repo.insert_all(University, uni, on_conflict: :nothing) end)
         |> reduce_multiple_insert_all()
 
       # Many to many association with universities:
@@ -145,7 +145,7 @@ defmodule FindYourFriendUniversity.Universities do
         |> Enum.concat()
         # 65535 is the maximum of parameters per query; 2 the number of params per row
         |> Enum.chunk_every(trunc(65535 / 2))
-        |> Enum.map(fn assoc -> Repo.insert_all("universities_courses", assoc) end)
+        |> Enum.map(fn assoc -> Repo.insert_all("universities_courses", assoc, on_conflict: :nothing) end)
         |> reduce_multiple_insert_all()
 
       {:ok, universities_inserted, associations_inserted}

@@ -17,10 +17,10 @@ $ mix phx.new . --app find_your_friend_university --module FindYourFriendUnivers
 To create the database:
 
 ```bash
-$ docker run --name postgres -e POSTGRES_PASSWORD=postgres -p 5432:5432 -d postgres
+$ docker run --name fyfu_db -e POSTGRES_PASSWORD=postgres -p 5432:5432 -d postgres
 
 # Start the container at computer startup
-$ docker run --restart=always --name postgres -e POSTGRES_PASSWORD=postgres -p 5432:5432 -d postgres
+$ docker run --restart=always --name fyfu_db -e POSTGRES_PASSWORD=postgres -p 5432:5432 -d postgres
 ```
 
 To access database

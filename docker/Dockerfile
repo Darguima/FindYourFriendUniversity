@@ -16,12 +16,6 @@ COPY assets assets
 
 RUN mix deps.get
 
-# Database Seeds
-COPY faker_seeds.py faker_seeds.py
-RUN python faker_seeds.py
-# the pattern match is a workaround to when the file doesn't exist
-COPY ./applications.jso[n] ./
-
 EXPOSE 4000
 
 CMD ["sh", "-c", "mix ecto.create && mix ecto.migrate && mix assets.setup && mix assets.build && mix phx.digest && mix phx.server"]
