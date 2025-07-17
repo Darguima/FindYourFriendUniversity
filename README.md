@@ -104,12 +104,21 @@ All the files that are present at `./seeds/` folder and respect the naming patte
 
 If you are thinking about scraping the data take in mind that this is the slowest option to setup, you will need install the `beautifulsoup4` package and scrape real data can go against the GDPR.
 
-```bash
-# Generate fake seeds
-$ python faker_seeds.py
+To generate fake data:
 
-# Scraping the official data from DGES
-$ pip install beautifulsoup4
+```bash
+$ python faker_seeds.py
+```
+
+To scrape the official data from DGES:
+
+```bash
+# Preparing the environment
+$ python -m venv .venv # Just run once
+$ source .venv/bin/activate # Run on new each terminal session
+$ pip install -r requirements.txt # Just run once
+
+# Scraping the data
 $ python applications_scraper.py
 ```
 
