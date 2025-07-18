@@ -88,11 +88,12 @@ defmodule FindYourFriendUniversity.LocationsSeeds do
             name:
               person["name"]
               |> String.trim()
-              |> normalize_string()
+              |> normalize_string([32])
+              |> String.replace(~r/\s+/, " ")
               |> String.replace(" *** ", " "),
             civil_id: person["civil_id"] |> String.trim() |> String.replace("*", "x"),
             parish_id: parish.id,
-            year: year,
+            year: year
           }
         end)
         |> Enum.filter(fn person -> person.civil_id != "" end)
