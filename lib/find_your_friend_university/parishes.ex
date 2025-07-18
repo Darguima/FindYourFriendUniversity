@@ -113,8 +113,8 @@ defmodule FindYourFriendUniversity.Parishes do
     else
       parishes_inserted =
         parishes
-        # 65535 is the maximum of parameters per query; 4 the number of params per row
-        |> Enum.chunk_every(trunc(65535 / 4))
+        # 65535 is the maximum of parameters per query; 5 the number of params per row
+        |> Enum.chunk_every(trunc(65535 / 5))
         |> Enum.map(fn parish -> Repo.insert_all(Parish, parish, on_conflict: :nothing) end)
         |> reduce_multiple_insert_all()
 

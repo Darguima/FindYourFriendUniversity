@@ -113,8 +113,8 @@ defmodule FindYourFriendUniversity.Counties do
     else
       counties_inserted =
         counties
-        # 65535 is the maximum of parameters per query; 4 the number of params per row
-        |> Enum.chunk_every(trunc(65535 / 4))
+        # 65535 is the maximum of parameters per query; 5 the number of params per row
+        |> Enum.chunk_every(trunc(65535 / 5))
         |> Enum.map(fn county -> Repo.insert_all(County, county, on_conflict: :nothing) end)
         |> reduce_multiple_insert_all()
 

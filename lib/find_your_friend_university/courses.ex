@@ -126,8 +126,8 @@ defmodule FindYourFriendUniversity.Courses do
           course
           |> Map.delete(:universities_ids)
         end)
-        # 65535 is the maximum of parameters per query; 4 the number of params per row
-        |> Enum.chunk_every(trunc(65535 / 4))
+        # 65535 is the maximum of parameters per query; 5 the number of params per row
+        |> Enum.chunk_every(trunc(65535 / 5))
         |> Enum.map(fn course -> Repo.insert_all(Course, course, conflict_target: :id, on_conflict: {:replace_all_except, [:id, :inserted_at]}) end)
         |> reduce_multiple_insert_all()
 

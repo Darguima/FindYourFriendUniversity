@@ -114,8 +114,8 @@ defmodule FindYourFriendUniversity.Locations do
     else
       locations_inserted =
         locations
-        # 65535 is the maximum of parameters per query; 4 the number of params per row
-        |> Enum.chunk_every(trunc(65535 / 6))
+        # 65535 is the maximum of parameters per query; 5 the number of params per row
+        |> Enum.chunk_every(trunc(65535 / 5))
         |> Enum.map(fn location -> Repo.insert_all(Location, location, on_conflict: :nothing) end)
         |> reduce_multiple_insert_all()
 

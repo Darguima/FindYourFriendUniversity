@@ -185,7 +185,7 @@ defmodule FindYourFriendUniversity.Students do
     else
       students_inserted =
         students
-        # 65535 is the maximum of parameters per query; 4 the number of params per row
+        # 65535 is the maximum of parameters per query; 6 the number of params per row
         |> Enum.chunk_every(trunc(65535 / 6))
         |> Enum.map(fn student -> Repo.insert_all(Student, student, conflict_target: :id, on_conflict: {:replace_all_except, [:id, :inserted_at]}) end)
         |> reduce_multiple_insert_all()
