@@ -15,5 +15,8 @@ defmodule FindYourFriendUniversity.Parishes.Parish do
     parish
     |> cast(attrs, [:id, :name, :county_id])
     |> validate_required([:id, :name, :county_id])
+    |> validate_length(:id, max: 4)
+    |> unique_constraint(:id, name: :parishes_pkey)
+    |> unique_constraint([:county_id, :name], name: :parishes_county_id_name_index)
   end
 end

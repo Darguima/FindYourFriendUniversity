@@ -14,5 +14,8 @@ defmodule FindYourFriendUniversity.Districts.District do
     district
     |> cast(attrs, [:id, :name])
     |> validate_required([:id, :name])
+    |> validate_length(:id, max: 2)
+    |> unique_constraint(:id, name: :districts_pkey)
+    |> unique_constraint(:name, name: :districts_name_index)
   end
 end

@@ -10,6 +10,7 @@ defmodule FindYourFriendUniversity.Repo.Migrations.CreateCounties do
       timestamps()
     end
 
+    create unique_index(:counties, [:id])
     create unique_index(:counties, [:district_id, :name])
   end
 end
