@@ -47,9 +47,9 @@ I generated my migrations, schemas and all the HTML files with this commands. Th
 
 ```bash
 $ mix phx.gen.html Students Student students id:string name:string display_name:string civil_id:string
-$ mix phx.gen.schema Courses.Course courses id:string name:string
-$ mix phx.gen.schema Universities.University universities id:string name:string is_polytechnic:boolean
-$ mix phx.gen.schema Applications.Application course_order_num:integer candidature_grade:integer exams_grades:integer _12grade:integer _11grade:integer student_option_number:integer placed:boolean year:integer phase:integer university_id:references:universities course_id:references:courses student_id:references:students
+$ mix phx.gen.context Courses Course courses id:string name:string
+$ mix phx.gen.context Universities University universities id:string name:string is_polytechnic:boolean
+$ mix phx.gen.context Applications Application applications course_order_num:integer candidature_grade:integer exams_grades:integer _12grade:integer _11grade:integer student_option_number:integer placed:boolean year:integer phase:integer university_id:references:universities course_id:references:courses student_id:references:students
 ```
 
 #### Many to Many Tables
