@@ -159,8 +159,8 @@ persons_location = []
 
 scraper()
 
-print(f"\n\nDone!!! Locations stored at `\033[1mstudents_location.json\033[0m`.")
+print(f"\n\nDone!!! Locations stored at `\033[1mlocations.json\033[0m`.")
 
-with open("students_location.json", "w") as file:
+with open("locations.json", "w") as file:
     json.dump(persons_location, file, indent=4, ensure_ascii=False)
 

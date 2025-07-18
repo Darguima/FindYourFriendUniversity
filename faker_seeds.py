@@ -258,7 +258,7 @@ for student in students_to_add:
         "civil_id": formatted_civil_id
     })
 
-with open("seeds/students_location_faked.json", "w") as file:
+with open("seeds/locations_faked.json", "w") as file:
     json.dump(locations, file, indent=4, ensure_ascii=False)
 
-print(f"Locations with students stored at `seeds/\033[1mstudents_location_faked.json\033[0m`.")
+print(f"Locations with students stored at `seeds/\033[1mlocations_faked.json\033[0m`.")
