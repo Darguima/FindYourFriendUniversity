@@ -3,13 +3,14 @@ defmodule FindYourFriendUniversity.Repo.Migrations.CreateLocations do
 
   def change do
     create table(:locations) do
-      add :name, :string
-      add :civil_id, :string
-      add :parish_id, :string
+      add :name, :string, null: false
+      add :civil_id, :string, null: false, size: 8
+      add :parish_id, :string, null: false
+      add :year, :string, null: false, size: 4
 
       timestamps()
     end
 
-    create unique_index(:locations, [:name, :civil_id, :parish_id])
+    create unique_index(:locations, [:name, :civil_id, :parish_id, :year])
   end
 end

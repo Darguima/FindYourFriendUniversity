@@ -2,6 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 import urllib.parse
 import json
+from datetime import datetime
 
 HEADERS = {
   "Content-Type": "application/x-www-form-urlencoded"
@@ -161,6 +162,12 @@ scraper()
 
 print(f"\n\nDone!!! Locations stored at `\033[1mlocations.json\033[0m`.")
 
+current_year = str(datetime.now().year)
+
+dated_locations = {
+  current_year: persons_location
+}
+
 with open("locations.json", "w") as file:
-    json.dump(persons_location, file, indent=4, ensure_ascii=False)
+    json.dump(dated_locations, file, indent=4, ensure_ascii=False)
 

@@ -5,8 +5,15 @@ alias FindYourFriendUniversity.Locations
 import FindYourFriendUniversity.Helpers
 
 defmodule FindYourFriendUniversity.LocationsSeeds do
-  alias ElixirLS.LanguageServer.Location
   def parse_locations_json_seeds(json) do
+    json
+    |> Enum.each(fn {year, locations_data} ->
+      IO.puts("\n--- Processing year #{year} ---")
+      parse_locations_aux(locations_data, year)
+    end)
+  end
+
+  defp parse_locations_aux(json, year) do
     districts =
       json
       |> Enum.map(fn district ->
@@ -78,21 +85,26 @@ defmodule FindYourFriendUniversity.LocationsSeeds do
         parish.people
         |> Enum.map(fn person ->
           %{
-            name: person["name"] |> String.trim() |> normalize_string() |> String.replace(" *** ", " "),
+            name:
+              person["name"]
+              |> String.trim()
+              |> normalize_string()
+              |> String.replace(" *** ", " "),
             civil_id: person["civil_id"] |> String.trim() |> String.replace("*", "x"),
-            parish_id: parish.id
+            parish_id: parish.id,
+            year: year,
           }
         end)
         |> Enum.filter(fn person -> person.civil_id != "" end)
       end)
 
-      case Locations.create_multiple_locations(locations) do
-        {:ok, {created_locations, []}} ->
-          IO.puts("Stored #{created_locations}/#{length(locations)} Locations from seeds ond DB.")
+    case Locations.create_multiple_locations(locations) do
+      {:ok, {created_locations, []}} ->
+        IO.puts("Stored #{created_locations}/#{length(locations)} Locations from seeds ond DB.")
 
-        {:error, errors} ->
-          IO.inspect(errors, label: "Locations inserting errors: ")
-          raise "Locations inserting error. See errors below."
-      end
+      {:error, errors} ->
+        IO.inspect(errors, label: "Locations inserting errors: ")
+        raise "Locations inserting error. See errors below."
+    end
   end
 end

@@ -258,7 +258,11 @@ for student in students_to_add:
         "civil_id": formatted_civil_id
     })
 
+dated_locations = {
+   "2025": locations
+}
+
 with open("seeds/locations_faked.json", "w") as file:
-    json.dump(locations, file, indent=4, ensure_ascii=False)
+    json.dump(dated_locations, file, indent=4, ensure_ascii=False)
 
 print(f"Locations with students stored at `seeds/\033[1mlocations_faked.json\033[0m`.")
