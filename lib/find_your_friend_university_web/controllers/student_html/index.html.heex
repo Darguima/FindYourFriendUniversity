@@ -113,7 +113,7 @@
           onchange="onSelectChanged('select-years', 'anos', true)"
           class="multiple-select select-years h-10 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg hover:ring-indigo-500 hover:border-indigo-500  p-2"
         >
-          <%= for year <- 2018..2023 |> Enum.map(&Integer.to_string(&1)) do %>
+          <%= for year <- 2018..2024 |> Enum.map(&Integer.to_string(&1)) do %>
             <%= if year not in @filters.years_applications do %>
               <option value={year}><%= year %></option>
             <% else %>

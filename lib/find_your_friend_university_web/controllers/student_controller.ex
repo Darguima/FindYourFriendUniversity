@@ -31,7 +31,7 @@ defmodule FindYourFriendUniversityWeb.StudentController do
       )
       |> Map.update(
         "years_applications",
-        2018..2023 |> Enum.map(&Integer.to_string(&1)),
+        2018..2024 |> Enum.map(&Integer.to_string(&1)),
         fn array -> Enum.filter(array, fn elem -> elem != "" end) end
 
       )
