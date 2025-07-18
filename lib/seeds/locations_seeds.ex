@@ -1,16 +1,19 @@
 alias FindYourFriendUniversity.Districts
 alias FindYourFriendUniversity.Counties
 alias FindYourFriendUniversity.Parishes
-alias FindYourFriendUniversity.Students
+alias FindYourFriendUniversity.Locations
+import FindYourFriendUniversity.Helpers
 
 defmodule FindYourFriendUniversity.LocationsSeeds do
+  alias ElixirLS.LanguageServer.Location
   def parse_locations_json_seeds(json) do
     districts =
       json
       |> Enum.map(fn district ->
         %{
           name: district["name"],
-          id: district["district_code"]
+          id: district["district_code"],
+          counties: district["counties"]
         }
       end)
 
@@ -24,14 +27,14 @@ defmodule FindYourFriendUniversity.LocationsSeeds do
     end
 
     counties =
-      json
+      districts
       |> Enum.flat_map(fn district ->
-        district["counties"]
+        district.counties
         |> Enum.map(fn county ->
           %{
             name: county["name"],
             id: county["county_code"],
-            district_id: district["district_code"],
+            district_id: district.id,
             parishes: county["parishes"]
           }
         end)
@@ -47,18 +50,16 @@ defmodule FindYourFriendUniversity.LocationsSeeds do
     end
 
     parishes =
-      json
-      |> Enum.flat_map(fn district ->
-        district["counties"]
-        |> Enum.flat_map(fn county ->
-          county["parishes"]
-          |> Enum.map(fn parish ->
-            %{
-              name: parish["name"],
-              id: parish["parish_code"],
-              county_id: county["county_code"]
-            }
-          end)
+      counties
+      |> Enum.flat_map(fn county ->
+        county.parishes
+        |> Enum.map(fn parish ->
+          %{
+            name: parish["name"],
+            id: parish["parish_code"],
+            county_id: county.id,
+            people: parish["people"] || []
+          }
         end)
       end)
 
@@ -70,5 +71,28 @@ defmodule FindYourFriendUniversity.LocationsSeeds do
         IO.inspect(errors, label: "Parishes inserting errors: ")
         raise "Parishes inserting error. See errors below."
     end
+
+    locations =
+      parishes
+      |> Enum.flat_map(fn parish ->
+        parish.people
+        |> Enum.map(fn person ->
+          %{
+            name: person["name"] |> String.trim() |> normalize_string() |> String.replace(" *** ", " "),
+            civil_id: person["civil_id"] |> String.trim() |> String.replace("*", "x"),
+            parish_id: parish.id
+          }
+        end)
+        |> Enum.filter(fn person -> person.civil_id != "" end)
+      end)
+
+      case Locations.create_multiple_locations(locations) do
+        {:ok, {created_locations, []}} ->
+          IO.puts("Stored #{created_locations}/#{length(locations)} Locations from seeds ond DB.")
+
+        {:error, errors} ->
+          IO.inspect(errors, label: "Locations inserting errors: ")
+          raise "Locations inserting error. See errors below."
+      end
   end
 end
