@@ -5,6 +5,7 @@ defmodule FindYourFriendUniversity.Parishes do
 
   import Ecto.Query, warn: false
   alias FindYourFriendUniversity.Repo
+  import FindYourFriendUniversity.Helpers
 
   alias FindYourFriendUniversity.Parishes.Parish
 
@@ -53,6 +54,72 @@ defmodule FindYourFriendUniversity.Parishes do
     %Parish{}
     |> Parish.changeset(attrs)
     |> Repo.insert()
+  end
+
+  @doc """
+  Creates multiple parishes.
+
+  If everything is ok, it returns a tuple containing the number of entries stored and any returned result as second element.
+
+  If the changeset detect some errors at some of the parishes it will return a list of parishes and its respective errors.
+
+  ## Examples
+
+      iex> create_multiple_parishes(
+              [
+                %{
+                  id: "1234",
+                  name: "Parish name",
+                  county_id: "12"
+                },
+                ...
+              ]
+            )
+      {:ok, {parishes_inserted_quantity, [...]}}
+
+      iex> create_multiple_parishes([%{field: value}, %{field: value}, ...])
+      {:error, [ %{parish: %Parish{}, errors: [ %Ecto.Changeset{} ]} ]}
+  """
+  def create_multiple_parishes(parishes) do
+    timestamp =
+      NaiveDateTime.utc_now()
+      |> NaiveDateTime.truncate(:second)
+
+    parishes =
+      parishes
+      |> Enum.map(fn parish ->
+        %{
+          id: parish |> Map.get(:id),
+          name: parish |> Map.get(:name),
+          county_id: parish |> Map.get(:county_id),
+          inserted_at: timestamp,
+          updated_at: timestamp
+        }
+      end)
+
+    errors =
+      parishes
+      |> Enum.map(fn parish ->
+        errors =
+          Parish.changeset(%Parish{}, parish)
+          |> Map.get(:errors)
+
+        %{parish: parish, errors: errors}
+      end)
+      |> Enum.filter(fn parish -> parish.errors != [] end)
+
+    if errors != [] do
+      {:error, errors}
+    else
+      parishes_inserted =
+        parishes
+        # 65535 is the maximum of parameters per query; 4 the number of params per row
+        |> Enum.chunk_every(trunc(65535 / 4))
+        |> Enum.map(fn parish -> Repo.insert_all(Parish, parish, on_conflict: :nothing) end)
+        |> reduce_multiple_insert_all()
+
+      {:ok, parishes_inserted}
+    end
   end
 
   @doc """

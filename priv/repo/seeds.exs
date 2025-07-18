@@ -1,4 +1,5 @@
 alias FindYourFriendUniversity.DGESSeeds
+alias FindYourFriendUniversity.LocationsSeeds
 
 ~S"""
 This script will load all the files at ./seeds/ folder that match the expected naming pattern and use them to seed the DB.
@@ -43,6 +44,10 @@ case File.ls(seeds_folder) do
               case type do
                 "applications" ->
                   DGESSeeds.parse_dges_json_seeds(json_data)
+                  IO.puts("Seeded successfully.")
+
+                "locations" ->
+                  LocationsSeeds.parse_locations_json_seeds(json_data)
                   IO.puts("Seeded successfully.")
 
                 _ ->

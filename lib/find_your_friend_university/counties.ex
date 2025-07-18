@@ -5,6 +5,7 @@ defmodule FindYourFriendUniversity.Counties do
 
   import Ecto.Query, warn: false
   alias FindYourFriendUniversity.Repo
+  import FindYourFriendUniversity.Helpers
 
   alias FindYourFriendUniversity.Counties.County
 
@@ -53,6 +54,72 @@ defmodule FindYourFriendUniversity.Counties do
     %County{}
     |> County.changeset(attrs)
     |> Repo.insert()
+  end
+
+  @doc """
+  Creates multiple counties.
+
+  If everything is ok, it returns a tuple containing the number of entries stored and any returned result as second element.
+
+  If the changeset detect some errors at some of the counties it will return a list of counties and its respective errors.
+
+  ## Examples
+
+      iex> create_multiple_counties(
+              [
+                %{
+                  id: "1234",
+                  name: "County name",
+                  district_id: "12"
+                },
+                ...
+              ]
+            )
+      {:ok, {counties_inserted_quantity, [...]}}
+
+      iex> create_multiple_counties([%{field: value}, %{field: value}, ...])
+      {:error, [ %{county: %County{}, errors: [ %Ecto.Changeset{} ]} ]}
+  """
+  def create_multiple_counties(counties) do
+    timestamp =
+      NaiveDateTime.utc_now()
+      |> NaiveDateTime.truncate(:second)
+
+    counties =
+      counties
+      |> Enum.map(fn county ->
+        %{
+          id: county |> Map.get(:id),
+          name: county |> Map.get(:name),
+          district_id: county |> Map.get(:district_id),
+          inserted_at: timestamp,
+          updated_at: timestamp
+        }
+      end)
+
+    errors =
+      counties
+      |> Enum.map(fn county ->
+        errors =
+          County.changeset(%County{}, county)
+          |> Map.get(:errors)
+
+        %{county: county, errors: errors}
+      end)
+      |> Enum.filter(fn county -> county.errors != [] end)
+
+    if errors != [] do
+      {:error, errors}
+    else
+      counties_inserted =
+        counties
+        # 65535 is the maximum of parameters per query; 4 the number of params per row
+        |> Enum.chunk_every(trunc(65535 / 4))
+        |> Enum.map(fn county -> Repo.insert_all(County, county, on_conflict: :nothing) end)
+        |> reduce_multiple_insert_all()
+
+      {:ok, counties_inserted}
+    end
   end
 
   @doc """
