@@ -24,6 +24,7 @@ defmodule FindYourFriendUniversity.Repo.Migrations.CreateApplications do
     create index(:applications, [:course_id])
     create index(:applications, [:student_id])
 
-    create unique_index(:applications, [:student_option_number, :year, :phase, :student_id])
+    # To prevent duplicated candidatures - conflicts will be ignored
+    create unique_index(:applications, [:student_id, :year, :phase, :student_option_number, :university_id, :course_id])
   end
 end

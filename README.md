@@ -100,7 +100,7 @@ Let's start by getting the seeds to populate the database. You have two options,
 
 For both options you have python scripts to do that and both will output at `./seeds/` folder.
 
-All the files that are present at `./seeds/` folder and respect the naming pattern will be used, so remember to maintain this folder clean.
+All the files that are present at `./seeds/` folder and respect the naming pattern will be used, so remember to maintain this folder clean. Applications files should be named like `applications_*.json`.
 
 If you are thinking about scraping the data take in mind that this is the slowest option to setup, you will need install the `beautifulsoup4` package and scrape real data can go against the GDPR.
 

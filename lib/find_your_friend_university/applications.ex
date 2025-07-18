@@ -151,6 +151,7 @@ defmodule FindYourFriendUniversity.Applications do
         applications
         # 65535 is the maximum of parameters per query; 4 the number of params per row
         |> Enum.chunk_every(trunc(65535 / 14))
+        # To prevent duplicated candidatures - conflict is the same student on the same year & phase & option to the same uni & course
         |> Enum.map(fn application -> Repo.insert_all(Application, application, on_conflict: :nothing) end)
         |> reduce_multiple_insert_all()
 
