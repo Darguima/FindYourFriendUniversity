@@ -5,7 +5,8 @@ defmodule FindYourFriendUniversity.Parishes.Parish do
   @primary_key {:id, :string, []}
   schema "parishes" do
     field :name, :string
-    field :county_id, :string
+
+    belongs_to :county, FindYourFriendUniversity.Counties.County, type: :string
 
     timestamps()
   end
@@ -15,8 +16,11 @@ defmodule FindYourFriendUniversity.Parishes.Parish do
     parish
     |> cast(attrs, [:id, :name, :county_id])
     |> validate_required([:id, :name, :county_id])
+
     |> validate_length(:id, max: 4)
     |> unique_constraint(:id, name: :parishes_pkey)
     |> unique_constraint([:county_id, :name], name: :parishes_county_id_name_index)
+
+    |> foreign_key_constraint(:county_id)
   end
 end

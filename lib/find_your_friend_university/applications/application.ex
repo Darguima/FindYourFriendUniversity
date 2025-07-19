@@ -35,7 +35,8 @@ defmodule FindYourFriendUniversity.Applications.Application do
     |> validate_number(:phase, greater_than_or_equal_to: 1, less_than_or_equal_to: 3)
     |> validate_number(:year, greater_than_or_equal_to: 2018)
 
-    |> unique_constraint([:student_option_number, :year, :phase, :student_id])
+    # To prevent duplicated candidatures - conflicts will be ignored
+    |> unique_constraint([:student_id, :year, :phase, :student_option_number, :university_id, :course_id])
 
     |> foreign_key_constraint(:university_id)
     |> foreign_key_constraint(:course_id)
