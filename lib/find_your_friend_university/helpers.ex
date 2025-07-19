@@ -67,4 +67,38 @@ defmodule FindYourFriendUniversity.Helpers do
   def map_keys_to_atoms(string_key_map) do
     for {key, val} <- string_key_map, into: %{}, do: {String.to_atom(key), val}
   end
+
+  @doc """
+  Merge two civil ID strings to minimize the number of 'x' characters.
+
+  ## Examples
+
+      iex> merge_civil_ids("234xxx61", "xxxx8961")
+      "23408961"
+
+      iex> merge_civil_ids("234xxx61", "1234x961")
+      "12348961"
+  """
+  def merge_civil_ids(id1, id2) when is_binary(id1) and is_binary(id2) do
+    id1_chars = String.graphemes(id1)
+    id2_chars = String.graphemes(id2)
+
+    # Ensure both IDs have the same length, pad with 'x' if needed
+    max_length = max(length(id1_chars), length(id2_chars))
+
+    id1_padded = id1_chars ++ List.duplicate("x", max_length - length(id1_chars))
+    id2_padded = id2_chars ++ List.duplicate("x", max_length - length(id2_chars))
+
+    # Merge character by character, preferring non-'x' characters
+    Enum.zip(id1_padded, id2_padded)
+    |> Enum.map(fn
+      {char, "x"} -> char
+      {"x", char} -> char
+      {char1, char2} when char1 == char2 -> char1
+      {char1, _char2} -> char1  # If different, prefer first one
+    end)
+    |> Enum.join("")
+  end
+
+  def merge_civil_ids(id1, id2), do: id1 || id2
 end

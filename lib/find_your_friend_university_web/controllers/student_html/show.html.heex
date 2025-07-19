@@ -1,95 +1,167 @@
 <%!-- <.back navigate={~p"/students"}>Back to students</.back> --%>
 
-<div class="max-w-screen-2xl w-screen flex-1">
-  <div class="px-8">
-    <h1 class="my-8 text-center text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl">
-      <%= @student.name %>
-    </h1>
+  <div class="max-w-screen-2xl w-screen flex-1">
+    <div class="px-8">
+      <h1
+        class="my-8 text-center text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl">
+        <%= @student.name %>
+      </h1>
+    </div>
 
-    Numero CC: <%= @student.civil_id %>
-  </div>
+    <div class="px-8 mt-16">
+      <h2 class="my-4 text-left text-xl font-medium leading-none tracking-tight text-gray-600 md:text-2xl">
+        Localizações
+      </h2>
+    </div>
 
-  <div class="m-8 overflow-x-auto shadow-md sm:rounded-lg">
-    <table class="text-sm text-left text-gray-500">
-      <thead class="text-xs text-gray-700 uppercase bg-gray-100">
-        <tr>
-          <th scope="col" class="px-6 py-3">
-              Curso
-          </th>
-          <th scope="col" class="px-6 py-3">
-              Universidade
-          </th>
-          <th scope="col" class="px-6 py-3">
-              Ano
-          </th>
-          <th scope="col" class="px-6 py-3">
-              Fase
-          </th>
-          <th scope="col" class="px-6 py-3">
-              Opção
-          </th>
-          <th scope="col" class="px-6 py-3">
-              Nota da candidatura
-          </th>
-          <th scope="col" class="px-6 py-3">
-              Nota Exames
-          </th>
-          <th scope="col" class="px-6 py-3">
-              Nota 12º
-          </th>
-          <th scope="col" class="px-6 py-3">
-              Nota 11º
-          </th>
-          <th scope="col" class="px-6 py-3">
-              Colocado?
-          </th>
-          <th scope="col" class="px-6 py-3">
-              Posição na colocação
-          </th>
-        </tr>
-      </thead>
+    <%= if @locations==[] do %>
+      <div class="m-8 p-4 bg-gray-50 border border-gray-200 rounded-lg">
+        <p class="text-gray-600 font-medium">No locations available for this student.</p>
 
-      <tbody>
-        <%= for application <- @applications do %>
-          <tr class="bg-white border-b">
+        <p class="text-gray-500 font-normal">Número CC: <%= @student.civil_id %>
+        </p>
+      </div>
+      <% else %>
+        <div class="m-8 overflow-x-auto shadow-md sm:rounded-lg">
+          <table class="w-full text-sm text-left text-gray-500">
+            <thead class="text-xs text-gray-700 uppercase bg-gray-100">
+              <tr>
+                <th scope="col" class="px-6 py-3">
+                  Distrito
+                </th>
+                <th scope="col" class="px-6 py-3">
+                  Concelho
+                </th>
+                <th scope="col" class="px-6 py-3">
+                  Freguesia
+                </th>
+                <th scope="col" class="px-6 py-3">
+                  Ano Nascimento
+                </th>
+                <th scope="col" class="px-6 py-3">
+                  Número CC
+                </th>
+              </tr>
+            </thead>
 
-            <td class="px-6 py-4">
-              <%= application.course.name %>
-            </td>
-            <td class="px-6 py-4">
-              <%= application.university.name %>
-            </td>
-            <td class="px-6 py-4">
-              <%= application.year %>
-            </td>
-            <td class="px-6 py-4">
-              <%= application.phase %>
-            </td>
-            <td class="px-6 py-4">
-              <%= application.student_option_number %>
-            </td>
-            <td class="px-6 py-4">
-              <%= application.candidature_grade %>
-            </td>
-            <td class="px-6 py-4">
-              <%= application.exams_grades %>
-            </td>
-            <td class="px-6 py-4">
-              <%= application._12grade %>
-            </td>
-            <td class="px-6 py-4">
-              <%= application._11grade %>
-            </td>
-            <td class="px-6 py-4">
-              <%= application.placed %>
-            </td>
-            <td class="px-6 py-4">
-              <%= application.course_order_num %>
-            </td>
-          </tr>
+            <tbody>
+              <%= for location <- @locations do %>
+                <tr class="bg-white border-b">
+
+                  <td class="px-6 py-4">
+                    <%= location.parish.county.district.name %>
+                  </td>
+                  <td class="px-6 py-4">
+                    <%= location.parish.county.name %>
+                  </td>
+                  <td class="px-6 py-4">
+                    <%= location.parish.name %>
+                  </td>
+                  <td class="px-6 py-4">
+                    <%= String.to_integer(location.year) - 18 %>
+                  </td>
+                  <td class="px-6 py-4">
+                    <%= merge_civil_ids(@student.civil_id, location.civil_id) %>
+                  </td>
+                </tr>
+                <% end %>
+            </tbody>
+          </table>
+        </div>
         <% end %>
-      </tbody>
-    </table>
-  </div>
 
-</div>
+          <div class="px-8 mt-16">
+            <h2 class="my-4 text-left text-xl font-medium leading-none tracking-tight text-gray-600 md:text-2xl">
+              Candidaturas
+            </h2>
+          </div>
+
+          <%= if @applications==[] do %>
+            <div class="m-8 p-4 bg-gray-50 border border-gray-200 rounded-lg">
+              <p class="text-gray-600 font-medium">No applications available for this student.</p>
+            </div>
+            <% else %>
+              <div class="m-8 overflow-x-auto shadow-md sm:rounded-lg">
+                <table class="text-sm text-left text-gray-500">
+                  <thead class="text-xs text-gray-700 uppercase bg-gray-100">
+                    <tr>
+                      <th scope="col" class="px-6 py-3">
+                        Curso
+                      </th>
+                      <th scope="col" class="px-6 py-3">
+                        Universidade
+                      </th>
+                      <th scope="col" class="px-6 py-3">
+                        Ano
+                      </th>
+                      <th scope="col" class="px-6 py-3">
+                        Fase
+                      </th>
+                      <th scope="col" class="px-6 py-3">
+                        Opção
+                      </th>
+                      <th scope="col" class="px-6 py-3">
+                        Nota da candidatura
+                      </th>
+                      <th scope="col" class="px-6 py-3">
+                        Nota Exames
+                      </th>
+                      <th scope="col" class="px-6 py-3">
+                        Nota 12º
+                      </th>
+                      <th scope="col" class="px-6 py-3">
+                        Nota 11º
+                      </th>
+                      <th scope="col" class="px-6 py-3">
+                        Colocado?
+                      </th>
+                      <th scope="col" class="px-6 py-3">
+                        Posição na colocação
+                      </th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    <%= for application <- @applications do %>
+                      <tr class="bg-white border-b">
+
+                        <td class="px-6 py-4">
+                          <%= application.course.name %>
+                        </td>
+                        <td class="px-6 py-4">
+                          <%= application.university.name %>
+                        </td>
+                        <td class="px-6 py-4">
+                          <%= application.year %>
+                        </td>
+                        <td class="px-6 py-4">
+                          <%= application.phase %>
+                        </td>
+                        <td class="px-6 py-4">
+                          <%= application.student_option_number %>
+                        </td>
+                        <td class="px-6 py-4">
+                          <%= application.candidature_grade %>
+                        </td>
+                        <td class="px-6 py-4">
+                          <%= application.exams_grades %>
+                        </td>
+                        <td class="px-6 py-4">
+                          <%= application._12grade %>
+                        </td>
+                        <td class="px-6 py-4">
+                          <%= application._11grade %>
+                        </td>
+                        <td class="px-6 py-4">
+                          <%= application.placed %>
+                        </td>
+                        <td class="px-6 py-4">
+                          <%= application.course_order_num %>
+                        </td>
+                      </tr>
+                      <% end %>
+                  </tbody>
+                </table>
+              </div>
+              <% end %>
+  </div>

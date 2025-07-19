@@ -20,6 +20,7 @@ defmodule FindYourFriendUniversity.Locations.Location do
 
     |> validate_length(:civil_id, greater_than_or_equal_to: 7, less_than_or_equal_to: 8)
     |> validate_length(:year, is: 4)
+    |> validate_format(:year, ~r/^\d{4}$/, message: "must be a 4-digit number")
     |> unique_constraint([:name, :civil_id, :parish_id, :year])
 
     |> foreign_key_constraint(:parish_id)

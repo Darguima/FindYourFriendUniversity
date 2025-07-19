@@ -24,6 +24,62 @@ defmodule FindYourFriendUniversity.Locations do
   end
 
   @doc """
+  Returns the list of possible locations of the student with preloaded parish, county, and district information.
+
+  This function searches for locations based on the student's name and civil ID:
+  - **Name**: Uses the first name and last name (if available) with fuzzy matching
+  - **Civil ID**: Takes the last 2 characters and matches locations with civil IDs ending with those characters
+
+  ## Parameters
+
+  - `student` - A %Student{} struct containing:
+
+  ## Examples
+
+      iex> student = %Student{name: "João Silva Santos", civil_id: "12345678"}
+      iex> Locations.search_by_student(student)
+      [%Location{
+        name: "João Santos",
+        civil_id: "xxxxx78",
+        year: "2023",
+        parish: %Parish{name: "São João"},
+        parish: %{county: %County{name: "Lisboa"}},
+        parish: %{county: %{district: %District{name: "Lisboa"}}}
+      }, ...]
+  """
+  def search_by_student(student) do
+    normalized_name =
+      student.name
+      |> normalize_string([32])
+      |> String.split()
+      |> case do
+        [first] -> first
+        [first | rest] -> "#{first} #{List.last(rest)}"
+        [] -> ""
+      end
+      |> String.replace(" ", "%")
+      |> IO.inspect(label: "Normalized Name")
+
+    normalized_civil_id =
+      student.civil_id
+      |> String.slice(-2, 2)
+      |> normalize_string(48..57)
+      |> String.replace("x", "_")
+      |> IO.inspect(label: "Normalized Civil ID")
+
+    query =
+      from(location in Location,
+        preload: [parish: [county: :district]],
+        order_by: location.name,
+        where:
+          ilike(location.name, ^"#{normalized_name}") and
+            ilike(location.civil_id, ^"%#{normalized_civil_id}")
+      )
+
+    Repo.all(query)
+  end
+
+  @doc """
   Gets a single location.
 
   Raises `Ecto.NoResultsError` if the Location does not exist.

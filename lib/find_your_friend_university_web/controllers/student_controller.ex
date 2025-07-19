@@ -6,6 +6,7 @@ defmodule FindYourFriendUniversityWeb.StudentController do
   alias FindYourFriendUniversity.Courses
   alias FindYourFriendUniversity.Repo
   alias FindYourFriendUniversity.Students
+  alias FindYourFriendUniversity.Locations
   alias FindYourFriendUniversity.Applications.Application
   import FindYourFriendUniversity.Helpers
   alias FindYourFriendUniversity.SearchHistory
@@ -97,6 +98,8 @@ defmodule FindYourFriendUniversityWeb.StudentController do
         |> Map.update!(:candidature_grade, fn grade -> grade / 100 end)
       end)
 
-    render(conn, :show, student: student, applications: applications)
+    locations = Locations.search_by_student(student)
+
+    render(conn, :show, student: student, applications: applications, locations: locations)
   end
 end

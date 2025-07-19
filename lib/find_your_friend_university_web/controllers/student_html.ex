@@ -1,6 +1,8 @@
 defmodule FindYourFriendUniversityWeb.StudentHTML do
   use FindYourFriendUniversityWeb, :html
 
+  import FindYourFriendUniversity.Helpers
+
   embed_templates "student_html/*"
 
   @doc """
