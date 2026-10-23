@@ -1,38 +1,57 @@
+name: fyfu
+
 services:
-  fyfu_db:
-    image: postgres:16.3
-    container_name: fyfu_db
+
+  fyfu:
+    container_name: fyfu
+    image: fyfu
     restart: unless-stopped
+
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+
+    hostname: fyfu
+
+    ports:
+      - "${EXPOSED_PORT}:4000"
+
+    environment:
+      MIX_ENV: prod
+      SECRET_KEY_BASE: ${SECRET_KEY_BASE}
+      DATABASE_URL: ecto://${DB_USER}:${DB_PASS}@fyfu-postgres/find_your_friend_university
+      PHX_PATH: ${PHX_PATH}
+
+    depends_on:
+      - fyfu-postgres
+
+    networks:
+      - fyfu-net
+
+  fyfu-postgres:
+
+    container_name: fyfu-postgres
+    image: postgres:16.3
+    restart: unless-stopped
+
+    hostname: fyfu-postgres
+
     environment:
       POSTGRES_USER: ${DB_USER}
       POSTGRES_PASSWORD: ${DB_PASS}
       POSTGRES_DB: find_your_friend_university
-    volumes:
-      - fyfu_db:/var/lib/postgresql
-    networks:
-      - fyfu_network
 
-  fyfu_app:
-    build:
-      context: ..
-      dockerfile: docker/Dockerfile
-    image: fyfu_app
-    container_name: fyfu_app
-    restart: unless-stopped
-    environment:
-      MIX_ENV: prod
-      SECRET_KEY_BASE: ${SECRET_KEY_BASE}
-      DATABASE_URL: ecto://${DB_USER}:${DB_PASS}@fyfu_db/find_your_friend_university
-      PHX_PATH: ${PHX_PATH}
-    depends_on:
-      - fyfu_db
+    volumes:
+      - fyfu-postgres-vol:/var/lib/postgresql/data
+
     networks:
-      - fyfu_network
-    ports:
-      - "${EXPOSED_PORT}:4000"
+      - fyfu-net
 
 volumes:
-  fyfu_db:
+  fyfu-postgres-vol:
+    name: fyfu-postgres-vol
 
 networks:
-  fyfu_network:
+  fyfu-net:
+    name: fyfu-net
+    driver: bridge

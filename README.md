@@ -162,13 +162,13 @@ Then you need to populate the database.
 
 ```bash
 # Clean the seeds folder (just if you want to remove the previously added seeds)
-docker exec -it fyfu_app rm /app/seeds/ -rf
+docker exec -it fyfu rm /app/seeds/ -rf
 
 # Copy seeds available now at seeds folder
-docker cp ./seeds/ fyfu_app:/app/seeds/
+docker cp ./seeds/ fyfu:/app/seeds/
 
 # Run the seeds
-docker exec -it fyfu_app mix ecto.setup
+docker exec -it fyfu mix ecto.setup
 ```
 
 To completely remove the container and the volumes, run:
